@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: rgb(10 10 10);
+
+  --bg-dark: rgb(10 10 10);
+  --bg-light: rgb(255 255 255);
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-light {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.shadow-crimson {
+  box-shadow: 0 0 10px lightcoral;
+}
+
+/*filter: drop-shadow(0 0 1rem crimson);*/
