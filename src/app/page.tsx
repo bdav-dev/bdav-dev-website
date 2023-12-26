@@ -1,7 +1,7 @@
 'use client';
 
 import Header from "@/components/header/Header";
-import ThemeApplier from "@/components/ThemeApplier";
+import ThemeApplier from "@/components/theme/ThemeApplier";
 
 export default function Home() {
 

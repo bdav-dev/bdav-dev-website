@@ -1,7 +1,7 @@
 import Header from "@/components/header/Header";
-import Headline from "@/components/base/Headline";
+import Headline from "@/components/pageElements/headlines/Headline";
 import PathBar from "@/components/PathBar";
-import ThemeApplier from "@/components/ThemeApplier";
+import ThemeApplier from "@/components/theme/ThemeApplier";
 import RecipeLink from "@/components/links/RecipeLink";
 import test from "@/../public/dev/test.png"
 

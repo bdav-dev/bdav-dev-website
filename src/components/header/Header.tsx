@@ -3,7 +3,7 @@ import Category from "./Category";
 import CodeIcon from "@/icons/CodeIcon";
 import AboutIcon from "@/icons/AboutIcon";
 import RecipiesIcon from "@/icons/RecipiesIcon";
-import DarkModeToggle from "../DarkModeToggle";
+import DarkModeToggle from "../theme/DarkModeToggle";
 import VerticalRuler from "../base/VerticalRuler";
 import Link from "next/link";
 import DropdownMenu from "./DropdownMenu";

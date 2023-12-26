@@ -1,5 +1,5 @@
 import PathBar from "./PathBar";
-import ThemeApplier from "./ThemeApplier";
+import ThemeApplier from "@/components/theme/ThemeApplier";
 import Header, { Categories } from "./header/Header";
 
 type PageBodyProps = {

@@ -20,4 +20,5 @@ export default function LightModeIcon(props: IconProps) {
             </g>
         </svg>
     );
+
 }

@@ -18,6 +18,5 @@ export default function AboutIcon(props: IconProps) {
             </g>
         </svg>
     );
+
 }
-
-

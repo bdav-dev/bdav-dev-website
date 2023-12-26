@@ -1,6 +1,7 @@
 import { IconProps } from "./IconProps";
 
 export default function BlenderIcon(props: IconProps) {
+
     return (
         <svg
             version="1.1"
@@ -18,4 +19,5 @@ export default function BlenderIcon(props: IconProps) {
             </g>
         </svg>
     );
+
 }

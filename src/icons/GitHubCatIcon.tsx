@@ -14,4 +14,5 @@ export default function GitHubCatIcon(props: IconProps) {
             </g>
         </svg >
     );
+    
 }

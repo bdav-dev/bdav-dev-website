@@ -1,5 +1,5 @@
 import Abstract3dSeriesProject from "@/components/links/Abstract3dSeriesLink";
-import Headline from "@/components/base/Headline";
+import Headline from "@/components/pageElements/headlines/Headline";
 import test from "@/../public/dev/test.png";
 import PageBody from "@/components/PageBody";
 

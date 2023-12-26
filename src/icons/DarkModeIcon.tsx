@@ -17,4 +17,5 @@ export default function DarkModeIcon(props: IconProps) {
             </g>
         </svg>
     );
+    
 }

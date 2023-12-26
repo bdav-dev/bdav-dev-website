@@ -14,4 +14,5 @@ export default function LinkedInIcon(props: IconProps) {
             </g>
         </svg>
     );
+
 }

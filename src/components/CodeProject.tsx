@@ -6,7 +6,6 @@ type CodeProjectProps = {
     children?: React.ReactNode
 }
 
-
 export default function CodeProject(props: CodeProjectProps) {
     return (
         <PageBody

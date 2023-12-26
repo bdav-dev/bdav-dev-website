@@ -17,4 +17,5 @@ export default function RecipesIcon(props: IconProps) {
             </g>
         </svg>
     );
+
 }

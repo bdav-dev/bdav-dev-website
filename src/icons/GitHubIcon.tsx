@@ -14,4 +14,5 @@ export default function GitHubIcon(props: IconProps) {
             </g>
         </svg >
     );
+    
 }
