@@ -1,7 +1,7 @@
 type EnumerateProps = {
     symbol?: string | React.ReactNode,
     symbolWidthClassName?: string,
-    items: string[]
+    items: (string | React.ReactNode)[]
 };
 
 export default function Enumerate(props: EnumerateProps) {
@@ -12,7 +12,7 @@ export default function Enumerate(props: EnumerateProps) {
                 props.items.map((listItem, index) => {
                     return (
                         <li className="flex flex-row flex-nowrap" key={index}>
-                            <div className={props.symbolWidthClassName ?? "w-6"}>
+                            <div className={props.symbolWidthClassName ?? "w-5"}>
                                 {props.symbol ?? `${index + 1}.`}
                             </div>
 

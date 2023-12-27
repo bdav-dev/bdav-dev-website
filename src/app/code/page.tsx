@@ -4,6 +4,7 @@ import Headline from "@/components/pageElements/headlines/Headline";
 import Tile from "@/components/base/Tile";
 import PageBody from "@/components/PageBody";
 import { codeProjects } from "@/content/codeProjects";
+import Section from "@/components/pageElements/Section";
 
 function mapCodeProjects() {
     return Object.values(codeProjects).map((codeProject, index) => {
@@ -30,11 +31,11 @@ export default function Code() {
                 </div>
             </Tile>
 
-            <Headline className="mt-4">Projects</Headline>
-
-            <div className="flex flex-row flex-wrap gap-5 justify-center sm:justify-normal">
-                {mapCodeProjects()}
-            </div>
+            <Section headline="Projects" className="mt-4">
+                <div className="mt-2 flex flex-row flex-wrap gap-5 justify-center sm:justify-normal">
+                    {mapCodeProjects()}
+                </div>
+            </Section>
 
         </PageBody>
     );

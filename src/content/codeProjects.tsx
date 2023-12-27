@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
-import test from "@/../public/dev/test.png";
+
+import timecoderBadge from '@/../public/dev/timecoder-badge.webp';
 
 export type CodeProject = {
     title: string,
@@ -16,12 +17,6 @@ export const codeProjects: CodeProjects = {
     timecoder: {
         title: "Timecoder",
         path: "/code/timecoder/",
-        image: test
-    },
-
-    timecoder2: {
-        title: "Timecoder2",
-        path: "/code/timecoder/",
-        image: test
+        image: timecoderBadge
     }
 };
