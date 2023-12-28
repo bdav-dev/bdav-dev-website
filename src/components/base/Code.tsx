@@ -2,15 +2,24 @@ import { Space_Mono } from "next/font/google";
 
 type CodeProps = {
     children?: React.ReactNode,
-    noMono?: boolean
+    noMono?: boolean,
+    largePadding?: boolean,
+    customColor?: string
 };
 
-const spaceMono = Space_Mono({subsets: ['latin'], weight: "400"});
+const spaceMono = Space_Mono({ subsets: ['latin'], weight: "400" });
 
-export default function Code(props: CodeProps) {
+export default function Code(props: CodeProps) {    
 
     return (
-        <span className={"dark:bg-zinc-950 bg-zinc-300 pr-1 pl-1 rounded-lg " + (props.noMono || spaceMono.className)}>
+        <span
+            className={
+                "rounded-lg "
+                + (props.noMono ? "" : spaceMono.className) + " "
+                + (props.largePadding ? "px-1.5 py-1" : "px-1") + " "
+                + (props.customColor ? props.customColor : "dark:bg-zinc-950 bg-zinc-300")
+            }
+        >
             {props.children}
         </span>
     );

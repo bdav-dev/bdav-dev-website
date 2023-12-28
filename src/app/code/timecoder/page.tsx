@@ -1,4 +1,5 @@
 import CodeProject from "@/components/CodeProject";
+import CodeProjectOverview from "@/components/CodeProjectOverview";
 import Code from "@/components/base/Code";
 import Enumerate from "@/components/base/Enumerate";
 import ExternalLink from "@/components/base/ExternalLink";
@@ -16,9 +17,9 @@ export default function Timecoder() {
         <CodeProject
             codeProject={codeProjects.timecoder}
         >
+            <CodeProjectOverview codeProject={codeProjects.timecoder}/>
 
-            <Article pageTitle="Timecoder">
-
+            <Article pageTitle={codeProjects.timecoder.title}>
 
                 <Section headline="Short description">
                     <Tile className="leading-7 mt-2">
@@ -39,7 +40,7 @@ export default function Timecoder() {
                 <Section headline="Use Timecoder">
                     <HStack className="mt-2">
                         <Tile title="Website">
-                            You can use Timecoder in the web with this website: <ExternalLink href="https://timecoder.vercel.app/" />
+                            You can use Timecoder in the web with this website: <ExternalLink href={codeProjects.timecoder.codeProjectProperies.launchLink!} />
                         </Tile>
 
                         <Tile title="From source code">
@@ -84,7 +85,7 @@ export default function Timecoder() {
                             <br />
                             You are able to comment the sequence, for example to state some corrections
                             in that timeframe (example: <Code noMono>Please add a caption here with text:
-                            "Our company is proud to announce the opening of its second factory in Berlin."</Code>).
+                                "Our company is proud to announce the opening of its second factory in Berlin."</Code>).
                             <br />
                             You can also delete sequences and change the arrangement by swapping them.
                         </Tile>

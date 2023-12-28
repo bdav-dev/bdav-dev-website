@@ -1,6 +1,5 @@
 import CodeProjectLink from "@/components/links/CodeProjectLink";
 import GitHubLink from "@/components/links/social/GitHubLink";
-import Headline from "@/components/pageElements/headlines/Headline";
 import Tile from "@/components/base/Tile";
 import PageBody from "@/components/PageBody";
 import { codeProjects } from "@/content/codeProjects";
