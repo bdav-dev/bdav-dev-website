@@ -2,7 +2,7 @@ import DropdownItem from "./DropdownItem";
 
 
 export type DropdownItem = {
-    text: string,
+    text: string | React.ReactNode,
     href: string,
     inNewTab?: boolean
 }

@@ -16,7 +16,7 @@ export default function Code(props: CodeProps) {
             className={
                 "rounded-lg "
                 + (props.noMono ? "" : spaceMono.className) + " "
-                + (props.largePadding ? "px-1.5 py-1" : "px-1") + " "
+                + (props.largePadding ? "px-1 py-0.5" : "px-1") + " "
                 + (props.customColor ? props.customColor : "dark:bg-zinc-950 bg-zinc-300")
             }
         >

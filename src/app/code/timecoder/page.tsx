@@ -17,8 +17,6 @@ export default function Timecoder() {
         <CodeProject
             codeProject={codeProjects.timecoder}
         >
-            <CodeProjectOverview codeProject={codeProjects.timecoder}/>
-
             <Article pageTitle={codeProjects.timecoder.title}>
 
                 <Section headline="Short description">
@@ -84,7 +82,7 @@ export default function Timecoder() {
                             timecode and displays the result in the difference timecode (example: <Code>00:00:46:07</Code>).
                             <br />
                             You are able to comment the sequence, for example to state some corrections
-                            in that timeframe (example: <Code noMono>Please add a caption here with text:
+                            in that timeframe (example: <Code noMono largePadding>Please add a caption here with text:
                                 "Our company is proud to announce the opening of its second factory in Berlin."</Code>).
                             <br />
                             You can also delete sequences and change the arrangement by swapping them.

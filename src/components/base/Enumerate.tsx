@@ -1,13 +1,14 @@
 type EnumerateProps = {
     symbol?: string | React.ReactNode,
     symbolWidthClassName?: string,
-    items: (string | React.ReactNode)[]
+    items: (string | React.ReactNode)[],
+    className?: string
 };
 
 export default function Enumerate(props: EnumerateProps) {
 
     return (
-        <ol className="w-full">
+        <ol className={"w-full " + props.className}>
             {
                 props.items.map((listItem, index) => {
                     return (

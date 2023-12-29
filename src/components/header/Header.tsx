@@ -19,7 +19,7 @@ function mapCodeProjectsToDropdownItems() {
     return Object.values(codeProjects).map(codeProject => {
         return {
             href: codeProject.path,
-            text: codeProject.title
+            text: codeProject.dropdownText ?? codeProject.title
         }
     });
 }
