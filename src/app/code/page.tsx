@@ -4,6 +4,7 @@ import Tile from "@/components/base/Tile";
 import PageBody from "@/components/PageBody";
 import { codeProjects } from "@/content/codeProjects";
 import Section from "@/components/pageElements/Section";
+import HStack from "@/components/base/stacks/HStack";
 
 function mapCodeProjects() {
     return Object.values(codeProjects).map((codeProject, index) => {
@@ -22,12 +23,10 @@ export default function Code() {
             category="Code"
             sitePath="/code"
         >
-
             <Tile>
-                <div className="ml-auto mr-auto w-fit">
-                    Visit me on
-                    <GitHubLink />
-                </div>
+                <HStack className="ml-auto mr-auto w-fit items-center">
+                    Visit me on <GitHubLink />
+                </HStack>
             </Tile>
 
             <Section headline="Projects" className="mt-4">

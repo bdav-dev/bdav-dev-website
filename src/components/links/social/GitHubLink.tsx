@@ -1,30 +1,14 @@
 import GitHubCatIcon from "@/icons/GitHubCatIcon";
 import GitHubIcon from "@/icons/GitHubIcon";
-import Link from "next/link";
+import SocialLink from "./SocialLink";
 
 export default function GitHubLink() {
 
     return (
-        <Link
-            href="https://github.com/bdav-dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block"
-            draggable="false"
-        >
-            <div
-                className={`
-                    m-1
-                    bg-zinc-800 dark:bg-black hover:bg-zinc-700 dark:hover:bg-zinc-900
-                    border border-zinc-600 dark:border-zinc-800
-                    transition-all ease-linear hover:rounded-3xl
-                    w-fit flex flex-row items-center gap-2 p-2 rounded-xl
-                `}
-            >
-                <GitHubIcon className="fill-white w-14" />
-                <GitHubCatIcon className="fill-white h-8" />
-            </div>
-        </Link>
+        <SocialLink href={"https://github.com/bdav-dev/"}>
+            <GitHubIcon className="fill-white" />
+            <GitHubCatIcon className="ml-1 fill-white w-[60%]" />
+        </SocialLink>
     );
 
 }

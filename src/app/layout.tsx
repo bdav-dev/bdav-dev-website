@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import ThemeContext from '@/contexts/ThemeContext'
-
-const inter = Inter({ subsets: ['latin'] })
+import { inter } from '@/fonts'
 
 export const metadata: Metadata = {
   title: 'bdav.dev – David Berezowski',
@@ -23,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeContext>
-        <body className={inter.className}>{children}</body>
+        <body className={inter}>{children}</body>
       </ThemeContext>
     </html>
   )

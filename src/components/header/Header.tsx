@@ -58,7 +58,18 @@ export default function Header(props: HeaderProps) {
                             text="3D"
                             link="/3d"
                             selected={props.selected == "3D"}
-
+                            dropdownMenu={
+                                <DropdownMenu
+                                    dropdownMenuGroups={[
+                                        [
+                                            { href: "https://github.com/bdav-dev", text: "Instagram", inNewTab: true }
+                                        ],
+                                        [
+                                            { href: "/3d/abstract-3d-series/", text: "Abstract3DSeries", inNewTab: false}
+                                        ]
+                                    ]}
+                                />
+                            }
                         />
 
                         <Category

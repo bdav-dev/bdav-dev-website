@@ -13,7 +13,14 @@ export default function RecipeLink(props: RecipeLinkProps) {
                 <div className="select-none text-lg text-center absolute transition-all opacity-0 group-hover:opacity-100 z-10 -translate-y-32 ease-out duration-300 group-hover:translate-y-0 left-0 right-0 ml-auto mr-auto w-fit">
                     {props.children}
                 </div>
-                <Image src={props.image} alt="test" className="transition-all duration-300 group-hover:blur-md" draggable="false" />
+
+                <Image
+                    src={props.image}
+                    alt="TODO"
+                    className="transition-all duration-300 group-hover:blur-md"
+                    draggable="false"
+                    placeholder="blur"
+                />
             </div>
         </Link>
     );

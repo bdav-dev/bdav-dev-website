@@ -1,6 +1,6 @@
 type HStackProps = {
     className?: string,
-    children: React.ReactNode
+    children?: React.ReactNode
 };
 
 

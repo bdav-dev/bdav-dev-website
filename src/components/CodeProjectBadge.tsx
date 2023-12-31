@@ -1,8 +1,6 @@
 import { CodeProject } from "@/content/codeProjects";
-import { Space_Mono } from "next/font/google";
+import { spaceMono } from "@/fonts";
 import Image from "next/image";
-
-const spaceMono = Space_Mono({ subsets: ['latin'], weight: "400" });
 
 type CodeProjectBadgeProps = {
     codeProject: CodeProject
@@ -35,12 +33,13 @@ export default function CodeProjectBadge(props: CodeProjectBadgeProps) {
                         src={props.codeProject.image}
                         alt="TODO"
                         className={props.animated ? "transition-all duration-300 group-hover:blur-md" : ""}
-                        draggable="false" />
+                        draggable="false"
+                        placeholder="blur" />
                     : <div
                         className={`
                             transition-all duration-300 select-none
                             ${props.animated && (props.codeProject.image ? "group-hover:blur-md" : "group-hover:scale-105")}
-                            ${spaceMono.className}
+                            ${spaceMono}
                             ml-auto mr-auto text-lg
                         `}>
                         {props.codeProject.badgeText ?? props.codeProject.title}

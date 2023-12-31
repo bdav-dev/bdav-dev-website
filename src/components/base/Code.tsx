@@ -1,4 +1,4 @@
-import { Space_Mono } from "next/font/google";
+import { spaceMono } from "@/fonts";
 
 type CodeProps = {
     children?: React.ReactNode,
@@ -7,15 +7,13 @@ type CodeProps = {
     customColor?: string
 };
 
-const spaceMono = Space_Mono({ subsets: ['latin'], weight: "400" });
-
 export default function Code(props: CodeProps) {    
 
     return (
         <span
             className={
                 "rounded-lg "
-                + (props.noMono ? "" : spaceMono.className) + " "
+                + (props.noMono ? "" : spaceMono) + " "
                 + (props.largePadding ? "px-1 py-0.5" : "px-1") + " "
                 + (props.customColor ? props.customColor : "dark:bg-zinc-950 bg-zinc-300")
             }

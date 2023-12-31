@@ -3,9 +3,10 @@ import ThemeApplier from "@/components/theme/ThemeApplier";
 import Header, { Categories } from "./header/Header";
 
 type PageBodyProps = {
-    category: Categories
+    category?: Categories
     sitePath: string,
-    children?: React.ReactNode
+    children?: React.ReactNode,
+    hidePathBar?: boolean
 };
 
 export default function PageBody(props: PageBodyProps) {
@@ -13,9 +14,11 @@ export default function PageBody(props: PageBodyProps) {
     return (
         <ThemeApplier>
             <Header selected={props.category} />
-            <PathBar path={props.sitePath} />
-
-            <main className="flex flex-col m-4">
+            {
+                !props.hidePathBar ? <PathBar path={props.sitePath} /> : <></>
+            }
+            
+            <main className="m-4 flex flex-col">
                 {props.children}
             </main>
         </ThemeApplier>

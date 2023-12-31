@@ -5,8 +5,8 @@ import Tile from "@/components/base/Tile";
 import HStack from "@/components/base/stacks/HStack";
 import Article from "@/components/pageElements/Article";
 import Section from "@/components/pageElements/Section";
-import SubSection from "@/components/pageElements/SubSection";
 import { codeProjects } from "@/content/codeProjects";
+import { spaceMono } from "@/fonts";
 
 
 
@@ -45,7 +45,7 @@ export default function CreateBlenderProject() {
                     </Tile>
                 </Section>
 
-                <Section headline={<>Use <span className="">create-blender-project</span></>}>
+                <Section headline={<>Use <span className={spaceMono}>create-blender-project</span></>}>
                     <HStack className="mt-2">
 
                         <Tile

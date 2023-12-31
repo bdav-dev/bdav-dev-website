@@ -28,28 +28,30 @@ export default function PathBar(props: PathBarProps) {
         <div className="m-2 ml-4 mb-6">
             <Link
                 href="/"
-                className="p-1 pl-1.5 pr-1.5 rounded-md transition-colors duration-200 hover:bg-zinc-300 dark:hover:bg-zinc-700"
+                className="select-none p-1 pl-1.5 pr-1.5 rounded-md transition-colors duration-200 hover:bg-zinc-300 dark:hover:bg-zinc-700"
                 draggable="false"
             >
                 bdav.dev
             </Link>
 
-            {nodes.map((node, i) => {
-                return (
-                    <span key={i}>
-                        <span
-                            className="ml-1.5 mr-1.5 select-none text-zinc-500"
-                        >/</span>
-                        <Link
-                            href={node.href}
-                            className="p-1 pl-1.5 pr-1.5 select-none rounded-md transition-colors duration-200 hover:bg-zinc-300 dark:hover:bg-zinc-700"
-                            draggable="false"
-                        >
-                            {node.node}
-                        </Link>
-                    </span>
-                );
-            })}
+            {
+                nodes.map(
+                    (node, i) => {
+                        return (
+                            <span key={i}>
+                                <span className="ml-1.5 mr-1.5 select-none dark:text-zinc-500 text-zinc-400">/</span>
+                                <Link
+                                    href={node.href}
+                                    className="whitespace-nowrap p-1 pl-1.5 pr-1.5 select-none rounded-md transition-colors duration-200 hover:bg-zinc-300 dark:hover:bg-zinc-700"
+                                    draggable="false"
+                                >
+                                    {node.node}
+                                </Link>
+                            </span>
+                        );
+                    }
+                )
+            }
         </div>
     );
 

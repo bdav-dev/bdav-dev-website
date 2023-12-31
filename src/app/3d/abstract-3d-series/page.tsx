@@ -2,24 +2,15 @@ import Abstract3dSeriesLink from "@/components/links/Abstract3dSeriesLink";
 import PageBody from "@/components/PageBody";
 import Section from "@/components/pageElements/Section";
 import { abstract3dSeriesImages } from "@/content/abstract3dSeries";
-import Tile from "@/components/base/Tile";
-import InstagramLink from "@/components/links/social/InstagramLink";
-import HStack from "@/components/base/stacks/HStack";
 
-export default function Blender() {
+export default function Abstract3DSeries() {
 
     return (
         <PageBody
             category="3D"
-            sitePath="/3d/"
+            sitePath="/3d/abstract-3d-series/"
         >
-            <Tile>
-                <HStack className="ml-auto mr-auto w-fit items-center">
-                    Visit me on <InstagramLink />
-                </HStack>
-            </Tile>
-
-            <Section headline="Abstract3DSeries" className="mt-4">
+            <Section headline="Abstract3DSeries">
 
                 <div className="mt-4 flex flex-row flex-wrap gap-5 justify-center sm:justify-normal">
                     {
