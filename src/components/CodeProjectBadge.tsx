@@ -11,39 +11,51 @@ export default function CodeProjectBadge(props: CodeProjectBadgeProps) {
     return (
         <div
             className={`
-            dark:border-zinc-800 border-zinc-400 border
-            w-72 h-32 overflow-hidden
-            flex items-center
-            rounded-2xl relative group
-            ${props.codeProject.image ? "" : "bg-zinc-200 dark:bg-zinc-900"}
+                dark:border-zinc-800 border-zinc-400 border
+                w-72 h-32 overflow-hidden
+                flex items-center
+                rounded-2xl relative group
+                ${props.codeProject.customBadgeImage ? "" : "bg-zinc-200 dark:bg-zinc-900"}
             `}
         >
 
             {
-                props.animated && props.codeProject.image
+                props.animated && props.codeProject.badgeHoverText
                     ? <div className="select-none text-2xl text-center absolute transition-all z-10 -translate-y-24 ease-out duration-300 group-hover:translate-y-0 left-0 right-0 ml-auto mr-auto w-fit">
-                        {props.codeProject.badgeHoverText ?? props.codeProject.title}
+                        {props.codeProject.badgeHoverText}
                     </div>
                     : null
             }
 
             {
-                props.codeProject.image
+                props.codeProject.customBadgeImage
                     ? <Image
-                        src={props.codeProject.image}
+                        src={props.codeProject.customBadgeImage}
                         alt="TODO"
-                        className={props.animated ? "transition-all duration-300 group-hover:blur-md" : ""}
+                        className={props.animated && props.codeProject.badgeHoverText ? "transition-all duration-300 group-hover:blur-md" : ""}
                         draggable="false"
                         placeholder="blur" />
-                    : <div
-                        className={`
-                            transition-all duration-300 select-none
-                            ${props.animated && (props.codeProject.image ? "group-hover:blur-md" : "group-hover:scale-105")}
-                            ${spaceMono}
-                            ml-auto mr-auto text-lg
-                        `}>
-                        {props.codeProject.badgeText ?? props.codeProject.title}
-                    </div>
+                    : (
+                        props.codeProject.customBadge
+                            ? <div
+                                className={`
+                                    w-full h-full select-none
+                                    ${props.animated && props.codeProject.badgeHoverText ? "transition-all duration-300 group-hover:blur-md" : ""}
+                                `}
+                            >
+                                {props.codeProject.customBadge}
+                            </div>
+                            : <div
+                                className={`
+                                    transition-all duration-300 select-none
+                                    ${props.animated ? "group-hover:scale-105" : ""}
+                                    ${spaceMono}
+                                    ml-auto mr-auto text-lg
+                                `}
+                            >
+                                {props.codeProject.customBadgeText ?? props.codeProject.title}
+                            </div>
+                    )
             }
 
         </div>

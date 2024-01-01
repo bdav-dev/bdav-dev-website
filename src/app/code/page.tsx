@@ -30,7 +30,7 @@ export default function Code() {
             </Tile>
 
             <Section headline="Projects" className="mt-4">
-                <div className="mt-2 flex flex-row flex-wrap gap-5 justify-center sm:justify-normal">
+                <div className="mt-2.5 flex flex-row flex-wrap gap-2.5 justify-center sm:justify-normal">
                     {mapCodeProjects()}
                 </div>
             </Section>

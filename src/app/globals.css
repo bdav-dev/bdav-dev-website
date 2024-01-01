@@ -30,3 +30,29 @@ body {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
+
+.dark .neumorphic {
+  color: #3B3D43;
+  padding: 8px;
+  border-radius: 20px;
+  margin: 7px;
+  background: rgb(236, 240, 243);
+  box-shadow: 5px 5px 8px rgb(209, 217, 230), -5px -5px 8px rgb(255, 255, 255);
+}
+
+.dark .neumorphic-bg {
+  background: rgb(236, 240, 243);
+}
+
+.neumorphic {
+  color: rgb(232, 232, 232);
+  padding: 8px;
+  border-radius: 20px;
+  margin: 7px;
+  background: rgb(48, 49, 53);
+  box-shadow: 5px 5px 8px rgb(35, 35, 35), -5px -5px 8px rgb(62, 63, 70);
+}
+
+.neumorphic-bg {
+  background: rgb(48, 49, 53);
+}

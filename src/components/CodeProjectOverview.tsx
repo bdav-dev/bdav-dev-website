@@ -13,9 +13,9 @@ type CodeProjectOverviewProps = {
 
 export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
     return (
-        <Tile className="w-fit mr-auto ml-auto mb-5 px-3.5">
+        <Tile className="w-fit mr-auto ml-auto mb-5 py-3 sm:py-2 sm:px-3">
 
-            <HStack className="justify-center gap-3 items-center">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 items-center">
 
                 <CodeProjectBadge codeProject={props.codeProject} />
 
@@ -46,35 +46,51 @@ export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
 
                     <table>
                         <tbody>
+
                             <tr>
                                 <td className="px-1">Project Language</td>
                                 <td className="px-1"><Code noMono largePadding>{props.codeProject.codeProjectProperies.projectLanguage}</Code></td>
                             </tr>
+
                             <tr className="border-t border-zinc-300 dark:border-zinc-800">
                                 <td className="px-1">Status</td>
                                 <td className="px-1">{props.codeProject.codeProjectProperies.status}</td>
                             </tr>
+
                             <tr className="border-t border-zinc-300 dark:border-zinc-800">
                                 <td className="px-1">Type</td>
                                 <td className="px-1">{props.codeProject.codeProjectProperies.type}</td>
                             </tr>
+
                             <tr className="border-t border-zinc-300 dark:border-zinc-800">
                                 <td className="px-1">Programming Language</td>
                                 <td className="px-1">
-                                    <Code noMono largePadding
-                                        customColor={props.codeProject.codeProjectProperies.programmingLanguage.className}
-                                    >
-                                        {props.codeProject.codeProjectProperies.programmingLanguage.name}
-                                    </Code>
+                                    <div className="flex flex-row mt-0.5 gap-0.5">
+                                        {
+                                            props.codeProject.codeProjectProperies.programmingLanguages.map(
+                                                (lang, index) => {
+                                                    return (
+                                                        <Code noMono
+                                                            customColor={lang.className}
+                                                            key={index}
+                                                        >
+                                                            {lang.name}
+                                                        </Code>
+                                                    )
+                                                }
+                                            )
+                                        }
+                                    </div>
                                 </td>
                             </tr>
+
                         </tbody>
                     </table>
 
                 </div>
 
-            </HStack>
-            
+            </div>
+
         </Tile>
     );
 }

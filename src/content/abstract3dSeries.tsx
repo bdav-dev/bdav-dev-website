@@ -33,7 +33,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     aspectRatio: "1:1",
                     width: 1080,
                     height: 1080,
-                    downloadURL: "https://nblilnvcme7hrrxj.public.blob.vercel-storage.com/a3ds_19.png"
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1704119929/abstract-3d-series/a3ds-19_pzrhla.png"
                 }
             ],
             // wallpaperDownloads: [

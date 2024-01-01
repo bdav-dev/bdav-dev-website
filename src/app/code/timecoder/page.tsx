@@ -10,7 +10,6 @@ import Section from "@/components/pageElements/Section";
 import SubSection from "@/components/pageElements/SubSection";
 import { codeProjects } from "@/content/codeProjects";
 
-// "dashboard": project language, programming language, type
 
 export default function Timecoder() {
     return (
@@ -98,13 +97,19 @@ export default function Timecoder() {
                             You can share and export the complete state of the application via 2 ways:
 
                             <Enumerate
+                                className="ml-1.5 mt-0.5"
+                                seperateItems
                                 items={[
-                                    <>Via .csv table:<br />The .csv table export option is perfect if
-                                        you want to save your work locally or want to print it out.</>,
-
-                                    <>Via link:<br />If you want to share your work with another person
-                                        or want to save your work for later editing, this option is for you.
-                                        The link contains a long string in which the whole state of the application is contained.</>
+                                    {
+                                        title: "Via .csv table",
+                                        text: "The .csv table export option is perfect if you want to save your work locally or want to print it out."
+                                    },
+                                    {
+                                        title: "Via link",
+                                        text: <>If you want to share your work with another person
+                                            or want to save your work for later editing, this option is for you.
+                                            The link contains a long string in which the whole state of the application is contained.</>
+                                    }
                                 ]}
                             />
                         </Tile>
@@ -129,57 +134,7 @@ export default function Timecoder() {
                     </Tile>
                 </Section>
 
-
             </Article>
-
-
-            {/* <Article pageTitle="Article">
-                This is content inside an article.
-
-                <Section headline="Section">
-                    This is content inside a section.
-
-                    <SubSection smallHeadline="Subsection">
-                        This is content inside a subsection.
-
-                        <HStack className="mt-1">
-                            <Tile>
-                                test
-                            </Tile>
-                            <Tile>
-                                test
-                            </Tile>
-                        </HStack>
-
-
-
-                    </SubSection>
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-
-                </Section>
-
-                <Section headline="Second Section">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at nobis odit. Placeat delectus sunt fugiat iusto repudiandae fuga nemo a quam, consequatur ratione! At ut recusandae voluptate omnis in!
-                </Section>
-
-            
-
-            </Article> */}
 
         </CodeProject>
     );
