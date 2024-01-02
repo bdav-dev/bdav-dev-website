@@ -115,7 +115,7 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
 
                 <div className="flex-grow">
 
-                    <Article pageTitle={`Abstract3DSeries #${params.nr}`}>
+                    <Article pageTitle={`Abstract3D Series #${params.nr}`}>
                         {abstract3dSeriesImage.description}
 
                         {

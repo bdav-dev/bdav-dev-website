@@ -10,7 +10,7 @@ export default function ThemeApplier(props: ThemeApplierProps) {
     const { darkTheme, setDarkTheme } = useTheme();
 
     return (
-        <div className={"" + (darkTheme ? "dark text-dark" : "text-light")}>
+        <div className={darkTheme ? "dark text-dark" : "text-light"}>
             {props.children}
         </div>
     );

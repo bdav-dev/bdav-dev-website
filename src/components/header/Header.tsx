@@ -8,6 +8,8 @@ import VerticalRuler from "../base/VerticalRuler";
 import Link from "next/link";
 import DropdownMenu from "./DropdownMenu";
 import { codeProjects } from "@/content/codeProjects";
+import InstagramIcon from "@/icons/InstagramIcon";
+import GitHubCatIcon from "@/icons/GitHubCatIcon";
 
 export type Categories = "Code" | "3D" | "Recipes" | "About";
 
@@ -45,7 +47,16 @@ export default function Header(props: HeaderProps) {
                                 <DropdownMenu
                                     dropdownMenuGroups={[
                                         [
-                                            { href: "https://github.com/bdav-dev", text: "GitHub", inNewTab: true }
+                                            {
+                                                href: "https://github.com/bdav-dev",
+                                                text: (
+                                                    <>
+                                                        GitHub
+                                                        <GitHubCatIcon className="h-4 inline dark:fill-white fill-black ml-1 mb-0.5" />
+                                                    </>
+                                                ),
+                                                inNewTab: true
+                                            }
                                         ],
                                         mapCodeProjectsToDropdownItems()
                                     ]}
@@ -62,10 +73,23 @@ export default function Header(props: HeaderProps) {
                                 <DropdownMenu
                                     dropdownMenuGroups={[
                                         [
-                                            { href: "https://github.com/bdav-dev", text: "Instagram", inNewTab: true }
+                                            {
+                                                href: "https://www.instagram.com/davidb.3d/",
+                                                text: (
+                                                    <>
+                                                        Instagram
+                                                        <InstagramIcon className="h-4 inline dark:fill-white fill-black ml-1" />
+                                                    </>
+                                                ),
+                                                inNewTab: true
+                                            }
                                         ],
                                         [
-                                            { href: "/3d/abstract-3d-series/", text: "Abstract3DSeries", inNewTab: false}
+                                            {
+                                                href: "/3d/abstract-3d-series/",
+                                                text: <span className="whitespace-nowrap">Abstract3D Series</span>,
+                                                inNewTab: false
+                                            }
                                         ]
                                     ]}
                                 />

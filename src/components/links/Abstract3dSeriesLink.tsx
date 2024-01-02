@@ -19,7 +19,7 @@ export default function Abstract3dSeriesLink(props: Abstract3dSeriesProjectProps
                     absolute flex items-center
                     rounded-2xl overflow-hidden
                     transition-all
-                    group-hover:saturate-200 dark:group-hover:saturate-150
+                    group-hover:saturate-200 dark:group-hover:saturate-200
                     group-hover:blur-xl group-hover:scale-105
                 `}
             >
