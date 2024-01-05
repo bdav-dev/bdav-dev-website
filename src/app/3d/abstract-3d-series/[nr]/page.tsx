@@ -109,6 +109,7 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
                         flex-shrink-0
                         border border-zinc-300 dark:border-zinc-800
                     `}
+                    quality={100}
                     placeholder="blur"
                     draggable={false}
                 />

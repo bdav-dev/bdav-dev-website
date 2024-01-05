@@ -9,7 +9,7 @@ type Abstract3dSeriesProjectProps = {
 export default function Abstract3dSeriesLink(props: Abstract3dSeriesProjectProps) {
     return (
         <Link
-            className="inline-block w-fit group"
+            className="inline-block w-fit group rounded-2xl"
             href={`/3d/abstract-3d-series/${props.abstract3dSeriesImage.nr}`}
             draggable="false"
         >

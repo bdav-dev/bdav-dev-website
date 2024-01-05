@@ -6,17 +6,6 @@ import { codeProjects } from "@/content/codeProjects";
 import Section from "@/components/pageElements/Section";
 import HStack from "@/components/base/stacks/HStack";
 
-function mapCodeProjects() {
-    return Object.values(codeProjects).map((codeProject, index) => {
-        return (
-            <CodeProjectLink
-                codeProject={codeProject}
-                key={index}
-            />
-        );
-    });
-}
-
 export default function Code() {
     return (
         <PageBody
@@ -31,7 +20,11 @@ export default function Code() {
 
             <Section headline="Projects" className="mt-4">
                 <div className="mt-2.5 flex flex-row flex-wrap gap-2.5 justify-center sm:justify-normal">
-                    {mapCodeProjects()}
+                    {
+                        Object.values(codeProjects).map(
+                            (codeProject, index) => <CodeProjectLink codeProject={codeProject} key={index} />
+                        )
+                    }
                 </div>
             </Section>
 

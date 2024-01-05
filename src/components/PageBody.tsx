@@ -22,13 +22,13 @@ export default function PageBody(props: PageBodyProps) {
 
                     {!props.hidePathBar ? <PathBar path={props.sitePath} /> : <></>}
 
-                    <main className="m-4 flex flex-col">
+                    <main className="mx-4 mt-4 flex flex-col">
                         {props.children}
                     </main>
                 </div>
 
                 <Footer />
-
+                
             </div>
 
         </ThemeApplier>

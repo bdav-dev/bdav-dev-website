@@ -10,6 +10,7 @@ import DropdownMenu from "./DropdownMenu";
 import { codeProjects } from "@/content/codeProjects";
 import InstagramIcon from "@/icons/InstagramIcon";
 import GitHubCatIcon from "@/icons/GitHubCatIcon";
+import { recipes } from "@/content/recipes";
 
 export type Categories = "Code" | "3D" | "Recipes" | "About";
 
@@ -22,6 +23,15 @@ function mapCodeProjectsToDropdownItems() {
         return {
             href: codeProject.path,
             text: codeProject.customDropdownText ?? codeProject.title
+        }
+    });
+}
+
+function mapRecipesToDropdownItems() {
+    return Object.values(recipes).map(recipe => {
+        return {
+            href: recipe.path,
+            text: recipe.customDropdownText ?? recipe.title
         }
     });
 }
@@ -98,9 +108,18 @@ export default function Header(props: HeaderProps) {
 
                         <Category
                             icon={<RecipiesIcon className="dark:stroke-white stroke-black stroke-[5] h-fit w-7" />}
-                            text="Recipies"
+                            text="Recipes"
                             link="/recipes"
-                            selected={props.selected == "Recipes"} />
+                            selected={props.selected == "Recipes"}
+                            dropdownMenu={
+                                <DropdownMenu
+                                    dropdownMenuGroups={[
+                                        mapRecipesToDropdownItems()
+                                    ]}
+                                />
+                            }
+
+                        />
 
                         <Category
                             icon={<AboutIcon className="dark:stroke-white stroke-black stroke-[5] h-fit w-7" />}

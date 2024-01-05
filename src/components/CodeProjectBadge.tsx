@@ -31,8 +31,11 @@ export default function CodeProjectBadge(props: CodeProjectBadgeProps) {
                 props.codeProject.customBadgeImage
                     ? <Image
                         src={props.codeProject.customBadgeImage}
-                        alt="TODO"
-                        className={props.animated && props.codeProject.badgeHoverText ? "transition-all duration-300 group-hover:blur-md" : ""}
+                        alt={props.codeProject.repository}
+                        className={`
+                            select-none
+                            ${props.animated && props.codeProject.badgeHoverText ? "transition-all duration-300 group-hover:blur-md" : ""}
+                        `}
                         draggable="false"
                         placeholder="blur" />
                     : (
