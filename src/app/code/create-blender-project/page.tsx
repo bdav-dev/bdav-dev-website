@@ -1,3 +1,4 @@
+import { defaultMetadata } from "@/app/layout";
 import CodeProject from "@/components/CodeProject";
 import Code from "@/components/base/Code";
 import Enumerate from "@/components/base/Enumerate";
@@ -67,7 +68,7 @@ export default function CreateBlenderProject() {
                             className="min-w-[25rem]"
                         >
                             If you want to install <Code>create-blender-project</Code> and make the command accessible anywhere in the terminal, copy the <Code>create-blender-project</Code> file to the following directory: <Code noMono largePadding>/usr/local/bin/</Code>
-                            <br/>
+                            <br />
                             Now you can access it without specifing the location of the file, like this: <Code>$ create-blender-project {"<Optional parameter: Project name>"}</Code>.
                         </Tile>
 
@@ -77,4 +78,10 @@ export default function CreateBlenderProject() {
             </Article>
         </CodeProject>
     );
+}
+
+export const metadata = {
+    title: "bdav.dev – create-blender-project",
+    description: "A command line tool to create a new blender project with common directories.",
+    ...defaultMetadata(["create-blender-project", "create blender project", "createBlenderProject"])
 }

@@ -1,3 +1,4 @@
+import { defaultMetadata } from "@/app/layout";
 import CodeProject from "@/components/CodeProject";
 import Code from "@/components/base/Code";
 import Enumerate from "@/components/base/Enumerate";
@@ -189,4 +190,10 @@ export default function TimeToWork() {
 
         </CodeProject>
     );
+}
+
+export const metadata = {
+    title: "bdav.dev – TimeToWork",
+    description: "Halte mit dem Arbeitszeitdashboard TimeToWork deine Arbeitsstunden im Blick.",
+    ...defaultMetadata(["TimeToWork", "Time to Work", "time-to-work"])    
 }

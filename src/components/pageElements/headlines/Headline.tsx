@@ -1,4 +1,4 @@
-type HeadlineProps = {
+export type HeadlineProps = {
     className?: string,
     children?: React.ReactNode
 }

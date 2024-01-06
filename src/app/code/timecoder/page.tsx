@@ -1,8 +1,9 @@
+import { defaultMetadata } from "@/app/layout";
 import CodeProject from "@/components/CodeProject";
 import CodeProjectOverview from "@/components/CodeProjectOverview";
 import Code from "@/components/base/Code";
 import Enumerate from "@/components/base/Enumerate";
-import ExternalLink from "@/components/base/ExternalLink";
+import HyperLink from "@/components/base/ExternalLink";
 import Tile from "@/components/base/Tile";
 import HStack from "@/components/base/stacks/HStack";
 import Article from "@/components/pageElements/Article";
@@ -37,7 +38,7 @@ export default function Timecoder() {
                 <Section headline="Use Timecoder">
                     <HStack className="mt-2">
                         <Tile title="Website">
-                            You can use Timecoder in the web with this website: <ExternalLink href={codeProjects.timecoder.codeProjectProperies.launchLink!} />
+                            You can use Timecoder in the web with this website: <HyperLink href={codeProjects.timecoder.codeProjectProperies.launchLink!} />
                         </Tile>
 
                         <Tile title="From source code">
@@ -51,7 +52,7 @@ export default function Timecoder() {
                                     "Open a terminal in the project's root directory.",
                                     <>Run <Code>npm install</Code> to install the project's dependencies.</>,
                                     <>Start the developement server by entering the command <Code>npm run dev</Code>.</>,
-                                    <>Open your browser and enter <ExternalLink href="http://localhost:3000/" /> in the address bar.</>
+                                    <>Open your browser and enter <HyperLink href="http://localhost:3000/" /> in the address bar.</>
                                 ]}
                             />
                         </Tile>
@@ -138,4 +139,10 @@ export default function Timecoder() {
 
         </CodeProject>
     );
+}
+
+export const metadata = {
+    title: "bdav.dev – Timecoder",
+    description: "With Timecoder you can document in/out sequences of a video. If you are a video producer, your client can document desired corrections with this web application and send you back a link so you can implement these corrections.",
+    ...defaultMetadata(["Timecoder"])    
 }

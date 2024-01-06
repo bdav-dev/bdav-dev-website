@@ -1,3 +1,4 @@
+import { defaultMetadata } from "@/app/layout";
 import PageBody from "@/components/PageBody";
 import Tile from "@/components/base/Tile";
 import HStack from "@/components/base/stacks/HStack";
@@ -114,4 +115,11 @@ export default function Cheeseburger() {
 
         </PageBody>
     );
+}
+
+
+export const metadata = {
+    title: `bdav.dev – Cheeseburger Recipe`,
+    description: "Cheeseburger recipe from David Berezowski",
+    ...defaultMetadata(["recipe", "Cheeseburger recipe", "Cheeseburger"])
 }

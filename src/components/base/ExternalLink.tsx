@@ -1,16 +1,21 @@
 import Link from "next/link";
 
-type ExternalLinkProps = {
+type HyperLinkProps = {
     href: string
     children?: React.ReactNode
-    noNewTab?: boolean
+    noNewTab?: boolean,
+    className?: string
 };
 
-export default function ExternalLink(props: ExternalLinkProps) {
+export default function HyperLink(props: HyperLinkProps) {
     return (
         <Link
             href={props.href}
-            className="dark:hover:text-sky-400 hover:text-sky-700 hover:underline"
+            className={`
+                dark:hover:text-sky-400 hover:text-sky-700
+                hover:underline
+                ${props.className}
+            `}
             target={props.noNewTab ? "_self" : "_blank"}
             rel="noopener noreferrer"
         >

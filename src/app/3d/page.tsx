@@ -5,6 +5,7 @@ import { abstract3dSeriesImages } from "@/content/abstract3dSeries";
 import Tile from "@/components/base/Tile";
 import InstagramLink from "@/components/links/social/InstagramLink";
 import HStack from "@/components/base/stacks/HStack";
+import { defaultMetadata } from "../layout";
 
 export default function Blender() {
 
@@ -34,4 +35,10 @@ export default function Blender() {
             </Section>
         </PageBody>
     );
+}
+
+export const metadata = {
+    title: "bdav.dev – 3D",
+    description: "Blender 3D projects from David Berezowski",
+    ...defaultMetadata(["Blender projects", "3D projects", "Project", "Blender", "3D"])    
 }

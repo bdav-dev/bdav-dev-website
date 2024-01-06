@@ -2,6 +2,7 @@ import RecipeLink from "@/components/links/RecipeLink";
 import PageBody from "@/components/PageBody";
 import Section from "@/components/pageElements/Section";
 import { recipes } from "@/content/recipes";
+import { defaultMetadata } from "../layout";
 
 export default function Recipes() {
     return (
@@ -21,4 +22,10 @@ export default function Recipes() {
 
         </PageBody>
     );
+}
+
+export const metadata = {
+    title: `bdav.dev – Recipes`,
+    description: "Recipes from David Berezowski",
+    ...defaultMetadata(["Recipes", "Recipe"])
 }

@@ -1,6 +1,7 @@
+import { defaultMetadata } from "@/app/layout";
 import PageBody from "@/components/PageBody";
 import Code from "@/components/base/Code";
-import ExternalLink from "@/components/base/ExternalLink";
+import HyperLink from "@/components/base/ExternalLink";
 import Tile from "@/components/base/Tile";
 import Article from "@/components/pageElements/Article";
 import Section from "@/components/pageElements/Section";
@@ -63,9 +64,9 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                                     </td>
 
                                     <td className="pl-1 text-right">
-                                        <ExternalLink href={image.downloadURL}>
+                                        <HyperLink href={image.downloadURL}>
                                             Download
-                                        </ExternalLink>
+                                        </HyperLink>
                                     </td>
 
                                 </tr>
@@ -155,4 +156,10 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
         </PageBody>
     );
 
+}
+
+export const metadata = {
+    title: `bdav.dev – Abstract3D Series Image`,
+    description: "Abstract3D Series Image from David Berezowski",
+    ...defaultMetadata(["Abstract3D Series", "Abstract3DSeries", "a3ds", "Blender", "3D", "abstract"])    
 }

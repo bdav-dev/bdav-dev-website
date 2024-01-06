@@ -1,11 +1,12 @@
 import { HeadlineProps } from "./Headline";
 
+
 export default function SmallHeadline(props: HeadlineProps) {
 
     return (
-        <h3 className={"text-xl text-zinc-900 dark:text-zinc-50 " + props.className}>
+        <h4 className={"font-semibold " + props.className}>
             {props.children}
-        </h3>
+        </h4>
     );
 
 }

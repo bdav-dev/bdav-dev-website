@@ -1,3 +1,4 @@
+import { defaultMetadata } from "@/app/layout";
 import Abstract3dSeriesLink from "@/components/links/Abstract3dSeriesLink";
 import PageBody from "@/components/PageBody";
 import Section from "@/components/pageElements/Section";
@@ -25,4 +26,10 @@ export default function Abstract3DSeries() {
             </Section>
         </PageBody>
     );
+}
+
+export const metadata = {
+    title: "bdav.dev – Abstract3D Series",
+    description: "Abstract3D Series from David Berezowski",
+    ...defaultMetadata(["Abstract3D Series", "Abstract3DSeries", "a3ds", "Blender", "3D", "abstract"])    
 }

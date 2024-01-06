@@ -5,6 +5,7 @@ import PageBody from "@/components/PageBody";
 import { codeProjects } from "@/content/codeProjects";
 import Section from "@/components/pageElements/Section";
 import HStack from "@/components/base/stacks/HStack";
+import { defaultMetadata } from "../layout";
 
 export default function Code() {
     return (
@@ -30,4 +31,11 @@ export default function Code() {
 
         </PageBody>
     );
+}
+
+
+export const metadata = {
+    title: "bdav.dev – Code",
+    description: "Code projects from David Berezowski",
+    ...defaultMetadata(["Code projects", "Code", "Project"])    
 }
