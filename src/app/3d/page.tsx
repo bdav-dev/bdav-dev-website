@@ -1,11 +1,11 @@
 import Abstract3dSeriesLink from "@/components/links/Abstract3dSeriesLink";
-import PageBody from "@/components/PageBody";
-import Section from "@/components/pageElements/Section";
-import { abstract3dSeriesImages } from "@/content/abstract3dSeries";
-import Tile from "@/components/base/Tile";
 import InstagramLink from "@/components/links/social/InstagramLink";
-import HStack from "@/components/base/stacks/HStack";
+import HStack from "@/components/pageStructure/stacks/HStack";
 import { defaultMetadata } from "../layout";
+import PageBody from "@/components/pageLayout/PageBody";
+import Tile from "@/components/pageElements/Tile";
+import Section from "@/components/pageStructure/Section";
+import { abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
 
 export default function Blender() {
 

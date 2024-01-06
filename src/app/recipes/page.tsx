@@ -1,8 +1,8 @@
 import RecipeLink from "@/components/links/RecipeLink";
-import PageBody from "@/components/PageBody";
-import Section from "@/components/pageElements/Section";
-import { recipes } from "@/content/recipes";
 import { defaultMetadata } from "../layout";
+import PageBody from "@/components/pageLayout/PageBody";
+import Section from "@/components/pageStructure/Section";
+import { recipes } from "@/content/recipes/recipes";
 
 export default function Recipes() {
     return (

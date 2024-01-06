@@ -1,12 +1,12 @@
 import { defaultMetadata } from "@/app/layout";
-import CodeProject from "@/components/CodeProject";
-import Code from "@/components/base/Code";
-import Enumerate from "@/components/base/Enumerate";
-import Tile from "@/components/base/Tile";
-import Article from "@/components/pageElements/Article";
-import Section from "@/components/pageElements/Section";
-import SubSection from "@/components/pageElements/SubSection";
-import { codeProjects } from "@/content/codeProjects";
+import CodeProject from "@/components/categories/code/CodeProject";
+import Code from "@/components/pageElements/Code";
+import Enumerate from "@/components/pageElements/Enumerate";
+import Tile from "@/components/pageElements/Tile";
+import Article from "@/components/pageStructure/Article";
+import Section from "@/components/pageStructure/Section";
+import SubSection from "@/components/pageStructure/SubSection";
+import { codeProjects } from "@/content/code/codeProjects";
 
 
 export default function TimeToWork() {
@@ -17,7 +17,7 @@ export default function TimeToWork() {
                 Since the language of this project is german, the following description will also be in german.
             </Tile>
 
-            <Article pageTitle={codeProjects.timeToWork.title} className="mt-3">
+            <Article headline={codeProjects.timeToWork.title} className="mt-3">
                 Work time dashboard / calculator
 
                 <Section headline="Kurzbeschreibung">
@@ -39,19 +39,19 @@ export default function TimeToWork() {
 
                 <Section headline="Features">
 
-                    <SubSection smallHeadline="Neumorphic Design">
+                    <SubSection headline="Neumorphic Design">
                         <Tile>
                             TimeToWork hat eine schöne und moderne Benutzeroberfläche im Neumorphic-Stil.
                         </Tile>
                     </SubSection>
 
-                    <SubSection smallHeadline="Light- und Dark-Mode">
+                    <SubSection headline="Light- und Dark-Mode">
                         <Tile>
                             Du kannst zwischen Light- und Dark-Mode wechseln, in dem du den Button oben links anklickst.
                         </Tile>
                     </SubSection>
 
-                    <SubSection smallHeadline="Zeiterfassung">
+                    <SubSection headline="Zeiterfassung">
                         <Tile>
                             Du kannst deine Arbeitszeit über 3 Wege erfassen:
                             <Enumerate
@@ -77,7 +77,7 @@ export default function TimeToWork() {
                         </Tile>
                     </SubSection>
 
-                    <SubSection smallHeadline="Arbeitszeitberechungen">
+                    <SubSection headline="Arbeitszeitberechungen">
                         <Tile>
                             Durch die Angabe von
                             <Enumerate
@@ -128,7 +128,7 @@ export default function TimeToWork() {
                         </Tile>
                     </SubSection>
 
-                    <SubSection smallHeadline="Zugberechungen">
+                    <SubSection headline="Zugberechungen">
                         <Tile>
                             Wenn du mit dem Zug zur Arbeit kommst, kannst du bei Angabe von
 
@@ -172,7 +172,7 @@ export default function TimeToWork() {
                         </Tile>
                     </SubSection>
 
-                    <SubSection smallHeadline="Speichern">
+                    <SubSection headline="Speichern">
                         <Tile>
                             Der gesamte Zustand der Applikation wird beim Schließen des Tabs (bei dir lokal via <Code>localStorage</Code>) gesichert.
                             Dieser Zustand wird wiederherstellt, wenn du die Appliaktion wieder öffnest.

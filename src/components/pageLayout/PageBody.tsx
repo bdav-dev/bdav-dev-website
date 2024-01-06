@@ -1,7 +1,7 @@
 import PathBar from "./PathBar";
 import ThemeApplier from "@/components/theme/ThemeApplier";
 import Header, { Categories } from "./header/Header";
-import Footer from "./base/Footer";
+import Footer from "./Footer";
 
 type PageBodyProps = {
     category?: Categories
@@ -20,7 +20,11 @@ export default function PageBody(props: PageBodyProps) {
                 <div className="flex-1">
                     <Header selected={props.category} />
 
-                    {!props.hidePathBar ? <PathBar path={props.sitePath} /> : <></>}
+                    {
+                        !props.hidePathBar
+                            ? <PathBar path={props.sitePath} />
+                            : <></>
+                    }
 
                     <main className="mx-4 mt-4 flex flex-col">
                         {props.children}
@@ -28,7 +32,7 @@ export default function PageBody(props: PageBodyProps) {
                 </div>
 
                 <Footer />
-                
+
             </div>
 
         </ThemeApplier>

@@ -1,6 +1,6 @@
-import { CodeProject } from "@/content/codeProjects";
+import { CodeProject } from "@/content/code/codeProjects";
 import Link from "next/link";
-import CodeProjectBadge from "../CodeProjectBadge";
+import CodeProjectBadge from "../categories/code/CodeProjectBadge";
 
 type CodeProjectProps = {
     codeProject: CodeProject

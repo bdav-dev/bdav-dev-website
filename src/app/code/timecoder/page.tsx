@@ -1,23 +1,21 @@
 import { defaultMetadata } from "@/app/layout";
-import CodeProject from "@/components/CodeProject";
-import CodeProjectOverview from "@/components/CodeProjectOverview";
-import Code from "@/components/base/Code";
-import Enumerate from "@/components/base/Enumerate";
-import HyperLink from "@/components/base/ExternalLink";
-import Tile from "@/components/base/Tile";
-import HStack from "@/components/base/stacks/HStack";
-import Article from "@/components/pageElements/Article";
-import Section from "@/components/pageElements/Section";
-import SubSection from "@/components/pageElements/SubSection";
-import { codeProjects } from "@/content/codeProjects";
-
+import CodeProject from "@/components/categories/code/CodeProject";
+import Code from "@/components/pageElements/Code";
+import Enumerate from "@/components/pageElements/Enumerate";
+import HyperLink from "@/components/pageElements/HyperLink";
+import Tile from "@/components/pageElements/Tile";
+import Article from "@/components/pageStructure/Article";
+import Section from "@/components/pageStructure/Section";
+import SubSection from "@/components/pageStructure/SubSection";
+import HStack from "@/components/pageStructure/stacks/HStack";
+import { codeProjects } from "@/content/code/codeProjects";
 
 export default function Timecoder() {
     return (
         <CodeProject
             codeProject={codeProjects.timecoder}
         >
-            <Article pageTitle={codeProjects.timecoder.title}>
+            <Article headline={codeProjects.timecoder.title}>
 
                 <Section headline="Short description">
                     <Tile className="leading-7 mt-2">
@@ -61,14 +59,14 @@ export default function Timecoder() {
 
 
                 <Section headline="Features">
-                    <SubSection smallHeadline="Project settings">
+                    <SubSection headline="Project settings">
                         <Tile>
                             You can set a project name and a framerate
                             (currently 24, 25, 30, 50 and 60 fps are supported).
                         </Tile>
                     </SubSection>
 
-                    <SubSection smallHeadline="In/Out sequences">
+                    <SubSection headline="In/Out sequences">
                         <Tile>
                             A in/out sequence consists of an in and out timecode,
                             a difference timecode and a comment field. The in-timecode specifies the
@@ -89,11 +87,11 @@ export default function Timecoder() {
                         </Tile>
                     </SubSection>
 
-                    <SubSection smallHeadline="Total">
+                    <SubSection headline="Total">
                         <Tile>Timecoder calculates the sum of the differences and displays it at the bottom left corner.</Tile>
                     </SubSection>
 
-                    <SubSection smallHeadline="Share and export">
+                    <SubSection headline="Share and export">
                         <Tile>
                             You can share and export the complete state of the application via 2 ways:
 
@@ -103,7 +101,8 @@ export default function Timecoder() {
                                 items={[
                                     {
                                         title: "Via .csv table",
-                                        text: "The .csv table export option is perfect if you want to save your work locally or want to print it out."
+                                        text: <>The .csv table export option is perfect if you want to
+                                            save your work locally or want to print it out.</>
                                     },
                                     {
                                         title: "Via link",
@@ -116,7 +115,7 @@ export default function Timecoder() {
                         </Tile>
                     </SubSection>
 
-                    <SubSection smallHeadline="Local storage">
+                    <SubSection headline="Local storage">
                         <Tile>
                             The entire state of the application is saved in your local storage.
                             This means, if you close your browser and reopen it, all of your work is still there.
@@ -144,5 +143,5 @@ export default function Timecoder() {
 export const metadata = {
     title: "bdav.dev – Timecoder",
     description: "With Timecoder you can document in/out sequences of a video. If you are a video producer, your client can document desired corrections with this web application and send you back a link so you can implement these corrections.",
-    ...defaultMetadata(["Timecoder"])    
+    ...defaultMetadata(["Timecoder"])
 }

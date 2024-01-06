@@ -35,14 +35,13 @@ export default function Enumerate(props: EnumerateProps) {
     return (
         <ol className={"w-full " + props.className}>
             {
-                props.items.map((listItem, index) => {
-                    return (
-                        <li
+                props.items.map(
+                    (listItem, index) => (
+                        <li key={index}
                             className={
                                 "flex flex-row flex-nowrap " +
                                 (props.seperateItems && index < props.items.length - 1 ? "mb-1" : "")
                             }
-                            key={index}
                         >
                             <div className={props.symbolWidthClassName ?? "w-5"}>
                                 {props.symbol ?? `${index + 1}.`}
@@ -52,8 +51,8 @@ export default function Enumerate(props: EnumerateProps) {
                                 {itemToJsx(listItem)}
                             </div>
                         </li>
-                    );
-                })
+                    )
+                )
             }
         </ol>
     );

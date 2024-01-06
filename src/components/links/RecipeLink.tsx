@@ -1,5 +1,5 @@
-import { Recipe } from "@/content/recipes";
-import Image, { StaticImageData } from "next/image";
+import { Recipe } from "@/content/recipes/recipes";
+import Image from "next/image";
 import Link from "next/link";
 
 type RecipeLinkProps = {
@@ -31,7 +31,7 @@ export default function RecipeLink(props: RecipeLinkProps) {
 
                 <Image
                     src={props.recipe.image}
-                    alt="TODO"
+                    alt={props.recipe.title}
                     className="transition-all duration-300 group-hover:blur-md p-3.5"
                     draggable="false"
                     placeholder="blur"

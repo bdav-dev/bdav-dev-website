@@ -1,6 +1,5 @@
 import { HeadlineProps } from "./Headline";
 
-
 export default function SmallHeadline(props: HeadlineProps) {
 
     return (

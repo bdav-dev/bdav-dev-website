@@ -14,13 +14,22 @@ export default function DarkModeToggle(props: DarkModeToggleProps) {
 
     return (
         <button
-            className={"p-1.5 ml-0.5 mr-0.5 rounded-lg transition-colors duration-200 flex row items-center bg-opacity-80 dark:bg-opacity-80 " + (props.selected ? "bg-zinc-400 dark:bg-zinc-950 " : "hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90")}
+            className={`
+                flex flex-row items-center
+                p-1.5 mx-0.5
+                rounded-lg 
+                transition-colors duration-200
+                bg-opacity-80 dark:bg-opacity-80
+                ${props.selected
+                    ? "bg-zinc-400 dark:bg-zinc-950"
+                    : "hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90"}
+            `}
             onClick={() => setDarkTheme(curr => !curr)}
         >
             {
-                darkTheme ?
-                    (<DarkModeIcon className="dark:stroke-white stroke-black stroke-[5] h-6 w-6" />) :
-                    (<LightModeIcon className="dark:stroke-white stroke-black stroke-[5] h-6 w-6" />)
+                darkTheme
+                    ? <DarkModeIcon className="dark:stroke-white stroke-black stroke-[5] h-6 w-6" />
+                    : <LightModeIcon className="dark:stroke-white stroke-black stroke-[5] h-6 w-6" />
             }
         </button>
     );

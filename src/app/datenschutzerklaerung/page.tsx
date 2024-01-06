@@ -1,12 +1,11 @@
-import PageBody from "@/components/PageBody";
-import Enumerate from "@/components/base/Enumerate";
-import HyperLink from "@/components/base/ExternalLink";
-import Spacer from "@/components/base/Spacer";
-import Article from "@/components/pageElements/Article";
-import Section from "@/components/pageElements/Section";
-import SubSection from "@/components/pageElements/SubSection";
-import SubSubSection from "@/components/pageElements/SubSubSection";
-
+import Enumerate from "@/components/pageElements/Enumerate";
+import HyperLink from "@/components/pageElements/HyperLink";
+import Spacer from "@/components/pageElements/Spacer";
+import PageBody from "@/components/pageLayout/PageBody";
+import Article from "@/components/pageStructure/Article";
+import Section from "@/components/pageStructure/Section";
+import SubSection from "@/components/pageStructure/SubSection";
+import SubSubSection from "@/components/pageStructure/SubSubSection";
 
 export default function Datenschutzerklaerung() {
 
@@ -14,18 +13,18 @@ export default function Datenschutzerklaerung() {
         <PageBody
             sitePath="/datenschutzerklaerung/"
         >
-            <Article pageTitle="Datenschutzerklärung">
+            <Article headline="Datenschutzerklärung">
 
                 <Section headline="1. Datenschutz auf einen Blick">
 
-                    <SubSection smallHeadline="Allgemeine Hinweise">
+                    <SubSection headline="Allgemeine Hinweise">
                         Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert,
                         wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert
                         werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten
                         Datenschutzerklärung.
                     </SubSection>
 
-                    <SubSection smallHeadline="Datenerfassung auf dieser Website">
+                    <SubSection headline="Datenerfassung auf dieser Website">
 
                         <SubSubSection headline="Wer ist verantwortlich für die Datenerfassung auf dieser Website?">
                             Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.
@@ -61,7 +60,7 @@ export default function Datenschutzerklaerung() {
 
                     </SubSection>
 
-                    <SubSection smallHeadline={"Analyse-Tools und Tools von Drittanbietern"}>
+                    <SubSection headline={"Analyse-Tools und Tools von Drittanbietern"}>
                         Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden.
                         Das geschieht vor allem mit sogenannten Analyseprogrammen.
                         Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden Datenschutzerklärung.
@@ -72,7 +71,7 @@ export default function Datenschutzerklaerung() {
                 <Section headline="2. Hosting">
                     Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
 
-                    <SubSection smallHeadline="Externes Hosting">
+                    <SubSection headline="Externes Hosting">
                         Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden,
                         werden auf den Servern des Hosters / der Hoster gespeichert.
                         Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten,
@@ -100,7 +99,7 @@ export default function Datenschutzerklaerung() {
                 </Section>
 
                 <Section headline="3. Allgemeine Hinweise und Pflichtinformationen">
-                    <SubSection smallHeadline={"Datenschutz"}>
+                    <SubSection headline={"Datenschutz"}>
                         Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst.
                         Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen
                         Datenschutzvorschriften sowie dieser Datenschutzerklärung.
@@ -114,7 +113,7 @@ export default function Datenschutzerklaerung() {
                         Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
                     </SubSection>
 
-                    <SubSection smallHeadline="Hinweis zur verantwortlichen Stelle">
+                    <SubSection headline="Hinweis zur verantwortlichen Stelle">
                         Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
                         <Spacer />
                         David Berezowski<br />
@@ -129,7 +128,7 @@ export default function Datenschutzerklaerung() {
                         (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
                     </SubSection>
 
-                    <SubSection smallHeadline="Speicherdauer">
+                    <SubSection headline="Speicherdauer">
                         Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde,
                         verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt.
                         Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen,
@@ -138,7 +137,7 @@ export default function Datenschutzerklaerung() {
                         im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.
                     </SubSection>
 
-                    <SubSection smallHeadline="Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website">
+                    <SubSection headline="Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website">
                         Sofern Sie in die Datenverarbeitung eingewilligt haben,
                         verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO,
                         sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden.
@@ -156,7 +155,7 @@ export default function Datenschutzerklaerung() {
                         Datenschutzerklärung informiert.
                     </SubSection>
 
-                    <SubSection smallHeadline="Empfänger von personenbezogenen Daten">
+                    <SubSection headline="Empfänger von personenbezogenen Daten">
                         Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen zusammen.
                         Dabei ist teilweise auch eine Übermittlung von personenbezogenen Daten an diese externen Stellen erforderlich.
                         Wir geben personenbezogene Daten nur dann an externe Stellen weiter,
@@ -168,13 +167,13 @@ export default function Datenschutzerklaerung() {
                         gemeinsame Verarbeitung geschlossen.
                     </SubSection>
 
-                    <SubSection smallHeadline="Widerruf Ihrer Einwilligung zur Datenverarbeitung">
+                    <SubSection headline="Widerruf Ihrer Einwilligung zur Datenverarbeitung">
                         Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich.
                         Sie können eine bereits erteilte Einwilligung jederzeit widerrufen.
                         Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
                     </SubSection>
 
-                    <SubSection smallHeadline="Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)">
+                    <SubSection headline="Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)">
                         WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT,
                         HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN,
                         GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN;
@@ -192,28 +191,28 @@ export default function Datenschutzerklaerung() {
                         VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
                     </SubSection>
 
-                    <SubSection smallHeadline="Beschwerderecht bei der zuständigen Aufsichtsbehörde">
+                    <SubSection headline="Beschwerderecht bei der zuständigen Aufsichtsbehörde">
                         Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde,
                         insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts,
                         ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu.
                         Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
                     </SubSection>
 
-                    <SubSection smallHeadline="Recht auf Datenübertragbarkeit">
+                    <SubSection headline="Recht auf Datenübertragbarkeit">
                         Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert
                         verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen.
                         Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur,
                         soweit es technisch machbar ist.
                     </SubSection>
 
-                    <SubSection smallHeadline="Auskunft, Berichtigung und Löschung">
+                    <SubSection headline="Auskunft, Berichtigung und Löschung">
                         Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über
                         Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf.
                         ein Recht auf Berichtigung oder Löschung dieser Daten.
                         Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.
                     </SubSection>
 
-                    <SubSection smallHeadline="Recht auf Einschränkung der Verarbeitung">
+                    <SubSection headline="Recht auf Einschränkung der Verarbeitung">
                         Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
                         Hierzu können Sie sich jederzeit an uns wenden.
                         Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen:
@@ -244,7 +243,7 @@ export default function Datenschutzerklaerung() {
                         oder eines Mitgliedstaats verarbeitet werden.
                     </SubSection>
 
-                    <SubSection smallHeadline="SSL- bzw. TLS-Verschlüsselung">
+                    <SubSection headline="SSL- bzw. TLS-Verschlüsselung">
                         Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte,
                         wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden,
                         eine SSL- bzw. TLS- Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran,
@@ -258,7 +257,7 @@ export default function Datenschutzerklaerung() {
 
                 <Section headline="4. Datenerfassung auf dieser Website">
                     
-                    <SubSection smallHeadline="Cookies">
+                    <SubSection headline="Cookies">
                         Unsere Internetseiten verwenden so genannte „Cookies“.
                         Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an.
                         Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies)
@@ -298,7 +297,7 @@ export default function Datenschutzerklaerung() {
 
                 <Section headline="5. Plugins und Tools">
                     
-                    <SubSection smallHeadline="Google Fonts">
+                    <SubSection headline="Google Fonts">
                         Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts,
                         die von Google bereitgestellt werden. Beim Aufruf einer Seite lädt Ihr Browser
                         die benötigten Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.

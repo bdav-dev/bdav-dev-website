@@ -1,9 +1,7 @@
-import PageBody from "@/components/PageBody";
-import HyperLink from "@/components/base/ExternalLink";
-import Article from "@/components/pageElements/Article";
-import Section from "@/components/pageElements/Section";
-
-
+import HyperLink from "@/components/pageElements/HyperLink";
+import PageBody from "@/components/pageLayout/PageBody";
+import Article from "@/components/pageStructure/Article";
+import Section from "@/components/pageStructure/Section";
 
 export default function Impressum() {
     return (
@@ -11,7 +9,7 @@ export default function Impressum() {
             sitePath="/impressum/"
         >
 
-            <Article pageTitle="Impressum">
+            <Article headline="Impressum">
 
                 <Section headline="Angaben gemäß § 5 TMG">
                     David Berezowski <br/>

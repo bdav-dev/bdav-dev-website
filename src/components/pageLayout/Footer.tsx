@@ -1,4 +1,4 @@
-import HyperLink from "./ExternalLink";
+import HyperLink from "../pageElements/HyperLink";
 
 export default function Footer() {
     return (

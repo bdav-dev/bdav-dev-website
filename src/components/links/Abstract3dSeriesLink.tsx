@@ -1,4 +1,4 @@
-import { Abstract3dSeriesImage } from "@/content/abstract3dSeries";
+import { Abstract3dSeriesImage } from "@/content/3d/abstract3dSeries";
 import Image from "next/image";
 import Link from "next/link";
 

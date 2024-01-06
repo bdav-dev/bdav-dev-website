@@ -1,29 +1,29 @@
 import { defaultMetadata } from "@/app/layout";
-import CodeProject from "@/components/CodeProject";
-import Code from "@/components/base/Code";
-import Enumerate from "@/components/base/Enumerate";
-import Tile from "@/components/base/Tile";
-import HStack from "@/components/base/stacks/HStack";
-import Article from "@/components/pageElements/Article";
-import Section from "@/components/pageElements/Section";
-import { codeProjects } from "@/content/codeProjects";
+import CodeProject from "@/components/categories/code/CodeProject";
+import Tile from "@/components/pageElements/Tile";
+import Article from "@/components/pageStructure/Article";
+import Section from "@/components/pageStructure/Section";
+import { codeProjects } from "@/content/code/codeProjects";
 import { spaceMono } from "@/fonts";
-
-
+import Enumerate from "@/components/pageElements/Enumerate";
+import Code from "@/components/pageElements/Code";
+import HStack from "@/components/pageStructure/stacks/HStack";
 
 export default function CreateBlenderProject() {
     return (
         <CodeProject
             codeProject={codeProjects.createBlenderProject}
         >
-            <Article pageTitle={codeProjects.createBlenderProject.title}>
+            <Article headline={codeProjects.createBlenderProject.title}>
                 A command line tool to create a new blender project with common directories.
 
                 <Section headline="Description">
                     <Tile className="leading-7 mt-2">
 
                         <Code>create-blender-project</Code> is a tool accessible via the command line / terminal.
+                        
                         <br />
+                        
                         It creates a new blender project with the following directories:
                         <Enumerate
                             className="ml-3"
@@ -35,6 +35,7 @@ export default function CreateBlenderProject() {
                                 <Code noMono largePadding>results</Code>,
                             ]}
                         />
+
                         The directory <Code noMono largePadding>blend-files</Code> will contain a blank blender file with the name of the project: <Code noMono largePadding>{"<projectName>.blend"}</Code>. The tool also sets the directoy render-output as the default render output directory of the newly created blender file.
                     </Tile>
                 </Section>
@@ -74,7 +75,7 @@ export default function CreateBlenderProject() {
 
                     </HStack>
                 </Section>
-
+                
             </Article>
         </CodeProject>
     );

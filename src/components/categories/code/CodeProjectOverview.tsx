@@ -1,11 +1,10 @@
-import { CodeProject } from "@/content/codeProjects";
-import HStack from "./base/stacks/HStack";
+import { CodeProject } from "@/content/code/codeProjects";
 import CodeProjectBadge from "./CodeProjectBadge";
-import Headline from "./pageElements/headlines/Headline";
-import Code from "./base/Code";
-import Tile from "./base/Tile";
 import Link from "next/link";
-import GitHubRepoLink from "./links/social/GitHubRepoLink";
+import Tile from "@/components/pageElements/Tile";
+import Headline from "@/components/pageStructure/headlines/Headline";
+import GitHubRepoLink from "@/components/links/social/GitHubRepoLink";
+import Code from "@/components/pageElements/Code";
 
 type CodeProjectOverviewProps = {
     codeProject: CodeProject
@@ -20,7 +19,6 @@ export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
                 <CodeProjectBadge codeProject={props.codeProject} />
 
                 <div>
-
                     <Headline>
                         <div className="flex flex-row justify-between h-9">
                             <div className="mt-auto">
@@ -34,11 +32,18 @@ export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
                                     props.codeProject.codeProjectProperies.launchLink
                                         ? <Link
                                             href={props.codeProject.codeProjectProperies.launchLink}
-                                            className="hover:scale-105 transition-transform text-white bg-blue-500 px-1.5 rounded-lg text-lg mb-1 flex items-center"
+                                            className={`
+                                                text-lg text-white
+                                                bg-blue-500
+                                                transition-transform hover:scale-105
+                                                px-1.5 mb-1
+                                                flex items-center
+                                                rounded-lg
+                                            `}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >Launch</Link>
-                                        : null
+                                        : <></>
                                 }
                             </div>
                         </div>
@@ -49,7 +54,9 @@ export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
 
                             <tr>
                                 <td className="px-1">Project Language</td>
-                                <td className="px-1"><Code noMono largePadding>{props.codeProject.codeProjectProperies.projectLanguage}</Code></td>
+                                <td className="px-1">
+                                    <Code noMono largePadding>{props.codeProject.codeProjectProperies.projectLanguage}</Code>
+                                </td>
                             </tr>
 
                             <tr className="border-t border-zinc-300 dark:border-zinc-800">
@@ -68,29 +75,23 @@ export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
                                     <div className="flex flex-row mt-0.5 gap-0.5">
                                         {
                                             props.codeProject.codeProjectProperies.programmingLanguages.map(
-                                                (lang, index) => {
-                                                    return (
-                                                        <Code noMono
-                                                            customColor={lang.className}
-                                                            key={index}
-                                                        >
-                                                            {lang.name}
-                                                        </Code>
-                                                    )
-                                                }
+                                                (lang, index) => (
+                                                    <Code noMono
+                                                        customColor={lang.className}
+                                                        key={index}
+                                                    >
+                                                        {lang.name}
+                                                    </Code>
+                                                )
                                             )
                                         }
                                     </div>
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
-
                 </div>
-
             </div>
-
         </Tile>
     );
 }

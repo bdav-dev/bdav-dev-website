@@ -1,8 +1,8 @@
 'use client';
 
-import { Ingredient, Recipe, ingredientAsString } from "@/content/recipes"
+import Code from "@/components/pageElements/Code";
+import { Ingredient, Recipe, ingredientAsString } from "@/content/recipes/recipes";
 import Image from "next/image";
-import Code from "../base/Code";
 import { useState } from "react";
 
 type IngredientListProps = {

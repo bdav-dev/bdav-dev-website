@@ -1,6 +1,6 @@
 'use client';
 
-import PageBody from "@/components/PageBody";
+import PageBody from "@/components/pageLayout/PageBody";
 
 export default function Home() {
     return (

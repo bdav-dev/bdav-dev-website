@@ -23,18 +23,15 @@ export default function useLocalStorage<T>(key: string, fallback: T) {
         setFirstLoadDone(true);
     }, [fallback, key]);
 
-
     useEffect(() => {
         if (!firstLoadDone)
             return;
 
-
         try {
-            if (typeof window !== "undefined")
+            if (typeof window !== "undefined") {
                 window.localStorage.setItem(key, JSON.stringify(storedValue));
-
-        } catch (error) {
-        }
+            }
+        } catch (error) { }
     }, [storedValue, firstLoadDone, key]);
 
     return { storedValue, setStoredValue };

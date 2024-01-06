@@ -1,24 +1,21 @@
 import { defaultMetadata } from "@/app/layout";
-import PageBody from "@/components/PageBody";
-import Tile from "@/components/base/Tile";
-import HStack from "@/components/base/stacks/HStack";
-import VStack from "@/components/base/stacks/VStack";
-import Section from "@/components/pageElements/Section";
-import SubSection from "@/components/pageElements/SubSection";
-import PageTitle from "@/components/pageElements/headlines/PageTitle";
-import IngredientList from "@/components/recipes/IngredientList";
-import { recipes } from "@/content/recipes";
+import HStack from "@/components/pageStructure/stacks/HStack";
+import VStack from "@/components/pageStructure/stacks/VStack";
+import PageTitle from "@/components/pageStructure/headlines/PageTitle";;
 import Image from "next/image";
+import { recipes } from "@/content/recipes/recipes";
+import Recipe from "@/components/categories/recipes/Recipe";
+import IngredientList from "@/components/categories/recipes/IngredientList";
+import Section from "@/components/pageStructure/Section";
+import Tile from "@/components/pageElements/Tile";
 
 
 export default function Cheeseburger() {
     const recipe = recipes.cheeseburger;
 
     return (
-        <PageBody
-            sitePath="/recipes/cheeseburger/"
-            category="Recipes"
-        >
+        <Recipe recipe={recipes.cheeseburger}>
+
             <div className="flex flex-col lg:flex-row gap-5 mb-8 lg:mb-20">
 
                 <Image
@@ -113,7 +110,7 @@ export default function Cheeseburger() {
 
             </Section>
 
-        </PageBody>
+        </Recipe>
     );
 }
 

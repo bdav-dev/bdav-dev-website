@@ -1,11 +1,11 @@
 import CodeProjectLink from "@/components/links/CodeProjectLink";
 import GitHubLink from "@/components/links/social/GitHubLink";
-import Tile from "@/components/base/Tile";
-import PageBody from "@/components/PageBody";
-import { codeProjects } from "@/content/codeProjects";
-import Section from "@/components/pageElements/Section";
-import HStack from "@/components/base/stacks/HStack";
+import HStack from "@/components/pageStructure/stacks/HStack";
 import { defaultMetadata } from "../layout";
+import PageBody from "@/components/pageLayout/PageBody";
+import Tile from "@/components/pageElements/Tile";
+import Section from "@/components/pageStructure/Section";
+import { codeProjects } from "@/content/code/codeProjects";
 
 export default function Code() {
     return (

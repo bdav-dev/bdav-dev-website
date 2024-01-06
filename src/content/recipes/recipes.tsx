@@ -1,14 +1,8 @@
 import { StaticImageData } from "next/image"
-import cheeseburger from '@/../public/recipes/cheeseburger/burger-q85.webp'
-import buns from '@/../public/recipes/cheeseburger/ingredients/buns-q85.webp'
-import cheese from '@/../public/recipes/cheeseburger/ingredients/cheese-q85.webp'
-import ketchup from '@/../public/recipes/cheeseburger/ingredients/ketchup-q75.webp'
-import mincedMeat from '@/../public/recipes/cheeseburger/ingredients/minced-meat-q50.webp'
-import onion from '@/../public/recipes/cheeseburger/ingredients/onion-q75.webp'
-import salad from '@/../public/recipes/cheeseburger/ingredients/salad-q75.webp'
+import cheeseburgerImages from "./images/cheeseburgerImages";
 
 export type Recipe = {
-    title: string | React.ReactNode,
+    title: string,
     path: string,
 
     badgeHoverText?: string | React.ReactNode,
@@ -43,46 +37,46 @@ export const recipes: Recipes = {
         title: "Cheeseburger",
         path: "/recipes/cheeseburger/",
         badgeHoverText: <span className="text-white">Cheeseburger</span>,
-        image: cheeseburger,
+        image: cheeseburgerImages.cheeseburger,
         ingredients: [
             {
                 name: "Burger Buns",
                 unit: "Piece",
                 amount: 1,
-                image: buns
+                image: cheeseburgerImages.buns
             },
             {
                 name: "Ketchup",
                 amount: "some",
                 unit: "None",
-                image: ketchup
+                image: cheeseburgerImages.ketchup
             },
             {
                 name: "Onion",
                 pluralName: "Onions",
                 amount: 0.5,
                 unit: "Piece",
-                image: onion
+                image: cheeseburgerImages.onion
             },
             {
                 name: "Lettuce Leaf",
                 pluralName: "Lettuce Leaves",
                 amount: 2,
                 unit: "Piece",
-                image: salad
+                image: cheeseburgerImages.lettuce
             },
             {
                 name: "Cheese Slice",
                 pluralName: "Cheese Slices",
                 amount: 2,
                 unit: "Piece",
-                image: cheese
+                image: cheeseburgerImages.cheese
             },
             {
                 name: "Minced Meat",
                 amount: 100,
                 unit: "Gram",
-                image: mincedMeat
+                image: cheeseburgerImages.mincedMeat
             }
         ]
     }

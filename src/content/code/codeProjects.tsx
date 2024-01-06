@@ -1,7 +1,6 @@
+import timecoderBadge from '@/../public/code/timecoder/timecoder-badge.webp';
+import { spaceMono } from "@/fonts";
 import { StaticImageData } from "next/image";
-
-import timecoderBadge from '@/../public/dev/timecoder-badge.webp';
-import { inter, spaceMono, spaceMonoBold } from "@/fonts";
 
 export type CodeProject = {
     title: string | React.ReactNode,

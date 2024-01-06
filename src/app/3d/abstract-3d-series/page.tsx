@@ -1,16 +1,14 @@
 import { defaultMetadata } from "@/app/layout";
 import Abstract3dSeriesLink from "@/components/links/Abstract3dSeriesLink";
-import PageBody from "@/components/PageBody";
-import Section from "@/components/pageElements/Section";
-import { abstract3dSeriesImages } from "@/content/abstract3dSeries";
+import Abstract3DSeriesLayout from '@/components/categories/3d/Abstract3DSeries';
+import Section from "@/components/pageStructure/Section";
+import { abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
 
 export default function Abstract3DSeries() {
 
     return (
-        <PageBody
-            category="3D"
-            sitePath="/3d/abstract-3d-series/"
-        >
+        <Abstract3DSeriesLayout>
+            
             <Section headline="Abstract3D Series">
 
                 <div className="mt-4 flex flex-row flex-wrap gap-5 justify-center sm:justify-normal">
@@ -24,12 +22,13 @@ export default function Abstract3DSeries() {
                 </div>
 
             </Section>
-        </PageBody>
+
+        </Abstract3DSeriesLayout>
     );
 }
 
 export const metadata = {
     title: "bdav.dev – Abstract3D Series",
     description: "Abstract3D Series from David Berezowski",
-    ...defaultMetadata(["Abstract3D Series", "Abstract3DSeries", "a3ds", "Blender", "3D", "abstract"])    
+    ...defaultMetadata(["Abstract3D Series", "Abstract3DSeries", "a3ds", "Blender", "3D", "abstract"])
 }

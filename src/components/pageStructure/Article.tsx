@@ -1,7 +1,7 @@
 import PageTitle from "./headlines/PageTitle";
 
 type ArticleProps = {
-    pageTitle: string | React.ReactNode,
+    headline: string | React.ReactNode,
     children?: React.ReactNode,
     className?: string
 };
@@ -9,7 +9,7 @@ type ArticleProps = {
 export default function MainPageContent(props: ArticleProps) {
     return (
         <article className={props.className}>
-            <PageTitle className="mb-1.5">{props.pageTitle}</PageTitle>
+            <PageTitle className="mb-1.5">{props.headline}</PageTitle>
             {props.children}
         </article>
     );

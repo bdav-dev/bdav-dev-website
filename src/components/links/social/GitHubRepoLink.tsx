@@ -1,5 +1,6 @@
-import GitHubCatIcon from "@/icons/GitHubCatIcon";
+import GitHubIcon from "@/icons/GitHubIcon";
 import Link from "next/link";
+
 type GitHubRepoLinkProps = {
     repository: string,
     className?: string
@@ -24,7 +25,7 @@ export default function GitHubRepoLink(props: GitHubRepoLinkProps) {
             `}
             draggable="false"
         >
-            <GitHubCatIcon className="fill-white" />
+            <GitHubIcon className="fill-white" />
         </Link>
     );
 

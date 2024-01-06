@@ -1,6 +1,6 @@
-import { CodeProject } from "@/content/codeProjects"
-import PageBody from "./PageBody";
+import PageBody from "@/components/pageLayout/PageBody";
 import CodeProjectOverview from "./CodeProjectOverview";
+import { CodeProject } from "@/content/code/codeProjects";
 
 type CodeProjectProps = {
     codeProject: CodeProject
@@ -13,7 +13,7 @@ export default function CodeProject(props: CodeProjectProps) {
             category="Code"
             sitePath={props.codeProject.path}
         >
-            <CodeProjectOverview codeProject={props.codeProject}/>
+            <CodeProjectOverview codeProject={props.codeProject} />
             {props.children}
         </PageBody>
     );

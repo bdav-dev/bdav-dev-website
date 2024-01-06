@@ -1,4 +1,4 @@
-import { CodeProject } from "@/content/codeProjects";
+import { CodeProject } from "@/content/code/codeProjects";
 import { spaceMono } from "@/fonts";
 import Image from "next/image";
 
@@ -21,10 +21,17 @@ export default function CodeProjectBadge(props: CodeProjectBadgeProps) {
 
             {
                 props.animated && props.codeProject.badgeHoverText
-                    ? <div className="select-none text-2xl text-center absolute transition-all z-10 -translate-y-24 ease-out duration-300 group-hover:translate-y-0 left-0 right-0 ml-auto mr-auto w-fit">
+                    ? <div className={`
+                        mx-auto w-fit left-0 right-0 z-10
+                        text-2xl text-center
+                        absolute
+                        transition-all ease-out duration-300
+                        -translate-y-24 group-hover:translate-y-0
+                        select-none
+                    `}>
                         {props.codeProject.badgeHoverText}
                     </div>
-                    : null
+                    : <></>
             }
 
             {
@@ -50,10 +57,11 @@ export default function CodeProjectBadge(props: CodeProjectBadgeProps) {
                             </div>
                             : <div
                                 className={`
-                                    transition-all duration-300 select-none
+                                    transition-all duration-300
                                     ${props.animated ? "group-hover:scale-105" : ""}
-                                    ${spaceMono}
-                                    ml-auto mr-auto text-lg
+                                    text-lg ${spaceMono}
+                                    mx-auto
+                                    select-none
                                 `}
                             >
                                 {props.codeProject.customBadgeText ?? props.codeProject.title}
