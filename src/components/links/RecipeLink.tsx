@@ -8,7 +8,7 @@ type RecipeLinkProps = {
 
 export default function RecipeLink(props: RecipeLinkProps) {
     return (
-        <Link className="inline-block w-fit rounded-full" href={props.recipe.path} draggable="false">
+        <Link className="inline-block w-fit rounded-full drop-shadow-sm" href={props.recipe.path} draggable="false">
 
             <div className={`
                 border dark:border-zinc-800 border-zinc-400

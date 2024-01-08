@@ -2,7 +2,8 @@ type TileProps = {
     title?: string,
     className?: string,
     children?: React.ReactNode,
-    customPadding?: boolean
+    customPadding?: boolean,
+    childrenClassName?: string
 }
 
 export default function Tile(props: TileProps) {
@@ -13,6 +14,7 @@ export default function Tile(props: TileProps) {
                 bg-zinc-100 dark:bg-zinc-900
                 border border-zinc-200 dark:border-zinc-800
                 rounded-xl
+                drop-shadow-sm
                 ${props.customPadding ? "" : "p-2.5"}
                 ${props.className ?? ""}
             `}
@@ -25,7 +27,9 @@ export default function Tile(props: TileProps) {
                 )
             }
 
-            {props.children}
+            <div className={props.childrenClassName}>
+                {props.children}
+            </div>
         </div>
     );
 

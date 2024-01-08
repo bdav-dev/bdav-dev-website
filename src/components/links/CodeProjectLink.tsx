@@ -9,7 +9,7 @@ type CodeProjectProps = {
 export default function CodeProjectLink(props: CodeProjectProps) {
 
     return (
-        <Link className="inline-block w-fit rounded-2xl" href={props.codeProject.path} draggable="false">
+        <Link className="inline-block w-fit rounded-2xl drop-shadow-sm" href={props.codeProject.path} draggable="false">
             <CodeProjectBadge codeProject={props.codeProject} animated/>
         </Link>
     );

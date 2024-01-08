@@ -18,6 +18,7 @@ export default function PageBody(props: PageBodyProps) {
             <div className="flex flex-col min-h-screen">
 
                 <div className="flex-1">
+
                     <Header selected={props.category} />
 
                     {
@@ -32,7 +33,6 @@ export default function PageBody(props: PageBodyProps) {
                 </div>
 
                 <Footer />
-
             </div>
 
         </ThemeApplier>

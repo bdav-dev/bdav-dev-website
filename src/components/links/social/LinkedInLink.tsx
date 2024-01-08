@@ -1,7 +1,7 @@
 import LinkedInIcon from "@/icons/LinkedInIcon";
 import SocialLink from "./SocialLink";
 
-export default function GitHubLink() {
+export default function LinkedInLink() {
 
     return (
         <SocialLink href={""}>

@@ -1,6 +1,7 @@
 'use client';
 
 import Code from "@/components/pageElements/Code";
+import Tile from "@/components/pageElements/Tile";
 import { Ingredient, Recipe, ingredientAsString } from "@/content/recipes/recipes";
 import Image from "next/image";
 import { useState } from "react";
@@ -44,14 +45,18 @@ export default function IngredientList(props: IngredientListProps) {
         });
     }
 
+        // <div className={`
+        //     flex flex-col justify-center
+        //     h-full mt-1
+        //     bg-zinc-100 dark:bg-zinc-900
+        //     border border-zinc-300 dark:border-zinc-800
+        //     rounded-2xl  
+        // `}>
+
     return (
-        <div className={`
-            flex flex-col justify-center
-            h-full mt-1
-            bg-zinc-100 dark:bg-zinc-900
-            border border-zinc-300 dark:border-zinc-800
-            rounded-2xl  
-        `}>
+        
+        <Tile className="h-full mt-1 flex flex-col justify-center">
+
 
             <div className="h-16 flex flex-row justify-center items-center m-3 mt-5">
 
@@ -66,6 +71,7 @@ export default function IngredientList(props: IngredientListProps) {
                         flex items-center justify-center
                         border
                         border-zinc-400 dark:border-zinc-800
+                        drop-shadow-sm
                     `}
                 >
                     {numberOfPortions}
@@ -82,6 +88,7 @@ export default function IngredientList(props: IngredientListProps) {
                             hover:bg-zinc-300 hover:dark:bg-zinc-900
                             active:bg-zinc-400 dark:active:bg-zinc-800
                             transition-colors duration-75
+                            drop-shadow-sm
                         `}
                         onClick={onInc}
                     >
@@ -97,6 +104,7 @@ export default function IngredientList(props: IngredientListProps) {
                             hover:bg-zinc-300 hover:dark:bg-zinc-900
                             active:bg-zinc-400 dark:active:bg-zinc-800
                             transition-colors duration-75
+                            drop-shadow-sm
                         `}
                         onClick={onDec}
                     >
@@ -120,6 +128,7 @@ export default function IngredientList(props: IngredientListProps) {
                                     border-zinc-400 dark:border-zinc-700
                                     rounded-2xl
                                     flex flex-col
+                                    drop-shadow-sm
                                 `}
                                 key={index}
                             >
@@ -145,6 +154,6 @@ export default function IngredientList(props: IngredientListProps) {
                     )
                 }
             </div>
-        </div >
+            </Tile>
     );
 }

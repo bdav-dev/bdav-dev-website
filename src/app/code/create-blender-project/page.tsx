@@ -52,7 +52,7 @@ export default function CreateBlenderProject() {
 
                         <Tile
                             title="Run"
-                            className="min-w-[25rem]"
+                            className="min-w-fit sm:min-w-[25rem]"
                         >
                             <Enumerate
                                 items={[
@@ -66,7 +66,7 @@ export default function CreateBlenderProject() {
 
                         <Tile
                             title="Install (Make accessible in terminal)"
-                            className="min-w-[25rem]"
+                            className="min-w-fit sm:min-w-[25rem]"
                         >
                             If you want to install <Code>create-blender-project</Code> and make the command accessible anywhere in the terminal, copy the <Code>create-blender-project</Code> file to the following directory: <Code noMono largePadding>/usr/local/bin/</Code>
                             <br />

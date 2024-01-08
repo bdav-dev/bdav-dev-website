@@ -25,6 +25,7 @@ export default function SocialLink(props: SocialLinkProps) {
                     flex flex-row items-center
                     border border-zinc-600 dark:border-zinc-800
                     transition-all ease-linear hover:rounded-3xl
+                    drop-shadow-sm
                     ${!props.useCustomPadding ? "p-2" : ""}
                     ${!props.useCustomColor ? "bg-zinc-800 hover:bg-zinc-700 dark:bg-black  dark:hover:bg-zinc-900" : ""}
                     ${props.className}

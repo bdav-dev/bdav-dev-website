@@ -54,15 +54,13 @@ export default function Cheeseburger() {
                         Keep the prepared onions warm.
                     </Tile>
 
-                    <HStack className="gap-3">
-                        <Tile title="Wash lettuce leaves">
-                            Next, wash and portion the lettuce leaves, ensuring one leaf matches the approximate width of the burger bun.
-                        </Tile>
+                    <Tile title="Wash lettuce leaves">
+                        Next, wash and portion the lettuce leaves, ensuring one leaf matches the approximate width of the burger bun.
+                    </Tile>
 
-                        <Tile title="Prepare cheese slices">
-                            Take the cheese slices out of the fridge and have them ready.
-                        </Tile>
-                    </HStack>
+                    <Tile title="Prepare cheese slices">
+                        Take the cheese slices out of the fridge and have them ready.
+                    </Tile>
 
                     <Tile title="Form patties">
                         For the burger patties, take 100g of minced meat per patty, mix it with salt and pepper evenly and shape it slightly larger than the bun to account for shrinkage during cooking.
@@ -76,26 +74,18 @@ export default function Cheeseburger() {
                         Start toasting the burger buns in a toaster or another pan.
                     </Tile>
 
+                    <Tile title="Frying">
+                        Once the pan is hot, cook the patties, turning them regularly (about one minute per side) until a good crust
+                        forms on both sides. Lower the heat and cook to your preferred level, be it medium rare or well-done.
+                        Add a bit of butter to both sides of the patty and let it melt thoroughly.
+                        <br />
+                        <br />
+                        As the patty nears completion, place 2 cheese slices on top of the patty to melt. Feel free to turn the patty around to speed up the cheese melting process.
+                    </Tile>
 
-
-                    <HStack className="gap-3">
-
-                        <Tile title="Frying">
-                            Once the pan is hot, cook the patties, turning them regularly (about one minute per side) until a good crust
-                            forms on both sides. Lower the heat and cook to your preferred level, be it medium rare or well-done.
-                            Add a bit of butter to both sides of the patty and let it melt thoroughly.
-                            <br />
-                            <br />
-                            As the patty nears completion, place 2 cheese slices on top of the patty to melt. Feel free to turn the patty around to speed up the cheese melting process.
-                        </Tile>
-
-                        <Tile title="Burger assembly">
-                            Simultaneously, assemble the burger by taking out the toasted buns, allowing them to cool slightly (about 30 seconds). Apply the following ingredients on both buns in order: preferred amount of ketchup, some fried onions and 1 lettuce leaf per bun.
-                        </Tile>
-
-
-
-                    </HStack>
+                    <Tile title="Burger assembly">
+                        Simultaneously, assemble the burger by taking out the toasted buns, allowing them to cool slightly (about 30 seconds). Apply the following ingredients on both buns in order: preferred amount of ketchup, some fried onions and 1 lettuce leaf per bun.
+                    </Tile>
 
                     <Tile title="Serve">
                         When everything is ready, place the patty with the melted cheese onto the burger and serve.
