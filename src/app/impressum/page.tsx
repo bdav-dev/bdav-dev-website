@@ -1,4 +1,4 @@
-import HyperLink from "@/components/pageElements/HyperLink";
+import HyperLink from "@/components/links/HyperLink";
 import PageBody from "@/components/pageLayout/PageBody";
 import Article from "@/components/pageStructure/Article";
 import Section from "@/components/pageStructure/Section";

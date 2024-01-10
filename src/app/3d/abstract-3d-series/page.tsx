@@ -1,5 +1,5 @@
 import { defaultMetadata } from "@/app/layout";
-import Abstract3dSeriesLink from "@/components/links/Abstract3dSeriesLink";
+import Abstract3dSeriesLink from "@/components/links/content/Abstract3dSeriesLink";
 import Abstract3DSeriesLayout from '@/components/categories/3d/Abstract3DSeries';
 import Section from "@/components/pageStructure/Section";
 import { abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";

@@ -2,7 +2,7 @@ import { defaultMetadata } from "@/app/layout";
 import CodeProject from "@/components/categories/code/CodeProject";
 import Code from "@/components/pageElements/Code";
 import Enumerate from "@/components/pageElements/Enumerate";
-import HyperLink from "@/components/pageElements/HyperLink";
+import HyperLink from "@/components/links/HyperLink";
 import Tile from "@/components/pageElements/Tile";
 import Article from "@/components/pageStructure/Article";
 import Section from "@/components/pageStructure/Section";

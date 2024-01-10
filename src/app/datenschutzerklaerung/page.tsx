@@ -1,5 +1,5 @@
 import Enumerate from "@/components/pageElements/Enumerate";
-import HyperLink from "@/components/pageElements/HyperLink";
+import HyperLink from "@/components/links/HyperLink";
 import Spacer from "@/components/pageElements/Spacer";
 import PageBody from "@/components/pageLayout/PageBody";
 import Article from "@/components/pageStructure/Article";

@@ -8,6 +8,8 @@ import Recipe from "@/components/categories/recipes/Recipe";
 import IngredientList from "@/components/categories/recipes/IngredientList";
 import Section from "@/components/pageStructure/Section";
 import Tile from "@/components/pageElements/Tile";
+import SubSection from "@/components/pageStructure/SubSection";
+import Code from "@/components/pageElements/Code";
 
 
 export default function Cheeseburger() {
@@ -42,9 +44,29 @@ export default function Cheeseburger() {
                 </div>
 
             </div>
+            
+            <Section headline="Recommendations">
+
+                <HStack className="mt-3">
+
+                    <Tile title="Burger Buns">
+                        use <Code noMono largePadding>brioche</Code> burger buns
+                    </Tile>
+
+                    <Tile title="Cheese">
+                        use <Code noMono largePadding>Appenzeller</Code> cheese slices
+                    </Tile>
+
+                    <Tile title="Lettuce">
+                        use either <Code noMono largePadding>romeo</Code> or <Code noMono largePadding>iceberg</Code> lettuce
+                    </Tile>
+
+                </HStack>
+
+            </Section>
 
 
-            <Section headline={"Cooking instructions"} className="text-lg">
+            <Section headline="Cooking instructions" className="text-lg">
 
                 <VStack className="gap-3 mt-3">
 

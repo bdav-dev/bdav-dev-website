@@ -45,18 +45,9 @@ export default function IngredientList(props: IngredientListProps) {
         });
     }
 
-        // <div className={`
-        //     flex flex-col justify-center
-        //     h-full mt-1
-        //     bg-zinc-100 dark:bg-zinc-900
-        //     border border-zinc-300 dark:border-zinc-800
-        //     rounded-2xl  
-        // `}>
 
     return (
-        
         <Tile className="h-full mt-1 flex flex-col justify-center">
-
 
             <div className="h-16 flex flex-row justify-center items-center m-3 mt-5">
 
@@ -154,6 +145,6 @@ export default function IngredientList(props: IngredientListProps) {
                     )
                 }
             </div>
-            </Tile>
+        </Tile>
     );
 }

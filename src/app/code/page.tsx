@@ -1,4 +1,4 @@
-import CodeProjectLink from "@/components/links/CodeProjectLink";
+import CodeProjectLink from "@/components/links/content/CodeProjectLink";
 import GitHubLink from "@/components/links/social/GitHubLink";
 import HStack from "@/components/pageStructure/stacks/HStack";
 import { defaultMetadata } from "../layout";

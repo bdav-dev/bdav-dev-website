@@ -1,4 +1,4 @@
-import RecipeLink from "@/components/links/RecipeLink";
+import RecipeLink from "@/components/links/content/RecipeLink";
 import { defaultMetadata } from "../layout";
 import PageBody from "@/components/pageLayout/PageBody";
 import Section from "@/components/pageStructure/Section";

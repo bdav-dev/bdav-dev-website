@@ -1,7 +1,7 @@
 import { defaultMetadata } from "@/app/layout";
 import Abstract3DSeries from "@/components/categories/3d/Abstract3DSeries";
 import Code from "@/components/pageElements/Code";
-import HyperLink from "@/components/pageElements/HyperLink";
+import HyperLink from "@/components/links/HyperLink";
 import Tile from "@/components/pageElements/Tile";
 import Article from "@/components/pageStructure/Article";
 import Section from "@/components/pageStructure/Section";

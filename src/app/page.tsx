@@ -1,6 +1,7 @@
-import Abstract3dSeriesLink from "@/components/links/Abstract3dSeriesLink";
-import CodeProjectLink from "@/components/links/CodeProjectLink";
-import RecipeLink from "@/components/links/RecipeLink";
+import LargeLink from "@/components/links/LargeLink";
+import Abstract3dSeriesLink from "@/components/links/content/Abstract3dSeriesLink";
+import CodeProjectLink from "@/components/links/content/CodeProjectLink";
+import RecipeLink from "@/components/links/content/RecipeLink";
 import GitHubLink from "@/components/links/social/GitHubLink";
 import InstagramLink from "@/components/links/social/InstagramLink";
 import LinkedInLink from "@/components/links/social/LinkedInLink";
@@ -51,19 +52,18 @@ export default function Home() {
                             md:ml-auto md:w-fit
                         `}>
 
-                            <Link href={"/code/"} className="hover:scale-105 transition-all drop-shadow-sm">
-                                <Tile childrenClassName="h-32 w-32 flex flex-col justify-center text-center">
-                                    <CodeIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />
-                                    <Code>Code</Code>
-                                </Tile>
-                            </Link>
+                            <LargeLink
+                                href="/code/"
+                                icon={<CodeIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />}
+                                text="Code"
+                            />
 
-                            <Link href={"/3d/"} className="hover:scale-105 transition-all drop-shadow-sm">
-                                <Tile childrenClassName="h-32 w-32 flex flex-col justify-center text-center">
-                                    <BlenderIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />
-                                    <Code>3D</Code>
-                                </Tile>
-                            </Link>
+                            <LargeLink
+                                href="/3d/"
+                                icon={<BlenderIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />}
+                                text="3D"
+                            />
+
                         </div>
 
                         <div className={`
@@ -72,32 +72,30 @@ export default function Home() {
                             md:mr-auto md:w-fit
                         `}>
 
-                            <Link href={"/recipes/"} className="hover:scale-105 transition-all drop-shadow-sm">
-                                <Tile childrenClassName="h-32 w-32 flex flex-col justify-center text-center">
-                                    <RecipesIcon className="stroke-black dark:stroke-white stroke stroke-[2.5] pb-2" />
-                                    <Code>Recipes</Code>
-                                </Tile>
-                            </Link>
+                            <LargeLink
+                                href="/recipes/"
+                                icon={<RecipesIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />}
+                                text="Recipes"
+                            />
 
-                            <Link href={"/about/"} className="hover:scale-105 transition-all drop-shadow-sm">
-                                <Tile childrenClassName="h-32 w-32 flex flex-col justify-center text-center">
-                                    <AboutIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />
-                                    <Code>About</Code>
-                                </Tile>
-                            </Link>
+                            <LargeLink
+                                href="/about/"
+                                icon={<AboutIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />}
+                                text="About"
+                            />
 
                         </div>
 
                     </div>
 
 
-                    <Spacer className="my-5"/>
+                    <Spacer className="my-5" />
 
 
                     <HStack className="gap-5">
-
                         <div className="flex flex-col grow">
-                            Random Code Project
+                            <span className="pl-0.5">Featured Code Project</span>
+
                             <Tile
                                 childrenClassName="flex justify-center items-center h-full"
                                 className="p-5"
@@ -110,7 +108,7 @@ export default function Home() {
                         </div>
 
                         <div className="flex flex-col grow">
-                            Random Abstract3D Series image
+                            <span className="pl-0.5">Featured Abstract3D Series Image</span>
                             <Tile
                                 childrenClassName="flex justify-center items-center h-full"
                                 className="p-5"
@@ -119,8 +117,9 @@ export default function Home() {
                                 <Abstract3dSeriesLink abstract3dSeriesImage={chooseRandom(Object.values(abstract3dSeriesImages))} />
                             </Tile>
                         </div>
+
                         <div className="flex flex-col grow">
-                            Random Recipe
+                            <span className="pl-0.5">Featured Recipe</span>
 
                             <Tile
                                 childrenClassName="flex justify-center items-center h-full"
