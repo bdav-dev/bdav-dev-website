@@ -22,7 +22,7 @@ export default function SocialLink(props: SocialLinkProps) {
                     w-28 h-12
                     m-1
                     rounded-xl
-                    flex flex-row items-center
+                    flex flex-row items-center justify-center
                     border border-zinc-600 dark:border-zinc-800
                     transition-all ease-linear hover:rounded-3xl
                     drop-shadow-sm

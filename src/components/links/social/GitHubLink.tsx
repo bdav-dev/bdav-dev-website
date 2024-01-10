@@ -6,8 +6,8 @@ export default function GitHubLink() {
 
     return (
         <SocialLink href={"https://github.com/bdav-dev/"}>
-            <GitHubText className="fill-white" />
-            <GitHubIcon className="ml-1 fill-white w-[60%]" />
+            <GitHubText className="fill-white w-16 h-8" />
+            <GitHubIcon className="ml-1 fill-white h-8 w-8" />
         </SocialLink>
     );
 

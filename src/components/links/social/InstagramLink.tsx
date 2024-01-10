@@ -6,8 +6,8 @@ export default function InstagramLink() {
 
     return (
         <SocialLink href={"https://www.instagram.com/davidb.3d/"}>
-            <InstagramTextIcon className="fill-white mt-1.5"/>
-            <InstagramIcon className="fill-white ml-1 w-[45%]"/>
+            <InstagramTextIcon className="fill-white mt-1.5 w-16 h-7"/>
+            <InstagramIcon className="fill-white ml-1.5 w-7 h-7"/>
         </SocialLink>
     );
 }

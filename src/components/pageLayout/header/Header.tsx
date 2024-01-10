@@ -145,7 +145,7 @@ export default function Header(props: HeaderProps) {
                 </nav>
             </div>
 
-            <div className="xs:h-16 h-24 mb-3"></div>
+            <div className="xs:mb-20 mb-28"></div>
         </>
     );
 
