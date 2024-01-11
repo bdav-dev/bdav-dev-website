@@ -12,7 +12,7 @@ type CategoryProps = {
 export default function Category(props: CategoryProps) {
 
     return (
-        <div className="relative group">
+        <div className="relative group h-fit">
             <Link
                 href={props.link ?? ""}
                 draggable="false"
@@ -23,6 +23,7 @@ export default function Category(props: CategoryProps) {
                     transition-colors duration-200
                     flex flex-row items-center
                     bg-opacity-80 dark:bg-opacity-80
+                    h-full
                     ${props.selected
                         ? "bg-zinc-400 dark:bg-zinc-950"
                         : "hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90"}

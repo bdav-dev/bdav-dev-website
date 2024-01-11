@@ -56,7 +56,7 @@ export default function Header(props: HeaderProps) {
                         <h1 className="text-xl">bdav.dev</h1>
                     </Link>
 
-                    <div className="xs:ml-auto flex flex-row h-fit">
+                    <div className="xs:ml-auto flex flex-row h-11 justify-center items-center">
                         <Category
                             icon={<CodeIcon className="dark:stroke-white stroke-black stroke-[5] h-fit w-7" />}
                             text="Code"
@@ -137,7 +137,7 @@ export default function Header(props: HeaderProps) {
                             selected={props.selected == "About"}
                         />
 
-                        <VerticalRuler className="ml-1 mr-1 h-auto" />
+                        <VerticalRuler className="ml-1 mr-1 h-9" />
 
                         <DarkModeToggle />
 
