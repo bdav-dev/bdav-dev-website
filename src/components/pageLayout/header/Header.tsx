@@ -49,6 +49,7 @@ export default function Header(props: HeaderProps) {
                     bg-opacity-60 dark:bg-opacity-60
                     backdrop-blur-md
                     select-none
+                    h-[5.75rem] xs:h-[3.75rem]
                 `}>
 
                     <Link href="/" className="pr-3.5 mt-0.5 mb-0.5" draggable="false">

@@ -1,3 +1,5 @@
+"use client";
+
 import LargeLink from "@/components/links/LargeLink";
 import Abstract3dSeriesLink from "@/components/links/content/Abstract3dSeriesLink";
 import CodeProjectLink from "@/components/links/content/CodeProjectLink";
@@ -12,7 +14,7 @@ import PageBody from "@/components/pageLayout/PageBody";
 import HStack from "@/components/pageStructure/stacks/HStack";
 import VStack from "@/components/pageStructure/stacks/VStack";
 import { abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
-import { codeProjects } from "@/content/code/codeProjects";
+import { CodeProject, codeProjects } from "@/content/code/codeProjects";
 import { recipes } from "@/content/recipes/recipes";
 import { spaceMonoBold } from "@/fonts";
 import AboutIcon from "@/icons/AboutIcon";
@@ -20,6 +22,7 @@ import BlenderIcon from "@/icons/BlenderIcon";
 import CodeIcon from "@/icons/CodeIcon";
 import RecipesIcon from "@/icons/RecipiesIcon";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 
 function chooseRandom<T>(array: T[]): T {
@@ -31,6 +34,15 @@ function getRandomInteger(upperBoundExclusive: number) {
 }
 
 export default function Home() {
+    let [randomCodeProject, setRandomCodeProject] = useState(codeProjects.timecoder);
+    let [randomA3dsImage, setRandomA3dsImage] = useState(abstract3dSeriesImages["19"]);
+    let [randomRecipe, setRandomRecipe] = useState(recipes.cheeseburger);
+
+    useEffect(() => {
+        setRandomCodeProject(() => chooseRandom(Object.values(codeProjects)));
+        setRandomA3dsImage(() => chooseRandom(Object.values(abstract3dSeriesImages)));
+        setRandomRecipe(() => chooseRandom(Object.values(recipes)));
+    }, []);
 
     return (
         <PageBody sitePath={"/"} hidePathBar>
@@ -102,7 +114,7 @@ export default function Home() {
                                 customPadding
                             >
                                 <div className="drop-shadow-sm dark:drop-shadow-md">
-                                    <CodeProjectLink codeProject={chooseRandom(Object.values(codeProjects))} />
+                                    <CodeProjectLink codeProject={randomCodeProject} />
                                 </div>
                             </Tile>
                         </div>
@@ -114,7 +126,7 @@ export default function Home() {
                                 className="p-5"
                                 customPadding
                             >
-                                <Abstract3dSeriesLink abstract3dSeriesImage={chooseRandom(Object.values(abstract3dSeriesImages))} />
+                                <Abstract3dSeriesLink abstract3dSeriesImage={randomA3dsImage} />
                             </Tile>
                         </div>
 
@@ -127,7 +139,7 @@ export default function Home() {
                                 customPadding
                             >
                                 <div className="drop-shadow-sm dark:drop-shadow-md">
-                                    <RecipeLink recipe={chooseRandom(Object.values(recipes))} />
+                                    <RecipeLink recipe={randomRecipe} />
                                 </div>
                             </Tile>
                         </div>

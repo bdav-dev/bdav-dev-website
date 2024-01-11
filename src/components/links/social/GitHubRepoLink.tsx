@@ -14,7 +14,7 @@ export default function GitHubRepoLink(props: GitHubRepoLinkProps) {
             target="_blank"
             rel="noopener noreferrer"
             className={`
-                flex flex-row items-center
+                flex flex-row items-center justify-center
                 p-[0.2rem]
                 rounded-lg
                 bg-zinc-800 dark:bg-black hover:bg-zinc-700 dark:hover:bg-zinc-900
@@ -25,7 +25,7 @@ export default function GitHubRepoLink(props: GitHubRepoLinkProps) {
             `}
             draggable="false"
         >
-            <GitHubIcon className="fill-white" />
+            <GitHubIcon className="fill-white h-6 w-6" />
         </Link>
     );
 

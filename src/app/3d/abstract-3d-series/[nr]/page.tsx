@@ -45,7 +45,7 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                                     </Code>
                                 </td>
 
-                                <td className={image.description ? "hidden xs:block" : ""}>
+                                <td className={"text-center " + (image.description ? "hidden xs:table-cell" : "")}>
                                     <Code noMono largePadding>
                                         {image.aspectRatio}
                                     </Code>
