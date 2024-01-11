@@ -1,4 +1,4 @@
-import { defaultMetadata } from "@/app/layout";
+import { defaultMetadata } from "@/metadata";
 import Abstract3DSeries from "@/components/categories/3d/Abstract3DSeries";
 import Code from "@/components/pageElements/Code";
 import HyperLink from "@/components/links/HyperLink";

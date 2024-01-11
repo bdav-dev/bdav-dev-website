@@ -1,4 +1,4 @@
-import { defaultMetadata } from "@/app/layout";
+import { defaultMetadata } from "@/metadata";
 import CodeProject from "@/components/categories/code/CodeProject";
 import Tile from "@/components/pageElements/Tile";
 import Article from "@/components/pageStructure/Article";

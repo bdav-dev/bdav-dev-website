@@ -1,4 +1,4 @@
-import { defaultMetadata } from "@/app/layout";
+import { defaultMetadata } from "@/metadata";
 import CodeProject from "@/components/categories/code/CodeProject";
 import Code from "@/components/pageElements/Code";
 import Enumerate from "@/components/pageElements/Enumerate";

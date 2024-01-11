@@ -1,4 +1,4 @@
-import { defaultMetadata } from "@/app/layout";
+import { defaultMetadata } from "@/metadata";
 import HStack from "@/components/pageStructure/stacks/HStack";
 import VStack from "@/components/pageStructure/stacks/VStack";
 import PageTitle from "@/components/pageStructure/headlines/PageTitle";;
