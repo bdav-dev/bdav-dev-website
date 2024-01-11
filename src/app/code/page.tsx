@@ -1,7 +1,7 @@
 import CodeProjectLink from "@/components/links/content/CodeProjectLink";
 import GitHubLink from "@/components/links/social/GitHubLink";
 import HStack from "@/components/pageStructure/stacks/HStack";
-import { defaultMetadata } from "../layout";
+import { defaultMetadata } from "@/metadata";
 import PageBody from "@/components/pageLayout/PageBody";
 import Tile from "@/components/pageElements/Tile";
 import Section from "@/components/pageStructure/Section";

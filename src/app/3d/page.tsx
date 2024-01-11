@@ -1,7 +1,7 @@
 import Abstract3dSeriesLink from "@/components/links/content/Abstract3dSeriesLink";
 import InstagramLink from "@/components/links/social/InstagramLink";
 import HStack from "@/components/pageStructure/stacks/HStack";
-import { defaultMetadata } from "../layout";
+import { defaultMetadata } from "@/metadata";
 import PageBody from "@/components/pageLayout/PageBody";
 import Tile from "@/components/pageElements/Tile";
 import Section from "@/components/pageStructure/Section";
