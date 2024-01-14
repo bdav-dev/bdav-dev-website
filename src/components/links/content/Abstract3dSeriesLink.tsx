@@ -15,7 +15,7 @@ export default function Abstract3dSeriesLink(props: Abstract3dSeriesProjectProps
         >
 
             <div className={`
-                    w-52 h-52 -z-10
+                    w-[13.25rem] h-[13.25rem]  -z-10
                     absolute flex items-center
                     rounded-2xl overflow-hidden
                     transition-all
@@ -32,7 +32,7 @@ export default function Abstract3dSeriesLink(props: Abstract3dSeriesProjectProps
             </div>
 
             <div className={`
-                    w-52 h-52 
+                    w-[13.25rem]  h-[13.25rem] 
                     relative flex items-center
                     border border-zinc-500 dark:border-zinc-800
                     rounded-2xl overflow-hidden
