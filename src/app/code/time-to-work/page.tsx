@@ -64,7 +64,7 @@ export default function TimeToWork() {
                                     },
                                     {
                                         title: "Zeiterfassung via Eingabe eines Zeitintervalls",
-                                        text: "Du kannst ein Zeitintervall (duch Angabe von Start- und Endzeit) erstellen."
+                                        text: "Du kannst ein Zeitintervall (durch Angabe von Start- und Endzeit) erstellen."
                                     },
                                     {
                                         title: "Erstellen eines offenen Zeitstempels bei angegebener Startzeit",
@@ -113,14 +113,14 @@ export default function TimeToWork() {
                                     },
                                     {
                                         title: "Arbeitsende",
-                                        text: "Dieses Feld zeigt dir an, wann du Feierabend hast. Dabei wird davon ausgeganen, dass du exakt die Zeit arbeitest, die du in dem Feld \"Arbeitszeit\" angegeben hast (keine Über- / Unterstunden). Es werden auch die Pausen (in Kombination mit der Mindestpause) miteinberechnet."
+                                        text: "Dieses Feld zeigt dir an, wann du Feierabend hast. Dabei wird davon ausgegangen, dass du exakt die Zeit arbeitest, die du in dem Feld \"Arbeitszeit\" angegeben hast (keine Über- / Unterstunden). Es werden auch die Pausen (in Kombination mit der Mindestpause) mit einberechnet."
                                     },
                                     {
                                         title: "neuer Zeitsaldo",
                                         text: "Falls du jetzt deinen Arbeitsplatz verlassen solltest, zeigt dir dieses Feld an, wie dein Überstundenkonto dann aussehen würde."
                                     },
                                     {
-                                        title: "Summe der eingelegete Pausen",
+                                        title: "Summe der eingelegten Pausen",
                                         text: "So lange hast du heute schon Pause gemacht."
                                     }
                                 ]}
@@ -161,7 +161,7 @@ export default function TimeToWork() {
                                 items={[
                                     {
                                         title: "Zeitpunkt zum Verlassen des Arbeitsplatzes",
-                                        text: "Hier siehst du, wann du deinen Arbeitsplatz verlassen musst, damit du den nächsten Zug pünklich erreichst."
+                                        text: "Hier siehst du, wann du deinen Arbeitsplatz verlassen musst, damit du den nächsten Zug pünktlich erreichst."
                                     },
                                     {
                                         title: "Abfahrt des nächsten Zugs",
@@ -175,7 +175,7 @@ export default function TimeToWork() {
                     <SubSection headline="Speichern">
                         <Tile>
                             Der gesamte Zustand der Applikation wird beim Schließen des Tabs (bei dir lokal via <Code>localStorage</Code>) gesichert.
-                            Dieser Zustand wird wiederherstellt, wenn du die Appliaktion wieder öffnest.
+                            Dieser Zustand wird wiederherstellt, wenn du die Applikation wieder öffnest.
                             Wenn du aber die Applikation an einem neuen Tag öffnest,
                             werden die Zeitstempel und Zeitintervalle vom Vortag nicht geladen und
                             der am Vortag berechnete neue Zeitsaldo wird als aktueller Zeitsaldo übernommen.

@@ -66,13 +66,13 @@ export default function Home() {
 
                             <LargeLink
                                 href="/code/"
-                                icon={<CodeIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />}
+                                icon={<CodeIcon className="stroke-black dark:stroke-white stroke-[2.75] pb-2" />}
                                 text="Code"
                             />
 
                             <LargeLink
                                 href="/3d/"
-                                icon={<BlenderIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />}
+                                icon={<BlenderIcon className="stroke-black dark:stroke-white stroke-[2.75] pb-2" />}
                                 text="3D"
                             />
 
@@ -86,13 +86,13 @@ export default function Home() {
 
                             <LargeLink
                                 href="/recipes/"
-                                icon={<RecipesIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />}
+                                icon={<RecipesIcon className="stroke-black dark:stroke-white stroke-[2.75] pb-2" />}
                                 text="Recipes"
                             />
 
                             <LargeLink
                                 href="/about/"
-                                icon={<AboutIcon className="stroke-black dark:stroke-white stroke-[2.5] pb-2" />}
+                                icon={<AboutIcon className="stroke-black dark:stroke-white stroke-[2.75] pb-2" />}
                                 text="About"
                             />
 

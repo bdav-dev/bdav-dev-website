@@ -317,7 +317,7 @@ export default function Datenschutzerklaerung() {
                         der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten soll.
                         Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten.
                         Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem
-                        Link: <HyperLink href="https://www.dataprivacyframework.gov/s/participant-search/participant- detail?contact=true&id=a2zt000000001L5AAI&status=Active" />
+                        Link: <HyperLink href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active" />
                     </SubSection>
 
                 </Section>

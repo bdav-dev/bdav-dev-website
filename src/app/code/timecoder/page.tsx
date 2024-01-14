@@ -36,7 +36,8 @@ export default function Timecoder() {
                 <Section headline="Use Timecoder">
                     <HStack className="mt-2">
                         <Tile title="Website">
-                            You can use Timecoder in the web with this website: <HyperLink href={codeProjects.timecoder.codeProjectProperies.launchLink!} />
+                            You can use Timecoder in the web with this
+                            website: <HyperLink href={codeProjects.timecoder.codeProjectProperies.launchLink!} />
                         </Tile>
 
                         <Tile title="From source code">
@@ -49,7 +50,7 @@ export default function Timecoder() {
                                     <>Download the source code of the project (as a .zip file or via <Code>git clone</Code>).</>,
                                     "Open a terminal in the project's root directory.",
                                     <>Run <Code>npm install</Code> to install the project's dependencies.</>,
-                                    <>Start the developement server by entering the command <Code>npm run dev</Code>.</>,
+                                    <>Start the development server by entering the command <Code>npm run dev</Code>.</>,
                                     <>Open your browser and enter <HyperLink href="http://localhost:3000/" /> in the address bar.</>
                                 ]}
                             />
@@ -80,7 +81,7 @@ export default function Timecoder() {
                             timecode and displays the result in the difference timecode (example: <Code>00:00:46:07</Code>).
                             <br />
                             You are able to comment the sequence, for example to state some corrections
-                            in that timeframe (example: <Code noMono largePadding>Please add a caption here with text:
+                            in that time frame (example: <Code noMono largePadding>Please add a caption here with text:
                                 "Our company is proud to announce the opening of its second factory in Berlin."</Code>).
                             <br />
                             You can also delete sequences and change the arrangement by swapping them.
@@ -128,7 +129,10 @@ export default function Timecoder() {
                     <Tile className="mt-2">
                         <Enumerate
                             symbol="-"
-                            items={["The app is not optimized for mobile use."]}
+                            items={[
+                                "The app is not optimized for mobile use.",
+                                "There are currently problems displaying the modals correctly on macOS WebKit"
+                            ]}
                             symbolWidthClassName="w-3"
                         />
                     </Tile>

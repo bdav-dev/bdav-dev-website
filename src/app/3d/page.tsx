@@ -33,6 +33,23 @@ export default function Blender() {
                 </div>
 
             </Section>
+
+            <Section headline="Abstract3D Series – Wallpapers" className="mt-4">
+
+                <div className="mt-4 flex flex-row flex-wrap gap-5 justify-center sm:justify-normal">
+                    {
+                        Object.values(abstract3dSeriesImages)
+                            .sort((a, b) => b.nr - a.nr)
+                            .map(
+                                (image, index) => {
+                                    if (image.downloads?.wallpaperDownloads)
+                                        return <Abstract3dSeriesLink abstract3dSeriesImage={image} key={index} />
+                                }
+                            )
+                    }
+                </div>
+
+            </Section>
         </PageBody>
     );
 }
@@ -40,5 +57,5 @@ export default function Blender() {
 export const metadata = {
     title: "bdav.dev – 3D",
     description: "Blender 3D projects from David Berezowski",
-    ...defaultMetadata(["Blender projects", "3D projects", "Project", "Blender", "3D"])    
+    ...defaultMetadata(["Blender projects", "3D projects", "Project", "Blender", "3D"])
 }

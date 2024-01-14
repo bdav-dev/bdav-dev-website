@@ -15,7 +15,7 @@ export default function DropdownMenu(props: DropdownMenuProps) {
 
     return (
         <div className="absolute left-1/2 invisible group-hover:visible pointer-events-none">
-            <div className="relative -left-1/2 pt-1 pointer-events-auto">
+            <div className="relative -left-1/2 pt-1 group-hover:pointer-events-auto">
                 <ul className={`
                     p-1.5 
                     flex flex-col items-center

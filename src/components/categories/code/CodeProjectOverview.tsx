@@ -5,6 +5,7 @@ import Tile from "@/components/pageElements/Tile";
 import Headline from "@/components/pageStructure/headlines/Headline";
 import GitHubRepoLink from "@/components/links/social/GitHubRepoLink";
 import Code from "@/components/pageElements/Code";
+import CodeLanguageBadge from "./CodeLanguageBadge";
 
 type CodeProjectOverviewProps = {
     codeProject: CodeProject
@@ -76,12 +77,7 @@ export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
                                         {
                                             props.codeProject.codeProjectProperies.programmingLanguages.map(
                                                 (lang, index) => (
-                                                    <Code noMono
-                                                        customColor={lang.className}
-                                                        key={index}
-                                                    >
-                                                        {lang.name}
-                                                    </Code>
+                                                    <CodeLanguageBadge lang={lang} key={index}/>
                                                 )
                                             )
                                         }

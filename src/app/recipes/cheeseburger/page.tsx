@@ -8,7 +8,6 @@ import Recipe from "@/components/categories/recipes/Recipe";
 import IngredientList from "@/components/categories/recipes/IngredientList";
 import Section from "@/components/pageStructure/Section";
 import Tile from "@/components/pageElements/Tile";
-import SubSection from "@/components/pageStructure/SubSection";
 import Code from "@/components/pageElements/Code";
 
 
@@ -66,7 +65,7 @@ export default function Cheeseburger() {
             </Section>
 
 
-            <Section headline="Cooking instructions" className="text-lg">
+            <Section headline="Cooking instructions">
 
                 <VStack className="gap-3 mt-3">
 

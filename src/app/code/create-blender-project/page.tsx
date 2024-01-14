@@ -21,9 +21,9 @@ export default function CreateBlenderProject() {
                     <Tile className="leading-7 mt-2">
 
                         <Code>create-blender-project</Code> is a tool accessible via the command line / terminal.
-                        
+
                         <br />
-                        
+
                         It creates a new blender project with the following directories:
                         <Enumerate
                             className="ml-3"
@@ -36,7 +36,10 @@ export default function CreateBlenderProject() {
                             ]}
                         />
 
-                        The directory <Code noMono largePadding>blend-files</Code> will contain a blank blender file with the name of the project: <Code noMono largePadding>{"<projectName>.blend"}</Code>. The tool also sets the directoy render-output as the default render output directory of the newly created blender file.
+                        The directory <Code noMono largePadding>blend-files</Code> will contain a blank blender file
+                        with the name of the project: <Code noMono largePadding>{"<projectName>.blend"}</Code>.
+                        The tool also sets the directory render-output as the default render output directory of the newly created
+                        blender file.
                     </Tile>
                 </Section>
 
@@ -56,9 +59,12 @@ export default function CreateBlenderProject() {
                         >
                             <Enumerate
                                 items={[
-                                    <>Download the source code of the project (as a .zip file or via <Code>git clone</Code>).</>,
-                                    <>Make sure the <Code noMono largePadding>create-blender-project</Code> file is flagged as executable, if not run <Code>$ chmod +x create-blender-project</Code></>,
-                                    <>Open a new terminal window and navigate to the directory in which you want to create a new blender project (using <Code>cd</Code>)</>,
+                                    <>Download the source code of the project
+                                        (as a .zip file or via <Code>git clone</Code>).</>,
+                                    <>Make sure the <Code noMono largePadding>create-blender-project</Code> file
+                                        is flagged as executable, if not run <Code>$ chmod +x create-blender-project</Code></>,
+                                    <>Open a new terminal window and navigate to the directory in which you want to
+                                        create a new blender project (using <Code>cd</Code>)</>,
                                     <>Run <Code>$ /path/to/file/create-blender-project {"<Optional parameter: Project name>"}</Code></>
                                 ]}
                             />
@@ -68,14 +74,17 @@ export default function CreateBlenderProject() {
                             title="Install (Make accessible in terminal)"
                             className="min-w-fit sm:min-w-[25rem]"
                         >
-                            If you want to install <Code>create-blender-project</Code> and make the command accessible anywhere in the terminal, copy the <Code>create-blender-project</Code> file to the following directory: <Code noMono largePadding>/usr/local/bin/</Code>
+                            If you want to install <Code>create-blender-project</Code> and make the command accessible
+                            anywhere in the terminal, copy the <Code noMono largePadding>create-blender-project</Code> file
+                            to the following directory: <Code noMono largePadding>/usr/local/bin/</Code>
                             <br />
-                            Now you can access it without specifing the location of the file, like this: <Code>$ create-blender-project {"<Optional parameter: Project name>"}</Code>.
+                            Now you can access it without specifying the location of the file, like
+                            this: <Code>$ create-blender-project {"<Optional parameter: Project name>"}</Code>.
                         </Tile>
 
                     </HStack>
                 </Section>
-                
+
             </Article>
         </CodeProject>
     );

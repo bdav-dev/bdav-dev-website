@@ -25,36 +25,47 @@ type CodeProjects = {
 type CodeProjectProperties = {
     projectLanguage: 'English' | 'German',
     programmingLanguages: ProgrammingLanguage[]
-    status: 'In Developement' | 'Maintaining' | 'Completed',
+    status: 'In Development' | 'Maintaining' | 'Completed',
     type: 'Web application' | 'Desktop application' | 'Terminal application',
     launchLink?: string
 }
 
-type ProgrammingLanguage = {
+export type ProgrammingLanguage = {
     name: string,
-    className: string
+    bgColor: string,
+    textColor?: string
 }
 
-const programmingLanguages: { [key: string]: ProgrammingLanguage } = {
+export const programmingLanguages: { [key: string]: ProgrammingLanguage } = {
     typeScript: {
         name: "TypeScript",
-        className: "bg-blue-600 text-white"
+        bgColor: "#2D79C7"
     },
     bash: {
         name: "Bash",
-        className: "bg-green-600 text-white"
+        bgColor: "#46B152"
     },
     html: {
         name: "HTML",
-        className: "bg-orange-600 text-white"
+        bgColor: "#EE5F27"
     },
     css: {
         name: "CSS",
-        className: "bg-blue-700 text-white"
+        bgColor: "#275DED"
     },
     javaScript: {
         name: "JavaScript",
-        className: "bg-yellow-400 text-black"
+        bgColor: "#F0DB4E",
+        textColor: "#323230"
+
+    },
+    java: {
+        name: "Java",
+        bgColor: "#ED272C"
+    },
+    abap: {
+        name: "ABAP",
+        bgColor: "#094789"
     }
 };
 
@@ -69,7 +80,7 @@ export const codeProjects: CodeProjects = {
         codeProjectProperies: {
             programmingLanguages: [programmingLanguages.typeScript],
             projectLanguage: "English",
-            status: "In Developement",
+            status: "In Development",
             type: "Web application",
             launchLink: "https://timecoder.vercel.app/"
         }
