@@ -29,7 +29,7 @@ export default function Category(props: CategoryProps) {
                 `}
             >
                 {props.icon}
-                <span className="sm:block hidden ml-1">{props.text}</span>
+                <span className="sm:inline-flex hidden ml-1 h-10 items-center">{props.text}</span>
             </Link>
             {props.dropdownMenu}
         </div>

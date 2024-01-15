@@ -52,13 +52,13 @@ export default function Header(props: HeaderProps) {
                     h-[5.75rem] xs:h-[3.75rem]
                 `}>
 
-                    <Link href="/" className="pr-3.5 mt-0.5 mb-0.5" draggable="false">
+                    <Link href="/" className="mr-3.5 my-0.5 px-1 rounded-md" draggable="false">
                         <h1 className="text-xl">bdav.dev</h1>
                     </Link>
 
                     <div className="xs:ml-auto flex flex-row h-11 justify-center items-center">
                         <Category
-                            icon={<CodeIcon className="dark:stroke-white stroke-black stroke-[5] h-fit w-7" />}
+                            icon={<CodeIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7" />}
                             text="Code"
                             link="/code/"
                             selected={props.selected == "Code"}
@@ -84,7 +84,7 @@ export default function Header(props: HeaderProps) {
                         />
 
                         <Category
-                            icon={<BlenderIcon className="dark:stroke-white stroke-black stroke-[5] h-fit w-7" />}
+                            icon={<BlenderIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7" />}
                             text="3D"
                             link="/3d/"
                             selected={props.selected == "3D"}
@@ -116,7 +116,7 @@ export default function Header(props: HeaderProps) {
                         />
 
                         <Category
-                            icon={<RecipiesIcon className="dark:stroke-white stroke-black stroke-[5] h-fit w-7" />}
+                            icon={<RecipiesIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7" />}
                             text="Recipes"
                             link="/recipes"
                             selected={props.selected == "Recipes"}
@@ -131,7 +131,7 @@ export default function Header(props: HeaderProps) {
                         />
 
                         <Category
-                            icon={<AboutIcon className="dark:stroke-white stroke-black stroke-[5] h-fit w-7" />}
+                            icon={<AboutIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7" />}
                             text="About"
                             link="/about"
                             selected={props.selected == "About"}

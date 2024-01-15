@@ -113,9 +113,8 @@ export default function Cheeseburger() {
                     </Tile>
 
                     <Tile className="text-center font-semibold">
-                        Enjoy your delicious homemade burger! <span className="italic">Guten Appetit!</span>
+                        Enjoy your delicious homemade burger! <span className="italic">Guten&nbsp;Appetit!</span>
                     </Tile>
-
 
                 </VStack>
 

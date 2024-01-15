@@ -31,7 +31,8 @@ export default function TimeToWork() {
                         <Enumerate
                             items={[
                                 <>Lade das Repository herunter (als .zip Datei oder via <Code>git clone</Code>).</>,
-                                <>Starte die Applikation, in dem du die Datei <Code noMono>timeToWork.html</Code> in deinem Browser öffnest.</>
+                                <>Starte die Applikation, in dem du die
+                                    Datei <Code noMono largePadding>timeToWork.html</Code> in deinem Browser öffnest.</>
                             ]}
                         />
                     </Tile>
@@ -195,5 +196,5 @@ export default function TimeToWork() {
 export const metadata = {
     title: "bdav.dev – TimeToWork",
     description: "Halte mit dem Arbeitszeitdashboard TimeToWork deine Arbeitsstunden im Blick.",
-    ...defaultMetadata(["TimeToWork", "Time to Work", "time-to-work"])    
+    ...defaultMetadata(["TimeToWork", "Time to Work", "time-to-work"])
 }
