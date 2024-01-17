@@ -26,9 +26,9 @@ export default function About() {
                         Right now, I am in the third semester and I work (as part of my studies)
                         at <HyperLink href="https://www.coop.ch/de/">Coop</HyperLink> in Basel.
                         First I worked with the programming
-                        language <CodeLanguageBadge lang={programmingLanguages.abap} /> in
+                        language <CodeLanguageBadge lang={programmingLanguages.abap} smallerPadding/> in
                         the SAP development department.
-                        Now I code in <CodeLanguageBadge lang={programmingLanguages.java} /> and
+                        Now I code in <CodeLanguageBadge lang={programmingLanguages.java} smallerPadding/> and
                         use the Spring and Vaadin frameworks.
                         <br />
                         <br />
@@ -41,12 +41,12 @@ export default function About() {
                         . I try to use many different programming languages to improve my skill and keep learning new things.
                         <br />
                         Currently, (programming, markup and style sheet) languages that I use include:&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.html} />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.css} />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.javaScript} />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.typeScript} />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.bash} /> and&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.java} />.
+                        <CodeLanguageBadge lang={programmingLanguages.html} smallerPadding />,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.css} smallerPadding />,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.javaScript} smallerPadding />,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.typeScript} smallerPadding />,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.bash} smallerPadding /> and&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.java} smallerPadding />.
                         <br />
                         <br />
                         I enjoy making things in the 3D computer graphics

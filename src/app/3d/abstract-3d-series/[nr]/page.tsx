@@ -14,6 +14,8 @@ import { notFound } from "next/navigation";
 function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
     let anyDescriptionPresent = imageDownloads.find(image => image.description != undefined) != undefined;
 
+    const yPadding = "py-[0.35rem]";
+
     return (
         <table className="w-full">
             <tbody>
@@ -29,13 +31,14 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                             >
                                 {
                                     image.description
-                                        ? <td className="pr-1 break-all xs:break-normal">{image.description}</td>
+                                        ? <td className={`pr-1 break-all xs:break-normal ${yPadding}`}>{image.description}</td>
                                         : <td className="w-0 p-0"></td>
                                 }
 
                                 <td className={`
                                         ${image.description ? "px-1" : "pr-1 break-all xs:break-normal w-[45%]"}
                                         ${anyDescriptionPresent ? "text-center" : ""}
+                                        ${yPadding}
                                     `}>
                                     <Code noMono largePadding>
                                         <span className={image.description ? "hidden sm:inline" : ""}>
@@ -45,19 +48,22 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                                     </Code>
                                 </td>
 
-                                <td className={"text-center " + (image.description ? "hidden xs:table-cell" : "")}>
+                                <td className={`
+                                    text-center ${yPadding}
+                                    ${image.description ? "hidden xs:table-cell" : ""}
+                                `}>
                                     <Code noMono largePadding>
                                         {image.aspectRatio}
                                     </Code>
                                 </td>
 
-                                <td className="px-1 text-center">
+                                <td className={`px-1 text-center ${yPadding}`}>
                                     <Code noMono largePadding>
                                         {`${image.width}x${image.height}`}
                                     </Code>
                                 </td>
 
-                                <td className="pl-1 text-right">
+                                <td className={`pl-1 text-right ${yPadding}`}>
                                     <HyperLink href={image.downloadURL}>
                                         Download
                                     </HyperLink>
@@ -117,7 +123,7 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
                                     {
                                         abstract3dSeriesImage.downloads.imageDownloads
                                             ? <SubSection headline="Image">
-                                                <Tile className="p-1.5" customPadding>
+                                                <Tile className="py-1 px-2" customPadding>
                                                     {imageDownloadsToTable(abstract3dSeriesImage.downloads?.imageDownloads!)}
                                                 </Tile>
                                             </SubSection>
@@ -127,7 +133,7 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
                                     {
                                         abstract3dSeriesImage.downloads.wallpaperDownloads
                                             ? <SubSection headline="Wallpapers">
-                                                <Tile className="p-1.5" customPadding>
+                                                <Tile className="py-1 px-2" customPadding>
                                                     {imageDownloadsToTable(abstract3dSeriesImage.downloads?.wallpaperDownloads!)}
                                                 </Tile>
                                             </SubSection>
@@ -141,7 +147,7 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
                     </Article>
 
                 </div>
-                
+
             </div>
 
         </Abstract3DSeries>
