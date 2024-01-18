@@ -46,6 +46,6 @@ export default function Abstract3DSeries() {
 
 export const metadata = {
     title: "bdav.dev – Abstract3D Series",
-    description: "Abstract3D Series from David Berezowski",
+    description: "Abstract3D Series from David Berezowski.",
     ...defaultMetadata(["Abstract3D Series", "Abstract3DSeries", "a3ds", "Blender", "3D", "abstract"])
 }

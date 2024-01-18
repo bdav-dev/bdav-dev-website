@@ -196,5 +196,5 @@ export default function TimeToWork() {
 export const metadata = {
     title: "bdav.dev – TimeToWork",
     description: "Halte mit dem Arbeitszeitdashboard TimeToWork deine Arbeitsstunden im Blick.",
-    ...defaultMetadata(["TimeToWork", "Time to Work", "time-to-work"])
+    ...defaultMetadata(["TimeToWork", "Time to Work", "time-to-work", "work time calculator", "Arbeitszeitdashboard"])
 }

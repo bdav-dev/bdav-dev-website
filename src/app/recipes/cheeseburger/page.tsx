@@ -127,6 +127,6 @@ export default function Cheeseburger() {
 
 export const metadata = {
     title: `bdav.dev – Cheeseburger Recipe`,
-    description: "Cheeseburger recipe from David Berezowski",
+    description: "Cheeseburger recipe from David Berezowski.",
     ...defaultMetadata(["recipe", "Cheeseburger recipe", "Cheeseburger"])
 }

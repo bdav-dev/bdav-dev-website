@@ -6,13 +6,13 @@ import Article from "@/components/pageStructure/Article";
 import Tile from "@/components/pageElements/Tile";
 import Section from "@/components/pageStructure/Section";
 import HyperLink from "@/components/links/HyperLink";
-import Code from "@/components/pageElements/Code";
 import CodeIcon from "@/icons/CodeIcon";
 import SmallInternalLink from "@/components/links/SmallInternalLink";
 import BlenderIcon from "@/icons/BlenderIcon";
 import RecipesIcon from "@/icons/RecipiesIcon";
 import CodeLanguageBadge from "@/components/categories/code/CodeLanguageBadge";
 import { programmingLanguages } from "@/content/code/codeProjects";
+import { defaultMetadata } from "@/metadata";
 
 export default function About() {
     return (
@@ -108,4 +108,10 @@ export default function About() {
             </Article>
         </PageBody >
     );
+}
+
+export const metadata = {
+    title: "bdav.dev – About",
+    description: "About me and this website.",
+    ...defaultMetadata(["About", "general", "me", "about me"])
 }

@@ -26,6 +26,6 @@ export default function Recipes() {
 
 export const metadata = {
     title: `bdav.dev – Recipes`,
-    description: "Recipes from David Berezowski",
+    description: "Recipes from David Berezowski.",
     ...defaultMetadata(["Recipes", "Recipe"])
 }

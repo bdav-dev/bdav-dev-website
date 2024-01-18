@@ -4,11 +4,13 @@ import ThemeContext from '@/contexts/ThemeContext'
 import { inter } from '@/fonts'
 import { defaultMetadata } from '@/metadata'
 
-
 export const metadata: Metadata = {
   title: 'bdav.dev – David Berezowski',
-  description: 'Homepage of David Berezowski',
-  ...defaultMetadata(["Homepage", "Main page"])
+  description: 'Homepage of David Berezowski. View code projects, 3D art and recipes.',
+  ...defaultMetadata(["Homepage", "Main page"]),
+  verification: {
+    google: "Ka_Vxx3_XV-4Rmvn5C6r5CsdkCUbtsREMbLzXRGWJC4"
+  }
 }
 
 export default function RootLayout({
@@ -23,5 +25,5 @@ export default function RootLayout({
         <body className={inter}>{children}</body>
       </ThemeContext>
     </html>
-  )
+  );
 }

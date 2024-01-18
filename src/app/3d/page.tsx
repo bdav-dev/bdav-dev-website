@@ -56,6 +56,6 @@ export default function Blender() {
 
 export const metadata = {
     title: "bdav.dev – 3D",
-    description: "Blender 3D projects from David Berezowski",
+    description: "Blender 3D projects from David Berezowski.",
     ...defaultMetadata(["Blender projects", "3D projects", "Project", "Blender", "3D"])
 }

@@ -329,3 +329,7 @@ export default function Datenschutzerklaerung() {
     );
 
 }
+
+export const metadata = {
+    title: "bdav.dev – Datenschutzerklärung"
+}

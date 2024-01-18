@@ -36,6 +36,6 @@ export default function Code() {
 
 export const metadata = {
     title: "bdav.dev – Code",
-    description: "Code projects from David Berezowski",
-    ...defaultMetadata(["Code projects", "Code", "Project"])    
+    description: "Code projects from David Berezowski.",
+    ...defaultMetadata(["Code projects", "Code", "Project"])
 }

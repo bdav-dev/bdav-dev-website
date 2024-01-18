@@ -29,3 +29,7 @@ export default function Impressum() {
         </PageBody>
     );
 }
+
+export const metadata = {
+    title: "bdav.dev – Impressum"
+}

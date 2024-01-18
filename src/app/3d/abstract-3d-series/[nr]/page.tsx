@@ -156,7 +156,7 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
 }
 
 export const metadata = {
-    title: `bdav.dev – Abstract3D Series Image`,
-    description: "Abstract3D Series Image from David Berezowski",
+    title: "bdav.dev – Abstract3D Series Image",
+    description: "Abstract3D Series Image from David Berezowski.",
     ...defaultMetadata(["Abstract3D Series", "Abstract3DSeries", "a3ds", "Blender", "3D", "abstract"])
 }

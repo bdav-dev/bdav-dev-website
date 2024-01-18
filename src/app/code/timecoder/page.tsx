@@ -146,6 +146,6 @@ export default function Timecoder() {
 
 export const metadata = {
     title: "bdav.dev – Timecoder",
-    description: "With Timecoder you can document in/out sequences of a video. If you are a video producer, your client can document desired corrections with this web application and send you back a link so you can implement these corrections.",
-    ...defaultMetadata(["Timecoder"])
+    description: "Timecode calculator. With Timecoder you can document in/out sequences of a video. If you are a video producer, your client can document desired corrections with this web application and send you back a link so you can implement these corrections.",
+    ...defaultMetadata(["Timecoder", "Timecode calculator"])
 }
