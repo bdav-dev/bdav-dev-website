@@ -44,7 +44,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     width: 3840,
                     height: 2160,
                     aspectRatio: "16:9",
-                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1704383733/abstract-3d-series/020/a3ds-020-wallpaper-desktop-uhd.png"
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1705605097/abstract-3d-series/020/a3ds-020-wallpaper-desktop-uhd.png"
                 }
             ],
         }
@@ -71,7 +71,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     width: 3840,
                     height: 2160,
                     aspectRatio: "16:9",
-                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1704383730/abstract-3d-series/019/a3ds-019-wallpaper-desktop-uhd.png"
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1705605181/abstract-3d-series/019/a3ds-019-wallpaper-desktop-uhd.png"
                 }
             ],
         }
@@ -98,7 +98,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     width: 3840,
                     height: 2160,
                     aspectRatio: "16:9",
-                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1704383726/abstract-3d-series/018/a3ds-018-wallpaper-desktop-uhd.png"
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1705605359/abstract-3d-series/016/a3ds-016-wallpaper-desktop-uhd.png"
                 }
             ],
         }
@@ -141,7 +141,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     width: 3840,
                     height: 2160,
                     aspectRatio: "16:9",
-                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1704383710/abstract-3d-series/016/a3ds-016-wallpaper-desktop-uhd.png"
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1705605359/abstract-3d-series/016/a3ds-016-wallpaper-desktop-uhd.png"
                 }
             ],
         }
@@ -168,7 +168,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     width: 3840,
                     height: 2160,
                     aspectRatio: "16:9",
-                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1704383667/abstract-3d-series/015/a3ds-015-wallpaper-desktop-uhd.png"
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1705605598/abstract-3d-series/015/a3ds-015-wallpaper-desktop-uhd.png"
                 }
             ],
         }
@@ -259,7 +259,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     width: 3840,
                     height: 2160,
                     aspectRatio: "16:9",
-                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1704383644/abstract-3d-series/010/a3ds-010-wallpaper-desktop-uhd.png"
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1705605661/abstract-3d-series/010/a3ds-010-wallpaper-desktop-uhd.png"
                 }
             ]
         }
@@ -481,13 +481,13 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
             ],
             wallpaperDownloads: [
                 {
-                    description: "Desktop UHD",
-                    fileName: "a3ds-004-wallpaper-desktop-uhd",
+                    description: "Desktop WUXGA",
+                    fileName: "a3ds-004-wallpaper-desktop-wuxga",
                     fileFormat: "png",
-                    width: 3840,
-                    height: 2160,
-                    aspectRatio: "16:9",
-                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1704383611/abstract-3d-series/004/a3ds-004-wallpaper-desktop-uhd.png"
+                    width: 1920,
+                    height: 1200,
+                    aspectRatio: "16:10",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1705605885/abstract-3d-series/004/a3ds-004-wallpaper-desktop-wuxga.png"
                 }
             ]
         }
