@@ -98,7 +98,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     width: 3840,
                     height: 2160,
                     aspectRatio: "16:9",
-                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1705605359/abstract-3d-series/016/a3ds-016-wallpaper-desktop-uhd.png"
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1705605273/abstract-3d-series/018/a3ds-018-wallpaper-desktop-uhd.png"
                 }
             ],
         }

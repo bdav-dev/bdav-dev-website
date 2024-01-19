@@ -16,6 +16,10 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
 
     const yPadding = "py-[0.35rem]";
 
+    const cellWidth = anyDescriptionPresent
+        ? "w-1/5"
+        : "w-1/4";
+
     return (
         <table className="w-full">
             <tbody>
@@ -31,17 +35,24 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                             >
                                 {
                                     image.description
-                                        ? <td className={`pr-1 break-all xs:break-normal ${yPadding}`}>{image.description}</td>
-                                        : <td className="w-0 p-0"></td>
+                                        ? <td className={`
+                                            ${cellWidth} ${yPadding}
+                                            break-all mxs:break-keep 
+                                            whitespace-normal mxs:whitespace-nowrap 
+                                        `}>{image.description}</td>
+                                        : <td className="w-0"></td>
                                 }
 
                                 <td className={`
-                                        ${image.description ? "px-1" : "pr-1 break-all xs:break-normal w-[45%]"}
+                                        ${image.description ? "px-1" : "pr-1"}
                                         ${anyDescriptionPresent ? "text-center" : ""}
                                         ${yPadding}
-                                    `}>
+                                        ${cellWidth}
+                                        break-all mxs:break-keep
+                                        whitespace-normal mxs:whitespace-nowrap 
+                                `}>
                                     <Code noMono largePadding>
-                                        <span className={image.description ? "hidden sm:inline" : ""}>
+                                        <span className={image.description ? "hidden" : "inline"}>
                                             {image.fileName}
                                         </span>
                                         .{image.fileFormat}
@@ -49,21 +60,22 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                                 </td>
 
                                 <td className={`
-                                    text-center ${yPadding}
-                                    ${image.description ? "hidden xs:table-cell" : ""}
+                                    px-1 ${yPadding}
+                                    ${image.description ? "hidden sm:table-cell" : ""}
+                                    ${cellWidth} text-center
                                 `}>
                                     <Code noMono largePadding>
                                         {image.aspectRatio}
                                     </Code>
                                 </td>
 
-                                <td className={`px-1 text-center ${yPadding}`}>
+                                <td className={`px-1 ${cellWidth} text-center ${yPadding}`}>
                                     <Code noMono largePadding>
                                         {`${image.width}x${image.height}`}
                                     </Code>
                                 </td>
 
-                                <td className={`pl-1 text-right ${yPadding}`}>
+                                <td className={`pl-1 ${cellWidth} text-right ${yPadding}`}>
                                     <HyperLink href={image.downloadURL}>
                                         Download
                                     </HyperLink>
@@ -74,7 +86,7 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                     )
                 }
             </tbody>
-        </table >
+        </table>
     );
 }
 
@@ -98,10 +110,11 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
                     src={abstract3dSeriesImage.image}
                     alt={`Abstract3DSeries #${abstract3dSeriesImage.nr}`}
                     className={`
-                        w-full self-center max-w-xl
+                        w-full self-center
+                        max-w-xl lg:max-w-3xl 3xl:max-w-[60rem]
                         sm:w-2/3 sm:min-w-0
                         md:w-[60%]
-                        lg:w-1/2 lg:self-auto lg:max-w-3xl
+                        lg:w-1/2 lg:self-auto 
                         rounded-2xl
                         flex-shrink-0
                         border border-zinc-300 dark:border-zinc-800
@@ -122,7 +135,11 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
 
                                     {
                                         abstract3dSeriesImage.downloads.imageDownloads
-                                            ? <SubSection headline="Image">
+                                            ? <SubSection headline={
+                                                abstract3dSeriesImage.downloads.imageDownloads.length > 1
+                                                    ? "Images"
+                                                    : "Image"
+                                            }>
                                                 <Tile className="py-1 px-2" customPadding>
                                                     {imageDownloadsToTable(abstract3dSeriesImage.downloads?.imageDownloads!)}
                                                 </Tile>
@@ -132,7 +149,11 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
 
                                     {
                                         abstract3dSeriesImage.downloads.wallpaperDownloads
-                                            ? <SubSection headline="Wallpapers">
+                                            ? <SubSection headline={
+                                                abstract3dSeriesImage.downloads.wallpaperDownloads.length > 1
+                                                    ? "Wallpapers"
+                                                    : "Wallpaper"
+                                            }>
                                                 <Tile className="py-1 px-2" customPadding>
                                                     {imageDownloadsToTable(abstract3dSeriesImage.downloads?.wallpaperDownloads!)}
                                                 </Tile>

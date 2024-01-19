@@ -11,7 +11,7 @@ export default function CodeLanguageBadge(props: CodeLanguageBadgeProps) {
         <span
             className={`
                 ${props.smallerPadding
-                    ? "py-[0.1rem]"
+                    ? "py-[0.09rem]"
                     : "py-0.5"}
                 px-1 rounded-lg
             `}

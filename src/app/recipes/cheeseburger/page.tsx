@@ -26,7 +26,7 @@ export default function Cheeseburger() {
                         w-full self-center max-w-xl
                         sm:w-2/3 sm:min-w-0
                         md:w-[60%]
-                        lg:w-1/2 lg:self-auto lg:max-w-3xl
+                        lg:w-1/2 lg:self-auto lg:max-w-3xl 3xl:max-w-[55rem]
                         flex-shrink-0
                         object-contain
                         drop-shadow-lg

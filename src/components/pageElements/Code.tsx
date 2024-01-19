@@ -14,7 +14,7 @@ export default function Code(props: CodeProps) {
             className={`
                 rounded-lg px-1
                 ${props.noMono ? "" : spaceMono}
-                ${props.largePadding ? "py-[0.1rem]" : ""}
+                ${props.largePadding ? "py-[0.09rem]" : ""}
                 ${props.customColor ? props.customColor : "dark:bg-zinc-950 bg-zinc-300"}
             `}
         >
@@ -23,7 +23,3 @@ export default function Code(props: CodeProps) {
     );
 
 }
-
-// rounded-lg inline-block my-[0.0625rem]
-//                 ${props.noMono ? "" : spaceMono}
-//                 ${props.largePadding ? ">py-0.5 px-1" : "px-1"}

@@ -18,6 +18,8 @@ const config: Config = {
     },
     screens: {
       'xs': '380px',
+      'mxs': '400px',
+      '3xl': '2000px',
       ...defaultTheme.screens
     }
   },
