@@ -265,7 +265,7 @@ export default function Datenschutzerklaerung() {
                         Permanente Cookies bleiben auf Ihrem Endgerät gespeichert,
                         bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.
                         <Spacer />
-                        Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen(sog. Third-Party-Cookies).
+                        Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog. Third-Party-Cookies).
                         Third-Party-Cookies ermöglichen die Einbindung bestimmter Dienstleistungen von Drittunternehmen
                         innerhalb von Webseiten (z. B. Cookies zur Abwicklung von Zahlungsdienstleistungen).
                         <Spacer />
