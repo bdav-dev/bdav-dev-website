@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 url: 'https://www.bdav.dev/3d/abstract-3d-image/' + a3dsImage.nr,
                 lastModified: new Date(),
                 changeFrequency: "yearly",
-                priority: 0.7
+                priority: 0.6
             }
         )
     );
@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 url: 'https://www.bdav.dev' + recipe.path,
                 lastModified: new Date(),
                 changeFrequency: "yearly",
-                priority: 0.7
+                priority: 0.6
             }
         )
     );
@@ -64,14 +64,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: 'https://www.bdav.dev/3d',
             lastModified: new Date(),
-            changeFrequency: "monthly",
-            priority: 0.9
+            changeFrequency: "weekly",
+            priority: 0.8
+        },
+        {
+            url: 'https://www.bdav.dev/3d/abstract-3d-series/',
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 0.8
         },
         {
             url: 'https://www.bdav.dev/recipes',
             lastModified: new Date(),
             changeFrequency: "monthly",
-            priority: 0.9
+            priority: 0.7
         },
         {
             url: 'https://www.bdav.dev/about',

@@ -9,6 +9,7 @@ import { Abstract3dSeriesImage, ImageDownload, abstract3dSeriesImages } from "@/
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Highlight from "@/components/pageElements/Highlight";
+import { Metadata } from "next";
 
 
 function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
@@ -176,8 +177,18 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
 
 }
 
-export const metadata = {
-    title: "bdav.dev – Abstract3D Series Image",
-    description: "Abstract3D Series Image from David Berezowski.",
-    ...defaultMetadata(["Abstract3D Series", "Abstract3DSeries", "a3ds", "Blender", "3D", "abstract"])
+export async function generateMetadata({ params }: { params: { nr: string } }): Promise<Metadata> {
+    return {
+        title: "bdav.dev – Abstract3D Series #" + params.nr,
+        description: "Abstract3D Series #" + params.nr + " Image from David Berezowski.",
+        ...defaultMetadata(
+            [
+                "Abstract 3D Series " + params.nr,
+                "Abstract 3D Series #" + params.nr,
+                "a3ds-" + params.nr,
+                "a3ds " + params.nr,
+                params.nr
+            ]
+        )
+    }
 }
