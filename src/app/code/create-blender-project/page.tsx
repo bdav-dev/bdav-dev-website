@@ -8,6 +8,8 @@ import { spaceMono } from "@/fonts";
 import Enumerate from "@/components/pageElements/Enumerate";
 import Code from "@/components/pageElements/Code";
 import HStack from "@/components/pageStructure/stacks/HStack";
+import LargeBr from "@/components/pageElements/breaks/LargeBr";
+import Highlight from "@/components/pageElements/Highlight";
 
 export default function CreateBlenderProject() {
     return (
@@ -18,26 +20,28 @@ export default function CreateBlenderProject() {
                 A command line tool to create a new blender project with common directories.
 
                 <Section headline="Description">
-                    <Tile className="leading-7 mt-2">
+                    <Tile className="mt-2">
 
                         <Code>create-blender-project</Code> is a tool accessible via the command line / terminal.
 
-                        <br />
+                        <LargeBr/>
 
                         It creates a new blender project with the following directories:
                         <Enumerate
                             className="ml-3"
                             symbol="-"
                             items={[
-                                <Code noMono largePadding>assets</Code>,
-                                <Code noMono largePadding>blend-files</Code>,
-                                <Code noMono largePadding>render-output</Code>,
-                                <Code noMono largePadding>results</Code>,
+                                <Highlight small>assets</Highlight>,
+                                <Highlight small>blend-files</Highlight>,
+                                <Highlight small>render-output</Highlight>,
+                                <Highlight small>results</Highlight>,
                             ]}
                         />
 
-                        The directory <Code noMono largePadding>blend-files</Code> will contain a blank blender file
-                        with the name of the project: <Code noMono largePadding>{"<projectName>.blend"}</Code>.
+                        <LargeBr/>
+
+                        The directory <Highlight>blend-files</Highlight> will contain a blank blender file
+                        with the name of the project: <Highlight>{"<projectName>.blend"}</Highlight>.
                         The tool also sets the directory render-output as the default render output directory of the newly created
                         blender file.
                     </Tile>
@@ -45,7 +49,7 @@ export default function CreateBlenderProject() {
 
                 <Section headline="Parameters">
                     <Tile className="mt-2">
-                        The command has one (optional) parameter: <Code noMono largePadding>project name</Code>.
+                        The command has one (optional) parameter: <Highlight>project name</Highlight>.
                         If the parameter is not specified, the terminal will ask for a project name.
                     </Tile>
                 </Section>
@@ -58,10 +62,11 @@ export default function CreateBlenderProject() {
                             className="min-w-fit sm:min-w-[25rem]"
                         >
                             <Enumerate
+                                seperateItems
                                 items={[
                                     <>Download the source code of the project
                                         (as a .zip file or via <Code>git clone</Code>).</>,
-                                    <>Make sure the <Code noMono largePadding>create-blender-project</Code> file
+                                    <>Make sure the <Highlight>create-blender-project</Highlight> file
                                         is flagged as executable, if not run <Code>$ chmod +x create-blender-project</Code></>,
                                     <>Open a new terminal window and navigate to the directory in which you want to
                                         create a new blender project (using <Code>cd</Code>)</>,
@@ -75,9 +80,9 @@ export default function CreateBlenderProject() {
                             className="min-w-fit sm:min-w-[25rem]"
                         >
                             If you want to install <Code>create-blender-project</Code> and make the command accessible
-                            anywhere in the terminal, copy the <Code noMono largePadding>create-blender-project</Code> file
-                            to the following directory: <Code noMono largePadding>/usr/local/bin/</Code>
-                            <br />
+                            anywhere in the terminal, copy the <Highlight>create-blender-project</Highlight> file
+                            to the following directory: <Highlight>/usr/local/bin/</Highlight>
+                            <LargeBr/>
                             Now you can access it without specifying the location of the file, like
                             this: <Code>$ create-blender-project {"<Optional parameter: Project name>"}</Code>.
                         </Tile>

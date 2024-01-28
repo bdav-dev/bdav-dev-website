@@ -8,7 +8,7 @@ type SectionProps = {
 
 export default function Section(props: SectionProps) {
     return (
-        <section className={"mt-1 mb-3.5 " + props.className}>
+        <section className={"mt-2.5 mb-5 leading-[1.55rem] " + props.className}>
             <Headline>{props.headline}</Headline>
             {props.children}
         </section>

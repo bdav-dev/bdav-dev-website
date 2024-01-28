@@ -9,6 +9,8 @@ import Section from "@/components/pageStructure/Section";
 import SubSection from "@/components/pageStructure/SubSection";
 import HStack from "@/components/pageStructure/stacks/HStack";
 import { codeProjects } from "@/content/code/codeProjects";
+import LargeBr from "@/components/pageElements/breaks/LargeBr";
+import Highlight from "@/components/pageElements/Highlight";
 
 export default function Timecoder() {
     return (
@@ -18,16 +20,16 @@ export default function Timecoder() {
             <Article headline={codeProjects.timecoder.title}>
 
                 <Section headline="Short description">
-                    <Tile className="leading-7 mt-2">
+                    <Tile className="mt-2">
                         With "Timecoder" you can document in/out sequences of a video.
                         When specifying an in and out timecode, "Timecoder" will calculate the difference between the two.
                         You are also able to add a comment to a in/out sequence.
-                        <br />
+                        <LargeBr/>
                         You can export and share your sequences via a .csv table or a link.
-                        <br />
+                        <LargeBr/>
                         If you are a video producer, your client can document desired corrections with this web application
                         and send you back a link so you can implement these corrections.
-                        <br />
+                        <LargeBr/>
                         This application uses Next.js with React and TypeScript.
                     </Tile>
                 </Section>
@@ -73,17 +75,17 @@ export default function Timecoder() {
                             a difference timecode and a comment field. The in-timecode specifies the
                             beginning of the sequence via a timecode
                             (example: <Code>00:01:15:14</Code>).
-                            <br />
+                            <LargeBr/>
                             The out-timecode specifies the end the sequence also via a timecode
                             (example: <Code>00:02:01:21</Code>).
-                            <br />
+                            <LargeBr/>
                             Timecoder automatically calculates the difference between the in and the out
                             timecode and displays the result in the difference timecode (example: <Code>00:00:46:07</Code>).
-                            <br />
+                            <LargeBr/>
                             You are able to comment the sequence, for example to state some corrections
-                            in that time frame (example: <Code noMono largePadding>Please add a caption here with text:
-                                "Our company is proud to announce the opening of its second factory in Berlin."</Code>).
-                            <br />
+                            in that time frame (example: <Highlight>Please add a caption here with text:
+                                "Our company is proud to announce the opening of its second factory in Berlin."</Highlight>).
+                                <LargeBr/>
                             You can also delete sequences and change the arrangement by swapping them.
                         </Tile>
                     </SubSection>

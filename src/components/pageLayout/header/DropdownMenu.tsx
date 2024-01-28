@@ -17,10 +17,10 @@ export default function DropdownMenu(props: DropdownMenuProps) {
         <div className="absolute left-1/2 invisible group-hover:visible pointer-events-none">
             <div className="relative -left-1/2 pt-1 group-hover:pointer-events-auto">
                 <ul className={`
-                    p-1.5 
+                    p-1.5
                     flex flex-col items-center
                     rounded-xl
-                    bg-opacity-75 dark:bg-opacity-90
+                    bg-opacity-90 dark:bg-opacity-80
                     backdrop-blur-sm
                     drop-shadow-sm
                     bg-zinc-100 dark:bg-zinc-900

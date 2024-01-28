@@ -8,7 +8,7 @@ type ArticleProps = {
 
 export default function MainPageContent(props: ArticleProps) {
     return (
-        <article className={props.className}>
+        <article className={props.className + " leading-[1.55rem]"}>
             <PageTitle className="mb-1.5">{props.headline}</PageTitle>
             {props.children}
         </article>

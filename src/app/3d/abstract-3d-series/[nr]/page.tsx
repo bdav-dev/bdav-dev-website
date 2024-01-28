@@ -1,6 +1,5 @@
 import { defaultMetadata } from "@/metadata";
 import Abstract3DSeries from "@/components/categories/3d/Abstract3DSeries";
-import Code from "@/components/pageElements/Code";
 import HyperLink from "@/components/links/HyperLink";
 import Tile from "@/components/pageElements/Tile";
 import Article from "@/components/pageStructure/Article";
@@ -9,6 +8,7 @@ import SubSection from "@/components/pageStructure/SubSection";
 import { Abstract3dSeriesImage, ImageDownload, abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Highlight from "@/components/pageElements/Highlight";
 
 
 function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
@@ -51,12 +51,12 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                                         break-all mxs:break-keep
                                         whitespace-normal mxs:whitespace-nowrap 
                                 `}>
-                                    <Code noMono largePadding>
+                                    <Highlight>
                                         <span className={image.description ? "hidden" : "inline"}>
                                             {image.fileName}
                                         </span>
                                         .{image.fileFormat}
-                                    </Code>
+                                    </Highlight>
                                 </td>
 
                                 <td className={`
@@ -64,15 +64,15 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                                     ${image.description ? "hidden sm:table-cell" : ""}
                                     ${cellWidth} text-center
                                 `}>
-                                    <Code noMono largePadding>
+                                    <Highlight>
                                         {image.aspectRatio}
-                                    </Code>
+                                    </Highlight>
                                 </td>
 
                                 <td className={`px-1 ${cellWidth} text-center ${yPadding}`}>
-                                    <Code noMono largePadding>
+                                    <Highlight>
                                         {`${image.width}x${image.height}`}
-                                    </Code>
+                                    </Highlight>
                                 </td>
 
                                 <td className={`pl-1 ${cellWidth} text-right ${yPadding}`}>

@@ -7,6 +7,8 @@ import Article from "@/components/pageStructure/Article";
 import Section from "@/components/pageStructure/Section";
 import SubSection from "@/components/pageStructure/SubSection";
 import { codeProjects } from "@/content/code/codeProjects";
+import LargeBr from "@/components/pageElements/breaks/LargeBr";
+import Highlight from "@/components/pageElements/Highlight";
 
 
 export default function TimeToWork() {
@@ -21,18 +23,18 @@ export default function TimeToWork() {
                 Work time dashboard / calculator
 
                 <Section headline="Kurzbeschreibung">
-                    <Tile>
+                    <Tile className="mt-1.5">
                         Halte mit dem Arbeitszeitdashboard "TimeToWork" deine Arbeitsstunden im Blick.
                     </Tile>
                 </Section>
 
                 <Section headline="TimeToWork starten">
-                    <Tile>
+                    <Tile className="mt-1.5">
                         <Enumerate
                             items={[
                                 <>Lade das Repository herunter (als .zip Datei oder via <Code>git clone</Code>).</>,
                                 <>Starte die Applikation, in dem du die
-                                    Datei <Code noMono largePadding>timeToWork.html</Code> in deinem Browser öffnest.</>
+                                    Datei <Highlight>timeToWork.html</Highlight> in deinem Browser öffnest.</>
                             ]}
                         />
                     </Tile>
@@ -60,20 +62,25 @@ export default function TimeToWork() {
                                 seperateItems
                                 items={[
                                     {
-                                        title: "Zeiterfassung via Zeitstempel",
-                                        text: "Wenn du auf den Button \"Zeitstempel erfassen\" klickst, wird eine neuer Zeitstempel mit der aktuellen Zeit erstellt. Falls bereits ein offener Zeitstempel vorhanden ist, wird dieser mit der aktuellen Zeit geschlossen."
+                                        title: <>Zeiterfassung via Zeitstempel</>,
+                                        text: <>Wenn du auf den Button "Zeitstempel erfassen" klickst,
+                                            wird eine neuer Zeitstempel mit der aktuellen Zeit erstellt.
+                                            Falls bereits ein offener Zeitstempel vorhanden ist,
+                                            wird dieser mit der aktuellen Zeit geschlossen.</>
                                     },
                                     {
-                                        title: "Zeiterfassung via Eingabe eines Zeitintervalls",
-                                        text: "Du kannst ein Zeitintervall (durch Angabe von Start- und Endzeit) erstellen."
+                                        title: <>Zeiterfassung via Eingabe eines Zeitintervalls</>,
+                                        text: <>Du kannst ein Zeitintervall (durch Angabe von Start- und Endzeit) erstellen.</>
                                     },
                                     {
-                                        title: "Erstellen eines offenen Zeitstempels bei angegebener Startzeit",
-                                        text: "Falls du ein Zeitintervall ohne Endzeit angibst wird, statt eines Zeitintervalls, ein offener Zeitstempel mit deiner angegeben Zeit erstellt."
+                                        title: <>Erstellen eines offenen Zeitstempels bei angegebener Startzeit</>,
+                                        text: <>Falls du ein Zeitintervall ohne Endzeit angibst wird,
+                                            statt eines Zeitintervalls, ein offener Zeitstempel mit deiner angegeben Zeit erstellt.</>
                                     }
                                 ]}
                             />
-                            Deine erstellten Zeitintervalle bzw. Zeitstempel werden in einer Tabelle angezeigt.<br />
+                            <LargeBr />
+                            Deine erstellten Zeitintervalle bzw. Zeitstempel werden in einer Tabelle angezeigt.
                             Dort siehst du auch den Zeitunterschied von jedem Zeitintervall / Zeitstempel.
                         </Tile>
                     </SubSection>
@@ -99,30 +106,36 @@ export default function TimeToWork() {
                                     }
                                 ]}
                             />
+                            <LargeBr />
                             berechnet dir TimeToWork folgende Werte:
+                            <LargeBr />
                             <Enumerate
                                 className="ml-2 mt-1.5"
                                 seperateItems
                                 items={[
                                     {
-                                        title: "Summe der Arbeitszeit",
-                                        text: "So lange hast du heute schon gearbeitet."
+                                        title: <>Summe der Arbeitszeit</>,
+                                        text: <>So lange hast du heute schon gearbeitet.</>
                                     },
                                     {
-                                        title: "restliche Arbeitszeit",
-                                        text: "Ein Blick auf dieses Feld verrät dir, wie viel du noch zu arbeiten hast."
+                                        title: <>restliche Arbeitszeit</>,
+                                        text: <>Ein Blick auf dieses Feld verrät dir, wie viel du noch zu arbeiten hast.</>
                                     },
                                     {
-                                        title: "Arbeitsende",
-                                        text: "Dieses Feld zeigt dir an, wann du Feierabend hast. Dabei wird davon ausgegangen, dass du exakt die Zeit arbeitest, die du in dem Feld \"Arbeitszeit\" angegeben hast (keine Über- / Unterstunden). Es werden auch die Pausen (in Kombination mit der Mindestpause) mit einberechnet."
+                                        title: <>Arbeitsende</>,
+                                        text: <>Dieses Feld zeigt dir an, wann du Feierabend hast.
+                                            Dabei wird davon ausgegangen, dass du exakt die Zeit arbeitest,
+                                            die du in dem Feld "Arbeitszeit" angegeben hast (keine Über- / Unterstunden).
+                                            Es werden auch die Pausen (in Kombination mit der Mindestpause) mit einberechnet.</>
                                     },
                                     {
-                                        title: "neuer Zeitsaldo",
-                                        text: "Falls du jetzt deinen Arbeitsplatz verlassen solltest, zeigt dir dieses Feld an, wie dein Überstundenkonto dann aussehen würde."
+                                        title: <>neuer Zeitsaldo</>,
+                                        text: <>Falls du jetzt deinen Arbeitsplatz verlassen solltest,
+                                            zeigt dir dieses Feld an, wie dein Überstundenkonto dann aussehen würde.</>
                                     },
                                     {
-                                        title: "Summe der eingelegten Pausen",
-                                        text: "So lange hast du heute schon Pause gemacht."
+                                        title: <>Summe der eingelegten Pausen</>,
+                                        text: <>So lange hast du heute schon Pause gemacht.</>
                                     }
                                 ]}
                             />
@@ -140,21 +153,26 @@ export default function TimeToWork() {
                                     {
                                         title: "Startzeitpunkt",
                                         text: <>Hier trägst du ein, was der Startzeitpunkt des Zugplans ist.
-                                            Beispiel: Wenn der Zug z.B. jeden Tag um 14:04, 14:34, 15:04, ... abfährt, trägst du hier <Code noMono largePadding>00:04</Code> ein.</>,
+                                            Beispiel: Wenn der Zug z.B. jeden Tag um 14:04, 14:34, 15:04, ... abfährt,
+                                            trägst du hier <Highlight>00:04</Highlight> ein.</>,
                                     },
                                     {
                                         title: "jede",
                                         text: <>Hier gibst du an, in welchem Intervall dein Zug regelmäßig kommt.
-                                            Beispiel: Wenn der Zug z.B. jeden Tag um 14:04, 14:34, 15:04, ... abfährt, trägst du hier <Code noMono largePadding>00:30</Code> ein.</>
+                                            Beispiel: Wenn der Zug z.B. jeden Tag um 14:04, 14:34, 15:04, ... abfährt,
+                                            trägst du hier <Highlight>00:30</Highlight> ein.</>
                                     },
                                     {
                                         title: "Wegzeit",
-                                        text: "In diesem Feld kannst du eintragen, wie lange du brauchst, um von deinem Arbeitsplatz zum Bahnhof zu gelangen."
+                                        text: <>In diesem Feld kannst du eintragen, wie lange du brauchst,
+                                            um von deinem Arbeitsplatz zum Bahnhof zu gelangen.</>
                                     }
                                 ]}
                             />
 
+                            <LargeBr />
                             folgendes sehen:
+                            <LargeBr />
 
                             <Enumerate
                                 className="ml-2 mt-1.5"
@@ -162,11 +180,12 @@ export default function TimeToWork() {
                                 items={[
                                     {
                                         title: "Zeitpunkt zum Verlassen des Arbeitsplatzes",
-                                        text: "Hier siehst du, wann du deinen Arbeitsplatz verlassen musst, damit du den nächsten Zug pünktlich erreichst."
+                                        text: <>Hier siehst du, wann du deinen Arbeitsplatz verlassen musst,
+                                            damit du den nächsten Zug pünktlich erreichst.</>
                                     },
                                     {
                                         title: "Abfahrt des nächsten Zugs",
-                                        text: "Dieses Feld zeigt dir an, wann der nächste Zug abfährt (und in wie vielen Minuten das ist)."
+                                        text: <>Dieses Feld zeigt dir an, wann der nächste Zug abfährt (und in wie vielen Minuten das ist).</>
                                     }
                                 ]}
                             />
@@ -175,8 +194,10 @@ export default function TimeToWork() {
 
                     <SubSection headline="Speichern">
                         <Tile>
-                            Der gesamte Zustand der Applikation wird beim Schließen des Tabs (bei dir lokal via <Code>localStorage</Code>) gesichert.
+                            Der gesamte Zustand der Applikation wird beim Schließen des Tabs
+                            (bei dir lokal via <Code>localStorage</Code>) gesichert.
                             Dieser Zustand wird wiederherstellt, wenn du die Applikation wieder öffnest.
+                            <LargeBr />
                             Wenn du aber die Applikation an einem neuen Tag öffnest,
                             werden die Zeitstempel und Zeitintervalle vom Vortag nicht geladen und
                             der am Vortag berechnete neue Zeitsaldo wird als aktueller Zeitsaldo übernommen.

@@ -8,7 +8,8 @@ import Recipe from "@/components/categories/recipes/Recipe";
 import IngredientList from "@/components/categories/recipes/IngredientList";
 import Section from "@/components/pageStructure/Section";
 import Tile from "@/components/pageElements/Tile";
-import Code from "@/components/pageElements/Code";
+import LargeBr from "@/components/pageElements/breaks/LargeBr";
+import Highlight from "@/components/pageElements/Highlight";
 
 
 export default function Cheeseburger() {
@@ -49,15 +50,15 @@ export default function Cheeseburger() {
                 <HStack className="mt-3">
 
                     <Tile title="Burger Buns">
-                        use <Code noMono largePadding>brioche</Code> burger buns
+                        use <Highlight>brioche</Highlight> burger buns
                     </Tile>
 
                     <Tile title="Cheese">
-                        use <Code noMono largePadding>Appenzeller</Code> cheese slices
+                        use <Highlight>Appenzeller</Highlight> cheese slices
                     </Tile>
 
                     <Tile title="Lettuce">
-                        use either <Code noMono largePadding>romeo</Code> or <Code noMono largePadding>iceberg</Code> lettuce
+                        use either <Highlight>romeo</Highlight> or <Highlight>iceberg</Highlight> lettuce
                     </Tile>
 
                 </HStack>
@@ -67,7 +68,7 @@ export default function Cheeseburger() {
 
             <Section headline="Cooking instructions">
 
-                <VStack className="gap-3 mt-3">
+                <VStack className="gap-4 mt-3">
 
                     <Tile title="Slice onions">
                         To prepare the cheeseburger, start by slicing the onion(s) into half rings. Make sure not to slice them too thin, use the image above as a reference. In a pan with cooking oil, fry the onions until light brown spots appear, ensuring they remain juicy without overcooking.
@@ -99,8 +100,7 @@ export default function Cheeseburger() {
                         Once the pan is hot, cook the patties, turning them regularly (about one minute per side) until a good crust
                         forms on both sides. Lower the heat and cook to your preferred level, be it medium rare or well-done.
                         Add a bit of butter to both sides of the patty and let it melt thoroughly.
-                        <br />
-                        <br />
+                        <LargeBr/>
                         As the patty nears completion, place 2 cheese slices on top of the patty to melt. Feel free to turn the patty around to speed up the cheese melting process.
                     </Tile>
 

@@ -1,17 +1,16 @@
-import { spaceMono } from "@/fonts";
-
-type CodeProps = {
+type HighlightProps = {
     children?: React.ReactNode,
+    small?: boolean,
     customColor?: string
 };
 
-export default function Code(props: CodeProps) {    
+export default function Highlight(props: HighlightProps) {    
 
     return (
         <span
             className={`
                 rounded-lg px-1
-                ${spaceMono}
+                ${props.small ? "" : "py-[0.09rem]"}
                 ${props.customColor ? props.customColor : "dark:bg-zinc-950 bg-zinc-300"}
             `}
         >

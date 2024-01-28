@@ -16,10 +16,11 @@ export type Recipe = {
 
 
 export type Ingredient = {
-    name: string;
-    pluralName?: string;
-    unit: Unit;
-    image: StaticImageData;
+    name: string,
+    pluralName?: string,
+    unit: Unit,
+    image: StaticImageData,
+    customImagePadding?: string
 } & (
         | { unit: "Gram" | "Piece"; amount: number }
         | { unit: "None"; amount: string }
@@ -49,7 +50,8 @@ export const recipes: Recipes = {
                 name: "Ketchup",
                 amount: "some",
                 unit: "None",
-                image: cheeseburgerImages.ketchup
+                image: cheeseburgerImages.ketchup,
+                customImagePadding: "p-4"
             },
             {
                 name: "Onion",

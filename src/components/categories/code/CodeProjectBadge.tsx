@@ -11,11 +11,11 @@ export default function CodeProjectBadge(props: CodeProjectBadgeProps) {
     return (
         <div
             className={`
-                dark:border-zinc-800 border-zinc-400 border
+                dark:border-zinc-700 border-zinc-400 border
                 w-72 h-32 overflow-hidden
                 flex items-center
                 rounded-2xl relative group
-                ${props.codeProject.customBadgeImage ? "" : "bg-zinc-200 dark:bg-zinc-900"}
+                ${props.codeProject.customBadgeImage ? "" : "bg-zinc-200 dark:bg-zinc-800"}
             `}
         >
 

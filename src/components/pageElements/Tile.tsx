@@ -14,7 +14,6 @@ export default function Tile(props: TileProps) {
                 bg-zinc-100 dark:bg-zinc-900
                 border border-zinc-200 dark:border-zinc-800
                 rounded-xl
-                drop-shadow-sm
                 ${props.customPadding ? "" : "p-2.5"}
                 ${props.className ?? ""}
             `}

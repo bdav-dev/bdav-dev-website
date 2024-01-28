@@ -1,6 +1,6 @@
 'use client';
 
-import Code from "@/components/pageElements/Code";
+import Highlight from "@/components/pageElements/Highlight";
 import Tile from "@/components/pageElements/Tile";
 import { Ingredient, Recipe, ingredientAsString } from "@/content/recipes/recipes";
 import Image from "next/image";
@@ -62,7 +62,6 @@ export default function IngredientList(props: IngredientListProps) {
                         flex items-center justify-center
                         border
                         border-zinc-400 dark:border-zinc-800
-                        drop-shadow-sm
                     `}
                 >
                     {numberOfPortions}
@@ -79,7 +78,7 @@ export default function IngredientList(props: IngredientListProps) {
                             hover:bg-zinc-300 hover:dark:bg-zinc-900
                             active:bg-zinc-400 dark:active:bg-zinc-800
                             transition-colors duration-75
-                            drop-shadow-sm
+                            select-none
                         `}
                         onClick={onInc}
                     >
@@ -95,7 +94,7 @@ export default function IngredientList(props: IngredientListProps) {
                             hover:bg-zinc-300 hover:dark:bg-zinc-900
                             active:bg-zinc-400 dark:active:bg-zinc-800
                             transition-colors duration-75
-                            drop-shadow-sm
+                            select-none
                         `}
                         onClick={onDec}
                     >
@@ -119,14 +118,16 @@ export default function IngredientList(props: IngredientListProps) {
                                     border-zinc-400 dark:border-zinc-700
                                     rounded-2xl
                                     flex flex-col
-                                    drop-shadow-sm
                                 `}
                                 key={index}
                             >
                                 <Image
                                     src={ingredient.image}
                                     alt={ingredient.name}
-                                    className="h-2/3 object-contain p-1.5 select-none rounded-xl drop-shadow-md"
+                                    className={`
+                                        ${ingredient.customImagePadding ?? "p-1.5"}
+                                        h-2/3 object-contain select-none rounded-xl drop-shadow-md
+                                    `}
                                     draggable="false"
                                     placeholder="blur"
                                 />
@@ -135,9 +136,9 @@ export default function IngredientList(props: IngredientListProps) {
                                     w-full text-center mt-auto flex flex-col px-2.5 pb-2
                                 `}>
 
-                                    <Code noMono largePadding>
+                                    <Highlight>
                                         {ingredientStringToJsx(ingredient, numberOfPortions)}
-                                    </Code>
+                                    </Highlight>
 
                                 </div>
                             </div>

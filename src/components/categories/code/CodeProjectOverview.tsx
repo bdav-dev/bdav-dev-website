@@ -4,8 +4,8 @@ import Link from "next/link";
 import Tile from "@/components/pageElements/Tile";
 import Headline from "@/components/pageStructure/headlines/Headline";
 import GitHubRepoLink from "@/components/links/social/GitHubRepoLink";
-import Code from "@/components/pageElements/Code";
 import CodeLanguageBadge from "./CodeLanguageBadge";
+import Highlight from "@/components/pageElements/Highlight";
 
 type CodeProjectOverviewProps = {
     codeProject: CodeProject
@@ -56,7 +56,7 @@ export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
                             <tr>
                                 <td className="px-1">Project Language</td>
                                 <td className="px-1">
-                                    <Code noMono largePadding>{props.codeProject.codeProjectProperies.projectLanguage}</Code>
+                                    <Highlight>{props.codeProject.codeProjectProperies.projectLanguage}</Highlight>
                                 </td>
                             </tr>
 

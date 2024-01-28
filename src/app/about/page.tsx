@@ -13,6 +13,7 @@ import RecipesIcon from "@/icons/RecipiesIcon";
 import CodeLanguageBadge from "@/components/categories/code/CodeLanguageBadge";
 import { programmingLanguages } from "@/content/code/codeProjects";
 import { defaultMetadata } from "@/metadata";
+import LargeBr from "@/components/pageElements/breaks/LargeBr";
 
 export default function About() {
     return (
@@ -30,8 +31,7 @@ export default function About() {
                         the SAP development department.
                         Now I code in <CodeLanguageBadge lang={programmingLanguages.java} smallerPadding/> and
                         use the Spring and Vaadin frameworks.
-                        <br />
-                        <br />
+                        <LargeBr/>
                         I also work on my personal programming projects in my free time.
 
                         You can have a look at them under the section&thinsp;
@@ -47,8 +47,9 @@ export default function About() {
                         <CodeLanguageBadge lang={programmingLanguages.typeScript} smallerPadding />,&#8200;
                         <CodeLanguageBadge lang={programmingLanguages.bash} smallerPadding /> and&#8200;
                         <CodeLanguageBadge lang={programmingLanguages.java} smallerPadding />.
-                        <br />
-                        <br />
+                        
+                        <LargeBr/>
+
                         I enjoy making things in the 3D computer graphics
                         software <HyperLink href="https://www.blender.org/">Blender</HyperLink>.
                         A project of mine is the&thinsp;
@@ -58,8 +59,9 @@ export default function About() {
                         , a series of images which feature abstract objects, substances or landscapes.
                         <br />
                         A few of my favorite creations are available as a wallpaper to download.
-                        <br />
-                        <br />
+                        
+                        <LargeBr/>
+
                         Sometimes, I like to cook various dishes.
                         I try to improve a handful of my favorite dishes, until I achieved (at least in my option) the
                         perfect recipe for that dish.
@@ -71,13 +73,15 @@ export default function About() {
                         <br />
                         I also try to make my very own original recipes and if I feel one is good enough,
                         I present the recipe here on this website.
-                        <br />
-                        <br />
+                        
+                        <LargeBr/>
+
                         One last thing: This website uses the dark mode as the default theme.
                         If you like to change that, click on the moon icon located on the very right of the website header.
                         This toggles between light and dark mode.
-                        <br />
-                        <br />
+                        
+                        <LargeBr/>
+
                         Thank you for visiting and enjoy your stay.
                     </Tile>
                 </Section>
