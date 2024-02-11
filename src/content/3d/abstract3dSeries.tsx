@@ -35,6 +35,17 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     aspectRatio: "1:1",
                     downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1707579822/abstract-3d-series/023/a3ds-023.png"
                 }
+            ],
+            wallpaperDownloads: [
+                {
+                    description: "Desktop UHD",
+                    fileName: "a3ds-023-wallpaper-desktop-uhd",
+                    fileFormat: "png",
+                    width: 3840,
+                    height: 2160,
+                    aspectRatio: "16:9",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1707663092/abstract-3d-series/023/a3ds-023-wallpaper-desktop-uhd.png"
+                }
             ]
         }
     },
