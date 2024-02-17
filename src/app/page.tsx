@@ -7,21 +7,19 @@ import RecipeLink from "@/components/links/content/RecipeLink";
 import GitHubLink from "@/components/links/social/GitHubLink";
 import InstagramLink from "@/components/links/social/InstagramLink";
 import LinkedInLink from "@/components/links/social/LinkedInLink";
-import Code from "@/components/pageElements/Code";
+import BdavDev from "@/components/misc/BdavDev";
 import Spacer from "@/components/pageElements/Spacer";
 import Tile from "@/components/pageElements/Tile";
 import PageBody from "@/components/pageLayout/PageBody";
 import HStack from "@/components/pageStructure/stacks/HStack";
 import VStack from "@/components/pageStructure/stacks/VStack";
 import { abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
-import { CodeProject, codeProjects } from "@/content/code/codeProjects";
+import { codeProjects } from "@/content/code/codeProjects";
 import { recipes } from "@/content/recipes/recipes";
-import { spaceMonoBold } from "@/fonts";
 import AboutIcon from "@/icons/AboutIcon";
 import BlenderIcon from "@/icons/BlenderIcon";
 import CodeIcon from "@/icons/CodeIcon";
 import RecipesIcon from "@/icons/RecipiesIcon";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 
@@ -50,7 +48,7 @@ export default function Home() {
             <div className="flex flex-col h-full my-auto">
 
                 <h1 className="text-4xl w-fit mx-auto text-center my-12">
-                    Welcome to <span className={spaceMonoBold}>bdav.dev</span>
+                    Welcome to <BdavDev/>
                 </h1>
 
                 <VStack className="gap-5">
