@@ -48,7 +48,7 @@ export default function Home() {
             <div className="flex flex-col h-full my-auto">
 
                 <h1 className="text-4xl w-fit mx-auto text-center my-12">
-                    Welcome to <BdavDev/>
+                    Welcome to <BdavDev />
                 </h1>
 
                 <VStack className="gap-5">

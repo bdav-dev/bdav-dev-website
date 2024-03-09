@@ -20,7 +20,7 @@ export default function DropdownMenu(props: DropdownMenuProps) {
                     p-1.5
                     flex flex-col items-center
                     rounded-xl
-                    bg-opacity-90 dark:bg-opacity-80
+                    bg-opacity-90 dark:bg-opacity-90
                     backdrop-blur-sm
                     drop-shadow-sm
                     bg-zinc-100 dark:bg-zinc-900
