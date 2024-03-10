@@ -10,6 +10,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import Highlight from "@/components/pageElements/Highlight";
 import { Metadata } from "next";
+import DownloadIcon from "@/icons/DownloadIcon";
 
 
 function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
@@ -38,8 +39,8 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                                     image.description
                                         ? <td className={`
                                             ${cellWidth} ${yPadding}
-                                            break-all mxs:break-keep 
-                                            whitespace-normal mxs:whitespace-nowrap 
+                                            break-all mxs:break-keep
+                                            whitespace-normal mxs:whitespace-nowrap
                                         `}>{image.description}</td>
                                         : <td className="w-0"></td>
                                 }
@@ -77,8 +78,14 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
                                 </td>
 
                                 <td className={`pl-1 ${cellWidth} text-right ${yPadding}`}>
-                                    <HyperLink href={image.downloadURL}>
-                                        Download
+                                    <HyperLink href={image.downloadURL} className="flex gap-1.5 w-fit ml-auto items-center stroke-white">
+
+                                        <DownloadIcon className="w-5 h-5 ml-auto stroke-[6]" />
+
+                                        <span className="hidden sm:inline">
+                                            Download
+                                        </span>
+
                                     </HyperLink>
                                 </td>
 
