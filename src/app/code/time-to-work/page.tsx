@@ -142,7 +142,7 @@ export default function TimeToWork() {
                         </Tile>
                     </SubSection>
 
-                    <SubSection headline="Zugberechungen">
+                    <SubSection headline="Zugberechnungen">
                         <Tile>
                             Wenn du mit dem Zug zur Arbeit kommst, kannst du bei Angabe von
 
