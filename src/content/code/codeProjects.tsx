@@ -1,6 +1,7 @@
 import timecoderBadge from '@/../public/code/timecoder/timecoder-badge.webp';
+import kdmFinderBadge from '@/../public/code/kdm-finder/kdm-finder-badge.webp';
 import { spaceMono } from "@/fonts";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export type CodeProject = {
     title: string | React.ReactNode,
@@ -66,6 +67,10 @@ export const programmingLanguages: { [key: string]: ProgrammingLanguage } = {
     abap: {
         name: "ABAP",
         bgColor: "#094789"
+    },
+    python: {
+        name: "Python",
+        bgColor: "#2C6999"
     }
 };
 
@@ -116,5 +121,29 @@ export const codeProjects: CodeProjects = {
             status: "Completed",
             type: "Web application"
         }
-    }
+    },
+    kdmFinder: {
+        title: "KDM-Finder",
+        path: "/code/kdm-finder/",
+        repository: "kdm-finder",
+
+        customBadge: (
+            <div className="w-full h-full flex justify-center items-center bg-[#161616] select-none">
+                <Image
+                    alt='KDM-Finder badge'
+                    src={kdmFinderBadge}
+                    className='h-full object-contain p-4'
+                    draggable={false}
+                />
+            </div>
+        ),
+        badgeHoverText: <span className='text-white'>KDM-Finder</span>,
+
+        codeProjectProperies: {
+            programmingLanguages: [programmingLanguages.python],
+            projectLanguage: "English",
+            status: "Maintaining",
+            type: "Desktop application"
+        }
+    },
 };

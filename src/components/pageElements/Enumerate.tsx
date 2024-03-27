@@ -8,7 +8,8 @@ type EnumerateProps = {
     symbolWidthClassName?: string,
     items: (string | React.ReactNode | TitledItem)[],
     className?: string,
-    seperateItems?: boolean
+    seperateItems?: boolean,
+    indent?: boolean
 };
 
 function itemToJsx(item: (TitledItem | string | React.ReactNode)) {
@@ -33,7 +34,11 @@ function itemToJsx(item: (TitledItem | string | React.ReactNode)) {
 export default function Enumerate(props: EnumerateProps) {
 
     return (
-        <ol className={"w-full " + props.className}>
+        <ol className={`
+            w-full
+            ${props.indent ? "ml-2" : ""}
+            ${props.className}
+        `}>
             {
                 props.items.map(
                     (listItem, index) => (

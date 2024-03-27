@@ -11,7 +11,7 @@ export default function Highlight(props: HighlightProps) {
             className={`
                 rounded-lg px-1
                 ${props.small ? "" : "py-[0.09rem]"}
-                ${props.customColor ? props.customColor : "dark:bg-zinc-950 bg-zinc-300"}
+                ${props.customColor ? props.customColor : "dark:bg-zinc-950 bg-neutral-250"}
             `}
         >
             {props.children}

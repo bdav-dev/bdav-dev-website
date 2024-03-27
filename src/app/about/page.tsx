@@ -45,7 +45,8 @@ export default function About() {
                         <CodeLanguageBadge lang={programmingLanguages.css} smallerPadding />,&#8200;
                         <CodeLanguageBadge lang={programmingLanguages.javaScript} smallerPadding />,&#8200;
                         <CodeLanguageBadge lang={programmingLanguages.typeScript} smallerPadding />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.bash} smallerPadding /> and&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.bash} smallerPadding />,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.python} smallerPadding /> and&#8200;
                         <CodeLanguageBadge lang={programmingLanguages.java} smallerPadding />.
                         
                         <LargeBr/>
