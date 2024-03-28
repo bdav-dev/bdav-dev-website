@@ -256,7 +256,7 @@ export default function Datenschutzerklaerung() {
                 </Section>
 
                 <Section headline="4. Datenerfassung auf dieser Website">
-                    
+
                     <SubSection headline="Cookies">
                         Unsere Internetseiten verwenden so genannte „Cookies“.
                         Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an.
@@ -296,7 +296,7 @@ export default function Datenschutzerklaerung() {
                 </Section>
 
                 <Section headline="5. Plugins und Tools">
-                    
+
                     <SubSection headline="Google Fonts">
                         Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts,
                         die von Google bereitgestellt werden. Beim Aufruf einer Seite lädt Ihr Browser
@@ -317,7 +317,10 @@ export default function Datenschutzerklaerung() {
                         der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten soll.
                         Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten.
                         Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem
-                        Link: <HyperLink href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active" />
+                        Link:<span> </span>
+                        <HyperLink href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active">
+                            https://<wbr/>www.dataprivacyframework.gov/<wbr/>s/<wbr/>participant-search/<wbr/>participant-detail?<wbr/>contact=true&<wbr/>id=a2zt000000001L5AAI&<wbr/>status=Active
+                        </HyperLink>
                     </SubSection>
 
                 </Section>

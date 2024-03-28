@@ -115,8 +115,8 @@ export default function KdmFinder() {
                                     indent
                                     symbol="-"
                                     items={[
-                                        <><Code>~/.local/share/applications/</Code>, if you want to install KDM-Finder for the current user</>,
-                                        <><Code>/usr/share/applications</Code>, if you want to install KDM-Finder system wide for all users</>
+                                        <><Code>~/<wbr/>.local/<wbr/>share/<wbr/>applications/</Code>, if you want to install KDM-Finder for the current user</>,
+                                        <><Code>/usr/<wbr/>share/<wbr/>applications</Code>, if you want to install KDM-Finder system wide for all users</>
                                     ]}
                                 />
                             </SubSubSection>
@@ -149,7 +149,10 @@ export default function KdmFinder() {
                                 On a Gmail account, the password is not the password to your google account.
                                 You need to enter an "app password".
                                 <br />
-                                Read this article to learn how to create one: <HyperLink href="https://support.google.com/accounts/answer/185833?hl=en" />
+                                Read this article to learn how to create one:<span> </span>
+                                <HyperLink href="https://support.google.com/accounts/answer/185833?hl=en">
+                                    https://<wbr />support.google.com/<wbr />accounts/<wbr />answer/<wbr />185833?hl=en
+                                </HyperLink>
                             </BlockQuote>
 
                             <LargeBr />
