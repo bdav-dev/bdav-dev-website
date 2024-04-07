@@ -29,7 +29,7 @@ export default function KdmFinder() {
                         <LargeBr />
 
                         A KDM (Key Delivery Message) is required to play an encrypted DCP movie.
-                        This is typically is provided as a <Code>.xml</Code> file.
+                        KDMs are typically is provided as <Code>.xml</Code> files.
 
                         <LargeBr />
 
@@ -52,17 +52,14 @@ export default function KdmFinder() {
 
                     <SubSection headline="Dependencies">
                         <Tile>
-                            Make sure you have Python and PyQt6 installed. The latter can be installed with <Code>pip install PyQt6</Code>.
-
-                            <LargeBr />
-
-                            The application is tested with:
+                            Make sure you have the following software installed:
                             <Enumerate
                                 indent
                                 symbol="-"
                                 items={[
-                                    "Python 3.10.12",
-                                    "PyQt6 6.6.1"
+                                    <>Python</>,
+                                    <>PyQt6 (can be installed with <Code>pip install PyQt6</Code>)</>,
+                                    <>On Linux: <Code>libxcb-cursor0</Code> (can be installed with <Code>sudo apt install libxcb-cursor0</Code>)</>
                                 ]}
                             />
                         </Tile>
@@ -70,17 +67,25 @@ export default function KdmFinder() {
 
                     <SubSection headline="Run and Install">
                         <Tile>
-                            To use KDM-Finder, download the source code of the latest version from GitHub
-                            (as a <Code>.zip</Code> file or via <Code>git clone</Code>).
+                            To use KDM-Finder, download the source code of the latest version from GitHub using one of the following methods:
+                            <Enumerate
+                                indent
+                                symbol="-"
+                                items={[
+                                    <>
+                                        Download as a .zip file:<span> </span>
+                                        <HyperLink href="https://github.com/bdav-dev/kdm-finder/archive/refs/heads/main.zip">
+                                            https://<wbr />github.com/<wbr />bdav-dev/<wbr />kdm-finder/<wbr />archive/<wbr />refs/<wbr />heads/<wbr />main.zip
+                                        </HyperLink>
+                                    </>,
+                                    <>Download via <Code>git clone https://<wbr />github.com/<wbr />bdav-dev/<wbr />kdm-finder.git</Code></>
+                                ]}
+                            />
 
-                            <LargeBr />
-
-                            You can also use this link: <HyperLink href="https://github.com/bdav-dev/kdm-finder/archive/refs/heads/main.zip" />
-
-                            <LargeBr />
 
                             <SubSubSection headline="Run">
                                 <Enumerate
+                                    indent
                                     items={[
                                         <>If needed, unzip the <Code>.zip</Code> file.</>,
                                         <>Execute the python file <Code>main.py</Code> located in the root directory of the project.
@@ -115,8 +120,8 @@ export default function KdmFinder() {
                                     indent
                                     symbol="-"
                                     items={[
-                                        <><Code>~/<wbr/>.local/<wbr/>share/<wbr/>applications/</Code>, if you want to install KDM-Finder for the current user</>,
-                                        <><Code>/usr/<wbr/>share/<wbr/>applications</Code>, if you want to install KDM-Finder system wide for all users</>
+                                        <><Code>~/<wbr />.local/<wbr />share/<wbr />applications/</Code>, if you want to install KDM-Finder for the current user</>,
+                                        <><Code>/usr/<wbr />share/<wbr />applications</Code>, if you want to install KDM-Finder system wide for all users</>
                                     ]}
                                 />
                             </SubSubSection>
@@ -172,12 +177,12 @@ export default function KdmFinder() {
                     <SubSection headline="Search">
                         <Tile>
                             KDM-Finder fetches the latest emails and determines if an email contains a KDM.
-                            An email is considered contain a KDM if
+                            An email is considered to contain a KDM if
                             <Enumerate
                                 indent
                                 symbol="-"
                                 items={[
-                                    <>the email content, subject or sender contain (case ignored) <Code>kdm</Code> or <Code>key</Code> and</>,
+                                    <>the email content, subject, sender or attachment contain (case ignored) <Code>kdm</Code> or <Code>key</Code> and</>,
                                     <>the email has an attachment with <Code>.zip</Code> or <Code>.xml</Code> as the file extension.</>
                                 ]}
                             />
@@ -222,6 +227,17 @@ export default function KdmFinder() {
                         </Tile>
                     </SubSection>
 
+                </Section>
+
+                <Section headline="Known Issues">
+                    <Tile>
+                        <Enumerate
+                            symbol="-"
+                            items={[
+                                <>The application windows don't appear in the middle of the screen on Linux when using Wayland</>
+                            ]}
+                        />
+                    </Tile>
                 </Section>
 
             </Article>
