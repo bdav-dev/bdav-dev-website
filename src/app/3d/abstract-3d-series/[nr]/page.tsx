@@ -5,7 +5,7 @@ import Tile from "@/components/pageElements/Tile";
 import Article from "@/components/pageStructure/Article";
 import Section from "@/components/pageStructure/Section";
 import SubSection from "@/components/pageStructure/SubSection";
-import { Abstract3dSeriesImage, ImageDownload, abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
+import { Abstract3dSeriesImage as Abstract3dSeriesImageType, ImageDownload, abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Highlight from "@/components/pageElements/Highlight";
@@ -101,7 +101,7 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
 
 export default function Abstract3dSeriesImage({ params }: { params: { nr: string } }) {
 
-    let abstract3dSeriesImage: Abstract3dSeriesImage | undefined;
+    let abstract3dSeriesImage: Abstract3dSeriesImageType | undefined;
 
     abstract3dSeriesImage = Object.values(abstract3dSeriesImages).find(
         image => image.nr.toString() === params.nr
