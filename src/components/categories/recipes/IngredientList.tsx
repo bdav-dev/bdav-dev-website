@@ -135,17 +135,21 @@ export default function IngredientList(props: IngredientListProps) {
                                 <div className={`
                                     w-full text-center mt-auto flex flex-col px-2.5 pb-2
                                 `}>
-
-                                    <Highlight>
+                                    <span
+                                        className={`
+                                            rounded-lg px-1
+                                            py-[0.09rem]
+                                            dark:bg-zinc-950 bg-zinc-300
+                                        `}
+                                    >
                                         {ingredientStringToJsx(ingredient, numberOfPortions)}
-                                    </Highlight>
-
+                                    </span>
                                 </div>
                             </div>
                         )
                     )
                 }
             </div>
-        </Tile>
+        </Tile >
     );
 }
