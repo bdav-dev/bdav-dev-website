@@ -28,6 +28,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
         downloads: {
             imageDownloads: [
                 {
+                    description: "Green",
                     fileName: "a3ds-024-green",
                     fileFormat: "png",
                     width: 1080,
@@ -36,6 +37,7 @@ export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = 
                     downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1709998497/abstract-3d-series/024/a3ds-024-green.png"
                 },
                 {
+                    description: "Pink",
                     fileName: "a3ds-024-pink",
                     fileFormat: "png",
                     width: 1080,
