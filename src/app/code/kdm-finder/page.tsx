@@ -230,7 +230,7 @@ export default function KdmFinder() {
                 </Section>
 
                 <Section headline="Known Issues">
-                    <Tile>
+                    <Tile className="mt-2">
                         <Enumerate
                             symbol="-"
                             items={[
