@@ -1,6 +1,5 @@
 'use client';
 
-import Highlight from "@/components/pageElements/Highlight";
 import Tile from "@/components/pageElements/Tile";
 import { Ingredient, Recipe, ingredientAsString } from "@/content/recipes/recipes";
 import Image from "next/image";

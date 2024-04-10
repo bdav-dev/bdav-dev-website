@@ -29,7 +29,7 @@ export default function KdmFinder() {
                         <LargeBr />
 
                         A KDM (Key Delivery Message) is required to play an encrypted DCP movie.
-                        KDMs are typically is provided as <Code>.xml</Code> files.
+                        KDMs are typically provided as <Code>.xml</Code> files.
 
                         <LargeBr />
 
