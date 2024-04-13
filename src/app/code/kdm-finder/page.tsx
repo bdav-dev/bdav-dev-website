@@ -234,7 +234,9 @@ export default function KdmFinder() {
                         <Enumerate
                             symbol="-"
                             items={[
-                                <>The application windows don't appear in the middle of the screen on Linux when using Wayland</>
+                                <>The application windows don't appear in the middle of the screen on Linux when using Wayland</>,
+                                <>Changing the OS theme (from light to dark mode or vice versa)
+                                    requires a restart of the application to avoid color issues</>
                             ]}
                         />
                     </Tile>
