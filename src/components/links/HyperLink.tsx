@@ -21,13 +21,13 @@ export default function HyperLink(props: HyperLinkProps) {
             className={`
                 ${
                     isMobile && !props.noMobileStyle
-                        ? "text-sky-700 dark:text-sky-400 !stroke-sky-700 dark:!stroke-sky-400"
-                        : "hover:text-sky-700 dark:hover:text-sky-400 hover:!stroke-sky-700 dark:hover:!stroke-sky-400"
+                    ? "text-sky-700 dark:text-sky-400 !stroke-sky-700 dark:!stroke-sky-400"
+                    : "hover:text-sky-700 dark:hover:text-sky-400 hover:!stroke-sky-700 dark:hover:!stroke-sky-400"
                 }
                 ${
                     props.noUnderline
-                        ? ""
-                        : isMobile && !props.noMobileStyle ? "underline" : "hover:underline"
+                    ? ""
+                    : "underline decoration-neutral-500 dark:decoration-neutral-300 hover:decoration-inherit dark:hover:decoration-inherit"
                 }
                 ${props.className}
             `}

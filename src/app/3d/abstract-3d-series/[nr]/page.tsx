@@ -79,6 +79,7 @@ function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
 
                                 <td className={`pl-1 ${cellWidth} text-right ${yPadding}`}>
                                     <HyperLink
+                                        noUnderline
                                         href={image.downloadURL}
                                         className="flex gap-1.5 w-fit ml-auto items-center stroke-black dark:stroke-white"
                                     >

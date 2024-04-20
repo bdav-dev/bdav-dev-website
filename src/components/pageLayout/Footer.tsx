@@ -7,11 +7,22 @@ export default function Footer() {
                 David Berezowski
             </div>
 
-            <HyperLink className="mr-auto sm:mr-2 sm:ml-auto" href="/datenschutzerklaerung/" noNewTab noMobileStyle>
+            <HyperLink
+                noNewTab
+                noMobileStyle
+                noUnderline
+                className="mr-auto sm:mr-2 sm:ml-auto"
+                href="/datenschutzerklaerung/"
+            >
                 Datenschutzerklärung
             </HyperLink>
 
-            <HyperLink href="/impressum/" noNewTab noMobileStyle>
+            <HyperLink
+                noNewTab
+                noMobileStyle
+                noUnderline
+                href="/impressum/"
+            >
                 Impressum
             </HyperLink>
         </footer>
