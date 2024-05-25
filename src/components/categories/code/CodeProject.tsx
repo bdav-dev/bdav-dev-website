@@ -1,9 +1,9 @@
 import PageBody from "@/components/pageLayout/PageBody";
 import CodeProjectOverview from "./CodeProjectOverview";
-import { CodeProject } from "@/content/code/codeProjects";
+import { CodeProject as CodeProjectType } from "@/content/code/codeProjects";
 
 type CodeProjectProps = {
-    codeProject: CodeProject
+    codeProject: CodeProjectType
     children?: React.ReactNode
 }
 
