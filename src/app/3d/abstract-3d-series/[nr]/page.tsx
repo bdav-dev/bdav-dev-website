@@ -1,115 +1,27 @@
 import { defaultMetadata } from "@/metadata";
-import Abstract3DSeries from "@/components/categories/3d/Abstract3DSeries";
-import HyperLink from "@/components/links/HyperLink";
 import Tile from "@/components/pageElements/Tile";
 import Article from "@/components/pageStructure/Article";
 import Section from "@/components/pageStructure/Section";
 import SubSection from "@/components/pageStructure/SubSection";
-import { Abstract3dSeriesImage as Abstract3dSeriesImageType, ImageDownload, abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
+import { Abstract3dSeriesImage as Abstract3dSeriesImageType, abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import Highlight from "@/components/pageElements/Highlight";
 import { Metadata } from "next";
-import DownloadIcon from "@/icons/DownloadIcon";
-
-
-function imageDownloadsToTable(imageDownloads: ImageDownload[]) {
-    let anyDescriptionPresent = imageDownloads.find(image => image.description != undefined) != undefined;
-
-    const yPadding = "py-[0.35rem]";
-
-    const cellWidth = anyDescriptionPresent
-        ? "w-1/5"
-        : "w-1/4";
-
-    return (
-        <table className="w-full">
-            <tbody>
-                {
-                    imageDownloads.map(
-                        (image, index) => (
-                            <tr key={index}
-                                className={
-                                    index != 0
-                                        ? "border-t border-zinc-300 dark:border-zinc-800"
-                                        : ""
-                                }
-                            >
-                                {
-                                    image.description
-                                        ? <td className={`
-                                            ${cellWidth} ${yPadding}
-                                            break-all mxs:break-keep
-                                            whitespace-normal mxs:whitespace-nowrap
-                                        `}>{image.description}</td>
-                                        : <td className="w-0"></td>
-                                }
-
-                                <td className={`
-                                        ${image.description ? "px-1" : "pr-1"}
-                                        ${anyDescriptionPresent ? "text-center" : ""}
-                                        ${yPadding}
-                                        ${cellWidth}
-                                        break-all mxs:break-keep
-                                        whitespace-normal mxs:whitespace-nowrap 
-                                `}>
-                                    <Highlight>
-                                        <span className={image.description ? "hidden" : "inline"}>
-                                            {image.fileName}
-                                        </span>
-                                        .{image.fileFormat}
-                                    </Highlight>
-                                </td>
-
-                                <td className={`
-                                    px-1 ${yPadding}
-                                    ${image.description ? "hidden sm:table-cell" : ""}
-                                    ${cellWidth} text-center
-                                `}>
-                                    <Highlight>
-                                        {image.aspectRatio}
-                                    </Highlight>
-                                </td>
-
-                                <td className={`px-1 ${cellWidth} text-center ${yPadding}`}>
-                                    <Highlight>
-                                        {`${image.width}x${image.height}`}
-                                    </Highlight>
-                                </td>
-
-                                <td className={`pl-1 ${cellWidth} text-right ${yPadding}`}>
-                                    <HyperLink
-                                        noUnderline
-                                        href={image.downloadURL}
-                                        className="flex gap-1.5 w-fit ml-auto items-center stroke-black dark:stroke-white"
-                                    >
-                                        <DownloadIcon className="w-5 h-5 ml-auto stroke-[6]" />
-
-                                        <span className="hidden sm:inline">
-                                            Download
-                                        </span>
-                                    </HyperLink>
-                                </td>
-
-                            </tr>
-                        )
-                    )
-                }
-            </tbody>
-        </table>
-    );
-}
+import A3dsImageDownloadTabe from "@/components/categories/3d/A3dsImageDownloadTable";
+import Abstract3DSeries from "@/components/categories/3d/Abstract3DSeries";
 
 export default function Abstract3dSeriesImage({ params }: { params: { nr: string } }) {
-
-    let abstract3dSeriesImage: Abstract3dSeriesImageType | undefined;
-
-    abstract3dSeriesImage = Object.values(abstract3dSeriesImages).find(
-        image => image.nr.toString() === params.nr
+    const abstract3dSeriesImage: Abstract3dSeriesImageType | undefined = (
+        Object.values(abstract3dSeriesImages).find(
+            image => image.nr.toString() === params.nr
+        )
     );
 
     if (abstract3dSeriesImage == undefined)
         notFound();
+
+    const amountOfImageDownloads = abstract3dSeriesImage.downloads?.imageDownloads?.length ?? 0;
+    const amountOfWallpaperDownloads = abstract3dSeriesImage.downloads?.wallpaperDownloads?.length ?? 0;
 
     return (
         <Abstract3DSeries imageNr={abstract3dSeriesImage.nr}>
@@ -134,50 +46,37 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
                     draggable={false}
                 />
 
-                <div className="flex-grow">
+                <Article headline={`Abstract3D Series #${params.nr}`} className="flex-grow">
+                    {abstract3dSeriesImage.description}
 
-                    <Article headline={`Abstract3D Series #${params.nr}`}>
-                        {abstract3dSeriesImage.description}
+                    {
+                        abstract3dSeriesImage.downloads &&
+                        <Section headline="Downloads" className="mt-4">
+                            { /* Image Downloads */
+                                abstract3dSeriesImage.downloads.imageDownloads &&
+                                <SubSection headline={amountOfImageDownloads > 1 ? "Images" : "Image"}>
+                                    <Tile className="py-1 px-2" customPadding>
+                                        <A3dsImageDownloadTabe
+                                            downloads={abstract3dSeriesImage.downloads?.imageDownloads!}
+                                        />
+                                    </Tile>
+                                </SubSection>
+                            }
 
-                        {
-                            abstract3dSeriesImage.downloads
-                                ? <Section headline="Downloads" className="mt-4">
+                            { /* Wallpaper Downloads */
+                                abstract3dSeriesImage.downloads.wallpaperDownloads &&
+                                <SubSection headline={amountOfWallpaperDownloads > 1 ? "Wallpapers" : "Wallpaper"}>
+                                    <Tile className="py-1 px-2" customPadding>
+                                        <A3dsImageDownloadTabe
+                                            downloads={abstract3dSeriesImage.downloads?.wallpaperDownloads!}
+                                        />
+                                    </Tile>
+                                </SubSection>
+                            }
+                        </Section>
+                    }
 
-                                    {
-                                        abstract3dSeriesImage.downloads.imageDownloads
-                                            ? <SubSection headline={
-                                                abstract3dSeriesImage.downloads.imageDownloads.length > 1
-                                                    ? "Images"
-                                                    : "Image"
-                                            }>
-                                                <Tile className="py-1 px-2" customPadding>
-                                                    {imageDownloadsToTable(abstract3dSeriesImage.downloads?.imageDownloads!)}
-                                                </Tile>
-                                            </SubSection>
-                                            : <></>
-                                    }
-
-                                    {
-                                        abstract3dSeriesImage.downloads.wallpaperDownloads
-                                            ? <SubSection headline={
-                                                abstract3dSeriesImage.downloads.wallpaperDownloads.length > 1
-                                                    ? "Wallpapers"
-                                                    : "Wallpaper"
-                                            }>
-                                                <Tile className="py-1 px-2" customPadding>
-                                                    {imageDownloadsToTable(abstract3dSeriesImage.downloads?.wallpaperDownloads!)}
-                                                </Tile>
-                                            </SubSection>
-                                            : <></>
-                                    }
-
-                                </Section>
-                                : <></>
-                        }
-
-                    </Article>
-
-                </div>
+                </Article>
 
             </div>
 

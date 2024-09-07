@@ -24,7 +24,7 @@ export default function Category(props: CategoryProps) {
                     bg-opacity-80 dark:bg-opacity-80
                     h-10
                     ${props.selected
-                        ? "bg-zinc-400 dark:bg-zinc-950"
+                        ? "bg-zinc-350 dark:bg-zinc-925"
                         : "hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90"}
                 `}
             >

@@ -13,7 +13,19 @@ const config: Config = {
     extend: {
       colors: {
         neutral: {
-          250: '#dcdcdc'
+          225: '#E0E0E0',
+          250: '#dcdcdc',
+          350: '#BEBEBE',
+          725: '#3B3B3B',
+          750: '#353535',
+          850: '#1F1F1F',
+          925: '#111111'
+        },
+        zinc: {
+          250: '#DCDCE0',
+          350: '#BDBDC3',
+          850: '#202023',
+          925: '#121214'
         }
       },
       backgroundImage: {

@@ -5,7 +5,7 @@ type TitledItem = {
 
 type EnumerateProps = {
     symbol?: string | React.ReactNode,
-    symbolWidthClassName?: string,
+    symbolWidth?: string,
     items: (string | React.ReactNode | TitledItem)[],
     className?: string,
     seperateItems?: boolean,
@@ -15,20 +15,15 @@ type EnumerateProps = {
 function itemToJsx(item: (TitledItem | string | React.ReactNode)) {
     const itemAsTitledItem = item as TitledItem;
 
-    if (itemAsTitledItem.title == undefined) {
-        return <>{item}</>;
-
-    } else {
-        return (
-            <>
-                <span className="font-semibold">
-                    {itemAsTitledItem.title}
-                </span>
-                <br />
-                {itemAsTitledItem.text}
-            </>
-        )
-    }
+    return itemAsTitledItem.title != undefined
+        ? <>
+            <span className="font-semibold">
+                {itemAsTitledItem.title}
+            </span>
+            <br />
+            {itemAsTitledItem.text}
+        </>
+        : <>{item}</>;
 }
 
 export default function Enumerate(props: EnumerateProps) {
@@ -43,12 +38,15 @@ export default function Enumerate(props: EnumerateProps) {
                 props.items.map(
                     (listItem, index) => (
                         <li key={index}
-                            className={
-                                "flex flex-row flex-nowrap " +
-                                (props.seperateItems && index < props.items.length - 1 ? "mb-1" : "")
-                            }
+                            className={`
+                                flex flex-row flex-nowrap
+                                ${props.seperateItems && index < props.items.length - 1 ? "mb-1" : ""}
+                            `}
                         >
-                            <div className={props.symbolWidthClassName ?? "w-5"}>
+                            <div
+                                className={"select-none"}
+                                style={{ width: props.symbolWidth ?? "1.25rem" }}
+                            >
                                 {props.symbol ?? `${index + 1}.`}
                             </div>
 

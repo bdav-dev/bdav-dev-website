@@ -1,4 +1,4 @@
-import { spaceMono } from "@/fonts";
+import { mono } from "@/fonts";
 
 
 type MonoSpanProps = {
@@ -8,7 +8,7 @@ type MonoSpanProps = {
 export default function MonoSpan(props: MonoSpanProps) {
 
     return (
-        <span className={spaceMono}>
+        <span className={mono}>
             {props.children}
         </span>
     );

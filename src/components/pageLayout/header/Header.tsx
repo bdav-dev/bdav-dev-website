@@ -40,7 +40,7 @@ export default function Header(props: HeaderProps) {
 
     return (
         <>
-            <div className="fixed top-0 w-full z-50">
+            <div className="fixed top-0 w-full z-50 ">
                 <nav className={`
                     flex flex-col xs:flex-row items-center justify-center
                     p-2.5 pl-3.5 m-2

@@ -1,24 +1,13 @@
 'use client';
 
 import Tile from "@/components/pageElements/Tile";
-import { Ingredient, Recipe, ingredientAsString } from "@/content/recipes/recipes";
-import Image from "next/image";
+import { Recipe } from "@/content/recipes/recipes";
 import { useState } from "react";
+import IngredientCard from "./IngredientCard";
+import NumberInput from "@/components/input/NumberInput";
 
 type IngredientListProps = {
     recipe: Recipe
-}
-
-function ingredientStringToJsx(ingredient: Ingredient, numberOfPortions: number) {
-    const ingredientString = ingredientAsString(ingredient, numberOfPortions);
-
-    return (
-        <>
-            {ingredientString.amount}
-            <br />
-            <span className="whitespace-nowrap">{ingredientString.name}</span>
-        </>
-    )
 }
 
 export default function IngredientList(props: IngredientListProps) {
@@ -26,128 +15,32 @@ export default function IngredientList(props: IngredientListProps) {
 
     let ingredients = [...props.recipe.ingredients];
 
-    function onInc() {
-        setNumberOfPortions(curr => {
-            if (curr >= 99)
-                return 99;
-
-            return curr + 1;
-        });
-    }
-
-    function onDec() {
-        setNumberOfPortions(curr => {
-            if (curr <= 1)
-                return 1;
-
-            return curr - 1;
-        });
-    }
-
-
     return (
-        <Tile className="h-full mt-1 flex flex-col justify-center">
+        <Tile className="h-full mt-1">
 
-            <div className="h-16 flex flex-row justify-center items-center m-3 mt-5">
+            <div className="flex flex-col justify-center h-full">
 
-                <span className="text-center">
+                <div className="h-16 flex flex-row justify-center items-center m-3 mt-5">
                     Ingredients for
-                </span>
-
-                <div
-                    className={`
-                        h-full w-20 rounded-md ml-3 text-xl
-                        bg-zinc-200 dark:bg-zinc-950 
-                        flex items-center justify-center
-                        border
-                        border-zinc-400 dark:border-zinc-800
-                    `}
-                >
-                    {numberOfPortions}
+                    <NumberInput onValueChanged={setNumberOfPortions} initial={1} min={1} max={99} />
+                    portion(s)
                 </div>
 
-                <div className="flex flex-col w-10 h-full justify-between ml-0.5 mr-3 gap-0.5">
-                    <button
-                        className={`
-                            bg-zinc-200 dark:bg-zinc-950
-                            h-full
-                            rounded-md
-                            border
-                            border-zinc-400 dark:border-zinc-800
-                            hover:bg-zinc-300 hover:dark:bg-zinc-900
-                            active:bg-zinc-400 dark:active:bg-zinc-800
-                            transition-colors duration-75
-                            select-none
-                        `}
-                        onClick={onInc}
-                    >
-                        +
-                    </button>
-                    <button
-                        className={`
-                            bg-zinc-200 dark:bg-zinc-950
-                            h-full
-                            rounded-md
-                            border
-                            border-zinc-400 dark:border-zinc-800
-                            hover:bg-zinc-300 hover:dark:bg-zinc-900
-                            active:bg-zinc-400 dark:active:bg-zinc-800
-                            transition-colors duration-75
-                            select-none
-                        `}
-                        onClick={onDec}
-                    >
-                        -
-                    </button>
-                </div>
+                <hr className="mx-8 border-zinc-400 dark:border-zinc-700 my-2" />
 
-                portion(s)
-            </div>
-
-            <hr className="mx-8 border-zinc-400 dark:border-zinc-700 my-2" />
-
-            <div className="flex flex-row flex-wrap gap-3 p-4 justify-center mb-2">
-                {
-                    ingredients.map(
-                        (ingredient, index) => (
-                            <div className={`
-                                    w-52 h-48
-                                    bg-zinc-200 dark:bg-zinc-800
-                                    border
-                                    border-zinc-400 dark:border-zinc-700
-                                    rounded-2xl
-                                    flex flex-col
-                                `}
-                                key={index}
-                            >
-                                <Image
-                                    src={ingredient.image}
-                                    alt={ingredient.name}
-                                    className={`
-                                        ${ingredient.customImagePadding ?? "p-1.5"}
-                                        h-2/3 object-contain select-none rounded-xl drop-shadow-md
-                                    `}
-                                    draggable="false"
-                                    placeholder="blur"
+                <div className="flex flex-row flex-wrap gap-3 p-4 justify-center mb-2">
+                    {
+                        ingredients.map(
+                            (ingredient, index) => (
+                                <IngredientCard
+                                    ingredient={ingredient}
+                                    numberOfPortions={numberOfPortions}
+                                    key={index}
                                 />
-
-                                <div className={`
-                                    w-full text-center mt-auto flex flex-col px-2.5 pb-2
-                                `}>
-                                    <span
-                                        className={`
-                                            rounded-lg px-1
-                                            py-[0.09rem]
-                                            dark:bg-zinc-950 bg-zinc-300
-                                        `}
-                                    >
-                                        {ingredientStringToJsx(ingredient, numberOfPortions)}
-                                    </span>
-                                </div>
-                            </div>
+                            )
                         )
-                    )
-                }
+                    }
+                </div>
             </div>
         </Tile >
     );

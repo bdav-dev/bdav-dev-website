@@ -19,6 +19,7 @@ export type Ingredient = {
     name: string,
     pluralName?: string,
     unit: Unit,
+    productRecommendation?: React.ReactNode
     image: StaticImageData,
     customImagePadding?: string
 } & (
@@ -41,35 +42,36 @@ export const recipes: Recipes = {
         image: cheeseburgerImages.cheeseburger,
         ingredients: [
             {
-                name: "Burger Buns",
+                name: "Brioche Burger Buns with Sesame Seeds",
                 unit: "Piece",
                 amount: 1,
                 image: cheeseburgerImages.buns
             },
             {
-                name: "Ketchup",
+                name: "Burger Sauce",
                 amount: "some",
                 unit: "None",
-                image: cheeseburgerImages.ketchup,
+                productRecommendation: <>Nawhal's Biggy Burger Sauce</>,
+                image: cheeseburgerImages.sauce,
                 customImagePadding: "p-4"
             },
             {
-                name: "Onion",
-                pluralName: "Onions",
+                name: "Large Onion",
+                pluralName: "Large Onions",
                 amount: 0.5,
                 unit: "Piece",
                 image: cheeseburgerImages.onion
             },
             {
-                name: "Lettuce Leaf",
-                pluralName: "Lettuce Leaves",
+                name: "Iceberg Lettuce Leaf",
+                pluralName: "Iceberg Lettuce Leaves",
                 amount: 2,
                 unit: "Piece",
                 image: cheeseburgerImages.lettuce
             },
             {
-                name: "Cheese Slice",
-                pluralName: "Cheese Slices",
+                name: "Cheddar Cheese Slice",
+                pluralName: "Cheddar Cheese Slices",
                 amount: 2,
                 unit: "Piece",
                 image: cheeseburgerImages.cheese

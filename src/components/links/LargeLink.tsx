@@ -19,9 +19,11 @@ export default function LargeLink(props: LargeLinkProps) {
             target={props.inNewTab ? "_blank" : "_self"}
             rel="noopener noreferrer"
         >
-            <Tile childrenClassName="h-32 w-32 flex flex-col justify-center text-center select-none">
-                {props.icon}
-                <Code>{props.text}</Code>
+            <Tile>
+                <div className="h-32 w-32 flex flex-col justify-center text-center select-none">
+                    {props.icon}
+                    <Code>{props.text}</Code>
+                </div>
             </Tile>
         </Link >
     );

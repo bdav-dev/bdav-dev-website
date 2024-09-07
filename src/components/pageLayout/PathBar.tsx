@@ -28,7 +28,7 @@ export default function PathBar(props: PathBarProps) {
         <div className="m-2 ml-4 mb-6">
             <Link
                 href="/"
-                className="select-none p-1 pl-1.5 pr-1.5 rounded-md transition-colors duration-200 hover:bg-zinc-300 dark:hover:bg-zinc-700"
+                className="select-none p-1 pl-1.5 pr-1.5 rounded-md transition-colors duration-200 hover:bg-zinc-200 dark:hover:bg-zinc-700"
                 draggable="false"
             >
                 bdav.dev
@@ -47,7 +47,7 @@ export default function PathBar(props: PathBarProps) {
                                     select-none
                                     rounded-md
                                     transition-colors duration-200
-                                    hover:bg-zinc-300 dark:hover:bg-zinc-700
+                                    hover:bg-zinc-200 dark:hover:bg-zinc-700
                                 `}
                                 draggable="false"
                             >

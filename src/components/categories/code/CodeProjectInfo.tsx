@@ -7,11 +7,11 @@ import GitHubRepoLink from "@/components/links/social/GitHubRepoLink";
 import CodeLanguageBadge from "./CodeLanguageBadge";
 import Highlight from "@/components/pageElements/Highlight";
 
-type CodeProjectOverviewProps = {
+type CodeProjectInfoProps = {
     codeProject: CodeProject
 }
 
-export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
+export default function CodeProjectInfo(props: CodeProjectInfoProps) {
     return (
         <Tile className="w-fit mr-auto ml-auto mb-5 py-3 sm:py-2 sm:px-3">
 
@@ -28,23 +28,23 @@ export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
 
                             <div className="flex flex-row gap-1">
                                 <GitHubRepoLink repository={props.codeProject.repository} className="mb-1 w-8" />
-
                                 {
-                                    props.codeProject.codeProjectProperies.launchLink
-                                        ? <Link
-                                            href={props.codeProject.codeProjectProperies.launchLink}
-                                            className={`
-                                                text-lg text-white
-                                                bg-blue-500
-                                                transition-transform hover:scale-105
-                                                px-1.5 mb-1
-                                                flex items-center
-                                                rounded-lg
-                                            `}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >Launch</Link>
-                                        : <></>
+                                    props.codeProject.codeProjectProperies.launchLink &&
+                                    <Link
+                                        className={`
+                                            text-lg text-white
+                                            bg-blue-500
+                                            transition-transform hover:scale-105
+                                            px-1.5 mb-1
+                                            flex items-center
+                                            rounded-lg
+                                        `}
+                                        href={props.codeProject.codeProjectProperies.launchLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Launch
+                                    </Link>
                                 }
                             </div>
                         </div>
@@ -77,7 +77,7 @@ export default function CodeProjectOverview(props: CodeProjectOverviewProps) {
                                         {
                                             props.codeProject.codeProjectProperies.programmingLanguages.map(
                                                 (lang, index) => (
-                                                    <CodeLanguageBadge lang={lang} key={index}/>
+                                                    <CodeLanguageBadge lang={lang} key={index} />
                                                 )
                                             )
                                         }

@@ -36,13 +36,13 @@ export default function Timecoder() {
 
 
                 <Section headline="Use Timecoder">
-                    <HStack className="mt-2">
-                        <Tile title="Website">
+                    <div className="flex mt-2 gap-1.5 flex-col md:flex-row">
+                        <Tile title="Website" className="flex-1">
                             You can use Timecoder in the web with this
                             website: <HyperLink href={codeProjects.timecoder.codeProjectProperies.launchLink!} />
                         </Tile>
 
-                        <Tile title="From source code">
+                        <Tile title="From source code" className="flex-1">
                             You can download the source code of the application and run the app locally.
                             To achieve this, follow these steps:
 
@@ -57,7 +57,7 @@ export default function Timecoder() {
                                 ]}
                             />
                         </Tile>
-                    </HStack>
+                    </div>
                 </Section>
 
 
@@ -135,7 +135,7 @@ export default function Timecoder() {
                                 "The app is not optimized for mobile use.",
                                 "There are currently problems displaying the modals correctly on macOS WebKit"
                             ]}
-                            symbolWidthClassName="w-3"
+                            symbolWidth="0.75rem"
                         />
                     </Tile>
                 </Section>

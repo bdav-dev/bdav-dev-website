@@ -1,5 +1,6 @@
 import Image from "next/image";
 import backgroundImage from "@/../public/misc/bdav-dev/bdav-dev-text-background-image.webp";
+import { mono } from "@/fonts";
 
 export default function BdavDev() {
 

@@ -1,32 +1,44 @@
 type TileProps = {
-    title?: string,
+    title?: string | React.ReactNode,
     className?: string,
     children?: React.ReactNode,
     customPadding?: boolean,
-    childrenClassName?: string
 }
 
 export default function Tile(props: TileProps) {
 
     return (
         <div className={`
-                relative flex-1
                 bg-zinc-100 dark:bg-zinc-900
                 border border-zinc-200 dark:border-zinc-800
                 rounded-xl
-                ${props.customPadding ? "" : "p-2.5"}
                 ${props.className ?? ""}
             `}
         >
             {
                 props.title && (
-                    <h4 className="font-semibold text-zinc-600 dark:text-zinc-500">
+                    <h4 className={`
+                            bg-zinc-200 dark:bg-zinc-800
+                            text-zinc-700 dark:text-zinc-250
+                            px-2.5 py-1.5
+                            font-semibold
+                            >rounded-t-xl
+                            rounded-t-[0.69rem]
+                            w-full
+                        `}
+                    >
                         {props.title}
                     </h4>
                 )
             }
 
-            <div className={props.childrenClassName}>
+            <div
+                className={`
+                    ${props.customPadding ? "" : "p-2.5"}
+                    w-full
+                    h-full
+                `}
+            >
                 {props.children}
             </div>
         </div>
