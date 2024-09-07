@@ -1,6 +1,6 @@
 import timecoderBadge from '@/../public/code/timecoder/timecoder-badge.webp';
 import kdmFinderBadge from '@/../public/code/kdm-finder/kdm-finder-badge.webp';
-import { spaceMono } from "@/fonts";
+import { mono } from "@/fonts";
 import Image, { StaticImageData } from "next/image";
 
 export type CodeProject = {
@@ -132,7 +132,7 @@ export const codeProjects: CodeProjects = {
 
         customBadge: (
             <div className="w-full h-full flex justify-center items-center neumorphic-bg">
-                <div className={"text-2xl neumorphic " + spaceMono}>
+                <div className={"text-2xl neumorphic " + mono}>
                     time-to-work
                 </div>
             </div>

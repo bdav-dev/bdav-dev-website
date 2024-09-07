@@ -12,7 +12,12 @@ type ThemeProviderType = {
     setDarkTheme: Dispatch<SetStateAction<boolean>>
 }
 
-const ThemeContext = React.createContext<ThemeProviderType>({ darkTheme: true, setDarkTheme: (b) => { true } });
+const ThemeContext = React.createContext<ThemeProviderType>(
+    {
+        darkTheme: true,
+        setDarkTheme: () => { true }
+    }
+);
 
 export function useTheme() {
     return useContext(ThemeContext);
@@ -21,14 +26,14 @@ export function useTheme() {
 export default function ThemeProvider(props: ThemeProviderProps) {
     const { storedValue: darkTheme, setStoredValue: setDarkTheme } = useLocalStorage("useDarkTheme", true);
 
-    useEffect(() => {
-        document.documentElement.style.setProperty('--bg', (darkTheme ? "var(--bg-dark)" : "var(--bg-light)"));
-    }, [darkTheme]);
+    useEffect(
+        () => document.documentElement.style.setProperty('--bg', (darkTheme ? "var(--bg-dark)" : "var(--bg-light)")),
+        [darkTheme]
+    );
 
     return (
         <ThemeContext.Provider value={{ darkTheme, setDarkTheme }}>
             {props.children}
         </ThemeContext.Provider>
     );
-
 }

@@ -4,7 +4,7 @@ import Tile from "@/components/pageElements/Tile";
 import Article from "@/components/pageStructure/Article";
 import Section from "@/components/pageStructure/Section";
 import { codeProjects } from "@/content/code/codeProjects";
-import { spaceMono } from "@/fonts";
+import { mono } from "@/fonts";
 import Enumerate from "@/components/pageElements/Enumerate";
 import Code from "@/components/pageElements/Code";
 import HStack from "@/components/pageStructure/stacks/HStack";
@@ -54,12 +54,12 @@ export default function CreateBlenderProject() {
                     </Tile>
                 </Section>
 
-                <Section headline={<>Use <span className={spaceMono}>create-blender-project</span></>}>
+                <Section headline={<>Use <span className={mono}>create-blender-project</span></>}>
                     <HStack className="mt-2">
 
                         <Tile
                             title="Run"
-                            className="min-w-fit sm:min-w-[25rem]"
+                            className="min-w-fit sm:min-w-[25rem] flex-1"
                         >
                             <Enumerate
                                 seperateItems
@@ -77,7 +77,7 @@ export default function CreateBlenderProject() {
 
                         <Tile
                             title="Install (Make accessible in terminal)"
-                            className="min-w-fit sm:min-w-[25rem]"
+                            className="min-w-fit sm:min-w-[25rem] flex-1"
                         >
                             If you want to install <Code>create-blender-project</Code> and make the command accessible
                             anywhere in the terminal, copy the <Highlight>create-blender-project</Highlight> file

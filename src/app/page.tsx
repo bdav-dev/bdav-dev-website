@@ -64,13 +64,13 @@ export default function Home() {
 
                             <LargeLink
                                 href="/code/"
-                                icon={<CodeIcon className="stroke-black dark:stroke-white stroke-[2.75] pb-2" />}
+                                icon={<CodeIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2" />}
                                 text="Code"
                             />
 
                             <LargeLink
                                 href="/3d/"
-                                icon={<BlenderIcon className="stroke-black dark:stroke-white stroke-[2.75] pb-2" />}
+                                icon={<BlenderIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2" />}
                                 text="3D"
                             />
 
@@ -84,13 +84,13 @@ export default function Home() {
 
                             <LargeLink
                                 href="/recipes/"
-                                icon={<RecipesIcon className="stroke-black dark:stroke-white stroke-[2.75] pb-2" />}
+                                icon={<RecipesIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2" />}
                                 text="Recipes"
                             />
 
                             <LargeLink
                                 href="/about/"
-                                icon={<AboutIcon className="stroke-black dark:stroke-white stroke-[2.75] pb-2" />}
+                                icon={<AboutIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2" />}
                                 text="About"
                             />
 
@@ -107,11 +107,10 @@ export default function Home() {
                             <span className="pl-0.5">Featured Code Project</span>
 
                             <Tile
-                                childrenClassName="flex justify-center items-center h-full"
-                                className="p-5"
+                                className="p-5 grow"
                                 customPadding
                             >
-                                <div className="drop-shadow-sm dark:drop-shadow-md">
+                                <div className="flex justify-center items-center h-full drop-shadow-sm dark:drop-shadow-md">
                                     <CodeProjectLink codeProject={randomCodeProject} />
                                 </div>
                             </Tile>
@@ -120,11 +119,12 @@ export default function Home() {
                         <div className="flex flex-col grow">
                             <span className="pl-0.5">Featured Abstract3D Series Image</span>
                             <Tile
-                                childrenClassName="flex justify-center items-center h-full"
-                                className="p-5"
+                                className="p-5 grow"
                                 customPadding
                             >
-                                <Abstract3dSeriesLink abstract3dSeriesImage={randomA3dsImage} />
+                                <div className="flex justify-center items-center h-full">
+                                    <Abstract3dSeriesLink abstract3dSeriesImage={randomA3dsImage} />
+                                </div>
                             </Tile>
                         </div>
 
@@ -132,11 +132,10 @@ export default function Home() {
                             <span className="pl-0.5">Featured Recipe</span>
 
                             <Tile
-                                childrenClassName="flex justify-center items-center h-full"
-                                className="p-5"
+                                className="p-5 grow"
                                 customPadding
                             >
-                                <div className="drop-shadow-sm dark:drop-shadow-md">
+                                <div className="flex justify-center items-center h-full drop-shadow-sm dark:drop-shadow-md">
                                     <RecipeLink recipe={randomRecipe} />
                                 </div>
                             </Tile>

@@ -6,7 +6,8 @@ export default function LightModeIcon(props: IconProps) {
         <svg
             className={props.className}
             viewBox="0 0 100 100"
-            version="1.1">
+            version="1.1"
+        >
             <g
                 fill="none"
                 strokeLinecap="round"

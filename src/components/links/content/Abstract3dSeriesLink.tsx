@@ -13,14 +13,13 @@ export default function Abstract3dSeriesLink(props: Abstract3dSeriesProjectProps
             href={`/3d/abstract-3d-series/${props.abstract3dSeriesImage.nr}`}
             draggable="false"
         >
-
             <div className={`
-                    w-[13.25rem] h-[13.25rem]  z-10
+                    w-[13.25rem] h-[13.25rem] z-10
                     absolute flex items-center
                     rounded-2xl overflow-hidden
                     transition-all
                     group-hover:saturate-200 dark:group-hover:saturate-200
-                    group-hover:blur-xl group-hover:scale-105
+                    group-hover:blur-[20px] group-hover:scale-105 ease-in duration-75
                 `}
             >
                 <Image
@@ -32,11 +31,11 @@ export default function Abstract3dSeriesLink(props: Abstract3dSeriesProjectProps
             </div>
 
             <div className={`
-                    w-[13.25rem]  h-[13.25rem] z-20
+                    w-[13.25rem] h-[13.25rem] z-20
                     relative flex items-center
                     border border-zinc-500 dark:border-zinc-800
                     rounded-2xl overflow-hidden
-                    transition-all group-hover:scale-105
+                    transition-all group-hover:scale-105 ease-in duration-100
                 `}
             >
                 <Image
@@ -46,7 +45,6 @@ export default function Abstract3dSeriesLink(props: Abstract3dSeriesProjectProps
                     placeholder="blur"
                 />
             </div>
-
         </Link>
     );
 }
