@@ -22,8 +22,7 @@ export default function Tile(props: TileProps) {
                             text-zinc-700 dark:text-zinc-250
                             px-2.5 py-1.5
                             font-semibold
-                            >rounded-t-xl
-                            rounded-t-[0.69rem]
+                            rounded-t-[0.65rem]
                             w-full
                         `}
                     >
