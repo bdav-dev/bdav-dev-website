@@ -13,7 +13,13 @@ import { Metadata } from "next";
 import A3dsImageDownloadTable from "@/components/categories/3d/A3dsImageDownloadTable";
 import Abstract3DSeries from "@/components/categories/3d/Abstract3DSeries";
 
-export default function Abstract3dSeriesImage({ params }: { params: { nr: string } }) {
+type Abstract3dSeriesImageProps = {
+    params: Promise<{ nr: string }>
+}
+
+export default async function Abstract3dSeriesImage(props: Abstract3dSeriesImageProps) {
+    const params = await props.params;
+
     const abstract3dSeriesImage: Abstract3dSeriesImageType | undefined = (
         Object.values(abstract3dSeriesImages).find(
             image => image.nr.toString() === params.nr
@@ -89,7 +95,13 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
 
 }
 
-export async function generateMetadata({ params }: { params: { nr: string } }): Promise<Metadata> {
+type DynamicMetadataProps = {
+    params: Promise<{ nr: string }>
+}
+
+export async function generateMetadata(props: DynamicMetadataProps): Promise<Metadata> {
+    const params = await props.params;
+
     return {
         title: "bdav.dev – Abstract3D Series #" + params.nr,
         description: "Abstract3D Series #" + params.nr + " Image from David Berezowski.",
