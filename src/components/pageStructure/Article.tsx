@@ -1,4 +1,5 @@
 import PageTitle from "./headlines/PageTitle";
+import React from "react";
 
 type ArticleProps = {
     headline: string | React.ReactNode,

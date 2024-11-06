@@ -1,3 +1,5 @@
+import React from "react";
+
 type TitledItem = {
     title: string | React.ReactNode,
     text: string | React.ReactNode
@@ -8,7 +10,7 @@ type EnumerateProps = {
     symbolWidth?: string,
     items: (string | React.ReactNode | TitledItem)[],
     className?: string,
-    seperateItems?: boolean,
+    separateItems?: boolean,
     indent?: boolean
 };
 
@@ -20,7 +22,7 @@ function itemToJsx(item: (TitledItem | string | React.ReactNode)) {
             <span className="font-semibold">
                 {itemAsTitledItem.title}
             </span>
-            <br />
+            <br/>
             {itemAsTitledItem.text}
         </>
         : <>{item}</>;
@@ -40,7 +42,7 @@ export default function Enumerate(props: EnumerateProps) {
                         <li key={index}
                             className={`
                                 flex flex-row flex-nowrap
-                                ${props.seperateItems && index < props.items.length - 1 ? "mb-1" : ""}
+                                ${props.separateItems && index < props.items.length - 1 ? "mb-1" : ""}
                             `}
                         >
                             <div

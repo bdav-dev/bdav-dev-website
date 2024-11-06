@@ -23,7 +23,7 @@ export default function Impressum() {
                 </Section>
 
                 Quelle: <HyperLink href="https://www.e-recht24.de"/>
-            </Article>    
+            </Article>
 
 
         </PageBody>

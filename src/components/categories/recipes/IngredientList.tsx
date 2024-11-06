@@ -22,11 +22,11 @@ export default function IngredientList(props: IngredientListProps) {
 
                 <div className="h-16 flex flex-row justify-center items-center m-3 mt-5">
                     Ingredients for
-                    <NumberInput onValueChanged={setNumberOfPortions} initial={1} min={1} max={99} />
+                    <NumberInput onValueChanged={setNumberOfPortions} initial={1} min={1} max={99}/>
                     portion(s)
                 </div>
 
-                <hr className="mx-8 border-zinc-400 dark:border-zinc-700 my-2" />
+                <hr className="mx-8 border-zinc-400 dark:border-zinc-700 my-2"/>
 
                 <div className="flex flex-row flex-wrap gap-3 p-4 justify-center mb-2">
                     {
@@ -42,6 +42,6 @@ export default function IngredientList(props: IngredientListProps) {
                     }
                 </div>
             </div>
-        </Tile >
+        </Tile>
     );
 }

@@ -42,7 +42,7 @@ export default function CodeProjectBadge(props: CodeProjectBadgeProps) {
                             ${props.animated && props.codeProject.badgeHoverText ? "transition-all duration-300 group-hover:blur-md" : ""}
                         `}
                         draggable="false"
-                        placeholder="blur" />
+                        placeholder="blur"/>
                     : (
                         props.codeProject.customBadge
                             ? <div className={`

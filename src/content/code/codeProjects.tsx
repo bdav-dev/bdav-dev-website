@@ -2,6 +2,7 @@ import timecoderBadge from '@/../public/code/timecoder/timecoder-badge.webp';
 import kdmFinderBadge from '@/../public/code/kdm-finder/kdm-finder-badge.webp';
 import { mono } from "@/fonts";
 import Image, { StaticImageData } from "next/image";
+import React from "react";
 
 export type CodeProject = {
     title: string | React.ReactNode,
@@ -16,7 +17,7 @@ export type CodeProject = {
 
     customDropdownText?: string | React.ReactNode,
 
-    codeProjectProperies: CodeProjectProperties
+    codeProjectProperties: CodeProjectProperties
 };
 
 type CodeProjects = {
@@ -93,7 +94,7 @@ export const codeProjects: CodeProjects = {
         ),
         badgeHoverText: <span className='text-white'>KDM-Finder</span>,
 
-        codeProjectProperies: {
+        codeProjectProperties: {
             programmingLanguages: [programmingLanguages.python],
             projectLanguage: "English",
             status: "Maintaining",
@@ -104,7 +105,7 @@ export const codeProjects: CodeProjects = {
         title: <>create&#8209;blender&#8209;project</>,
         path: "/code/create-blender-project/",
         repository: "create-blender-project",
-        codeProjectProperies: {
+        codeProjectProperties: {
             projectLanguage: "English",
             programmingLanguages: [programmingLanguages.bash],
             status: "Completed",
@@ -117,7 +118,7 @@ export const codeProjects: CodeProjects = {
         repository: "timecoder",
         customBadgeImage: timecoderBadge,
         badgeHoverText: <span className="text-white">Timecoder</span>,
-        codeProjectProperies: {
+        codeProjectProperties: {
             programmingLanguages: [programmingLanguages.typeScript],
             projectLanguage: "English",
             status: "In Development",
@@ -139,7 +140,7 @@ export const codeProjects: CodeProjects = {
         ),
         badgeHoverText: <span className={"text-white dark:text-black"}>time-to-work</span>,
 
-        codeProjectProperies: {
+        codeProjectProperties: {
             programmingLanguages: [programmingLanguages.html, programmingLanguages.css, programmingLanguages.javaScript],
             projectLanguage: "German",
             status: "Completed",

@@ -1,6 +1,6 @@
 import Tile from "@/components/pageElements/Tile";
-import { StaticImageData } from "next/image";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import React from "react";
 
 type RecipeStepProps = {
     title: string,

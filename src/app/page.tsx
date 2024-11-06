@@ -48,7 +48,7 @@ export default function Home() {
             <div className="flex flex-col h-full my-auto">
 
                 <h1 className="text-4xl w-fit mx-auto text-center my-12">
-                    Welcome to <BdavDev />
+                    Welcome to <BdavDev/>
                 </h1>
 
                 <VStack className="gap-5">
@@ -64,13 +64,13 @@ export default function Home() {
 
                             <LargeLink
                                 href="/code/"
-                                icon={<CodeIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2" />}
+                                icon={<CodeIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2"/>}
                                 text="Code"
                             />
 
                             <LargeLink
                                 href="/3d/"
-                                icon={<BlenderIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2" />}
+                                icon={<BlenderIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2"/>}
                                 text="3D"
                             />
 
@@ -84,13 +84,13 @@ export default function Home() {
 
                             <LargeLink
                                 href="/recipes/"
-                                icon={<RecipesIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2" />}
+                                icon={<RecipesIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2"/>}
                                 text="Recipes"
                             />
 
                             <LargeLink
                                 href="/about/"
-                                icon={<AboutIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2" />}
+                                icon={<AboutIcon className="stroke-black dark:stroke-white stroke-[3.25] pb-2"/>}
                                 text="About"
                             />
 
@@ -99,7 +99,7 @@ export default function Home() {
                     </div>
 
 
-                    <Spacer className="my-5" />
+                    <Spacer className="my-5"/>
 
 
                     <HStack className="gap-5">
@@ -110,8 +110,9 @@ export default function Home() {
                                 className="p-5 grow"
                                 customPadding
                             >
-                                <div className="flex justify-center items-center h-full drop-shadow-sm dark:drop-shadow-md">
-                                    <CodeProjectLink codeProject={randomCodeProject} />
+                                <div
+                                    className="flex justify-center items-center h-full drop-shadow-sm dark:drop-shadow-md">
+                                    <CodeProjectLink codeProject={randomCodeProject}/>
                                 </div>
                             </Tile>
                         </div>
@@ -123,7 +124,7 @@ export default function Home() {
                                 customPadding
                             >
                                 <div className="flex justify-center items-center h-full">
-                                    <Abstract3dSeriesLink abstract3dSeriesImage={randomA3dsImage} />
+                                    <Abstract3dSeriesLink abstract3dSeriesImage={randomA3dsImage}/>
                                 </div>
                             </Tile>
                         </div>
@@ -135,8 +136,9 @@ export default function Home() {
                                 className="p-5 grow"
                                 customPadding
                             >
-                                <div className="flex justify-center items-center h-full drop-shadow-sm dark:drop-shadow-md">
-                                    <RecipeLink recipe={randomRecipe} />
+                                <div
+                                    className="flex justify-center items-center h-full drop-shadow-sm dark:drop-shadow-md">
+                                    <RecipeLink recipe={randomRecipe}/>
                                 </div>
                             </Tile>
                         </div>
@@ -155,17 +157,17 @@ export default function Home() {
                             items-center
                             sm:gap-2
                         `}>
-                            <GitHubLink />
-                            <InstagramLink />
-                            <LinkedInLink />
+                            <GitHubLink/>
+                            <InstagramLink/>
+                            <LinkedInLink/>
                         </div>
 
                     </Tile>
 
                 </VStack>
 
-            </div >
+            </div>
 
-        </PageBody >
+        </PageBody>
     );
 }

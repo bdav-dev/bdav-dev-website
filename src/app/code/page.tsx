@@ -15,7 +15,7 @@ export default function Code() {
         >
             <Tile>
                 <HStack className="ml-auto mr-auto w-fit items-center">
-                    Visit me on <GitHubLink />
+                    Visit me on <GitHubLink/>
                 </HStack>
             </Tile>
 
@@ -23,7 +23,7 @@ export default function Code() {
                 <div className="mt-2.5 flex flex-row flex-wrap gap-2.5 justify-center sm:justify-normal">
                     {
                         Object.values(codeProjects).map(
-                            (codeProject, index) => <CodeProjectLink codeProject={codeProject} key={index} />
+                            (codeProject, index) => <CodeProjectLink codeProject={codeProject} key={index}/>
                         )
                     }
                 </div>

@@ -3,10 +3,9 @@ import Abstract3DSeriesLayout from '@/components/categories/3d/Abstract3DSeries'
 import Abstract3DSeriesOverview from "@/components/categories/3d/Abstract3DSeriesOverview";
 
 export default function Abstract3DSeries() {
-
     return (
         <Abstract3DSeriesLayout>
-            <Abstract3DSeriesOverview />
+            <Abstract3DSeriesOverview/>
         </Abstract3DSeriesLayout>
     );
 }

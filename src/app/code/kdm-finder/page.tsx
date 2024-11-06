@@ -26,12 +26,12 @@ export default function KdmFinder() {
                         KDM-Finder is an application developed for cinemas,
                         simplifying the search for KDMs (Key Delivery Messages) within an email account.
 
-                        <LargeBr />
+                        <LargeBr/>
 
                         A KDM (Key Delivery Message) is required to play an encrypted DCP movie.
                         KDMs are typically provided as <Code>.xml</Code> files.
 
-                        <LargeBr />
+                        <LargeBr/>
 
                         The application is written in Python and uses the PyQt6 UI library.
                     </Tile>
@@ -42,7 +42,7 @@ export default function KdmFinder() {
                         KDM-Finder should work on all platforms supporting Python and PyQt6.
                         However, the application was only tested on Linux (Ubuntu 22.04).
 
-                        <LargeBr />
+                        <LargeBr/>
 
                         Functionality under macOS or Windows has not been tested.
                     </Tile>
@@ -59,7 +59,8 @@ export default function KdmFinder() {
                                 items={[
                                     <>Python</>,
                                     <>PyQt6 (can be installed with <Code>pip install PyQt6</Code>)</>,
-                                    <>On Linux: <Code>libxcb-cursor0</Code> (can be installed with <Code>sudo apt install libxcb-cursor0</Code>)</>
+                                    <>On Linux: <Code>libxcb-cursor0</Code> (can be installed with <Code>sudo apt
+                                        install libxcb-cursor0</Code>)</>
                                 ]}
                             />
                         </Tile>
@@ -67,18 +68,40 @@ export default function KdmFinder() {
 
                     <SubSection headline="Run and Install">
                         <Tile>
-                            To use KDM-Finder, download the source code of the latest version from GitHub using one of the following methods:
+                            To use KDM-Finder, download the source code of the latest version from GitHub using one of
+                            the following methods:
                             <Enumerate
                                 indent
                                 symbol="-"
                                 items={[
                                     <>
                                         Download as a .zip file:<span> </span>
-                                        <HyperLink href="https://github.com/bdav-dev/kdm-finder/archive/refs/heads/main.zip">
-                                            https://<wbr />github.com/<wbr />bdav-dev/<wbr />kdm-finder/<wbr />archive/<wbr />refs/<wbr />heads/<wbr />main.zip
+                                        <HyperLink
+                                            href="https://github.com/bdav-dev/kdm-finder/archive/refs/heads/main.zip">
+                                            https://
+                                            <wbr/>
+                                            github.com/
+                                            <wbr/>
+                                            bdav-dev/
+                                            <wbr/>
+                                            kdm-finder/
+                                            <wbr/>
+                                            archive/
+                                            <wbr/>
+                                            refs/
+                                            <wbr/>
+                                            heads/
+                                            <wbr/>
+                                            main.zip
                                         </HyperLink>
                                     </>,
-                                    <>Download via <Code>git clone https://<wbr />github.com/<wbr />bdav-dev/<wbr />kdm-finder.git</Code></>
+                                    <>Download via <Code>git clone https://
+                                        <wbr/>
+                                        github.com/
+                                        <wbr/>
+                                        bdav-dev/
+                                        <wbr/>
+                                        kdm-finder.git</Code></>
                                 ]}
                             />
 
@@ -88,19 +111,21 @@ export default function KdmFinder() {
                                     indent
                                     items={[
                                         <>If needed, unzip the <Code>.zip</Code> file.</>,
-                                        <>Execute the python file <Code>main.py</Code> located in the root directory of the project.
+                                        <>Execute the python file <Code>main.py</Code> located in the root directory of
+                                            the project.
                                             On Linux, this can be done with <Code>python3 path/to/main.py</Code></>
                                     ]}
                                 />
                             </SubSubSection>
 
-                            <LargeBr />
+                            <LargeBr/>
 
                             <SubSubSection headline="Install (Linux)">
-                                A <Code>.desktop</Code> file is provided (in the root directory of the project) to install
+                                A <Code>.desktop</Code> file is provided (in the root directory of the project) to
+                                install
                                 KDM-Finder on Linux systems.
 
-                                <LargeBr />
+                                <LargeBr/>
 
                                 Modify the <Code>Exec</Code> and the <Code>Icon</Code> properties,
                                 pointing them to the correct files in your KDM-Finder installation:
@@ -108,20 +133,34 @@ export default function KdmFinder() {
                                     indent
                                     symbol="-"
                                     items={[
-                                        <>The <Code>Exec</Code> property should point the the <Code>main.py</Code> file</>,
-                                        <>The <Code>Icon</Code> property should point the the <Code>kdm_finder_icon.png</Code> file</>
+                                        <>The <Code>Exec</Code> property should point the
+                                            the <Code>main.py</Code> file</>,
+                                        <>The <Code>Icon</Code> property should point the
+                                            the <Code>kdm_finder_icon.png</Code> file</>
                                     ]}
                                 />
 
-                                <LargeBr />
+                                <LargeBr/>
 
                                 Copy the <Code>kdm_finder.desktop</Code> file to
                                 <Enumerate
                                     indent
                                     symbol="-"
                                     items={[
-                                        <><Code>~/<wbr />.local/<wbr />share/<wbr />applications/</Code>, if you want to install KDM-Finder for the current user</>,
-                                        <><Code>/usr/<wbr />share/<wbr />applications</Code>, if you want to install KDM-Finder system wide for all users</>
+                                        <><Code>~/
+                                            <wbr/>
+                                            .local/
+                                            <wbr/>
+                                            share/
+                                            <wbr/>
+                                            applications/</Code>, if you want to install KDM-Finder for the current
+                                            user</>,
+                                        <><Code>/usr/
+                                            <wbr/>
+                                            share/
+                                            <wbr/>
+                                            applications</Code>, if you want to install KDM-Finder system wide for all
+                                            users</>
                                     ]}
                                 />
                             </SubSubSection>
@@ -146,21 +185,29 @@ export default function KdmFinder() {
                                 ]}
                             />
 
-                            <LargeBr />
+                            <LargeBr/>
 
                             <BlockQuote>
                                 <span className="font-semibold">Note</span>
-                                <br />
+                                <br/>
                                 On a Gmail account, the password is not the password to your google account.
                                 You need to enter an "app password".
-                                <br />
+                                <br/>
                                 Read this article to learn how to create one:<span> </span>
                                 <HyperLink href="https://support.google.com/accounts/answer/185833?hl=en">
-                                    https://<wbr />support.google.com/<wbr />accounts/<wbr />answer/<wbr />185833?hl=en
+                                    https://
+                                    <wbr/>
+                                    support.google.com/
+                                    <wbr/>
+                                    accounts/
+                                    <wbr/>
+                                    answer/
+                                    <wbr/>
+                                    185833?hl=en
                                 </HyperLink>
                             </BlockQuote>
 
-                            <LargeBr />
+                            <LargeBr/>
 
                             You can also specify ...
                             <Enumerate
@@ -182,12 +229,14 @@ export default function KdmFinder() {
                                 indent
                                 symbol="-"
                                 items={[
-                                    <>the email content, subject, sender or attachment contain (case ignored) <Code>kdm</Code> or <Code>key</Code> and</>,
-                                    <>the email has an attachment with <Code>.zip</Code> or <Code>.xml</Code> as the file extension.</>
+                                    <>the email content, subject, sender or attachment contain (case
+                                        ignored) <Code>kdm</Code> or <Code>key</Code> and</>,
+                                    <>the email has an attachment with <Code>.zip</Code> or <Code>.xml</Code> as the
+                                        file extension.</>
                                 ]}
                             />
 
-                            <LargeBr />
+                            <LargeBr/>
 
                             When all emails are fetched, the found KDMs are displayed in a list.
                             For each KDM the following information is displayed:
@@ -201,28 +250,31 @@ export default function KdmFinder() {
                                 ]}
                             />
 
-                            <LargeBr />
+                            <LargeBr/>
 
-                            A <Highlight>View</Highlight> button is also present for each KDM, making it possible to view the entire email.
+                            A <Highlight>View</Highlight> button is also present for each KDM, making it possible to
+                            view the entire email.
                         </Tile>
                     </SubSection>
 
                     <SubSection headline="Save">
                         <Tile>
                             You can select the KDMs you want to save by clicking on them in the list.
-                            When you selected all KDMs you want to save, click the <Highlight>Save selected</Highlight> button.
+                            When you selected all KDMs you want to save, click the <Highlight>Save
+                            selected</Highlight> button.
 
-                            <LargeBr />
+                            <LargeBr/>
 
                             Now, you can locate to a directory in your file system in which the KDMs should be saved.
 
-                            <LargeBr />
+                            <LargeBr/>
 
                             <BlockQuote>
                                 <span className="font-semibold">Note</span>
-                                <br />
+                                <br/>
                                 If you save a <MonoSpan>.zip</MonoSpan> file,
-                                the contents of the file will be extracted and saved, rather than the <MonoSpan>.zip</MonoSpan> file itself.
+                                the contents of the file will be extracted and saved, rather than
+                                the <MonoSpan>.zip</MonoSpan> file itself.
                             </BlockQuote>
                         </Tile>
                     </SubSection>
@@ -234,7 +286,8 @@ export default function KdmFinder() {
                         <Enumerate
                             symbol="-"
                             items={[
-                                <>The application windows don't appear in the middle of the screen on Linux when using Wayland</>,
+                                <>The application windows don't appear in the middle of the screen on Linux when using
+                                    Wayland</>,
                                 <>Changing the OS theme (from light to dark mode or vice versa)
                                     requires a restart of the application to avoid color issues</>
                             ]}

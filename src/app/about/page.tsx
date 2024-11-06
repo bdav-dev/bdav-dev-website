@@ -23,8 +23,9 @@ export default function About() {
                 <Section headline={"About me and this website"}>
                     <Tile className="mt-2">
                         Hey there, I'm David. I am currently studying computer science (as a dual course of study) at
-                        the <HyperLink href="https://dhbw-loerrach.de/home">DHBW University in Lörrach</HyperLink>, Germany.
-                        Right now, I am in the third semester and I work (as part of my studies)
+                        the <HyperLink href="https://dhbw-loerrach.de/home">DHBW University in Lörrach</HyperLink>,
+                        Germany.
+                        Right now, I am in the fifth semester and I work (as part of my studies)
                         at <HyperLink href="https://www.coop.ch/">Coop</HyperLink> in Basel.
                         First I worked with the programming
                         language <CodeLanguageBadge lang={programmingLanguages.abap} smallerPadding/> in
@@ -36,31 +37,32 @@ export default function About() {
 
                         You can have a look at them under the section&thinsp;
                         <SmallInternalLink href="/code/">
-                            <CodeIcon className="h-5 inline stroke-[6] pb-0.5 self-center" /> Code
+                            <CodeIcon className="h-5 inline stroke-[6] pb-0.5 self-center"/> Code
                         </SmallInternalLink>
-                        . I try to use many different programming languages to improve my skill and keep learning new things.
-                        <br />
+                        . I try to use many different programming languages to improve my skill and keep learning new
+                        things.
+                        <br/>
                         Currently, (programming, markup and style sheet) languages that I use include:&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.html} smallerPadding />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.css} smallerPadding />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.javaScript} smallerPadding />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.typeScript} smallerPadding />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.bash} smallerPadding />,&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.python} smallerPadding /> and&#8200;
-                        <CodeLanguageBadge lang={programmingLanguages.java} smallerPadding />.
-                        
+                        <CodeLanguageBadge lang={programmingLanguages.html} smallerPadding/>,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.css} smallerPadding/>,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.javaScript} smallerPadding/>,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.typeScript} smallerPadding/>,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.bash} smallerPadding/>,&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.python} smallerPadding/> and&#8200;
+                        <CodeLanguageBadge lang={programmingLanguages.java} smallerPadding/>.
+
                         <LargeBr/>
 
                         I enjoy making things in the 3D computer graphics
                         software <HyperLink href="https://www.blender.org/">Blender</HyperLink>.
                         A project of mine is the&thinsp;
                         <SmallInternalLink href="/3d/abstract-3d-series/">
-                            <BlenderIcon className="h-5 inline stroke-[6] pb-0.5 self-center" /> Abstract3D Series
+                            <BlenderIcon className="h-5 inline stroke-[6] pb-0.5 self-center"/> Abstract3D Series
                         </SmallInternalLink>
                         , a series of images which feature abstract objects, substances or landscapes.
-                        <br />
+                        <br/>
                         A few of my favorite creations are available as a wallpaper to download.
-                        
+
                         <LargeBr/>
 
                         Sometimes, I like to cook various dishes.
@@ -68,27 +70,27 @@ export default function About() {
                         perfect recipe for that dish.
                         When that happens, you will find that recipe in the&thinsp;
                         <SmallInternalLink href="/recipes/">
-                            <RecipesIcon className="h-5 inline stroke-[6] pb-0.5 self-center" /> Recipes
+                            <RecipesIcon className="h-5 inline stroke-[6] pb-0.5 self-center"/> Recipes
                         </SmallInternalLink>
                         &thinsp;section of this website.
-                        <br />
+                        <br/>
                         I also try to make my very own original recipes and if I feel one is good enough,
                         I present the recipe here on this website.
-                        
+
                         <LargeBr/>
 
                         One last thing: This website uses the dark mode as the default theme.
-                        If you like to change that, click on the moon icon located on the very right of the website header.
+                        If you like to change that, click on the moon icon located on the very right of the website
+                        header.
                         This toggles between light and dark mode.
-                        
+
                         <LargeBr/>
 
                         Thank you for visiting and enjoy your stay.
                     </Tile>
                 </Section>
 
-
-                <Section headline={"Social"}>
+                <Section headline="Social">
                     <Tile className="text-center mb-3 mt-2">
 
                         <div className="my-1.5 text-lg">
@@ -102,16 +104,16 @@ export default function About() {
                             items-center
                             sm:gap-2
                         `}>
-                            <GitHubLink />
-                            <InstagramLink />
-                            <LinkedInLink />
+                            <GitHubLink/>
+                            <InstagramLink/>
+                            <LinkedInLink/>
                         </div>
 
                     </Tile>
                 </Section>
 
             </Article>
-        </PageBody >
+        </PageBody>
     );
 }
 

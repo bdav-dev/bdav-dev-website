@@ -12,7 +12,7 @@ export default function Abstract3DSeriesOverview() {
                         Object.values(abstract3dSeriesImages)
                             .sort((a, b) => b.nr - a.nr)
                             .map(
-                                (image, index) => <Abstract3dSeriesLink abstract3dSeriesImage={image} key={index} />
+                                (image, index) => <Abstract3dSeriesLink abstract3dSeriesImage={image} key={index}/>
                             )
                     }
                 </div>
@@ -24,7 +24,7 @@ export default function Abstract3DSeriesOverview() {
                         Object.values(abstract3dSeriesImages)
                             .sort((a, b) => b.nr - a.nr)
                             .filter(image => image.downloads?.wallpaperDownloads)
-                            .map((image, index) => <Abstract3dSeriesLink abstract3dSeriesImage={image} key={index} />)
+                            .map((image, index) => <Abstract3dSeriesLink abstract3dSeriesImage={image} key={index}/>)
                     }
                 </div>
             </Section>

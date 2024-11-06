@@ -3,5 +3,5 @@ type SpacerProps = {
 }
 
 export default function Spacer(props: SpacerProps) {
-    return <div className={props.className ?? "my-1.5"} />
+    return <div className={props.className ?? "my-1.5"}/>
 }

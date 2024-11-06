@@ -38,12 +38,12 @@ export default function Cheeseburger() {
                     <RecipeStep title="Form patties">
                         For the burger patties, take 100g of minced meat per patty,
                         mix it with salt and pepper evenly and shape it slightly larger than
-                        the burger buns to account for shrinkage during cooking.<br />
+                        the burger buns to account for shrinkage during cooking.<br/>
                         At the end, season both sides of the raw patty with salt and pepper.
                     </RecipeStep>
 
                     <RecipeStep title="Prepare burger buns and preheat pan">
-                        Have the burger buns and sauce ready.<br />
+                        Have the burger buns and sauce ready.<br/>
                         Preheat a pan with cooking oil for the burger patties at high temperature.
                         Start toasting the burger buns in a toaster or another pan.
                     </RecipeStep>
@@ -53,7 +53,7 @@ export default function Cheeseburger() {
                         (about one minute per side) until a good crust forms on both sides.
                         Lower the heat and cook to your preferred level, be it medium rare or well-done.
                         Add a bit of butter to both sides of the patty and let it melt thoroughly.
-                        <LargeBr />
+                        <LargeBr/>
                         As the patty nears completion, place 2 cheese slices on top of the patty to melt.
                         Feel free to turn the patty around to speed up the cheese melting process.
                     </RecipeStep>

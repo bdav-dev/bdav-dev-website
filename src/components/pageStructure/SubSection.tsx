@@ -1,4 +1,5 @@
 import SmallHeadline from "./headlines/SmallHeadline";
+import React from "react";
 
 type SectionProps = {
     headline: string | React.ReactNode,

@@ -1,10 +1,12 @@
+import React from "react";
+
 type HighlightProps = {
     children?: React.ReactNode,
     small?: boolean,
     customColor?: string
 };
 
-export default function Highlight(props: HighlightProps) {    
+export default function Highlight(props: HighlightProps) {
 
     return (
         <span

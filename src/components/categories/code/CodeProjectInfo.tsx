@@ -17,7 +17,7 @@ export default function CodeProjectInfo(props: CodeProjectInfoProps) {
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 items-center">
 
-                <CodeProjectBadge codeProject={props.codeProject} />
+                <CodeProjectBadge codeProject={props.codeProject}/>
 
                 <div>
                     <Headline>
@@ -27,9 +27,9 @@ export default function CodeProjectInfo(props: CodeProjectInfoProps) {
                             </div>
 
                             <div className="flex flex-row gap-1">
-                                <GitHubRepoLink repository={props.codeProject.repository} className="mb-1 w-8" />
+                                <GitHubRepoLink repository={props.codeProject.repository} className="mb-1 w-8"/>
                                 {
-                                    props.codeProject.codeProjectProperies.launchLink &&
+                                    props.codeProject.codeProjectProperties.launchLink &&
                                     <Link
                                         className={`
                                             text-lg text-white
@@ -39,7 +39,7 @@ export default function CodeProjectInfo(props: CodeProjectInfoProps) {
                                             flex items-center
                                             rounded-lg
                                         `}
-                                        href={props.codeProject.codeProjectProperies.launchLink}
+                                        href={props.codeProject.codeProjectProperties.launchLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -53,37 +53,37 @@ export default function CodeProjectInfo(props: CodeProjectInfoProps) {
                     <table>
                         <tbody>
 
-                            <tr>
-                                <td className="px-1">Project Language</td>
-                                <td className="px-1">
-                                    <Highlight>{props.codeProject.codeProjectProperies.projectLanguage}</Highlight>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td className="px-1">Project Language</td>
+                            <td className="px-1">
+                                <Highlight>{props.codeProject.codeProjectProperties.projectLanguage}</Highlight>
+                            </td>
+                        </tr>
 
-                            <tr className="border-t border-zinc-300 dark:border-zinc-800">
-                                <td className="px-1">Status</td>
-                                <td className="px-1">{props.codeProject.codeProjectProperies.status}</td>
-                            </tr>
+                        <tr className="border-t border-zinc-300 dark:border-zinc-800">
+                            <td className="px-1">Status</td>
+                            <td className="px-1">{props.codeProject.codeProjectProperties.status}</td>
+                        </tr>
 
-                            <tr className="border-t border-zinc-300 dark:border-zinc-800">
-                                <td className="px-1">Type</td>
-                                <td className="px-1">{props.codeProject.codeProjectProperies.type}</td>
-                            </tr>
+                        <tr className="border-t border-zinc-300 dark:border-zinc-800">
+                            <td className="px-1">Type</td>
+                            <td className="px-1">{props.codeProject.codeProjectProperties.type}</td>
+                        </tr>
 
-                            <tr className="border-t border-zinc-300 dark:border-zinc-800">
-                                <td className="px-1">Programming Language</td>
-                                <td className="px-1">
-                                    <div className="flex flex-row mt-0.5 gap-0.5">
-                                        {
-                                            props.codeProject.codeProjectProperies.programmingLanguages.map(
-                                                (lang, index) => (
-                                                    <CodeLanguageBadge lang={lang} key={index} />
-                                                )
+                        <tr className="border-t border-zinc-300 dark:border-zinc-800">
+                            <td className="px-1">Programming Language</td>
+                            <td className="px-1">
+                                <div className="flex flex-row mt-0.5 gap-0.5">
+                                    {
+                                        props.codeProject.codeProjectProperties.programmingLanguages.map(
+                                            (lang, index) => (
+                                                <CodeLanguageBadge lang={lang} key={index}/>
                                             )
-                                        }
-                                    </div>
-                                </td>
-                            </tr>
+                                        )
+                                    }
+                                </div>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>

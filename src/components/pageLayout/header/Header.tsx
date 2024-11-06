@@ -58,7 +58,7 @@ export default function Header(props: HeaderProps) {
 
                     <div className="xs:ml-auto flex flex-row h-11 justify-center items-center">
                         <Category
-                            icon={<CodeIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7" />}
+                            icon={<CodeIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7"/>}
                             text="Code"
                             link="/code/"
                             selected={props.selected == "Code"}
@@ -71,7 +71,8 @@ export default function Header(props: HeaderProps) {
                                                 text: (
                                                     <>
                                                         GitHub
-                                                        <GitHubIcon className="h-4 inline dark:fill-white fill-black ml-1 mb-0.5" />
+                                                        <GitHubIcon
+                                                            className="h-4 inline dark:fill-white fill-black ml-1 mb-0.5"/>
                                                     </>
                                                 ),
                                                 inNewTab: true
@@ -84,7 +85,7 @@ export default function Header(props: HeaderProps) {
                         />
 
                         <Category
-                            icon={<BlenderIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7" />}
+                            icon={<BlenderIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7"/>}
                             text="3D"
                             link="/3d/"
                             selected={props.selected == "3D"}
@@ -97,7 +98,8 @@ export default function Header(props: HeaderProps) {
                                                 text: (
                                                     <>
                                                         Instagram
-                                                        <InstagramIcon className="h-4 inline dark:fill-white fill-black ml-1" />
+                                                        <InstagramIcon
+                                                            className="h-4 inline dark:fill-white fill-black ml-1"/>
                                                     </>
                                                 ),
                                                 inNewTab: true
@@ -116,7 +118,7 @@ export default function Header(props: HeaderProps) {
                         />
 
                         <Category
-                            icon={<RecipiesIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7" />}
+                            icon={<RecipiesIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7"/>}
                             text="Recipes"
                             link="/recipes"
                             selected={props.selected == "Recipes"}
@@ -131,15 +133,15 @@ export default function Header(props: HeaderProps) {
                         />
 
                         <Category
-                            icon={<AboutIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7" />}
+                            icon={<AboutIcon className="dark:stroke-white stroke-black stroke-[5] h-10 w-7"/>}
                             text="About"
                             link="/about"
                             selected={props.selected == "About"}
                         />
 
-                        <VerticalRuler className="ml-1 mr-1 h-9" />
+                        <VerticalRuler className="ml-1 mr-1 h-9"/>
 
-                        <DarkModeToggle />
+                        <DarkModeToggle/>
 
                     </div>
 
