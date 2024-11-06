@@ -1,13 +1,14 @@
 'use client';
 
-import { useTheme } from "@/contexts/ThemeContext";
+import React from "react";
+import { useTheme } from "@/hooks/UseTheme";
 
 type ThemeApplierProps = {
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 
 export default function ThemeApplier(props: ThemeApplierProps) {
-    const { darkTheme, setDarkTheme } = useTheme();
+    const { darkTheme } = useTheme();
 
     return (
         <div className={darkTheme ? "dark text-dark" : "text-light"}>

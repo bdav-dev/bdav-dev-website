@@ -2,6 +2,7 @@ import PathBar from "./PathBar";
 import ThemeApplier from "@/components/theme/ThemeApplier";
 import Header, { Categories } from "./header/Header";
 import Footer from "./Footer";
+import React from "react";
 
 type PageBodyProps = {
     category?: Categories
@@ -19,11 +20,11 @@ export default function PageBody(props: PageBodyProps) {
 
                 <div className="flex-1">
 
-                    <Header selected={props.category} />
+                    <Header selected={props.category}/>
 
                     {
                         !props.hidePathBar
-                            ? <PathBar path={props.sitePath} />
+                            ? <PathBar path={props.sitePath}/>
                             : <></>
                     }
 
@@ -32,7 +33,7 @@ export default function PageBody(props: PageBodyProps) {
                     </main>
                 </div>
 
-                <Footer />
+                <Footer/>
             </div>
 
         </ThemeApplier>

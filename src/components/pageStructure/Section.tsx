@@ -1,4 +1,5 @@
 import Headline from "./headlines/Headline";
+import React from "react";
 
 type SectionProps = {
     headline: string | React.ReactNode,

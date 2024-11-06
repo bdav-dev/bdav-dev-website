@@ -42,7 +42,8 @@ export default function CreateBlenderProject() {
 
                         The directory <Highlight>blend-files</Highlight> will contain a blank blender file
                         with the name of the project: <Highlight>{"<projectName>.blend"}</Highlight>.
-                        The tool also sets the directory render-output as the default render output directory of the newly created
+                        The tool also sets the directory render-output as the default render output directory of the
+                        newly created
                         blender file.
                     </Tile>
                 </Section>
@@ -62,15 +63,17 @@ export default function CreateBlenderProject() {
                             className="min-w-fit sm:min-w-[25rem] flex-1"
                         >
                             <Enumerate
-                                seperateItems
+                                separateItems
                                 items={[
                                     <>Download the source code of the project
                                         (as a .zip file or via <Code>git clone</Code>).</>,
                                     <>Make sure the <Highlight>create-blender-project</Highlight> file
-                                        is flagged as executable, if not run <Code>$ chmod +x create-blender-project</Code></>,
+                                        is flagged as executable, if not run <Code>$ chmod +x
+                                            create-blender-project</Code></>,
                                     <>Open a new terminal window and navigate to the directory in which you want to
                                         create a new blender project (using <Code>cd</Code>)</>,
-                                    <>Run <Code>$ /path/to/file/create-blender-project {"<Optional parameter: Project name>"}</Code></>
+                                    <>Run <Code>$
+                                        /path/to/file/create-blender-project {"<Optional parameter: Project name>"}</Code></>
                                 ]}
                             />
                         </Tile>

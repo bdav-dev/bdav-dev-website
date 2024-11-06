@@ -1,7 +1,7 @@
-import CodeIcon from "@/icons/CodeIcon";
 import Link from "next/link";
 import Code from "../pageElements/Code";
 import Tile from "../pageElements/Tile";
+import React from "react";
 
 
 type LargeLinkProps = {
@@ -25,6 +25,6 @@ export default function LargeLink(props: LargeLinkProps) {
                     <Code>{props.text}</Code>
                 </div>
             </Tile>
-        </Link >
+        </Link>
     );
 }

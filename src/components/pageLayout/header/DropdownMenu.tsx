@@ -1,4 +1,5 @@
 import DropdownItem from "./DropdownItem";
+import React from "react";
 
 
 export type DropdownItem = {
@@ -34,12 +35,13 @@ export default function DropdownMenu(props: DropdownMenuProps) {
                             (dropDownGroup, i) => {
                                 let array = dropDownGroup.map(
                                     (dropDownItem, index) => (
-                                        <DropdownItem dropdownItem={dropDownItem} key={`${i}${index}`} />
+                                        <DropdownItem dropdownItem={dropDownItem} key={`${i}${index}`}/>
                                     )
                                 );
 
                                 if (props.dropdownMenuGroups && i != props.dropdownMenuGroups.length - 1) {
-                                    array.push(<hr className="w-[90%] m-0.5 border-zinc-300 dark:border-zinc-700" key={i} />);
+                                    array.push(<hr className="w-[90%] m-0.5 border-zinc-300 dark:border-zinc-700"
+                                                   key={i}/>);
                                 }
 
                                 return array;

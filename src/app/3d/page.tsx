@@ -6,7 +6,6 @@ import Tile from "@/components/pageElements/Tile";
 import Abstract3DSeriesOverview from "@/components/categories/3d/Abstract3DSeriesOverview";
 
 export default function Blender() {
-
     return (
         <PageBody
             category="3D"
@@ -14,11 +13,11 @@ export default function Blender() {
         >
             <Tile>
                 <HStack className="ml-auto mr-auto w-fit items-center">
-                    Visit me on <InstagramLink />
+                    Visit me on <InstagramLink/>
                 </HStack>
             </Tile>
 
-            <Abstract3DSeriesOverview />
+            <Abstract3DSeriesOverview/>
         </PageBody>
     );
 }

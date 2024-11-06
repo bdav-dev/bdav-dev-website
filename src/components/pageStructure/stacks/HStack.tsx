@@ -1,3 +1,5 @@
+import React from "react";
+
 type HStackProps = {
     className?: string,
     children?: React.ReactNode

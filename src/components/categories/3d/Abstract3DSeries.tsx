@@ -1,4 +1,5 @@
 import PageBody from "@/components/pageLayout/PageBody";
+import React from "react";
 
 type Abstract3DSeriesProps = {
     children?: React.ReactNode,

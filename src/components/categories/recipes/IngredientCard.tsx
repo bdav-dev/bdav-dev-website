@@ -35,7 +35,7 @@ export default function IngredientCard(props: IngredientCardProps) {
 
             {
                 props.ingredient.productRecommendation &&
-                <RecommendationStar content={props.ingredient.productRecommendation} />
+                <RecommendationStar content={props.ingredient.productRecommendation}/>
             }
 
             <div className={`

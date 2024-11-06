@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 
 type CategoryProps = {
     icon?: React.ReactNode,
@@ -24,8 +25,8 @@ export default function Category(props: CategoryProps) {
                     bg-opacity-80 dark:bg-opacity-80
                     h-10
                     ${props.selected
-                        ? "bg-zinc-350 dark:bg-zinc-925"
-                        : "hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90"}
+                    ? "bg-zinc-350 dark:bg-zinc-925"
+                    : "hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90"}
                 `}
             >
                 {props.icon}

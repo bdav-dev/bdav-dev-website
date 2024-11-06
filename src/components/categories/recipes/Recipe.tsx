@@ -3,6 +3,7 @@ import PageTitle from '@/components/pageStructure/headlines/PageTitle';
 import { Recipe as RecipeType } from '@/content/recipes/recipes';
 import Image from "next/image";
 import IngredientList from './IngredientList';
+import React from "react";
 
 type RecipeProps = {
     recipe: RecipeType
@@ -37,7 +38,7 @@ export default function Recipe(props: RecipeProps) {
 
                 <div className="flex-grow">
                     <PageTitle>{props.recipe.title}</PageTitle>
-                    <IngredientList recipe={props.recipe} />
+                    <IngredientList recipe={props.recipe}/>
                 </div>
 
             </div>

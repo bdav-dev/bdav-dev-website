@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image"
 import cheeseburgerImages from "./images/cheeseburgerImages";
+import React from "react";
 
 export type Recipe = {
     title: string,
@@ -14,7 +15,6 @@ export type Recipe = {
 }
 
 
-
 export type Ingredient = {
     name: string,
     pluralName?: string,
@@ -23,8 +23,8 @@ export type Ingredient = {
     image: StaticImageData,
     customImagePadding?: string
 } & (
-        | { unit: "Gram" | "Piece"; amount: number }
-        | { unit: "None"; amount: string }
+    | { unit: "Gram" | "Piece"; amount: number }
+    | { unit: "None"; amount: string }
     )
 
 type Unit = "Gram" | "None" | "Piece";

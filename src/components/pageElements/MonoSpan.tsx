@@ -1,4 +1,5 @@
 import { mono } from "@/fonts";
+import React from "react";
 
 
 type MonoSpanProps = {

@@ -1,3 +1,5 @@
+import React from "react";
+
 type TileProps = {
     title?: string | React.ReactNode,
     className?: string,

@@ -25,7 +25,7 @@ export default function GitHubRepoLink(props: GitHubRepoLinkProps) {
             `}
             draggable="false"
         >
-            <GitHubIcon className="fill-white h-6 w-6" />
+            <GitHubIcon className="fill-white h-6 w-6"/>
         </Link>
     );
 

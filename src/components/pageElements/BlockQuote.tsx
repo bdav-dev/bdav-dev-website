@@ -1,3 +1,4 @@
+import React from "react";
 
 type BlockQuoteProps = {
     children?: React.ReactNode

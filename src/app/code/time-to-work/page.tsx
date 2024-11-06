@@ -59,7 +59,7 @@ export default function TimeToWork() {
                             Du kannst deine Arbeitszeit über 3 Wege erfassen:
                             <Enumerate
                                 className="mb-1.5 ml-2"
-                                seperateItems
+                                separateItems
                                 items={[
                                     {
                                         title: <>Zeiterfassung via Zeitstempel</>,
@@ -70,16 +70,18 @@ export default function TimeToWork() {
                                     },
                                     {
                                         title: <>Zeiterfassung via Eingabe eines Zeitintervalls</>,
-                                        text: <>Du kannst ein Zeitintervall (durch Angabe von Start- und Endzeit) erstellen.</>
+                                        text: <>Du kannst ein Zeitintervall (durch Angabe von Start- und Endzeit)
+                                            erstellen.</>
                                     },
                                     {
                                         title: <>Erstellen eines offenen Zeitstempels bei angegebener Startzeit</>,
                                         text: <>Falls du ein Zeitintervall ohne Endzeit angibst wird,
-                                            statt eines Zeitintervalls, ein offener Zeitstempel mit deiner angegeben Zeit erstellt.</>
+                                            statt eines Zeitintervalls, ein offener Zeitstempel mit deiner angegeben
+                                            Zeit erstellt.</>
                                     }
                                 ]}
                             />
-                            <LargeBr />
+                            <LargeBr/>
                             Deine erstellten Zeitintervalle bzw. Zeitstempel werden in einer Tabelle angezeigt.
                             Dort siehst du auch den Zeitunterschied von jedem Zeitintervall / Zeitstempel.
                         </Tile>
@@ -90,7 +92,7 @@ export default function TimeToWork() {
                             Durch die Angabe von
                             <Enumerate
                                 className="my-1.5 ml-2"
-                                seperateItems
+                                separateItems
                                 items={[
                                     {
                                         title: "Arbeitszeit",
@@ -106,12 +108,12 @@ export default function TimeToWork() {
                                     }
                                 ]}
                             />
-                            <LargeBr />
+                            <LargeBr/>
                             berechnet dir TimeToWork folgende Werte:
-                            <LargeBr />
+                            <LargeBr/>
                             <Enumerate
                                 className="ml-2 mt-1.5"
-                                seperateItems
+                                separateItems
                                 items={[
                                     {
                                         title: <>Summe der Arbeitszeit</>,
@@ -119,14 +121,17 @@ export default function TimeToWork() {
                                     },
                                     {
                                         title: <>restliche Arbeitszeit</>,
-                                        text: <>Ein Blick auf dieses Feld verrät dir, wie viel du noch zu arbeiten hast.</>
+                                        text: <>Ein Blick auf dieses Feld verrät dir, wie viel du noch zu arbeiten
+                                            hast.</>
                                     },
                                     {
                                         title: <>Arbeitsende</>,
                                         text: <>Dieses Feld zeigt dir an, wann du Feierabend hast.
                                             Dabei wird davon ausgegangen, dass du exakt die Zeit arbeitest,
-                                            die du in dem Feld "Arbeitszeit" angegeben hast (keine Über- / Unterstunden).
-                                            Es werden auch die Pausen (in Kombination mit der Mindestpause) mit einberechnet.</>
+                                            die du in dem Feld "Arbeitszeit" angegeben hast (keine Über- /
+                                            Unterstunden).
+                                            Es werden auch die Pausen (in Kombination mit der Mindestpause) mit
+                                            einberechnet.</>
                                     },
                                     {
                                         title: <>neuer Zeitsaldo</>,
@@ -148,7 +153,7 @@ export default function TimeToWork() {
 
                             <Enumerate
                                 className="my-1.5 ml-2"
-                                seperateItems
+                                separateItems
                                 items={[
                                     {
                                         title: "Startzeitpunkt",
@@ -170,13 +175,13 @@ export default function TimeToWork() {
                                 ]}
                             />
 
-                            <LargeBr />
+                            <LargeBr/>
                             folgendes sehen:
-                            <LargeBr />
+                            <LargeBr/>
 
                             <Enumerate
                                 className="ml-2 mt-1.5"
-                                seperateItems
+                                separateItems
                                 items={[
                                     {
                                         title: "Zeitpunkt zum Verlassen des Arbeitsplatzes",
@@ -185,7 +190,8 @@ export default function TimeToWork() {
                                     },
                                     {
                                         title: "Abfahrt des nächsten Zugs",
-                                        text: <>Dieses Feld zeigt dir an, wann der nächste Zug abfährt (und in wie vielen Minuten das ist).</>
+                                        text: <>Dieses Feld zeigt dir an, wann der nächste Zug abfährt (und in wie
+                                            vielen Minuten das ist).</>
                                     }
                                 ]}
                             />
@@ -197,7 +203,7 @@ export default function TimeToWork() {
                             Der gesamte Zustand der Applikation wird beim Schließen des Tabs
                             (bei dir lokal via <Code>localStorage</Code>) gesichert.
                             Dieser Zustand wird wiederherstellt, wenn du die Applikation wieder öffnest.
-                            <LargeBr />
+                            <LargeBr/>
                             Wenn du aber die Applikation an einem neuen Tag öffnest,
                             werden die Zeitstempel und Zeitintervalle vom Vortag nicht geladen und
                             der am Vortag berechnete neue Zeitsaldo wird als aktueller Zeitsaldo übernommen.

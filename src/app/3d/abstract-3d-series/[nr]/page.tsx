@@ -3,11 +3,14 @@ import Tile from "@/components/pageElements/Tile";
 import Article from "@/components/pageStructure/Article";
 import Section from "@/components/pageStructure/Section";
 import SubSection from "@/components/pageStructure/SubSection";
-import { Abstract3dSeriesImage as Abstract3dSeriesImageType, abstract3dSeriesImages } from "@/content/3d/abstract3dSeries";
+import {
+    Abstract3dSeriesImage as Abstract3dSeriesImageType,
+    abstract3dSeriesImages
+} from "@/content/3d/abstract3dSeries";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import A3dsImageDownloadTabe from "@/components/categories/3d/A3dsImageDownloadTable";
+import A3dsImageDownloadTable from "@/components/categories/3d/A3dsImageDownloadTable";
 import Abstract3DSeries from "@/components/categories/3d/Abstract3DSeries";
 
 export default function Abstract3dSeriesImage({ params }: { params: { nr: string } }) {
@@ -17,8 +20,9 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
         )
     );
 
-    if (abstract3dSeriesImage == undefined)
+    if (!abstract3dSeriesImage) {
         notFound();
+    }
 
     const amountOfImageDownloads = abstract3dSeriesImage.downloads?.imageDownloads?.length ?? 0;
     const amountOfWallpaperDownloads = abstract3dSeriesImage.downloads?.wallpaperDownloads?.length ?? 0;
@@ -56,7 +60,7 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
                                 abstract3dSeriesImage.downloads.imageDownloads &&
                                 <SubSection headline={amountOfImageDownloads > 1 ? "Images" : "Image"}>
                                     <Tile className="py-1 px-2" customPadding>
-                                        <A3dsImageDownloadTabe
+                                        <A3dsImageDownloadTable
                                             downloads={abstract3dSeriesImage.downloads?.imageDownloads!}
                                         />
                                     </Tile>
@@ -67,7 +71,7 @@ export default function Abstract3dSeriesImage({ params }: { params: { nr: string
                                 abstract3dSeriesImage.downloads.wallpaperDownloads &&
                                 <SubSection headline={amountOfWallpaperDownloads > 1 ? "Wallpapers" : "Wallpaper"}>
                                     <Tile className="py-1 px-2" customPadding>
-                                        <A3dsImageDownloadTabe
+                                        <A3dsImageDownloadTable
                                             downloads={abstract3dSeriesImage.downloads?.wallpaperDownloads!}
                                         />
                                     </Tile>

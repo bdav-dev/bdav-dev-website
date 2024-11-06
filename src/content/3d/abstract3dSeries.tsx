@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image"
 import { a3ds } from "./abstract3dSeriesImages"
+import React from "react";
 
 export type Abstract3dSeriesImage = {
     nr: number

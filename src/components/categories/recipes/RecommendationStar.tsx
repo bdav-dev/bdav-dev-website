@@ -1,4 +1,5 @@
 import StarIcon from "@/icons/StarIcon"
+import React from "react";
 
 type RecommendationStarProps = {
     content: React.ReactNode
@@ -21,7 +22,7 @@ export default function RecommendationStar(props: RecommendationStarProps) {
             select-none
             group
         `}>
-            <StarIcon className="fill-white w-6 h-6" />
+            <StarIcon className="fill-white w-6 h-6"/>
 
             <div className={`
                     w-64
@@ -57,7 +58,7 @@ export default function RecommendationStar(props: RecommendationStarProps) {
                             flex justify-center items-center gap-0.5
                         `}
                     >
-                        <StarIcon className="w-4 h-4 fill-white pt-[0.0625rem]" /> Product recommendation
+                        <StarIcon className="w-4 h-4 fill-white pt-[0.0625rem]"/> Product recommendation
                     </div>
 
                     <div className="select-text my-1 text-center">

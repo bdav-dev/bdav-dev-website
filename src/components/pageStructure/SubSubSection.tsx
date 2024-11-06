@@ -1,4 +1,5 @@
 import VerySmallHeadline from "./headlines/VerySmallHeadline";
+import React from "react";
 
 type SubSubSectionProps = {
     headline: string | React.ReactNode,
