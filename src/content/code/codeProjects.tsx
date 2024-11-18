@@ -18,7 +18,7 @@ export type CodeProject = {
     customDropdownText?: string | React.ReactNode,
 
     codeProjectProperties: CodeProjectProperties
-};
+}
 
 type CodeProjects = {
     [key: string]: CodeProject
@@ -53,13 +53,12 @@ export const programmingLanguages: { [key: string]: ProgrammingLanguage } = {
     },
     css: {
         name: "CSS",
-        bgColor: "#275DED"
+        bgColor: "#663399"
     },
     javaScript: {
         name: "JavaScript",
         bgColor: "#F0DB4E",
         textColor: "#323230"
-
     },
     java: {
         name: "Java",
@@ -73,7 +72,7 @@ export const programmingLanguages: { [key: string]: ProgrammingLanguage } = {
         name: "Python",
         bgColor: "#2C6999"
     }
-};
+}
 
 
 export const codeProjects: CodeProjects = {
