@@ -13,7 +13,7 @@ export default function Code(props: CodeProps) {
             className={`
                 rounded-lg px-1.5 py-[0.0625rem]
                 ${mono}
-                ${props.customColor ? props.customColor : "dark:bg-neutral-950 bg-neutral-250"}
+                ${props.customColor ?? "dark:bg-neutral-950 bg-neutral-250"}
             `}
         >
             {props.children}

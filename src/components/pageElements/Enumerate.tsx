@@ -19,9 +19,7 @@ function itemToJsx(item: (TitledItem | string | React.ReactNode)) {
 
     return itemAsTitledItem.title != undefined
         ? <>
-            <span className="font-semibold">
-                {itemAsTitledItem.title}
-            </span>
+            <span className="font-semibold">{itemAsTitledItem.title}</span>
             <br/>
             {itemAsTitledItem.text}
         </>
@@ -46,7 +44,7 @@ export default function Enumerate(props: EnumerateProps) {
                             `}
                         >
                             <div
-                                className={"select-none"}
+                                className="select-none"
                                 style={{ width: props.symbolWidth ?? "1.25rem" }}
                             >
                                 {props.symbol ?? `${index + 1}.`}

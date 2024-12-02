@@ -29,14 +29,10 @@ export default function HyperLink(props: HyperLinkProps) {
                 props.noUnderline
                     ? ""
                     : `
-                            underline
-                            hover:decoration-inherit dark:hover:decoration-inherit
-                            ${
-                        isMobile
-                            ? ""
-                            : "decoration-neutral-500 dark:decoration-neutral-300"
-                    }
-                        `
+                    underline
+                    hover:decoration-inherit dark:hover:decoration-inherit
+                    ${isMobile ? "" : "decoration-neutral-500 dark:decoration-neutral-300"}
+                    `
             }
                 ${props.className}
             `}

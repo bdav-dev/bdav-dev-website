@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import ThemeContext from '@/contexts/ThemeContext'
-import { inter } from '@/fonts'
 import { defaultMetadata } from '@/metadata'
 import React from "react";
+import { inter } from "@/fonts";
 
 export const metadata: Metadata = {
     title: 'bdav.dev – David Berezowski',

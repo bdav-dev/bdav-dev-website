@@ -5,10 +5,8 @@ type BlockQuoteProps = {
 }
 
 export default function BlockQuote(props: BlockQuoteProps) {
-
     return (
-        <div
-            className={`
+        <div className={`
                 bg-neutral-225 dark:bg-zinc-800
                 border-neutral-350 dark:border-neutral-725
                 w-fit
@@ -20,5 +18,4 @@ export default function BlockQuote(props: BlockQuoteProps) {
             {props.children}
         </div>
     );
-
 }

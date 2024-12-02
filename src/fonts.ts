@@ -9,5 +9,5 @@ const cascadiaCodeFont = localFont({
     weight: "350"
 });
 
-export const inter = interFont.className;
 export const mono = cascadiaCodeFont.className;
+export const inter = interFont.className;

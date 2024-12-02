@@ -7,9 +7,15 @@ type SmallInternalLinkProps = {
 }
 
 export default function SmallInternalLink(props: SmallInternalLinkProps) {
+
     return (
-        <HyperLink href={props.href} className="rounded-md stroke-black dark:stroke-white" noNewTab noUnderline
-                   noMobileStyle>
+        <HyperLink
+            href={props.href}
+            className="rounded-md stroke-black dark:stroke-white"
+            noNewTab
+            noUnderline
+            noMobileStyle
+        >
             <span className={`
                 py-0.5 px-1
                 my-0.5
