@@ -5,7 +5,6 @@ export default function BdavDev() {
 
     return (
         <div className="inline relative">
-
             <span
                 className={`
                     font-semibold
@@ -16,8 +15,7 @@ export default function BdavDev() {
                     from-[#00AAFF]
                     via-[#00ffff]
                     to-[#01FFA4]
-                    brightness-[0.7]
-                    drop-shadow
+                    brightness-[0.85]
                     dark:brightness-100
                 `}
             >
@@ -35,13 +33,14 @@ export default function BdavDev() {
                     absolute w-full -z-50
                     top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                     scale-y-[65%]
-                    dark:brightness-50
+                    dark:brightness-[0.65]
                     brightness-110
+                    opacity-50
+                    dark:opacity-100
                     blur-3xl
                     select-none
                 `}
             />
-
         </div>
     );
 }
