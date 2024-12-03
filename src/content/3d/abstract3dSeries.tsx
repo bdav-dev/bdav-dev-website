@@ -15,7 +15,7 @@ export type Abstract3dSeriesImage = {
 export type ImageDownload = {
     description?: string
     fileName: string
-    fileFormat: "png"
+    fileFormat: "png" | "exr"
     aspectRatio: string
     width: number
     height: number
@@ -23,6 +23,30 @@ export type ImageDownload = {
 }
 
 export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = {
+    31: {
+        nr: 31,
+        image: a3ds.O31,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-031",
+                    fileFormat: "exr",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/raw/upload/v1733258314/abstract-3d-series/031/a3ds-031.exr"
+                },
+                {
+                    fileName: "a3ds-031",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1733258318/abstract-3d-series/031/a3ds-031.png"
+                }
+            ]
+        }
+    },
     30: {
         nr: 30,
         image: a3ds.O30,
