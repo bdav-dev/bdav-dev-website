@@ -33,6 +33,7 @@ import O32 from '@/../public/3d/abstract-3d-series/a3ds-032-q85.webp'
 import O33 from '@/../public/3d/abstract-3d-series/a3ds-033-q90.webp'
 import O34 from '@/../public/3d/abstract-3d-series/a3ds-034-q80.webp'
 import O35 from '@/../public/3d/abstract-3d-series/a3ds-035-q95.webp'
+import O36 from '@/../public/3d/abstract-3d-series/a3ds-036-q60.webp'
 
 export const a3ds = {
     OO1,
@@ -69,5 +70,6 @@ export const a3ds = {
     O32,
     O33,
     O34,
-    O35
+    O35,
+    O36
 }
