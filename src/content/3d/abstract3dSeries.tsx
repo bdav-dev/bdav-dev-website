@@ -23,6 +23,230 @@ export type ImageDownload = {
 }
 
 export const abstract3dSeriesImages: { [key: string]: Abstract3dSeriesImage } = {
+    52: {
+        nr: 52,
+        image: a3ds.O52,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-052",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232968/abstract-3d-series/052/a3ds-052.png"
+                }
+            ]
+        }
+    },
+    51: {
+        nr: 51,
+        image: a3ds.O51,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-051",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232932/abstract-3d-series/051/a3ds-051.png"
+                }
+            ]
+        }
+    },
+    50: {
+        nr: 50,
+        image: a3ds.O50,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-050",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232899/abstract-3d-series/050/a3ds-050.png"
+                }
+            ]
+        }
+    },
+    49: {
+        nr: 49,
+        image: a3ds.O49,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-049",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232868/abstract-3d-series/049/a3ds-049.png"
+                }
+            ]
+        }
+    },
+    48: {
+        nr: 48,
+        image: a3ds.O48,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-048",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232823/abstract-3d-series/048/a3ds-048.png"
+                }
+            ]
+        }
+    },
+    47: {
+        nr: 47,
+        image: a3ds.O47,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-047",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232790/abstract-3d-series/047/a3ds-047.png"
+                }
+            ]
+        }
+    },
+    46: {
+        nr: 46,
+        image: a3ds.O46,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-046",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232761/abstract-3d-series/046/a3ds-046.png"
+                }
+            ]
+        }
+    },
+    45: {
+        nr: 45,
+        image: a3ds.O45,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-045",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232733/abstract-3d-series/045/a3ds-045.png"
+                }
+            ]
+        }
+    },
+    44: {
+        nr: 44,
+        image: a3ds.O44,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-044",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232701/abstract-3d-series/044/a3ds-044.png"
+                }
+            ]
+        }
+    },
+    43: {
+        nr: 43,
+        image: a3ds.O43,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-043",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232659/abstract-3d-series/043/a3ds-043.png"
+                }
+            ]
+        }
+    },
+    42: {
+        nr: 42,
+        image: a3ds.O42,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-042",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232630/abstract-3d-series/042/a3ds-042.png"
+                }
+            ]
+        }
+    },
+    41: {
+        nr: 41,
+        image: a3ds.O41,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-041",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232603/abstract-3d-series/041/a3ds-041.png"
+                }
+            ]
+        }
+    },
+    40: {
+        nr: 40,
+        image: a3ds.O40,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-040",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232571/abstract-3d-series/040/a3ds-040.png"
+                }
+            ]
+        }
+    },
+    39: {
+        nr: 39,
+        image: a3ds.O39,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-039",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1735232533/abstract-3d-series/039/a3ds-039.png"
+                }
+            ]
+        }
+    },
     38: {
         nr: 38,
         image: a3ds.O38,

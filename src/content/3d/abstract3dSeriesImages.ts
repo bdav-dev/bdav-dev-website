@@ -36,44 +36,26 @@ import O35 from '@/../public/3d/abstract-3d-series/a3ds-035-q95.webp'
 import O36 from '@/../public/3d/abstract-3d-series/a3ds-036-q60.webp'
 import O37 from '@/../public/3d/abstract-3d-series/a3ds-037-q90.webp'
 import O38 from '@/../public/3d/abstract-3d-series/a3ds-038-q95.webp'
+import O39 from '@/../public/3d/abstract-3d-series/a3ds-039-q65.webp'
+import O40 from '@/../public/3d/abstract-3d-series/a3ds-040-q45.webp'
+import O41 from '@/../public/3d/abstract-3d-series/a3ds-041-q95.webp'
+import O42 from '@/../public/3d/abstract-3d-series/a3ds-042-q95.webp'
+import O43 from '@/../public/3d/abstract-3d-series/a3ds-043-q95.webp'
+import O44 from '@/../public/3d/abstract-3d-series/a3ds-044-q90.webp'
+import O45 from '@/../public/3d/abstract-3d-series/a3ds-045-q85.webp'
+import O46 from '@/../public/3d/abstract-3d-series/a3ds-046-q85.webp'
+import O47 from '@/../public/3d/abstract-3d-series/a3ds-047-q30.webp'
+import O48 from '@/../public/3d/abstract-3d-series/a3ds-048-q90.webp'
+import O49 from '@/../public/3d/abstract-3d-series/a3ds-049-q95.webp'
+import O50 from '@/../public/3d/abstract-3d-series/a3ds-050-q90.webp'
+import O51 from '@/../public/3d/abstract-3d-series/a3ds-051-q85.webp'
+import O52 from '@/../public/3d/abstract-3d-series/a3ds-052-q90.webp'
 
 export const a3ds = {
-    OO1,
-    OO2,
-    OO3,
-    OO4,
-    OO5,
-    OO6,
-    OO7,
-    OO8,
-    OO9,
-    O10,
-    O11,
-    O12,
-    O13,
-    O14,
-    O15,
-    O16,
-    O17,
-    O18,
-    O19,
-    O20,
-    O21,
-    O22,
-    O23,
-    O24,
-    O25,
-    O26,
-    O27,
-    O28,
-    O29,
-    O30,
-    O31,
-    O32,
-    O33,
-    O34,
-    O35,
-    O36,
-    O37,
-    O38
+    OO1, OO2, OO3, OO4, OO5, OO6, OO7, OO8, OO9, O10,
+    O11, O12, O13, O14, O15, O16, O17, O18, O19, O20,
+    O21, O22, O23, O24, O25, O26, O27, O28, O29, O30,
+    O31, O32, O33, O34, O35, O36, O37, O38, O39, O40,
+    O41, O42, O43, O44, O45, O46, O47, O48, O49, O50,
+    O51, O52
 }
