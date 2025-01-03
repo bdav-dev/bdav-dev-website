@@ -3,9 +3,6 @@
 import React, { Dispatch, SetStateAction, useEffect } from "react";
 import useLocalStorage from "../hooks/UseLocalStorage";
 
-type ThemeProviderProps = {
-    children?: React.ReactNode
-}
 
 type ThemeContextType = {
     darkTheme: boolean,
@@ -16,6 +13,10 @@ export const ThemeContext = React.createContext<ThemeContextType>({
     darkTheme: true,
     setDarkTheme: () => { }
 });
+
+type ThemeProviderProps = {
+    children?: React.ReactNode
+}
 
 export default function ThemeProvider(props: ThemeProviderProps) {
     const { storedValue: darkTheme, setStoredValue: setDarkTheme } = useLocalStorage("useDarkTheme", true);

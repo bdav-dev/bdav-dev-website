@@ -1,4 +1,4 @@
-import Tile from "@/components/pageElements/Tile";
+import Tile from "@/components/Tile";
 import CutleryIcon from "@/icons/CutleryIcon";
 import React from "react";
 
@@ -7,7 +7,6 @@ type BonAppetitMessageProps = {
 }
 
 export default function BonAppetitMessage(props: BonAppetitMessageProps) {
-
     return (
         <Tile className="text-center font-semibold">
             {props.children}

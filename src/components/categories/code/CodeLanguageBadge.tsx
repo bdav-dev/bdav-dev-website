@@ -1,17 +1,13 @@
 import { ProgrammingLanguage } from "@/content/code/codeProjects";
 
 type CodeLanguageBadgeProps = {
-    lang: ProgrammingLanguage,
-    smallerPadding?: boolean
+    lang: ProgrammingLanguage
 }
 
 export default function CodeLanguageBadge(props: CodeLanguageBadgeProps) {
     return (
         <span
-            className={`
-                ${props.smallerPadding ? "py-[0.09rem]" : "py-0.5"}
-                px-1 rounded-lg
-            `}
+            className={'px-[0.32rem] py-[0.05rem] rounded-full'}
             style={{
                 backgroundColor: props.lang.bgColor,
                 color: props.lang.textColor ?? "#FFFFFF"

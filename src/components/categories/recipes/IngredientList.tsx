@@ -1,6 +1,6 @@
 'use client';
 
-import Tile from "@/components/pageElements/Tile";
+import Tile from "@/components/Tile";
 import { Recipe } from "@/content/recipes/recipes";
 import { useState } from "react";
 import IngredientCard from "./IngredientCard";

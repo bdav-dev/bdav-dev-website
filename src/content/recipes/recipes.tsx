@@ -3,8 +3,8 @@ import cheeseburgerImages from "./images/cheeseburgerImages";
 import React from "react";
 
 export type Recipe = {
+    routeSegment: string,
     title: string,
-    path: string,
 
     badgeHoverText?: string | React.ReactNode,
     image: StaticImageData,
@@ -36,8 +36,8 @@ type Recipes = {
 
 export const recipes: Recipes = {
     cheeseburger: {
+        routeSegment: 'cheeseburger',
         title: "Cheeseburger",
-        path: "/recipes/cheeseburger/",
         badgeHoverText: <span className="text-white">Cheeseburger</span>,
         image: cheeseburgerImages.cheeseburger,
         ingredients: [

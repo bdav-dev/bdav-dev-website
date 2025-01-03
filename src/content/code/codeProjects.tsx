@@ -5,31 +5,24 @@ import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 export type CodeProject = {
+    routeSegment: string,
     title: string | React.ReactNode,
-    path: string,
     repository: string,
+    properties: {
+        projectLanguage: 'English' | 'German',
+        programmingLanguages: ProgrammingLanguage[]
+        status: 'In Development' | 'Maintaining' | 'Completed',
+        type: 'Web application' | 'Desktop application' | 'Terminal application',
+        launchLink?: string
+    }
 
     badgeHoverText?: string | React.ReactNode,
-
     customBadge?: React.ReactNode,
     customBadgeText?: string | React.ReactNode,
+
     customBadgeImage?: StaticImageData,
 
     customDropdownText?: string | React.ReactNode,
-
-    codeProjectProperties: CodeProjectProperties
-}
-
-type CodeProjects = {
-    [key: string]: CodeProject
-}
-
-type CodeProjectProperties = {
-    projectLanguage: 'English' | 'German',
-    programmingLanguages: ProgrammingLanguage[]
-    status: 'In Development' | 'Maintaining' | 'Completed',
-    type: 'Web application' | 'Desktop application' | 'Terminal application',
-    launchLink?: string
 }
 
 export type ProgrammingLanguage = {
@@ -38,48 +31,47 @@ export type ProgrammingLanguage = {
     textColor?: string
 }
 
-export const programmingLanguages: { [key: string]: ProgrammingLanguage } = {
-    typeScript: {
+export const ProgrammingLanguages: { [key: string]: ProgrammingLanguage } = {
+    TypeScript: {
         name: "TypeScript",
         bgColor: "#2D79C7"
     },
-    bash: {
+    Bash: {
         name: "Bash",
         bgColor: "#46B152"
     },
-    html: {
+    HTML: {
         name: "HTML",
         bgColor: "#EE5F27"
     },
-    css: {
+    CSS: {
         name: "CSS",
         bgColor: "#663399"
     },
-    javaScript: {
+    JavaScript: {
         name: "JavaScript",
         bgColor: "#F0DB4E",
         textColor: "#323230"
     },
-    java: {
+    Java: {
         name: "Java",
         bgColor: "#ED272C"
     },
-    abap: {
+    ABAP: {
         name: "ABAP",
         bgColor: "#094789"
     },
-    python: {
+    Python: {
         name: "Python",
         bgColor: "#2C6999"
     }
 }
 
-
-export const codeProjects: CodeProjects = {
+export const CodeProjects: { [key: string]: CodeProject } = {
     kdmFinder: {
         title: "KDM-Finder",
-        path: "/code/kdm-finder/",
         repository: "kdm-finder",
+        routeSegment: 'kdm-finder',
 
         customBadge: (
             <div className="w-full h-full flex justify-center items-center bg-[#161616] select-none">
@@ -93,32 +85,32 @@ export const codeProjects: CodeProjects = {
         ),
         badgeHoverText: <span className='text-white'>KDM-Finder</span>,
 
-        codeProjectProperties: {
-            programmingLanguages: [programmingLanguages.python],
+        properties: {
+            programmingLanguages: [ProgrammingLanguages.Python],
             projectLanguage: "English",
             status: "Maintaining",
             type: "Desktop application"
         }
     },
     createBlenderProject: {
+        routeSegment: 'create-blender-project',
         title: <>create&#8209;blender&#8209;project</>,
-        path: "/code/create-blender-project/",
         repository: "create-blender-project",
-        codeProjectProperties: {
+        properties: {
             projectLanguage: "English",
-            programmingLanguages: [programmingLanguages.bash],
+            programmingLanguages: [ProgrammingLanguages.Bash],
             status: "Completed",
             type: "Terminal application"
         }
     },
     timecoder: {
+        routeSegment: 'timecoder',
         title: "Timecoder",
-        path: "/code/timecoder/",
         repository: "timecoder",
         customBadgeImage: timecoderBadge,
         badgeHoverText: <span className="text-white">Timecoder</span>,
-        codeProjectProperties: {
-            programmingLanguages: [programmingLanguages.typeScript],
+        properties: {
+            programmingLanguages: [ProgrammingLanguages.TypeScript],
             projectLanguage: "English",
             status: "In Development",
             type: "Web application",
@@ -126,8 +118,8 @@ export const codeProjects: CodeProjects = {
         }
     },
     timeToWork: {
+        routeSegment: 'time-to-work',
         title: "time-to-work",
-        path: "/code/time-to-work/",
         repository: "time-to-work",
 
         customBadge: (
@@ -139,8 +131,8 @@ export const codeProjects: CodeProjects = {
         ),
         badgeHoverText: <span className={"text-white dark:text-black"}>time-to-work</span>,
 
-        codeProjectProperties: {
-            programmingLanguages: [programmingLanguages.html, programmingLanguages.css, programmingLanguages.javaScript],
+        properties: {
+            programmingLanguages: [ProgrammingLanguages.HTML, ProgrammingLanguages.CSS, ProgrammingLanguages.JavaScript],
             projectLanguage: "German",
             status: "Completed",
             type: "Web application"
