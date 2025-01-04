@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import Article from "@/components/document/Article";
 import Section from "@/components/document/Section";
@@ -7,21 +9,26 @@ import Abstract3DDownloadTable from "@/components/categories/3d/a3ds/Abstract3DD
 import { Abstract3D } from "@/content/3d/a3ds/abstract3dSeries";
 import { Space } from "@/components/format/Space";
 import Mono from "@/components/Mono";
+import { useContext } from "react";
+import { Abstract3DCollectionsContext } from "@/contexts/Abstract3DCollectionsContext";
+import StarIcon from "@/icons/StarIcon";
 
 
 type Abstract3DViewProps = {
-    abstract3dSeriesImage: Abstract3D
+    abstract3D: Abstract3D
 }
 
-export default function Abstract3DView({ abstract3dSeriesImage }: Abstract3DViewProps) {
-    const amountOfImageDownloads = abstract3dSeriesImage.downloads?.imageDownloads?.length ?? 0;
-    const amountOfWallpaperDownloads = abstract3dSeriesImage.downloads?.wallpaperDownloads?.length ?? 0;
+export default function Abstract3DView({ abstract3D }: Abstract3DViewProps) {
+    const { favorites } = useContext(Abstract3DCollectionsContext);
+
+    const amountOfImageDownloads = abstract3D.downloads?.imageDownloads?.length ?? 0;
+    const amountOfWallpaperDownloads = abstract3D.downloads?.wallpaperDownloads?.length ?? 0;
 
     return (
         <div className="flex flex-col lg:flex-row gap-5">
             <Image
-                src={abstract3dSeriesImage.image}
-                alt={`Abstract3DSeries #${abstract3dSeriesImage.nr}`}
+                src={abstract3D.image}
+                alt={`Abstract3DSeries #${abstract3D.nr}`}
                 className={`
                         w-full self-center
                         max-w-xl lg:max-w-3xl 3xl:max-w-[60rem]
@@ -37,37 +44,51 @@ export default function Abstract3DView({ abstract3dSeriesImage }: Abstract3DView
                 draggable={false}
             />
 
-            <Article headline={`Abstract3D Series #${abstract3dSeriesImage.nr}`} className="flex-grow">
-                {
-                    abstract3dSeriesImage.description
+            <Article
+                trailingComponent={
+                    <button onClick={() => favorites.toggleFavorite(abstract3D)}>
+                        <StarIcon
+                            className={`
+                                ml-1
+                                w-9 h-9 stroke-yellow-500 stroke-[60]
+                                active:scale-110
+                                transition-transform duration-75
+                                ${favorites.isFavorite(abstract3D) ? 'fill-yellow-500' : 'fill-transparent'}
+                            `}
+                        />
+                    </button>
                 }
+                headline={`Abstract3D Series #${abstract3D.nr}`}
+                className="flex-grow"
+            >
+                {abstract3D.description}
                 {
-                    abstract3dSeriesImage.adventCalendar &&
+                    abstract3D.adventCalendar &&
                     <>
-                        <Mono>#{abstract3dSeriesImage.adventCalendar.nr}</Mono>
-                        <Space/>in Advent Calendar {abstract3dSeriesImage.adventCalendar.year}
+                        <Mono>#{abstract3D.adventCalendar.nr}</Mono>
+                        <Space/>in Advent Calendar {abstract3D.adventCalendar.year}
                     </>
                 }
                 {
-                    abstract3dSeriesImage.downloads &&
+                    abstract3D.downloads &&
                     <Section headline="Downloads" className="mt-4">
                         { /* Image Downloads */
-                            abstract3dSeriesImage.downloads.imageDownloads &&
+                            abstract3D.downloads.imageDownloads &&
                             <SubSection headline={amountOfImageDownloads > 1 ? "Images" : "Image"}>
                                 <Tile className="py-1 px-2" customPadding>
                                     <Abstract3DDownloadTable
-                                        downloads={abstract3dSeriesImage.downloads?.imageDownloads}
+                                        downloads={abstract3D.downloads?.imageDownloads}
                                     />
                                 </Tile>
                             </SubSection>
                         }
 
                         { /* Wallpaper Downloads */
-                            abstract3dSeriesImage.downloads.wallpaperDownloads &&
+                            abstract3D.downloads.wallpaperDownloads &&
                             <SubSection headline={amountOfWallpaperDownloads > 1 ? "Wallpapers" : "Wallpaper"}>
                                 <Tile className="py-1 px-2" customPadding>
                                     <Abstract3DDownloadTable
-                                        downloads={abstract3dSeriesImage.downloads?.wallpaperDownloads}
+                                        downloads={abstract3D.downloads?.wallpaperDownloads}
                                     />
                                 </Tile>
                             </SubSection>

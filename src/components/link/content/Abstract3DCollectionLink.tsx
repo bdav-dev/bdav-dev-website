@@ -4,21 +4,32 @@ import Link from "next/link";
 import { Abstract3D } from "@/content/3d/a3ds/abstract3dSeries";
 import { isEven } from "@/utils/MathUtils";
 import { Route } from "@/utils/RouteUtils";
+import React, { CSSProperties } from "react";
+import { Abstract3DLinkPlaceholder, Abstract3DLinkPlaceholderProps } from "@/components/link/content/Abstract3DLink";
 
 
-type A3dsCollectionLinkProps = {
+type Abstract3DCollectionLinkProps = {
+    collection: Abstract3DCollection,
     noMargin?: boolean,
     className?: string,
-    collection: Abstract3DCollection
+    small?: boolean
 };
 
-export function A3dsCollectionLink(props: A3dsCollectionLinkProps) {
+const size = (small?: boolean) => small ? '8.5rem' : '13.25rem';
+
+export function Abstract3DCollectionLink(props: Abstract3DCollectionLinkProps) {
     const collection = props.collection;
     const [first, second, third] = collection.abstract3Ds;
     const amountOfImages = collection.abstract3Ds.length;
 
+    const sizeStyle: CSSProperties = {
+        width: size(props.small),
+        height: size(props.small),
+    }
+
+    const marginClassName = props.small ? 'my-2 mx-4' : 'my-4 mx-6';
+
     const sharedClassNames = `
-        w-[13.25rem] h-[13.25rem]
         border rounded-2xl
     `;
     const imageClassNames = `
@@ -35,27 +46,20 @@ export function A3dsCollectionLink(props: A3dsCollectionLinkProps) {
         : '-translate-x-3 -rotate-3 group-hover:-translate-x-6 group-hover:-rotate-6';
 
     return (
-        <div className={`w-fit ${props.noMargin ? '' : 'my-4 mx-6'} ${props.className}`}>
+        <div className={`w-fit flex flex-col items-center ${props.noMargin ? '' : marginClassName} ${props.className}`}>
             <Link href={Route.abstract3dCollection(collection)} className={'block relative group rounded-2xl'}>
                 {
                     amountOfImages == 0 &&
-                    <div
-                        className={`
-                        ${sharedClassNames}
-                        border-zinc-800 dark:border-zinc-400 border-dashed
-                        text-zinc-800 dark:text-zinc-400
-                        text-center content-center
-                        select-none
-                    `}
-                    >
-                        Empty Collection
-                    </div>
+                    <Abstract3DCollectionLinkPlaceholder small={props.small}>
+                        Empty collection
+                    </Abstract3DCollectionLinkPlaceholder>
                 }
                 {
                     first &&
                     <Image
                         abstract3D={first}
                         collection={collection}
+                        style={sizeStyle}
                         className={
                             `
                             ${imageClassNames}
@@ -75,6 +79,7 @@ export function A3dsCollectionLink(props: A3dsCollectionLinkProps) {
                     <Image
                         abstract3D={second}
                         collection={collection}
+                        style={sizeStyle}
                         className={`
                             ${obstructedImageClassNames}
                             ${secondImageClassNamesAddition}
@@ -86,6 +91,7 @@ export function A3dsCollectionLink(props: A3dsCollectionLinkProps) {
                     <Image
                         abstract3D={third}
                         collection={props.collection}
+                        style={sizeStyle}
                         className={`
                             ${obstructedImageClassNames}
                             translate-x-3 rotate-3 group-hover:translate-x-6 group-hover:rotate-6
@@ -101,15 +107,17 @@ export function A3dsCollectionLink(props: A3dsCollectionLinkProps) {
     );
 }
 
-function Image(
-    props: {
-        abstract3D: Abstract3D,
-        collection: Abstract3DCollection
-        className?: string
-    }
-) {
+type ImageProps = {
+    abstract3D: Abstract3D,
+    collection: Abstract3DCollection
+    className?: string,
+    style?: CSSProperties
+}
+
+function Image(props: ImageProps) {
     return (
         <NextImage
+            style={props.style}
             src={props.abstract3D.image}
             alt={props.collection.name}
             className={props.className}
@@ -117,4 +125,9 @@ function Image(
             placeholder="blur"
         />
     );
+}
+
+
+export function Abstract3DCollectionLinkPlaceholder(props: Abstract3DLinkPlaceholderProps) {
+    return <Abstract3DLinkPlaceholder {...props}/>
 }

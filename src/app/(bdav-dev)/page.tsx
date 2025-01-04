@@ -1,7 +1,7 @@
 "use client";
 
 import LargeLink from "@/components/link/LargeLink";
-import Abstract3DLink, { Abstract3DSeriesLinkPlaceholder } from "@/components/link/content/Abstract3DLink";
+import Abstract3DLink, { Abstract3DLinkPlaceholder } from "@/components/link/content/Abstract3DLink";
 import CodeProjectLink, { CodeProjectLinkPlaceholder } from "@/components/link/content/CodeProjectLink";
 import RecipeLink, { RecipeLinkPlaceholder } from "@/components/link/content/RecipeLink";
 import GitHubLink from "@/components/link/social/GitHubLink";
@@ -116,7 +116,7 @@ export default function HomePage() {
                                 {
                                     featuredA3D
                                         ? <Abstract3DLink abstract3D={featuredA3D}/>
-                                        : <Abstract3DSeriesLinkPlaceholder/>
+                                        : <Abstract3DLinkPlaceholder/>
                                 }
                             </div>
                         </Tile>

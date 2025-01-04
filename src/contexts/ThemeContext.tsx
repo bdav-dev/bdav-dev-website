@@ -19,7 +19,7 @@ type ThemeProviderProps = {
 }
 
 export default function ThemeProvider(props: ThemeProviderProps) {
-    const { storedValue: darkTheme, setStoredValue: setDarkTheme } = useLocalStorage("useDarkTheme", true);
+    const [darkTheme, setDarkTheme] = useLocalStorage("useDarkTheme", true);
 
     useEffect(() => {
         document.documentElement.style.setProperty('--bg', (darkTheme ? "var(--bg-dark)" : "var(--bg-light)"))

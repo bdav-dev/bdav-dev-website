@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-export default function useLocalStorage<T>(key: string, fallback: T) {
+export default function useLocalStorage<T>(key: string, fallback: T): [T, Dispatch<SetStateAction<T>>] {
     const [firstLoadDone, setFirstLoadDone] = useState(false);
     const [storedValue, setStoredValue] = useState(fallback);
 
     function fromLocalStorage() {
-        if (typeof window === "undefined") {
+        if (window == undefined) {
             return fallback;
         }
 
@@ -22,7 +22,7 @@ export default function useLocalStorage<T>(key: string, fallback: T) {
     useEffect(() => {
         setStoredValue(fromLocalStorage());
         setFirstLoadDone(true);
-    }, [fallback, key]);
+    }, []);
 
     useEffect(() => {
         if (!firstLoadDone) {
@@ -30,12 +30,12 @@ export default function useLocalStorage<T>(key: string, fallback: T) {
         }
 
         try {
-            if (typeof window !== "undefined") {
+            if (window != undefined) {
                 window.localStorage.setItem(key, JSON.stringify(storedValue));
             }
         } catch (error) {
         }
-    }, [storedValue, firstLoadDone, key]);
+    }, [storedValue]);
 
-    return { storedValue, setStoredValue };
+    return [storedValue, setStoredValue];
 }

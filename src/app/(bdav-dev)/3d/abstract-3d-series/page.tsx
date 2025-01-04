@@ -1,20 +1,20 @@
 import { defaultMetadata } from "@/metadata";
 import Abstract3DList from "@/components/categories/3d/a3ds/Abstract3DList";
 import { Abstract3DSeries } from "@/content/3d/a3ds/abstract3dSeries";
-import Section from "@/components/document/Section";
-import Abstract3DCollections from "@/components/categories/3d/a3ds/Abstract3DCollections";
 import Article from "@/components/document/Article";
+import Section from "@/components/document/Section";
+import PinnedAbstract3DCollections from "@/views/3d/PinnedAbstract3DCollections";
 
 export default function Abstract3DSeriesPage() {
+
     return (
         <Article headline={'Abstract3D Series'}>
-            <Abstract3DList
-                abstract3Ds={Object.values(Abstract3DSeries)}
-                className={'mt-3 mb-7'}
-            />
-
-            <Section headline="Collections">
-                <Abstract3DCollections/>
+            <PinnedAbstract3DCollections/>
+            <Section headline={'All Images'}>
+                <Abstract3DList
+                    abstract3Ds={Object.values(Abstract3DSeries)}
+                    className={'mt-3 mb-2'}
+                />
             </Section>
         </Article>
     );

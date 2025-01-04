@@ -25,10 +25,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         )
     );
 
-    const a3dsImagesEntries: SitemapEntry[] = Object.values(Abstract3DSeries).map(
-        a3dsImage => (
+    const abstract3DEntries: SitemapEntry[] = Object.values(Abstract3DSeries).map(
+        a3d => (
             {
-                url: 'https://www.bdav.dev/3d/abstract-3d-image/' + a3dsImage.nr,
+                url: 'https://www.bdav.dev/3d/abstract-3d-image/' + a3d.nr,
                 lastModified: new Date(),
                 changeFrequency: "yearly",
                 priority: 0.6
@@ -87,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.9
         },
         ...codeProjectEntries,
-        ...a3dsImagesEntries,
+        ...abstract3DEntries,
         ...recipesEntries
     ];
 }

@@ -4,7 +4,7 @@ import { defaultMetadata } from "@/metadata";
 import Tile from "@/components/Tile";
 import Section from "@/components/document/Section";
 import { Abstract3DSeries } from "@/content/3d/a3ds/abstract3dSeries";
-import { Abstract3DSeriesLinkPlaceholder } from "@/components/link/content/Abstract3DLink";
+import { Abstract3DLinkPlaceholder } from "@/components/link/content/Abstract3DLink";
 import { Abstract3DSeriesSort } from "@/utils/SortUtils";
 import Link from "next/link";
 import { Route } from "@/utils/RouteUtils";
@@ -43,17 +43,11 @@ export default function BlenderPage() {
                                   href={Route.abstract3dSeries}
                                   draggable={false}
                             >
-                                <Abstract3DSeriesLinkPlaceholder
-                                    className={`
-                                        flex justify-center
-                                        items-center text-center
-                                        bg-zinc-100 dark:bg-zinc-950
-                                    `}
-                                >
+                                <Abstract3DLinkPlaceholder fill>
                                     <div className={'text-xl group-hover:scale-105 transition-transform ease-out'}>
-                                        View All
+                                        View all
                                     </div>
-                                </Abstract3DSeriesLinkPlaceholder>
+                                </Abstract3DLinkPlaceholder>
                             </Link>
                         }
                         className={'mt-3'}

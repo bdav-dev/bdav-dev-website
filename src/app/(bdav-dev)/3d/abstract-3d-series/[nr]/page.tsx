@@ -21,7 +21,7 @@ export default async function Abstract3dSeriesImagePage(props: Abstract3dSeriesI
         notFound();
     }
 
-    return <Abstract3DView abstract3dSeriesImage={abstract3dSeriesImage}/>;
+    return <Abstract3DView abstract3D={abstract3dSeriesImage}/>;
 }
 
 export async function generateMetadata(props: { params: Promise<{ nr: string }> }): Promise<Metadata> {
