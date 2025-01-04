@@ -20,7 +20,7 @@ export const Abstract3DStaticCollections: NamedAbstract3DCollections = {
     },
     creatorsFavorites: {
         routeSegment: 'creators-favorites',
-        name: 'Creators favorites',
+        name: "Creator's favorites",
         abstract3Ds:
             [
                 Abstract3DSeries[49],
