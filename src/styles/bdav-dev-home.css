@@ -1,0 +1,38 @@
+:root {
+    --bdav-dev-home-text-color: #000000;
+
+    --bdav-dev-home-from-color: hsl(200, 100%, 42.5%);
+    --bdav-dev-home-via-color: hsl(180, 100%, 42.5%);
+    --bdav-dev-home-to-color: hsl(158.5, 100%, 42.5%);
+}
+
+.dark {
+    --bdav-dev-home-text-color: #FFFFFF;
+
+    --bdav-dev-home-from-color: hsl(200, 100%, 50%);
+    --bdav-dev-home-via-color: hsl(180, 100%, 50%);
+    --bdav-dev-home-to-color: hsl(158.5, 100%, 50%);
+}
+
+.bdav-dev-home {
+    color: transparent;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+
+    background-clip: text;
+    background-image: linear-gradient(
+            to right,
+            var(--bdav-dev-home-from-color) 0%,
+            var(--bdav-dev-home-via-color) 25%,
+            var(--bdav-dev-home-to-color) 50%,
+            var(--bdav-dev-home-text-color) 50%,
+            var(--bdav-dev-home-text-color) 100%
+    );
+    background-size: 200%;
+    background-position-x: 100%;
+    transition: background-position .15s ease-out;
+}
+
+.bdav-dev-home:hover {
+    background-position-x: 0;
+}

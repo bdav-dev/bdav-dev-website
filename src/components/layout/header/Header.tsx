@@ -4,7 +4,6 @@ import BlenderIcon from "@/icons/BlenderIcon";
 import CategoryButton from "./CategoryButton";
 import CodeIcon from "@/icons/CodeIcon";
 import AboutIcon from "@/icons/AboutIcon";
-import Link from "next/link";
 import DropdownMenu from "./DropdownMenu";
 import InstagramIcon from "@/icons/InstagramIcon";
 import { CodeProjects } from "@/content/code/codeProjects";
@@ -15,8 +14,10 @@ import ThemeToggle from "@/components/theme/ThemeToggle";
 import RecipesIcon from "@/icons/RecipiesIcon";
 import { usePathname } from "next/navigation";
 import { Route } from "@/utils/RouteUtils";
+import BdavDevHome from "@/components/layout/header/BdavDevHome";
 
 type Category = "code" | "3d" | "recipes" | "about" | string | undefined;
+
 
 function mapCodeProjectsToDropdownItems() {
     return Object.values(CodeProjects).map(codeProject => (
@@ -52,9 +53,7 @@ export default function Header() {
                     select-none
                     h-[5.75rem] xs:h-[3.75rem]
                 `}>
-                    <Link href="/" className="mr-3.5 my-0.5 px-1 rounded-md" draggable="false">
-                        <h1 className="text-xl">bdav.dev</h1>
-                    </Link>
+                    <BdavDevHome className={'mr-3.5'}/>
 
                     <div className="xs:ml-auto flex flex-row h-11 justify-center items-center">
                         <CategoryButton

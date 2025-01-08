@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { Abstract3D } from "@/content/3d/a3ds/abstract3dSeries";
 
-import '@/style/dialog-styles.css'
+import '@/styles/abstract3d-dialog.css'
 
 type Abstract3DDialogProps = {
     abstract3D: Abstract3D;
@@ -22,7 +22,7 @@ export default function Abstract3DDialog(props: Abstract3DDialogProps) {
     }, [props.isVisible]);
 
     return (
-        <dialog ref={dialog} onClick={props.onCloseRequest}>
+        <dialog ref={dialog} onClick={props.onCloseRequest} className={'abstract3d-dialog'}>
             <Image
                 src={props.abstract3D.image}
                 alt={`Abstract3DSeries #${props.abstract3D.nr}`}
