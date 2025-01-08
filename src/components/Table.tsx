@@ -8,7 +8,7 @@ type TableProps = {
 }
 
 export default function Table(props: TableProps) {
-    const amountOfColumns = Math.max(...props.data.map(array => array.length));
+    const amountOfColumns = Math.max(...props.data.map(row => row.length));
     const headerClassName = 'px-0.5 font-normal text-lg';
 
     return (
@@ -27,28 +27,31 @@ export default function Table(props: TableProps) {
             }
             <tbody>
             {
-                props.data.map(
-                    (row, rowIndex) => (
-                        <tr key={rowIndex}
-                            className={
-                                !(isFirst(rowIndex) && props.header == undefined) &&
-                                isFirst(rowIndex)
-                                    ? 'border-t border-zinc-500 dark:border-zinc-400'
-                                    : 'border-t border-zinc-300 dark:border-zinc-800'
-                            }
-                        >
-                            {
-                                row.map(
-                                    (column, columnIndex) => (
-                                        <td key={columnIndex} className={`px-1 ${isFirst(rowIndex) ? 'pt-1' : ''}`}>
-                                            {column}
-                                        </td>
+                props.data
+                    .filter(row => row.length != 0)
+                    .map(
+                        (row, rowIndex) => (
+                            <tr key={rowIndex}
+                                className={
+                                    !(isFirst(rowIndex) && props.header == undefined)
+                                        ? isFirst(rowIndex)
+                                            ? 'border-t border-zinc-500 dark:border-zinc-400'
+                                            : 'border-t border-zinc-300 dark:border-zinc-800'
+                                        : ''
+                                }
+                            >
+                                {
+                                    row.map(
+                                        (column, columnIndex) => (
+                                            <td key={columnIndex} className={`px-1 ${isFirst(rowIndex) ? 'pt-1' : ''}`}>
+                                                {column}
+                                            </td>
+                                        )
                                     )
-                                )
-                            }
-                        </tr>
+                                }
+                            </tr>
+                        )
                     )
-                )
             }
             </tbody>
         </table>
