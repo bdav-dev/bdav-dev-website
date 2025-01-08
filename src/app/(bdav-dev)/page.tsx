@@ -7,7 +7,7 @@ import RecipeLink, { RecipeLinkPlaceholder } from "@/components/link/content/Rec
 import GitHubLink from "@/components/link/social/GitHubLink";
 import InstagramLink from "@/components/link/social/InstagramLink";
 import LinkedInLink from "@/components/link/social/LinkedInLink";
-import BdavDev from "@/components/misc/BdavDev";
+import WelcomeToBdavDevHeadline from "@/components/misc/WelcomeToBdavDevHeadline";
 import VerticalSpacer from "@/components/format/VerticalSpacer";
 import Tile from "@/components/Tile";
 import HStack from "@/components/layout/stacks/HStack";
@@ -36,9 +36,7 @@ export default function HomePage() {
 
     return (
         <>
-            <h1 className="text-4xl w-fit mx-auto text-center my-12">
-                Welcome to <BdavDev/>
-            </h1>
+            <WelcomeToBdavDevHeadline/>
 
             <VStack className="gap-5">
                 <div className="flex flex-col md:flex-row gap-4">
