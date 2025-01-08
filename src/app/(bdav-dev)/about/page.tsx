@@ -25,7 +25,7 @@ export default function AboutPage() {
                     Hey there, I'm David. I am currently studying computer science (as a dual course of study) at
                     the <HyperLink href="https://dhbw-loerrach.de/home">DHBW University in Lörrach</HyperLink>,
                     Germany.
-                    Right now, I am in the fifth semester and I work (as part of my studies)
+                    Right now, I am in my last semester and I work (as part of my studies)
                     at <HyperLink href="https://www.coop.ch/">Coop</HyperLink> in Basel.
                     First I worked with the programming
                     language <CodeLanguageBadge lang={ProgrammingLanguages.ABAP}/> in
