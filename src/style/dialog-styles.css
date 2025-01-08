@@ -1,0 +1,51 @@
+:root {
+    --dialog-backdrop-background-color: rgb(0 0 0 / 75%);
+    --dialog-animation-duration: 0.25s;
+}
+
+dialog[open] {
+    animation: fade-in var(--dialog-animation-duration) ease-out forwards;
+}
+
+dialog {
+    max-width: 100%;
+    max-height: 100%;
+    user-focus: none;
+    background: transparent;
+    overflow: hidden;
+}
+
+dialog::backdrop {
+    overflow: hidden;
+    background-color: var(--dialog-backdrop-background-color);
+}
+
+dialog:focus-visible {
+    outline: none;
+}
+
+dialog[open]::backdrop {
+    animation: backdrop-fade-in var(--dialog-animation-duration) ease-out forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform:  translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backdrop-fade-in {
+    from {
+        background-color: rgb(0 0 0 / 0%);
+    }
+
+    to {
+        background-color: var(--dialog-backdrop-background-color);
+    }
+}

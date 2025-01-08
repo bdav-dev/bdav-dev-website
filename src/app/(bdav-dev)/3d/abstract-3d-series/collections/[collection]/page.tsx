@@ -8,7 +8,7 @@ type Abstract3DSeriesCollectionProps = {
     params: Promise<{ collection: string }>
 }
 
-export default async function Abstract3DSeriesCollectionPage(props: Abstract3DSeriesCollectionProps) {
+export default async function Abstract3DCollectionPage(props: Abstract3DSeriesCollectionProps) {
     const params = await props.params;
     return <Abstract3DCollectionView collectionRoute={params.collection}/>;
 }

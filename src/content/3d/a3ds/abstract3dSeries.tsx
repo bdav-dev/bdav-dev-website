@@ -14,7 +14,8 @@ export type ImageDownload = {
 
 export type Abstract3D = {
     nr: number
-    image: StaticImageData
+    image: StaticImageData,
+    releaseDate: string,
     description?: string | React.ReactNode,
     adventCalendar?: {
         nr: number,
@@ -29,6 +30,7 @@ export type Abstract3D = {
 export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     52: {
         nr: 52,
+        releaseDate: '24.12.2024',
         adventCalendar: { nr: 24, year: 2024 },
         image: a3ds.O52,
         downloads: {
@@ -46,6 +48,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     51: {
         nr: 51,
+        releaseDate: '23.12.2024',
         adventCalendar: { nr: 23, year: 2024 },
         image: a3ds.O51,
         downloads: {
@@ -63,6 +66,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     50: {
         nr: 50,
+        releaseDate: '22.12.2024',
         adventCalendar: { nr: 22, year: 2024 },
         image: a3ds.O50,
         downloads: {
@@ -80,6 +84,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     49: {
         nr: 49,
+        releaseDate: '21.12.2024',
         adventCalendar: { nr: 21, year: 2024 },
         image: a3ds.O49,
         downloads: {
@@ -97,6 +102,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     48: {
         nr: 48,
+        releaseDate: '20.12.2024',
         adventCalendar: { nr: 20, year: 2024 },
         image: a3ds.O48,
         downloads: {
@@ -114,6 +120,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     47: {
         nr: 47,
+        releaseDate: '19.12.2024',
         adventCalendar: { nr: 19, year: 2024 },
         image: a3ds.O47,
         downloads: {
@@ -131,6 +138,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     46: {
         nr: 46,
+        releaseDate: '18.12.2024',
         adventCalendar: { nr: 18, year: 2024 },
         image: a3ds.O46,
         downloads: {
@@ -148,6 +156,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     45: {
         nr: 45,
+        releaseDate: '17.12.2024',
         adventCalendar: { nr: 17, year: 2024 },
         image: a3ds.O45,
         downloads: {
@@ -165,6 +174,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     44: {
         nr: 44,
+        releaseDate: '16.12.2024',
         adventCalendar: { nr: 16, year: 2024 },
         image: a3ds.O44,
         downloads: {
@@ -182,6 +192,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     43: {
         nr: 43,
+        releaseDate: '15.12.2024',
         adventCalendar: { nr: 15, year: 2024 },
         image: a3ds.O43,
         downloads: {
@@ -199,6 +210,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     42: {
         nr: 42,
+        releaseDate: '14.12.2024',
         adventCalendar: { nr: 14, year: 2024 },
         image: a3ds.O42,
         downloads: {
@@ -216,6 +228,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     41: {
         nr: 41,
+        releaseDate: '13.12.2024',
         adventCalendar: { nr: 13, year: 2024 },
         image: a3ds.O41,
         downloads: {
@@ -233,6 +246,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     40: {
         nr: 40,
+        releaseDate: '12.12.2024',
         adventCalendar: { nr: 12, year: 2024 },
         image: a3ds.O40,
         downloads: {
@@ -250,6 +264,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     39: {
         nr: 39,
+        releaseDate: '11.12.2024',
         adventCalendar: { nr: 11, year: 2024 },
         image: a3ds.O39,
         downloads: {
@@ -267,6 +282,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     38: {
         nr: 38,
+        releaseDate: '10.12.2024',
         adventCalendar: { nr: 10, year: 2024 },
         image: a3ds.O38,
         downloads: {
@@ -284,6 +300,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     37: {
         nr: 37,
+        releaseDate: '9.12.2024',
         adventCalendar: { nr: 9, year: 2024 },
         image: a3ds.O37,
         downloads: {
@@ -301,6 +318,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     36: {
         nr: 36,
+        releaseDate: '8.12.2024',
         adventCalendar: { nr: 8, year: 2024 },
         image: a3ds.O36,
         downloads: {
@@ -318,6 +336,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     35: {
         nr: 35,
+        releaseDate: '7.12.2024',
         adventCalendar: { nr: 7, year: 2024 },
         image: a3ds.O35,
         downloads: {
@@ -335,6 +354,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     34: {
         nr: 34,
+        releaseDate: '6.12.2024',
         adventCalendar: { nr: 6, year: 2024 },
         image: a3ds.O34,
         downloads: {
@@ -352,6 +372,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     33: {
         nr: 33,
+        releaseDate: '5.12.2024',
         adventCalendar: { nr: 5, year: 2024 },
         image: a3ds.O33,
         downloads: {
@@ -369,6 +390,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     32: {
         nr: 32,
+        releaseDate: '4.12.2024',
         adventCalendar: { nr: 4, year: 2024 },
         image: a3ds.O32,
         downloads: {
@@ -386,6 +408,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     31: {
         nr: 31,
+        releaseDate: '3.12.2024',
         adventCalendar: { nr: 3, year: 2024 },
         image: a3ds.O31,
         downloads: {
@@ -411,6 +434,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     30: {
         nr: 30,
+        releaseDate: '2.12.2024',
         adventCalendar: { nr: 2, year: 2024 },
         image: a3ds.O30,
         downloads: {
@@ -428,6 +452,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     29: {
         nr: 29,
+        releaseDate: '1.12.2024',
         adventCalendar: { nr: 1, year: 2024 },
         image: a3ds.O29,
         downloads: {
@@ -445,6 +470,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     28: {
         nr: 28,
+        releaseDate: '27.08.2024',
         image: a3ds.O28,
         downloads: {
             imageDownloads: [
@@ -461,6 +487,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     27: {
         nr: 27,
+        releaseDate: '26.08.2024',
         image: a3ds.O27,
         downloads: {
             imageDownloads: [
@@ -477,6 +504,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     26: {
         nr: 26,
+        releaseDate: '04.06.2024',
         image: a3ds.O26,
         downloads: {
             imageDownloads: [
@@ -504,6 +532,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     25: {
         nr: 25,
+        releaseDate: '20.04.2024',
         image: a3ds.O25,
         downloads: {
             imageDownloads: [
@@ -520,6 +549,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     24: {
         nr: 24,
+        releaseDate: '10.03.2024',
         image: a3ds.O24,
         downloads: {
             imageDownloads: [
@@ -546,6 +576,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     23: {
         nr: 23,
+        releaseDate: '23.02.2024',
         image: a3ds.O23,
         downloads: {
             imageDownloads: [
@@ -573,6 +604,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     22: {
         nr: 22,
+        releaseDate: '10.02.2024',
         image: a3ds.O22,
         downloads: {
             imageDownloads: [
@@ -589,6 +621,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     21: {
         nr: 21,
+        releaseDate: '28.01.2024',
         image: a3ds.O21,
         downloads: {
             imageDownloads: [
@@ -605,6 +638,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     20: {
         nr: 20,
+        releaseDate: '25.10.2023',
         image: a3ds.O20,
         downloads: {
             imageDownloads: [
@@ -632,6 +666,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     19: {
         nr: 19,
+        releaseDate: '22.10.2023',
         image: a3ds.O19,
         downloads: {
             imageDownloads: [
@@ -659,6 +694,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     18: {
         nr: 18,
+        releaseDate: '16.09.2023',
         image: a3ds.O18,
         downloads: {
             imageDownloads: [
@@ -686,6 +722,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     17: {
         nr: 17,
+        releaseDate: '10.09.2023',
         image: a3ds.O17,
         downloads: {
             imageDownloads: [
@@ -702,6 +739,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     16: {
         nr: 16,
+        releaseDate: '04.09.2023',
         image: a3ds.O16,
         downloads: {
             imageDownloads: [
@@ -729,6 +767,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     15: {
         nr: 15,
+        releaseDate: '13.05.2023',
         image: a3ds.O15,
         downloads: {
             imageDownloads: [
@@ -756,6 +795,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     14: {
         nr: 14,
+        releaseDate: '10.05.2023',
         image: a3ds.O14,
         downloads: {
             imageDownloads: [
@@ -772,6 +812,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     13: {
         nr: 13,
+        releaseDate: '07.05.2023',
         image: a3ds.O13,
         downloads: {
             imageDownloads: [
@@ -788,6 +829,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     12: {
         nr: 12,
+        releaseDate: '09.07.2022',
         image: a3ds.O12,
         downloads: {
             imageDownloads: [
@@ -804,6 +846,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     11: {
         nr: 11,
+        releaseDate: '09.07.2022',
         image: a3ds.O11,
         downloads: {
             imageDownloads: [
@@ -820,6 +863,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     10: {
         nr: 10,
+        releaseDate: '02.07.2022',
         image: a3ds.O10,
         downloads: {
             imageDownloads: [
@@ -847,6 +891,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     9: {
         nr: 9,
+        releaseDate: '02.07.2022',
         image: a3ds.OO9,
         downloads: {
             imageDownloads: [
@@ -863,6 +908,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     8: {
         nr: 8,
+        releaseDate: '12.05.2022',
         image: a3ds.OO8,
         downloads: {
             imageDownloads: [
@@ -907,6 +953,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     7: {
         nr: 7,
+        releaseDate: '20.03.2022',
         image: a3ds.OO7,
         description: "Bismut Landscape",
         downloads: {
@@ -1006,6 +1053,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     6: {
         nr: 6,
+        releaseDate: '13.03.2022',
         image: a3ds.OO6,
         downloads: {
             imageDownloads: [
@@ -1032,6 +1080,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     5: {
         nr: 5,
+        releaseDate: '13.03.2022',
         image: a3ds.OO5,
         downloads: {
             imageDownloads: [
@@ -1048,6 +1097,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     4: {
         nr: 4,
+        releaseDate: '13.03.2022',
         image: a3ds.OO4,
         downloads: {
             imageDownloads: [
@@ -1075,6 +1125,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     3: {
         nr: 3,
+        releaseDate: '17.11.2021',
         image: a3ds.OO3,
         downloads: {
             imageDownloads: [
@@ -1091,6 +1142,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     2: {
         nr: 2,
+        releaseDate: '09.07.2021',
         image: a3ds.OO2,
         downloads: {
             imageDownloads: [
@@ -1107,6 +1159,7 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
     },
     1: {
         nr: 1,
+        releaseDate: '08.07.2021',
         image: a3ds.OO1,
         downloads: {
             imageDownloads: [

@@ -3,11 +3,11 @@ import { Metadata } from "next";
 import { defaultMetadata } from "@/metadata";
 import { formatAbstract3DCollectionRouteSegment } from "@/utils/StringUtils";
 
-type Abstract3DSeriesCollectionImagePageProps = {
+type Abstract3DCollectionImagePageProps = {
     params: Promise<{ collection: string, nr: string }>
 }
 
-export default async function Abstract3DSeriesCollectionImagePage(props: Abstract3DSeriesCollectionImagePageProps) {
+export default async function Abstract3DCollectionImagePage(props: Abstract3DCollectionImagePageProps) {
     const params = await props.params;
 
     return <Abstract3DInCollectionView {...params}/>;

@@ -9,9 +9,12 @@ import Abstract3DDownloadTable from "@/components/categories/3d/a3ds/Abstract3DD
 import { Abstract3D } from "@/content/3d/a3ds/abstract3dSeries";
 import { Space } from "@/components/format/Space";
 import Mono from "@/components/Mono";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Abstract3DCollectionsContext } from "@/contexts/Abstract3DCollectionsContext";
 import StarIcon from "@/icons/StarIcon";
+import Table from "@/components/Table";
+import { formatDmyString } from "@/utils/DateUtils";
+import Abstract3DDialog from "@/components/categories/3d/a3ds/Abstract3DDialog";
 
 
 type Abstract3DViewProps = {
@@ -20,6 +23,7 @@ type Abstract3DViewProps = {
 
 export default function Abstract3DView({ abstract3D }: Abstract3DViewProps) {
     const { favorites } = useContext(Abstract3DCollectionsContext);
+    const [isDialogVisible, setIsDialogVisible] = useState(false);
 
     const amountOfImageDownloads = abstract3D.downloads?.imageDownloads?.length ?? 0;
     const amountOfWallpaperDownloads = abstract3D.downloads?.wallpaperDownloads?.length ?? 0;
@@ -29,16 +33,18 @@ export default function Abstract3DView({ abstract3D }: Abstract3DViewProps) {
             <Image
                 src={abstract3D.image}
                 alt={`Abstract3DSeries #${abstract3D.nr}`}
+                onClick={() => setIsDialogVisible(true)}
                 className={`
-                        w-full self-center
-                        max-w-xl lg:max-w-3xl 3xl:max-w-[60rem]
-                        sm:w-2/3 sm:min-w-0
-                        md:w-[60%]
-                        lg:w-1/2 lg:self-auto 
-                        rounded-2xl
-                        flex-shrink-0
-                        border border-zinc-300 dark:border-zinc-800
-                    `}
+                    cursor-pointer
+                    w-full self-center
+                    max-w-xl lg:max-w-3xl 3xl:max-w-[60rem]
+                    sm:w-2/3 sm:min-w-0
+                    md:w-[60%]
+                    lg:w-1/2 lg:self-auto 
+                    rounded-2xl
+                    flex-shrink-0
+                    border border-zinc-300 dark:border-zinc-800
+                `}
                 quality={100}
                 placeholder="blur"
                 draggable={false}
@@ -61,14 +67,24 @@ export default function Abstract3DView({ abstract3D }: Abstract3DViewProps) {
                 headline={`Abstract3D Series #${abstract3D.nr}`}
                 className="flex-grow"
             >
-                {abstract3D.description}
-                {
-                    abstract3D.adventCalendar &&
-                    <>
-                        <Mono>#{abstract3D.adventCalendar.nr}</Mono>
-                        <Space/>in Advent Calendar {abstract3D.adventCalendar.year}
-                    </>
-                }
+                <Table
+                    data={
+                        [
+                            abstract3D.description
+                                ? [abstract3D.description]
+                                : [],
+                            [formatDmyString(abstract3D.releaseDate)],
+                            abstract3D.adventCalendar
+                                ? [
+                                    <>
+                                        <Mono>#{abstract3D.adventCalendar.nr}</Mono>
+                                        <Space/>in Advent Calendar {abstract3D.adventCalendar.year}
+                                    </>
+                                ]
+                                : []
+                        ]
+                    }
+                />
                 {
                     abstract3D.downloads &&
                     <Section headline="Downloads" className="mt-4">
@@ -96,6 +112,13 @@ export default function Abstract3DView({ abstract3D }: Abstract3DViewProps) {
                     </Section>
                 }
             </Article>
+
+            <Abstract3DDialog
+                abstract3D={abstract3D}
+                isVisible={isDialogVisible}
+                onCloseRequest={() => setIsDialogVisible(false)}
+            />
+
         </div>
     );
 }

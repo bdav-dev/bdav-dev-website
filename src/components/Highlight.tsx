@@ -9,7 +9,7 @@ export default function Highlight(props: HighlightProps) {
     return (
         <span
             className={`
-                px-1.5 dark:bg-neutral-950 bg-neutral-250
+                px-[0.3rem] dark:bg-neutral-950 bg-neutral-250
                 ${props.small ? "rounded-full" : "rounded-lg py-[0.09rem]"}
             `}
         >

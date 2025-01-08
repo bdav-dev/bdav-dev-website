@@ -4,11 +4,11 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Abstract3DView from "@/views/3d/Abstract3DView";
 
-type Abstract3dSeriesImageProps = {
+type Abstract3DPageProps = {
     params: Promise<{ nr: string }>
 }
 
-export default async function Abstract3dSeriesImagePage(props: Abstract3dSeriesImageProps) {
+export default async function Abstract3DPage(props: Abstract3DPageProps) {
     const params = await props.params;
 
     const abstract3dSeriesImage: Abstract3dSeriesImageType | undefined = (
