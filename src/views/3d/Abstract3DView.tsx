@@ -13,9 +13,10 @@ import { useContext, useState } from "react";
 import { Abstract3DCollectionsContext } from "@/contexts/Abstract3DCollectionsContext";
 import StarIcon from "@/icons/StarIcon";
 import Table from "@/components/Table";
-import { formatDmyString } from "@/utils/DateUtils";
 import Abstract3DDialog from "@/components/categories/3d/a3ds/Abstract3DDialog";
-
+import { formatDmyString } from "@/utils/DateUtils";
+import NewBadge from "@/components/categories/3d/a3ds/NewBadge";
+import { isNew } from "@/utils/categories/Abstract3DSeriesUtils";
 
 type Abstract3DViewProps = {
     abstract3D: Abstract3D
@@ -73,7 +74,12 @@ export default function Abstract3DView({ abstract3D }: Abstract3DViewProps) {
                             abstract3D.description
                                 ? [abstract3D.description]
                                 : [],
-                            [formatDmyString(abstract3D.releaseDate)],
+                            [
+                                <>
+                                    {formatDmyString(abstract3D.releaseDate)}
+                                    {isNew(abstract3D) && <NewBadge className={'ml-1 py-0.5'}/>}
+                                </>
+                            ],
                             abstract3D.adventCalendar
                                 ? [
                                     <>

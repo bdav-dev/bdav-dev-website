@@ -22,16 +22,34 @@ import RecipesIcon from "@/icons/RecipiesIcon";
 import { useEffect, useState } from "react";
 import { chooseRandom } from "@/utils/RandomUtils";
 import { Route } from "@/utils/RouteUtils";
+import { isNew } from "@/utils/categories/Abstract3DSeriesUtils";
+import { Abstract3DSeriesSort } from "@/utils/SortUtils";
+import { isEmpty } from "@/utils/ArrayUtils";
 
 export default function HomePage() {
     let [featuredCodeProject, setFeaturedCodeProject] = useState<CodeProject>();
-    let [featuredA3D, setFeaturedA3D] = useState<Abstract3D>();
     let [featuredRecipe, setFeaturedRecipe] = useState<Recipe>();
+    let [featuredAbstract3D, setFeaturedAbstract3D] = useState<Abstract3D>();
+    let [isNewAbstract3D, setIsNewAbstract3D] = useState(false);
+
+    function setAbstract3D() {
+        const newAbstract3Ds = Object.values(Abstract3DSeries)
+            .filter(isNew)
+            .sort(Abstract3DSeriesSort);
+        const areNewAbstract3DsPresent = !isEmpty(newAbstract3Ds);
+
+        setIsNewAbstract3D(areNewAbstract3DsPresent);
+        setFeaturedAbstract3D(
+            areNewAbstract3DsPresent
+                ? newAbstract3Ds[0]
+                : chooseRandom(Object.values(Abstract3DSeries))
+        );
+    }
 
     useEffect(() => {
-        setFeaturedCodeProject(() => chooseRandom(Object.values(CodeProjects)));
-        setFeaturedA3D(() => chooseRandom(Object.values(Abstract3DSeries)));
-        setFeaturedRecipe(() => chooseRandom(Object.values(recipes)));
+        setFeaturedCodeProject(chooseRandom(Object.values(CodeProjects)));
+        setFeaturedRecipe(chooseRandom(Object.values(recipes)));
+        setAbstract3D();
     }, []);
 
     return (
@@ -105,15 +123,17 @@ export default function HomePage() {
                     </div>
 
                     <div className="flex flex-col grow">
-                        <span className="pl-0.5">Featured Abstract3D Series Image</span>
+                        <span className="pl-0.5">
+                            {isNewAbstract3D ? 'New' : 'Featured'} Abstract3D Series Image
+                        </span>
                         <Tile
                             className="p-5 grow"
                             customPadding
                         >
                             <div className="flex justify-center items-center h-full">
                                 {
-                                    featuredA3D
-                                        ? <Abstract3DLink abstract3D={featuredA3D}/>
+                                    featuredAbstract3D
+                                        ? <Abstract3DLink abstract3D={featuredAbstract3D}/>
                                         : <Abstract3DLinkPlaceholder/>
                                 }
                             </div>

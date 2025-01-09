@@ -31,7 +31,7 @@ export default function BreadcrumbNavigation() {
         <div className="m-2 ml-4 mb-6 flex flex-row flex-wrap items-center">
             <span>
                 <Link
-                    href={Route.root}
+                    href={Route.home}
                     className="select-none p-1 pl-1.5 pr-1.5 rounded-md transition-colors duration-200 hover:bg-zinc-200 dark:hover:bg-zinc-700"
                     draggable="false"
                 >

@@ -5,7 +5,7 @@ import { Abstract3DCollection } from "@/content/3d/a3ds/abstract3dCollections";
 
 
 export class Route {
-    public static readonly root = '/';
+    public static readonly home = '/';
 
     public static readonly code = '/code';
     public static readonly blender = '/3d';

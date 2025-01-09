@@ -10,7 +10,7 @@ type BdavDevHomeProps = {
 export default function BdavDevHome(props: BdavDevHomeProps) {
     return (
         <Link
-            href={Route.root}
+            href={Route.home}
             className={`bdav-dev-home py-0.5 px-1 rounded-md ${props.className}`}
             draggable={false}
         >
