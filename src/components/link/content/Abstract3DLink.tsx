@@ -20,7 +20,7 @@ export default function Abstract3DLink(props: Abstract3DLinkProps) {
 
     return (
         <Link
-            className="w-fit group rounded-2xl relative"
+            className="w-fit group rounded-2xl select-none relative"
             href={
                 props.collection
                     ? Route.abstract3dInCollection(props.collection, props.abstract3D)
@@ -28,36 +28,41 @@ export default function Abstract3DLink(props: Abstract3DLinkProps) {
             }
             draggable="false"
         >
-            <Image
-                src={props.abstract3D.image}
-                alt={`Abstract3DSeries #${props.abstract3D.nr}`}
-                placeholder='blur'
-                draggable={false}
+            <div
                 style={sizeStyle}
                 className={`
-                    z-20
-                    flex items-center relative
+                    relative z-20
+                    flex items-center
                     border border-zinc-500 dark:border-zinc-800
                     rounded-2xl overflow-hidden
                     transition-all group-hover:scale-105 ease-in duration-100
                 `}
-            />
-
-            <Image
-                src={props.abstract3D.image}
-                alt={''}
-                draggable={false}
-                placeholder='blur'
+            >
+                <Image
+                    src={props.abstract3D.image}
+                    alt={`Abstract3DSeries #${props.abstract3D.nr}`}
+                    placeholder='blur'
+                    draggable={false}
+                />
+            </div>
+            <div
                 style={sizeStyle}
                 className={`
                     z-10
-                    absolute flex items-center top-0
+                    absolute top-0
                     rounded-2xl overflow-hidden
                     transition-all
                     group-hover:saturate-200 dark:group-hover:saturate-200
-                    group-hover:blur-[20px] group-hover:scale-105 ease-in duration-75
+                    group-hover:blur-[20px] group-hover:scale-105 ease-in duration-[250ms]
                 `}
-            />
+            >
+                <Image
+                    src={props.abstract3D.image}
+                    alt={''}
+                    draggable={false}
+                    placeholder='blur'
+                />
+            </div>
             {
                 isNew(props.abstract3D) &&
                 <div className={'absolute top-0 z-30 w-full h-full group-hover:scale-105 ease-in duration-100'}>

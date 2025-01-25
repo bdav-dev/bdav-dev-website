@@ -34,6 +34,7 @@ export function Abstract3DCollectionLink(props: Abstract3DCollectionLinkProps) {
     `;
     const imageClassNames = `
         ${sharedClassNames}
+        select-none
         transition-all ease-out
         border-zinc-500 dark:border-zinc-800
     `;

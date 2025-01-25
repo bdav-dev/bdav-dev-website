@@ -3,9 +3,8 @@ import HStack from "@/components/layout/stacks/HStack";
 import { defaultMetadata } from "@/metadata";
 import Tile from "@/components/Tile";
 import Section from "@/components/document/Section";
-import { Abstract3DSeries } from "@/content/3d/a3ds/abstract3dSeries";
+import { Abstract3DSeriesValues } from "@/content/3d/a3ds/abstract3dSeries";
 import { Abstract3DLinkPlaceholder } from "@/components/link/content/Abstract3DLink";
-import { Abstract3DSeriesSort } from "@/utils/SortUtils";
 import Link from "next/link";
 import { Route } from "@/utils/RouteUtils";
 import InternalLink from "@/components/link/InternalLink";
@@ -15,10 +14,8 @@ import Abstract3DList from "@/components/categories/3d/a3ds/Abstract3DList";
 import HyperLink from "@/components/link/HyperLink";
 
 export default function BlenderPage() {
-    const amountOfAbstract3Ds = Object.values(Abstract3DSeries).length;
-    const abstract3DPreview = Object.values(Abstract3DSeries)
-        .slice(-15)
-        .sort(Abstract3DSeriesSort);
+    const amountOfAbstract3Ds = Abstract3DSeriesValues.length;
+    const abstract3DPreview = [...Abstract3DSeriesValues].reverse().slice(-15).reverse();
 
     return (
         <>

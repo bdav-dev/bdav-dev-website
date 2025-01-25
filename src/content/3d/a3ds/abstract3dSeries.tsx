@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image"
 import { a3ds } from "./abstract3dSeriesImages"
 import React from "react";
+import { Abstract3DSeriesSort } from "@/utils/SortUtils";
 
 export type ImageDownload = {
     description?: string
@@ -1175,4 +1176,5 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
         }
     }
 }
+export const Abstract3DSeriesValues = Object.values(Abstract3DSeries).sort(Abstract3DSeriesSort);
 

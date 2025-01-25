@@ -17,6 +17,7 @@ export class Route {
 
     public static readonly abstract3dSeries = '/3d/abstract-3d-series';
     public static readonly abstract3dCollections = '/3d/abstract-3d-series/collections';
+    public static readonly abstract3dFavoritesCollection = buildRoute(Route.abstract3dCollections, 'favorites')
 
     public static readonly codeProject = (codeProject: CodeProject) => buildRoute(
         Route.code, codeProject.routeSegment

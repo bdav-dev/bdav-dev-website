@@ -1,5 +1,6 @@
-import { Abstract3D, Abstract3DSeries } from "@/content/3d/a3ds/abstract3dSeries";
+import { Abstract3D, Abstract3DSeries, Abstract3DSeriesValues } from "@/content/3d/a3ds/abstract3dSeries";
 import { Abstract3DSeriesSort } from "@/utils/SortUtils";
+import { parseDMY } from "@/utils/DateUtils";
 
 export type Abstract3DCollection = {
     routeSegment: string,
@@ -9,14 +10,45 @@ export type Abstract3DCollection = {
 export type Abstract3DCollections = Abstract3DCollection[];
 export type NamedAbstract3DCollections = { [name: string]: Abstract3DCollection };
 
+const yearCollections: NamedAbstract3DCollections = (
+    Object.fromEntries(
+        Object.entries(
+            Abstract3DSeriesValues
+                .reduce<{ [name: string]: Abstract3D[] }>(
+                    (accumulator, abstract3D) => {
+                        const year = parseDMY(abstract3D.releaseDate).getFullYear();
+                        const abstract3DsFromYear = accumulator[year];
+
+                        if (abstract3DsFromYear != undefined) {
+                            abstract3DsFromYear.push(abstract3D);
+                        } else {
+                            accumulator[year] = [abstract3D];
+                        }
+
+                        return accumulator;
+                    },
+                    {}
+                )
+        )
+            .map(([year, abstract3Ds]) => [
+                `year-${year}`,
+                {
+                    routeSegment: year,
+                    name: year,
+                    abstract3Ds: abstract3Ds.toSorted(Abstract3DSeriesSort)
+                }
+            ])
+            .reverse()
+    )
+);
+
 export const Abstract3DStaticCollections: NamedAbstract3DCollections = {
     wallpapers: {
         routeSegment: 'wallpapers',
         name: 'Wallpapers',
         abstract3Ds:
-            Object.values(Abstract3DSeries)
+            Abstract3DSeriesValues
                 .filter(abstract3D => abstract3D.downloads?.wallpaperDownloads)
-                .sort(Abstract3DSeriesSort)
     },
     creatorsFavorites: {
         routeSegment: 'creators-favorites',
@@ -38,9 +70,7 @@ export const Abstract3DStaticCollections: NamedAbstract3DCollections = {
     adventCalendar2024: {
         routeSegment: 'advent-calendar-2024',
         name: 'Advent Calendar 2024',
-        abstract3Ds:
-            Object.values(Abstract3DSeries)
-                .filter(abstract3D => abstract3D.adventCalendar?.year == 2024)
-                .sort(Abstract3DSeriesSort)
-    }
+        abstract3Ds: Abstract3DSeriesValues.filter(abstract3D => abstract3D.adventCalendar?.year == 2024)
+    },
+    ...yearCollections
 };

@@ -1,5 +1,5 @@
 import { defaultMetadata } from "@/metadata";
-import { Abstract3D as Abstract3dSeriesImageType, Abstract3DSeries } from "@/content/3d/a3ds/abstract3dSeries";
+import { Abstract3D as Abstract3dSeriesImageType, Abstract3DSeriesValues } from "@/content/3d/a3ds/abstract3dSeries";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Abstract3DView from "@/views/3d/Abstract3DView";
@@ -12,7 +12,7 @@ export default async function Abstract3DPage(props: Abstract3DPageProps) {
     const params = await props.params;
 
     const abstract3dSeriesImage: Abstract3dSeriesImageType | undefined = (
-        Object.values(Abstract3DSeries).find(
+        Abstract3DSeriesValues.find(
             image => image.nr.toString() === params.nr
         )
     );

@@ -12,7 +12,7 @@ import VerticalSpacer from "@/components/format/VerticalSpacer";
 import Tile from "@/components/Tile";
 import HStack from "@/components/layout/stacks/HStack";
 import VStack from "@/components/layout/stacks/VStack";
-import { Abstract3D, Abstract3DSeries } from "@/content/3d/a3ds/abstract3dSeries";
+import { Abstract3D, Abstract3DSeriesValues } from "@/content/3d/a3ds/abstract3dSeries";
 import { CodeProject, CodeProjects } from "@/content/code/codeProjects";
 import { Recipe, recipes } from "@/content/recipes/recipes";
 import AboutIcon from "@/icons/AboutIcon";
@@ -23,7 +23,6 @@ import { useEffect, useState } from "react";
 import { chooseRandom } from "@/utils/RandomUtils";
 import { Route } from "@/utils/RouteUtils";
 import { isNew } from "@/utils/categories/Abstract3DSeriesUtils";
-import { Abstract3DSeriesSort } from "@/utils/SortUtils";
 import { isEmpty } from "@/utils/ArrayUtils";
 
 export default function HomePage() {
@@ -33,16 +32,14 @@ export default function HomePage() {
     let [isNewAbstract3D, setIsNewAbstract3D] = useState(false);
 
     function setAbstract3D() {
-        const newAbstract3Ds = Object.values(Abstract3DSeries)
-            .filter(isNew)
-            .sort(Abstract3DSeriesSort);
+        const newAbstract3Ds = Abstract3DSeriesValues.filter(isNew);
         const areNewAbstract3DsPresent = !isEmpty(newAbstract3Ds);
 
         setIsNewAbstract3D(areNewAbstract3DsPresent);
         setFeaturedAbstract3D(
             areNewAbstract3DsPresent
                 ? newAbstract3Ds[0]
-                : chooseRandom(Object.values(Abstract3DSeries))
+                : chooseRandom(Abstract3DSeriesValues)
         );
     }
 

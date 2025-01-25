@@ -15,7 +15,7 @@ export default function PinnedAbstract3DCollections() {
         <Tile title={'Pinned Collections'} className={'mt-2.5'}>
             <Abstract3DCollections
                 small
-                limit={isMobile ? 3 : undefined}
+                limit={isMobile ? 3 : 5}
                 trailingComponent={
                     <Link href={Route.abstract3dCollections} className={'group'}>
                         <Abstract3DLinkPlaceholder small fill className={'my-3 mx-4'}>

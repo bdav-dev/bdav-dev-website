@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useMemo } from "react";
-import { Abstract3D, Abstract3DSeries } from "@/content/3d/a3ds/abstract3dSeries";
+import { Abstract3D, Abstract3DSeriesValues } from "@/content/3d/a3ds/abstract3dSeries";
 import { Abstract3DCollection, Abstract3DCollections, Abstract3DStaticCollections } from "@/content/3d/a3ds/abstract3dCollections";
 import useLocalStorage from "@/hooks/UseLocalStorage";
-import { Abstract3DSeriesSort } from "@/utils/SortUtils";
 
 type Abstract3DCollectionsContextType = {
     favorites: {
@@ -69,9 +68,8 @@ export function Abstract3DCollectionsProvider(props: Abstract3DCollectionsProvid
 }
 
 function mapFavoritesNr(favoritesNr: number[]) {
-    return Object.values(Abstract3DSeries)
-        .filter(a3d => favoritesNr.includes(a3d.nr))
-        .sort(Abstract3DSeriesSort);
+    return Abstract3DSeriesValues
+        .filter(a3d => favoritesNr.includes(a3d.nr));
 }
 
 function createFavoritesCollection(favoritesNr: number[]): Abstract3DCollection {
