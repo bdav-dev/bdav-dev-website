@@ -35,7 +35,7 @@ const yearCollections: NamedAbstract3DCollections = (
                 {
                     routeSegment: year,
                     name: year,
-                    abstract3Ds: abstract3Ds.toSorted(Abstract3DSeriesSort)
+                    abstract3Ds: [...abstract3Ds].sort(Abstract3DSeriesSort)
                 }
             ])
             .reverse()
