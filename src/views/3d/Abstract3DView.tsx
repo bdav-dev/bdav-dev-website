@@ -77,7 +77,7 @@ export default function Abstract3DView({ abstract3D }: Abstract3DViewProps) {
                             [
                                 <>
                                     {formatDmyString(abstract3D.releaseDate)}
-                                    {isNew(abstract3D) && <NewBadge className={'ml-1 py-0.5'}/>}
+                                    {isNew(abstract3D) && <NewBadge className={'ml-1.5 py-0.5'}/>}
                                 </>
                             ],
                             abstract3D.adventCalendar
