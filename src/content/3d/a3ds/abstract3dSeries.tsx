@@ -6,7 +6,7 @@ import { Abstract3DSeriesSort } from "@/utils/SortUtils";
 export type ImageDownload = {
     description?: string
     fileName: string
-    fileFormat: "png" | "exr"
+    fileFormat: "png" | "exr" | "jpg"
     aspectRatio: string
     width: number
     height: number
@@ -42,6 +42,17 @@ export const Abstract3DSeries: { [key: string]: Abstract3D } = {
                     height: 1080,
                     aspectRatio: "1:1",
                     downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1738612366/abstract-3d-series/053/a3ds-053.png"
+                }
+            ],
+            wallpaperDownloads: [
+                {
+                    description: "Desktop UHD",
+                    fileName: "a3ds-053-wallpaper-desktop-uhd",
+                    fileFormat: "jpg",
+                    width: 3840,
+                    height: 2160,
+                    aspectRatio: "16:9",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1738854650/abstract-3d-series/053/a3ds-053-wallpaper-desktop-uhd.jpg"
                 }
             ]
         }
