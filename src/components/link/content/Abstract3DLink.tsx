@@ -1,3 +1,5 @@
+'use client';
+
 import { Abstract3D } from "@/content/3d/a3ds/abstract3dSeries";
 import Image from "next/image";
 import Link from "next/link";
