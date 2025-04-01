@@ -115,7 +115,7 @@ export const CodeProjects: { [key: string]: CodeProject } = {
             projectLanguage: "English",
             status: "In Development",
             type: "Web application",
-            launchLink: "https://timecoder.vercel.app/"
+            launchLink: "https://timecoder.bdav.dev/"
         }
     },
     timeToWork: {
