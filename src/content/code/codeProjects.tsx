@@ -1,5 +1,6 @@
 import timecoderBadge from '@/../public/code/timecoder/timecoder-badge.webp';
 import kdmFinderBadge from '@/../public/code/kdm-finder/kdm-finder-badge.webp';
+import recipeHavenBadge from '@/../public/code/recipe-haven/recipe-haven-badge.webp'
 import { mono } from "@/fonts";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
@@ -12,7 +13,7 @@ export type CodeProject = {
         projectLanguage: 'English' | 'German',
         programmingLanguages: ProgrammingLanguage[]
         status: 'In Development' | 'Maintaining' | 'Completed',
-        type: 'Web application' | 'Desktop application' | 'Terminal application',
+        type: 'Web application' | 'Desktop application' | 'Terminal application' | 'Mobile application'
         launchLink?: string
     }
 
@@ -136,6 +137,20 @@ export const CodeProjects: { [key: string]: CodeProject } = {
             projectLanguage: "German",
             status: "Completed",
             type: "Web application"
+        }
+    },
+    recipeHaven: {
+        routeSegment: 'recipe-haven',
+        title: 'Recipe Haven',
+        repository: 'recipe-haven',
+        customBadgeImage: recipeHavenBadge,
+        badgeHoverText: <span className="text-white">Recipe Haven</span>,
+
+        properties: {
+            programmingLanguages: [ProgrammingLanguages.TypeScript],
+            projectLanguage: "German",
+            status: "Completed",
+            type: "Mobile application"
         }
     }
 };

@@ -10,6 +10,7 @@ import LargeBreak from "@/components/format/break/LargeBreak";
 import Highlight from "@/components/Highlight";
 import React from "react";
 import CodeProjectLayout from "@/layout/CodeProjectLayout";
+import NativeLanguageNotice from "@/components/categories/code/NativeLanguageNotice";
 
 
 export default function TimeToWorkPage() {
@@ -18,9 +19,7 @@ export default function TimeToWorkPage() {
     return (
         <CodeProjectLayout codeProject={timeToWork}>
 
-            <Tile className="text-center text-red-700 dark:text-red-400 p-1" customPadding>
-                Since the language of this project is german, the following description will also be in german.
-            </Tile>
+            <NativeLanguageNotice/>
 
             <Article headline={timeToWork.title} className="mt-3">
                 Work time dashboard / calculator
