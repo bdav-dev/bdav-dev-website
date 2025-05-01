@@ -22,7 +22,7 @@ export default function Abstract3DDialog(props: Abstract3DDialogProps) {
     }, [props.isVisible]);
 
     return (
-        <dialog ref={dialog} onClick={props.onCloseRequest} className={'abstract3d-dialog'}>
+        <dialog ref={dialog} onClick={props.onCloseRequest} onClose={props.onCloseRequest} className={'abstract3d-dialog'}>
             <Image
                 src={props.abstract3D.image}
                 alt={`Abstract3DSeries #${props.abstract3D.nr}`}
