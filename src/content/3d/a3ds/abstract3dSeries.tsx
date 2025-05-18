@@ -29,6 +29,23 @@ export type Abstract3D = {
 }
 
 export const Abstract3DSeries: { [key: string]: Abstract3D } = {
+    55: {
+        nr: 55,
+        releaseDate: '18.05.2025',
+        image: a3ds.O55,
+        downloads: {
+            imageDownloads: [
+                {
+                    fileName: "a3ds-055",
+                    fileFormat: "png",
+                    width: 1080,
+                    height: 1080,
+                    aspectRatio: "1:1",
+                    downloadURL: "https://res.cloudinary.com/bdav-dev/image/upload/v1747577680/abstract-3d-series/055/a3ds-055.png"
+                }
+            ]
+        }
+    },
     54: {
         nr: 54,
         releaseDate: '01.05.2025',
