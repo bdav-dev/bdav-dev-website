@@ -55,6 +55,7 @@ import O54 from '../../../../public/3d/abstract-3d-series/a3ds-054-q90.webp'
 import O55 from '../../../../public/3d/abstract-3d-series/a3ds-055-q80.webp'
 import O56 from '../../../../public/3d/abstract-3d-series/a3ds-056-q85.webp'
 import O57 from '../../../../public/3d/abstract-3d-series/a3ds-057-colorful-q85.webp'
+import O58 from '../../../../public/3d/abstract-3d-series/a3ds-058-pink-q50.webp'
 
 export const a3ds = {
     OO1, OO2, OO3, OO4, OO5, OO6, OO7, OO8, OO9, O10,
@@ -62,5 +63,5 @@ export const a3ds = {
     O21, O22, O23, O24, O25, O26, O27, O28, O29, O30,
     O31, O32, O33, O34, O35, O36, O37, O38, O39, O40,
     O41, O42, O43, O44, O45, O46, O47, O48, O49, O50,
-    O51, O52, O53, O54, O55, O56, O57
+    O51, O52, O53, O54, O55, O56, O57, O58
 }
