@@ -1,7 +1,9 @@
 import DarkAppIconSvgGroup from "@/categories/code/appIcons/DarkAppIconSvgGroup";
-import { CSSProperties } from "react";
+import { CSSProperties, useId } from "react";
 
 export default function TimeToWorkAppIcon(props: { className?: string, style?: CSSProperties }) {
+    const id = useId();
+
     return (
         <svg
             width="100"
@@ -16,7 +18,7 @@ export default function TimeToWorkAppIcon(props: { className?: string, style?: C
             <g>
                 <defs>
                     <linearGradient
-                        id="green-schedule-block-gradient"
+                        id={`green-schedule-block-gradient-${id}`}
                         x1="35.136669"
                         y1="46.601845"
                         x2="35.136669"
@@ -34,7 +36,7 @@ export default function TimeToWorkAppIcon(props: { className?: string, style?: C
                     </linearGradient>
 
                     <linearGradient
-                        id="blue-schedule-block-gradient"
+                        id={`blue-schedule-block-gradient-${id}`}
                         x1="35.136669"
                         y1="46.601845"
                         x2="35.136669"
@@ -72,11 +74,11 @@ export default function TimeToWorkAppIcon(props: { className?: string, style?: C
                     d="m 6.982873,25.148268 11.613203,6.732263 M 6.982873,74.851732 18.596076,68.119469 M 93.017127,25.148268 81.403924,31.880531 M 93.017127,74.851732 81.403924,68.119469"
                 />
                 <path
-                    style={{ fill: 'url(#blue-schedule-block-gradient)', stroke: 'none' }}
+                    style={{ fill: `url(#blue-schedule-block-gradient-${id})`, stroke: 'none' }}
                     d="m 23.9546,87.6875 h 31.135931 a 2.833783,2.833783 128.55513 0 0 2.762375,-3.465931 L 50.814779,53.466192 A 3.0565527,3.0565527 27.310317 0 0 46.666067,51.323936 L 15.776933,64.112081 a 5.5514057,5.5514057 123.75519 0 0 -3.427904,5.129215 l 0,6.840633 A 11.605571,11.605571 45 0 0 23.9546,87.6875 Z"
                 />
                 <path
-                    style={{ fill: 'url(#green-schedule-block-gradient)', stroke: 'none' }}
+                    style={{ fill: `url(#green-schedule-block-gradient-${id})`, stroke: 'none' }}
                     d="m 23.9546,87.6875 h 31.135931 a 2.833783,2.833783 128.55513 0 0 2.762375,-3.465931 L 50.814779,53.466192 A 3.0565527,3.0565527 27.310317 0 0 46.666067,51.323936 L 15.776933,64.112081 a 5.5514057,5.5514057 123.75519 0 0 -3.427904,5.129215 l 0,6.840633 A 11.605571,11.605571 45 0 0 23.9546,87.6875 Z"
                     transform="rotate(180,50.024657,49.992187)"
                 />
