@@ -1,4 +1,4 @@
-import LinkedInIcon from "@/icons/LinkedInIcon";
+import LinkedInIcon from "@/icons/deprecated/LinkedInIcon";
 import SocialLink from "./SocialLink";
 
 export default function LinkedInLink() {

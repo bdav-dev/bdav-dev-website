@@ -1,31 +1,21 @@
-import Abstract3DCollectionView from "@/views/3d/Abstract3DCollectionView";
 import { Metadata } from "next";
-import { defaultMetadata } from "@/metadata";
-import { formatAbstract3DCollectionRouteSegment } from "@/utils/StringUtils";
+import Abstract3dCollectionViewResolver from "@/categories/3d/a3ds/views/resolver/Abstract3dCollectionViewResolver";
+import { capitalizeFirstLetter } from "@/utils/StringUtils";
 
-
-type Abstract3DSeriesCollectionProps = {
-    params: Promise<{ collection: string }>
-}
-
-export default async function Abstract3DCollectionPage(props: Abstract3DSeriesCollectionProps) {
-    const params = await props.params;
-    return <Abstract3DCollectionView collectionRoute={params.collection}/>;
-}
 
 export async function generateMetadata(props: { params: Promise<{ collection: string }> }): Promise<Metadata> {
-    const collection = formatAbstract3DCollectionRouteSegment(
-        (await props.params).collection
-    );
+    const collection = (await props.params).collection
+        .split('-')
+        .map(capitalizeFirstLetter)
+        .join(' ');
 
     return {
         title: "bdav.dev – " + collection,
         description: `Abstract3D Series Collection „${collection}“.`,
-        ...defaultMetadata(
-            [
-                `Abstract 3D Series Collection „${collection}“`,
-                collection
-            ]
-        )
+        keywords: [`Abstract 3D Series Collection „${collection}“`, collection]
     }
+}
+
+export default async function Abstract3dCollectionPage(props: { params: Promise<{ collection: string }> }) {
+    return <Abstract3dCollectionViewResolver routeSegmentOfCollection={(await props.params).collection}/>;
 }

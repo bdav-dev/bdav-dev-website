@@ -1,19 +1,18 @@
 'use client';
 
-import React from "react";
+import { ReactNode, useEffect } from "react";
 import { useTheme } from "@/hooks/UseTheme";
 
-type ThemeApplierProps = {
-    children?: React.ReactNode
-}
 
-export default function ThemeApplier(props: ThemeApplierProps) {
+export default function ThemeApplier({ children }: { children?: ReactNode }) {
     const { darkTheme } = useTheme();
 
-    return (
-        <div className={darkTheme ? "dark text-dark" : "text-light"}>
-            {props.children}
-        </div>
+    useEffect(
+        () => {
+            document.documentElement.classList.toggle("dark", darkTheme);
+        },
+        [darkTheme]
     );
 
+    return children;
 }

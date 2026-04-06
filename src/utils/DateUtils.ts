@@ -1,4 +1,4 @@
-export function parseDMY(dateInDmyFormat: string) {
+export function parseDmy(dateInDmyFormat: string) {
     const [day, month, year] = dateInDmyFormat.split('.');
 
     return new Date(
@@ -22,5 +22,5 @@ export function toDmyString(date: Date) {
 }
 
 export function formatDmyString(dateInDmyFormat: string) {
-    return toDmyString(parseDMY(dateInDmyFormat));
+    return toDmyString(parseDmy(dateInDmyFormat));
 }

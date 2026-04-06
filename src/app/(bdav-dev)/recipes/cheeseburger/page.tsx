@@ -1,11 +1,12 @@
 import { defaultMetadata } from "@/metadata";
-import VStack from "@/components/layout/stacks/VStack";
-import { recipes } from "@/content/recipes/recipes";
-import RecipeLayout from "@/layout/RecipeLayout";
-import Section from "@/components/document/Section";
-import LargeBreak from "@/components/format/break/LargeBreak";
+import DEPRECATED_VStack from "@/components/library/stacks/DEPRECATED_VStack";
+import { recipes } from "@/categories/recipes/recipes";
+import RecipeLayout from "@/layout/content/RecipeLayout";
+import Section from "@/components/layout/document/Section";
+import LargeBreak from "@/components/library/spacing/LargeBreak";
 import RecipeStep from "@/components/categories/recipes/RecipeStep";
 import BonAppetitMessage from "@/components/categories/recipes/BonAppetitMessage";
+import { Metadata } from "next";
 
 export default function CheeseburgerPage() {
     return (
@@ -13,7 +14,7 @@ export default function CheeseburgerPage() {
 
             <Section headline="Cooking instructions">
 
-                <VStack className="gap-4 mt-3">
+                <DEPRECATED_VStack className="gap-4 mt-3">
 
                     <RecipeStep title="Slice onions" imageStart>
                         Start by slicing the onion(s) into rings or half rings.
@@ -73,7 +74,7 @@ export default function CheeseburgerPage() {
                         Enjoy your delicious homemade burger!
                     </BonAppetitMessage>
 
-                </VStack>
+                </DEPRECATED_VStack>
 
             </Section>
 
@@ -81,7 +82,7 @@ export default function CheeseburgerPage() {
     );
 }
 
-export const metadata = {
+export const metadata: Metadata = {
     title: `bdav.dev – Cheeseburger Recipe`,
     description: "Cheeseburger recipe from David Berezowski.",
     ...defaultMetadata(["recipe", "Cheeseburger recipe", "Cheeseburger"])

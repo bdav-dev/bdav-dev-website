@@ -1,45 +1,46 @@
 "use client";
 
-import LargeLink from "@/components/link/LargeLink";
-import Abstract3DLink, { Abstract3DLinkPlaceholder } from "@/components/link/content/Abstract3DLink";
-import CodeProjectLink, { CodeProjectLinkPlaceholder } from "@/components/link/content/CodeProjectLink";
+import LargeLink from "@/components/library/link/LargeLink";
+import Abstract3dImageLink, { Abstract3dImageLinkPlaceholder } from "@/categories/3d/a3ds/components/Abstract3dImageLink";
+import CodeProjectLink, { CodeProjectLinkPlaceholder } from "@/categories/code/components/CodeProjectLink";
 import RecipeLink, { RecipeLinkPlaceholder } from "@/components/link/content/RecipeLink";
 import GitHubLink from "@/components/link/social/GitHubLink";
 import InstagramLink from "@/components/link/social/InstagramLink";
 import LinkedInLink from "@/components/link/social/LinkedInLink";
 import WelcomeToBdavDevHeadline from "@/components/misc/WelcomeToBdavDevHeadline";
-import VerticalSpacer from "@/components/format/VerticalSpacer";
-import Tile from "@/components/Tile";
-import HStack from "@/components/layout/stacks/HStack";
-import VStack from "@/components/layout/stacks/VStack";
-import { Abstract3D, Abstract3DSeriesValues } from "@/content/3d/a3ds/abstract3dSeries";
-import { CodeProject, CodeProjects } from "@/content/code/codeProjects";
-import { Recipe, recipes } from "@/content/recipes/recipes";
-import AboutIcon from "@/icons/AboutIcon";
-import BlenderIcon from "@/icons/BlenderIcon";
-import CodeIcon from "@/icons/CodeIcon";
-import RecipesIcon from "@/icons/RecipiesIcon";
+import VerticalSpace from "@/components/library/spacing/VerticalSpace";
+import Tile from "@/components/library/Tile";
+import DEPRECATED_HStack from "@/components/library/stacks/DEPRECATED_HStack";
+import DEPRECATED_VStack from "@/components/library/stacks/DEPRECATED_VStack";
+import { Abstract3dImage, Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
+import { CodeProject, CodeProjects } from "@/categories/code/content/codeProjects";
+import { Recipe, recipes } from "@/categories/recipes/recipes";
+import AboutIcon from "@/icons/deprecated/AboutIcon";
+import CubeIcon from "@/icons/CubeIcon";
+import CodeIcon from "@/icons/deprecated/CodeIcon";
+import RecipesIcon from "@/icons/deprecated/RecipiesIcon";
 import { useEffect, useState } from "react";
 import { chooseRandom } from "@/utils/RandomUtils";
-import { Route } from "@/utils/RouteUtils";
-import { isNew } from "@/utils/categories/Abstract3DSeriesUtils";
+import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
 import { isEmpty } from "@/utils/ArrayUtils";
+import { BdavDev } from "@/routing";
+
 
 export default function HomePage() {
     let [featuredCodeProject, setFeaturedCodeProject] = useState<CodeProject>();
     let [featuredRecipe, setFeaturedRecipe] = useState<Recipe>();
-    let [featuredAbstract3D, setFeaturedAbstract3D] = useState<Abstract3D>();
+    let [featuredAbstract3D, setFeaturedAbstract3D] = useState<Abstract3dImage>();
     let [isNewAbstract3D, setIsNewAbstract3D] = useState(false);
 
     function setAbstract3D() {
-        const newAbstract3Ds = Abstract3DSeriesValues.filter(isNew);
+        const newAbstract3Ds = Object.values(Abstract3dSeries).filter(isNew);
         const areNewAbstract3DsPresent = !isEmpty(newAbstract3Ds);
 
         setIsNewAbstract3D(areNewAbstract3DsPresent);
         setFeaturedAbstract3D(
             areNewAbstract3DsPresent
                 ? newAbstract3Ds[0]
-                : chooseRandom(Abstract3DSeriesValues)
+                : chooseRandom(Object.values(Abstract3dSeries))
         );
     }
 
@@ -53,7 +54,7 @@ export default function HomePage() {
         <>
             <WelcomeToBdavDevHeadline/>
 
-            <VStack className="gap-5">
+            <DEPRECATED_VStack className="gap-5">
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className={`
                             min-w-0
@@ -63,14 +64,14 @@ export default function HomePage() {
                         `}>
 
                         <LargeLink
-                            href={Route.code}
+                            href={BdavDev.code.getRoute()}
                             icon={CodeIcon}
                             text="Code"
                         />
 
                         <LargeLink
-                            href={Route.blender}
-                            icon={BlenderIcon}
+                            href={BdavDev.blender.getRoute()}
+                            icon={CubeIcon}
                             text="3D"
                         />
 
@@ -83,13 +84,13 @@ export default function HomePage() {
                         `}>
 
                         <LargeLink
-                            href={Route.recipes}
+                            href={BdavDev.recipes.getRoute()}
                             icon={RecipesIcon}
                             text="Recipes"
                         />
 
                         <LargeLink
-                            href={Route.about}
+                            href={BdavDev.about.getRoute()}
                             icon={AboutIcon}
                             text="About"
                         />
@@ -98,9 +99,9 @@ export default function HomePage() {
 
                 </div>
 
-                <VerticalSpacer height='1.25rem'/>
+                <VerticalSpace height='1.25rem'/>
 
-                <HStack className="gap-5">
+                <DEPRECATED_HStack className="gap-5">
                     <div className="flex flex-col grow">
                         <span className="pl-0.5">Featured Code Project</span>
 
@@ -109,7 +110,7 @@ export default function HomePage() {
                             customPadding
                         >
                             <div
-                                className="flex justify-center items-center h-full drop-shadow-sm dark:drop-shadow-md">
+                                className="flex justify-center items-center h-full">
                                 {
                                     featuredCodeProject
                                         ? <CodeProjectLink codeProject={featuredCodeProject}/>
@@ -130,8 +131,8 @@ export default function HomePage() {
                             <div className="flex justify-center items-center h-full">
                                 {
                                     featuredAbstract3D
-                                        ? <Abstract3DLink abstract3D={featuredAbstract3D}/>
-                                        : <Abstract3DLinkPlaceholder/>
+                                        ? <Abstract3dImageLink image={featuredAbstract3D}/>
+                                        : <Abstract3dImageLinkPlaceholder/>
                                 }
                             </div>
                         </Tile>
@@ -145,7 +146,7 @@ export default function HomePage() {
                             customPadding
                         >
                             <div
-                                className="flex justify-center items-center h-full drop-shadow-sm dark:drop-shadow-md">
+                                className="flex justify-center items-center h-full">
                                 {
                                     featuredRecipe
                                         ? <RecipeLink recipe={featuredRecipe}/>
@@ -154,7 +155,7 @@ export default function HomePage() {
                             </div>
                         </Tile>
                     </div>
-                </HStack>
+                </DEPRECATED_HStack>
 
                 <Tile className="text-center mb-3">
 
@@ -175,7 +176,8 @@ export default function HomePage() {
                     </div>
 
                 </Tile>
-            </VStack>
+
+            </DEPRECATED_VStack>
         </>
     );
 }

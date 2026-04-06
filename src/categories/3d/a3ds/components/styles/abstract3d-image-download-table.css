@@ -1,0 +1,28 @@
+
+.abstract-3d-image-download-table {
+    @apply leading-5 w-full;
+}
+
+.abstract-3d-image-download-table thead tr {
+    @apply text-left align-bottom border-b border-zinc-400 dark:border-zinc-500;
+}
+
+.abstract-3d-image-download-table thead tr th {
+    @apply font-semibold pb-1.5 px-1;
+}
+
+.abstract-3d-image-download-table tbody tr:not(:last-of-type) {
+    @apply border-b dark:border-zinc-600 border-zinc-350;
+}
+
+.abstract-3d-image-download-table tbody tr td {
+    @apply px-1;
+}
+
+.abstract-3d-image-download-table tbody tr:not(:last-of-type) td {
+    @apply py-1.5;
+}
+
+.abstract-3d-image-download-table tbody tr:last-of-type td {
+    @apply pt-1.5;
+}

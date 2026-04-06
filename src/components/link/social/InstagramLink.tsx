@@ -1,6 +1,6 @@
 import SocialLink from "./SocialLink";
-import InstagramTextIcon from "@/icons/InstagramText";
-import InstagramIcon from "@/icons/InstagramIcon";
+import InstagramTextIcon from "@/icons/deprecated/InstagramText";
+import InstagramIcon from "@/icons/deprecated/InstagramIcon";
 
 export default function InstagramLink() {
 

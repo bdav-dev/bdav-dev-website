@@ -11,12 +11,11 @@ export default function ContentLinkPlaceholder(props: ContentLinkPlaceholderProp
     return (
         <div style={props.style}
              className={`
-                border border-zinc-500
                 flex justify-center items-center
                 text-zinc-600 dark:text-zinc-400
                 text-center
                 p-1.5
-                ${props.fill ? 'bg-zinc-200 dark:bg-zinc-925' : 'border-dashed'}
+                ${props.fill ? 'bg-tile' : 'border border-zinc-500 border-dashed'}
                 ${props.className}
              `}
         >

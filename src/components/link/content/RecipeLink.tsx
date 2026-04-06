@@ -1,8 +1,8 @@
-import { Recipe } from "@/content/recipes/recipes";
+import { Recipe } from "@/categories/recipes/recipes";
 import Image from "next/image";
 import Link from "next/link";
 import ContentLinkPlaceholder from "@/components/link/content/ContentLinkPlaceholder";
-import { Route } from "@/utils/RouteUtils";
+import { BdavDev } from "@/routing";
 
 type RecipeLinkProps = {
     recipe: Recipe
@@ -10,16 +10,16 @@ type RecipeLinkProps = {
 
 export default function RecipeLink({ recipe }: RecipeLinkProps) {
     return (
-        <Link className="w-fit rounded-full drop-shadow-sm" href={Route.recipe(recipe)} draggable="false">
+        <Link className="w-fit rounded-full" href={BdavDev.recipes.$recipe.getRoute({ recipe })} draggable="false">
 
             <div className={`
-                border dark:border-zinc-800 border-zinc-400
+                >border dark:border-zinc-800 border-zinc-400
                 w-56 h-56
                 overflow-hidden
                 flex items-center relative
                 rounded-full
                 group
-                bg-zinc-100 dark:bg-zinc-900
+                bg-zinc-100 dark:bg-zinc-850
             `}>
                 <div className={`
                     text-2xl text-center select-none

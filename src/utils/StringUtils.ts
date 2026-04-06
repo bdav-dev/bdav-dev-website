@@ -16,13 +16,6 @@ export function splitWithoutRemoving(string: string, separators: string[]) {
     return chunks;
 }
 
-export function capitalizeFirstLetter(str: string) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-export function formatAbstract3DCollectionRouteSegment(routeSegment: string) {
-    return routeSegment
-        .split('-')
-        .map(capitalizeFirstLetter)
-        .join(' ');
+export function capitalizeFirstLetter(string: string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }

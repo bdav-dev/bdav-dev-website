@@ -1,0 +1,66 @@
+import { Abstract3dImageDownload } from "@/categories/3d/a3ds/content/abstract3dSeries";
+import DownloadButton from "@/components/library/DownloadButton";
+
+import '@/categories/3d/a3ds/components/styles/abstract3d-image-download-table.css';
+import Tile from "@/components/library/Tile";
+import { calculateAspectRatio } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
+
+
+type Abstract3dImageDownloadTableProps = {
+    downloads: readonly Abstract3dImageDownload[]
+}
+
+export default function Abstract3dImageDownloadTable(props: Abstract3dImageDownloadTableProps) {
+    const isAnyDescriptionPresent = props.downloads.some(download => download.description);
+
+    return (
+        <Tile>
+            <table className="abstract-3d-image-download-table">
+                <thead>
+                <tr>
+                    <th>File name</th>
+                    {
+                        isAnyDescriptionPresent &&
+                        <th>Description</th>
+                    }
+                    <th className={'sm:table-cell hidden'}>Aspect&nbsp;ratio</th>
+                    <th className={'sm:table-cell hidden'}>Resolution</th>
+                    <th/>
+                </tr>
+                </thead>
+                <tbody>
+                {
+                    props.downloads.map(
+                        (download, index) => (
+                            <tr key={index}>
+                                <td>
+                                    {download.fileName}.{download.fileFormat}
+                                </td>
+
+                                {
+                                    isAnyDescriptionPresent &&
+                                    <td>
+                                        {download.description}
+                                    </td>
+                                }
+
+                                <td className={"sm:table-cell hidden"}>
+                                    {calculateAspectRatio(download.width, download.height)}
+                                </td>
+
+                                <td className={"sm:table-cell hidden"}>
+                                    {download.width}x{download.height}
+                                </td>
+
+                                <td className={"text-right"}>
+                                    <DownloadButton url={download.downloadUrl} fileName={`${download.fileName}.${download.fileFormat}`}/>
+                                </td>
+                            </tr>
+                        )
+                    )
+                }
+                </tbody>
+            </table>
+        </Tile>
+    );
+}

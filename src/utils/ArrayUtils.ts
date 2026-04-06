@@ -1,4 +1,4 @@
-export function createIsLast(array: unknown[]) {
+export function createIsLast(array: readonly unknown[]) {
     return (index: number) => array.length - 1 === index;
 }
 

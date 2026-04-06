@@ -1,7 +1,7 @@
-import Tile from "@/components/Tile";
+import Tile from "@/components/library/Tile";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import Switch from "@/components/util/Switch";
+import Switch from "@/components/library/util/Switch";
 
 type RecipeStepProps = {
     title: string,
@@ -34,7 +34,7 @@ export default function RecipeStep(props: RecipeStepProps) {
                                 drop-shadow-lg
                                 select-none
                                 rounded-xl
-                                border-neutral-500
+                                border-zinc-500
                             `}
                             quality={100}
                             placeholder="blur"

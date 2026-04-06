@@ -1,26 +1,26 @@
-import Abstract3DInCollectionView from "@/views/3d/Abstract3DInCollectionView";
 import { Metadata } from "next";
-import { defaultMetadata } from "@/metadata";
-import { formatAbstract3DCollectionRouteSegment } from "@/utils/StringUtils";
+import { capitalizeFirstLetter } from "@/utils/StringUtils";
+import Abstract3dImageOfCollectionViewResolver from "@/categories/3d/a3ds/views/resolver/Abstract3dImageOfCollectionViewResolver";
 
-type Abstract3DCollectionImagePageProps = {
+
+export async function generateMetadata(props: { params: Promise<{ collection: string, nr: string }> }): Promise<Metadata> {
+    const parameters = await props.params;
+    const collection = parameters.collection
+        .split('-')
+        .map(capitalizeFirstLetter)
+        .join(' ');
+
+    return {
+        title: `bdav.dev – Abstract3D #${parameters.nr} in ${collection}`,
+        description: `Abstract3D Series #${parameters.nr} Collection „${collection}“.`
+    }
+}
+
+type Abstract3dImageOfCollectionPageProps = {
     params: Promise<{ collection: string, nr: string }>
 }
 
-export default async function Abstract3DCollectionImagePage(props: Abstract3DCollectionImagePageProps) {
-    const params = await props.params;
-
-    return <Abstract3DInCollectionView {...params}/>;
-}
-
-export async function generateMetadata(props: { params: Promise<{ collection: string, nr: string }> }): Promise<Metadata> {
-    const params = await props.params;
-    const collection = formatAbstract3DCollectionRouteSegment(params.collection);
-    const nr = params.nr;
-
-    return {
-        title: `bdav.dev – Abstract3D #${nr} in ${collection}`,
-        description: `Abstract3D Series #${nr} Collection „${collection}“.`,
-        ...defaultMetadata()
-    }
+export default async function Abstract3dImageOfCollectionPage(props: Abstract3dImageOfCollectionPageProps) {
+    const parameters = await props.params;
+    return <Abstract3dImageOfCollectionViewResolver abstract3dImageNumber={+parameters.nr} routeSegmentOfCollection={parameters.collection}/>;
 }

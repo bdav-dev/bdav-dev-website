@@ -1,0 +1,31 @@
+.image-slide-carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.image-slide-carousel > .track {
+    display: flex;
+    width: max-content;
+    gap: var(--gap);
+    padding-right: var(--gap);
+    animation: scroll 4s linear infinite; /*300s*/
+}
+
+.image-slide-carousel > .track > .element {
+    flex: 0 0 auto;
+}
+
+.image-slide-carousel > .track > .element > .image {
+    width: 100%;
+    height: 250px;
+    display: block;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

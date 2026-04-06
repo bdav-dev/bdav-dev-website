@@ -3,64 +3,59 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { isEmpty } from "@/utils/ArrayUtils";
-import { Route } from "@/utils/RouteUtils";
+import { BdavDev } from "@/routing";
+import { ReactNode } from "react";
 
-type Segment = {
-    node: string,
-    href: string
-}
 
 export default function BreadcrumbNavigation() {
     const route = usePathname()
         .split("/")
-        .filter(e => e != "");
+        .filter(segment => segment != "");
 
     if (isEmpty(route)) {
         return <></>;
     }
 
-    let segments: Segment[] = [];
-    for (let i = 0; i < route.length; i++) {
-        segments.push({
-            node: route[i],
-            href: "/" + route.slice(0, i + 1).join("/")
-        });
-    }
-
     return (
-        <div className="m-2 ml-4 mb-6 flex flex-row flex-wrap items-center">
-            <span>
-                <Link
-                    href={Route.home}
-                    className="select-none p-1 pl-1.5 pr-1.5 rounded-md transition-colors duration-200 hover:bg-zinc-200 dark:hover:bg-zinc-700"
-                    draggable="false"
-                >
-                    bdav.dev
-                </Link>
-            </span>
+        <div className="flex flex-row flex-wrap items-center">
+            <Segment href={BdavDev.getRoute()}>
+                bdav.dev
+            </Segment>
             {
-                segments.map(
-                    (node, i) => (
-                        <span key={i}>
-                            <span className="ml-1.5 mr-1.5 select-none dark:text-zinc-500 text-zinc-400">/</span>
-                            <Link
-                                href={node.href}
-                                className={`
-                                    p-1 px-1.5
-                                    whitespace-nowrap
-                                    select-none
-                                    rounded-md
-                                    transition-colors duration-200
-                                    hover:bg-zinc-200 dark:hover:bg-zinc-700
-                                `}
-                                draggable="false"
-                            >
-                                {node.node}
-                            </Link>
-                        </span>
+                route.map(
+                    (segment, index) => (
+                        <div key={segment} className={"flex flex-row flex-nowrap items-center"}>
+                            <SegmentDivider/>
+                            <Segment href={"/" + route.slice(0, index + 1).join("/")}>
+                                {segment}
+                            </Segment>
+                        </div>
                     )
                 )
             }
         </div>
     );
+}
+
+function Segment(props: { href: string, children?: ReactNode }) {
+    return (
+        <Link
+            href={props.href}
+            className={`
+                px-1.5 py-0.5
+                whitespace-nowrap
+                select-none
+                rounded-md
+                transition-colors duration-200
+                hover:bg-zinc-200 dark:hover:bg-zinc-700
+            `}
+            draggable={false}
+        >
+            {props.children}
+        </Link>
+    );
+}
+
+function SegmentDivider() {
+    return <div className="px-1.5 select-none dark:text-zinc-500 text-zinc-400">/</div>;
 }

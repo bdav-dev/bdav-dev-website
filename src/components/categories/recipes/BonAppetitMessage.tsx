@@ -1,5 +1,5 @@
-import Tile from "@/components/Tile";
-import CutleryIcon from "@/icons/CutleryIcon";
+import Tile from "@/components/library/Tile";
+import CutleryIcon from "@/icons/deprecated/CutleryIcon";
 import React from "react";
 
 type BonAppetitMessageProps = {

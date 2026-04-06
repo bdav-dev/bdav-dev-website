@@ -1,10 +1,10 @@
 'use client';
 
-import Tile from "@/components/Tile";
-import { Recipe } from "@/content/recipes/recipes";
+import Tile from "@/components/library/Tile";
+import { Recipe } from "@/categories/recipes/recipes";
 import { useState } from "react";
 import IngredientCard from "./IngredientCard";
-import NumberInput from "@/components/input/NumberInput";
+import NumberInput from "@/components/library/input/NumberInput";
 
 type IngredientListProps = {
     recipe: Recipe

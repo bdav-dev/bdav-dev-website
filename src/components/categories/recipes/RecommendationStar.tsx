@@ -28,7 +28,7 @@ export default function RecommendationStar(props: RecommendationStarProps) {
                     w-64
                     pb-10
                     absolute -right-4 bottom-0
-                    dark:text-white text-neutral-900
+                    dark:text-white text-zinc-900
                     invisible group-hover:visible
                     pointer-events-auto 
                     opacity-25 scale-[0.97]

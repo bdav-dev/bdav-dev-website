@@ -8,16 +8,17 @@ export default function BdavDevLayout(
     { children }: { children: React.ReactNode }
 ) {
     return (
-        <div className="flex flex-col min-h-screen">
-            <div className="flex-1">
+        <>
+            <div className={"flex-1 flex flex-col"}>
                 <Header/>
-                <BreadcrumbNavigation/>
-
-                <main className="mx-4 mt-4 flex flex-col">
+                <div className={'px-5'}>
+                    <BreadcrumbNavigation/>
+                </div>
+                <main className={"flex-1 flex flex-col mt-5 mx-3 sm:mx-6"}>
                     {children}
                 </main>
             </div>
             <Footer/>
-        </div>
+        </>
     );
 }

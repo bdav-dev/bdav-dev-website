@@ -1,33 +1,24 @@
 'use client';
 
-import LightModeIcon from "@/icons/LightModeIcon";
-import DarkModeIcon from "@/icons/DarkModeIcon";
+import LightModeIcon from "@/icons/deprecated/LightModeIcon";
+import DarkModeIcon from "@/icons/deprecated/DarkModeIcon";
 import { useTheme } from "@/hooks/UseTheme";
 
-type ThemeToggleProps = {
-    selected?: boolean
-}
 
-export default function ThemeToggle(props: ThemeToggleProps) {
-
+export default function ThemeToggle() {
     const { darkTheme, setDarkTheme } = useTheme();
 
     return (
         <button
-            className={
-                `
+            className={`
                 flex flex-row items-center
                 p-1.5 mx-0.5
                 rounded-lg 
                 transition-colors duration-200
                 bg-opacity-80 dark:bg-opacity-80
-                ${
-                    props.selected
-                        ? "bg-zinc-400 dark:bg-zinc-950"
-                        : "hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90"
-                }
+                hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90
             `}
-            onClick={() => setDarkTheme(curr => !curr)}
+            onClick={() => setDarkTheme(current => !current)}
         >
             {
                 darkTheme

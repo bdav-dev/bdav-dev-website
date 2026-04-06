@@ -1,5 +1,5 @@
-import GitHubIcon from "@/icons/GitHubIcon";
-import GitHubText from "@/icons/GitHubText";
+import GitHubIcon from "@/icons/logos/GitHubIcon";
+import GitHubText from "@/icons/deprecated/GitHubText";
 import SocialLink from "./SocialLink";
 
 export default function GitHubLink() {

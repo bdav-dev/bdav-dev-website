@@ -1,4 +1,4 @@
-import { Ingredient, ingredientAsString } from "@/content/recipes/recipes";
+import { Ingredient, ingredientAsString } from "@/categories/recipes/recipes";
 import Image from "next/image";
 import RecommendationStar from "./RecommendationStar";
 

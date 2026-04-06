@@ -1,113 +1,101 @@
-import { defaultMetadata } from "@/metadata";
-import Tile from "@/components/Tile";
-import Article from "@/components/document/Article";
-import Section from "@/components/document/Section";
-import { CodeProjects } from "@/content/code/codeProjects";
-import Enumerate from "@/components/Enumerate";
-import Code from "@/components/Code";
-import HStack from "@/components/layout/stacks/HStack";
-import LargeBreak from "@/components/format/break/LargeBreak";
-import Highlight from "@/components/Highlight";
-import Mono from "@/components/Mono";
+import Tile from "@/components/library/Tile";
+import { CodeProjects } from "@/categories/code/content/codeProjects";
 import React from "react";
-import CodeProjectLayout from "@/layout/CodeProjectLayout";
+import { Metadata } from "next";
+import Enumerate from "@/components/library/Enumerate";
+import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLayout";
+import ReadingLayout from "@/layout/ReadingLayout";
+import Terminal, { Path } from "@/components/library/Terminal";
+
+
+export const metadata: Metadata = {
+    title: `${CodeProjects.CreateBlenderProject.title} – bdav.dev`,
+    description: "A command line tool to create a new blender project with common directories.",
+    keywords: ["create-blender-project", "create blender project", "createBlenderProject"]
+}
 
 export default function CreateBlenderProjectPage() {
-    const createBlenderProject = CodeProjects.createBlenderProject;
+    const project = CodeProjects.CreateBlenderProject;
 
     return (
-        <CodeProjectLayout codeProject={createBlenderProject}>
-
-            <Article headline={createBlenderProject.title}>
-                A command line tool to create a new blender project with common directories.
-
-                <Section headline="Description">
-                    <Tile className="mt-2">
-
-                        <Code>create-blender-project</Code> is a tool accessible via the command line / terminal.
-
-                        <LargeBreak/>
-
-                        It creates a new blender project with the following directories:
-                        <Enumerate
-                            indent
-                            items={[
-                                <Highlight small>assets</Highlight>,
-                                <Highlight small>blend-files</Highlight>,
-                                <Highlight small>render-output</Highlight>,
-                                <Highlight small>results</Highlight>,
-                            ]}
-                        />
-
-                        <LargeBreak/>
-
-                        The directory <Highlight>blend-files</Highlight> will contain a blank blender file
-                        with the name of the project: <Highlight>{"<projectName>.blend"}</Highlight>.
-                        The tool also sets the directory render-output as the default render output directory of the
-                        newly created blender file.
+        <CodeProjectLayout
+            project={project}
+            banner={
+                {
+                    image: {
+                        src: '/code/create-blender-project/banner.png',
+                        height: 1080,
+                        width: 2200
+                    },
+                    className: 'invert dark:invert-0 hue-rotate-180 dark:hue-rotate-0 dark:brightness-75'
+                }
+            }
+        >
+            <ReadingLayout>
+                <div className={'flex flex-col gap-5'}>
+                    <Tile className={"flex-1 text-center"}>
+                        <CreateBlenderProjectTitle/> is a command-line tool designed to make starting new Blender projects faster and more organized.
                     </Tile>
-                </Section>
 
-                <Section headline="Parameters">
-                    <Tile className="mt-2">
-                        The command has one (optional) parameter: <Highlight>project name</Highlight>.
-                        If the parameter is not specified, the terminal will ask for a project name.
-                    </Tile>
-                </Section>
+                    <div className={"flex flex-col lg:flex-row gap-5"}>
 
-                <Section headline={<>Use <Mono>create-blender-project</Mono></>}>
-                    <HStack className="mt-2">
+                        <div className={"flex flex-col gap-5 flex-1"}>
+                            <Tile className={"flex-1"}>
+                                Instead of manually creating folders and setting things up every time, the tool automatically generates a clean project structure with commonly used directories:
+                                <Enumerate indent items={['assets', 'blender-files', 'render-output', 'results']}/>
+                            </Tile>
+                            <Tile className={"flex-1"}>
+                                It also creates a ready-to-use Blender file named after your project, so you can jump straight into creating.
+                            </Tile>
+                        </div>
 
-                        <Tile
-                            title="Run"
-                            className="min-w-fit sm:min-w-[25rem] flex-1"
-                        >
-                            <Enumerate
-                                spaceBetween
-                                numbered
-                                items={[
-                                    <>
-                                        Download the source code of the project
-                                        (as a .zip file or via <Code>git clone</Code>).
-                                    </>,
-                                    <>
-                                        Make sure the <Highlight>create-blender-project</Highlight> file
-                                        is flagged as executable, if not run <Code>$ chmod +x
-                                        create-blender-project</Code>
-                                    </>,
-                                    <>
-                                        Open a new terminal window and navigate to the directory in which you want to
-                                        create a new blender project (using <Code>cd</Code>)
-                                    </>,
-                                    <>
-                                        Run <Code>$/path/to/file/create-blender-project {"<Optional parameter: Project name>"}</Code>
-                                    </>
-                                ]}
-                            />
-                        </Tile>
-
-                        <Tile
-                            title="Install (Make accessible in terminal)"
-                            className="min-w-fit sm:min-w-[25rem] flex-1"
-                        >
-                            If you want to install <Code>create-blender-project</Code> and make the command accessible
-                            anywhere in the terminal, copy the <Highlight>create-blender-project</Highlight> file
-                            to the following directory: <Highlight>/usr/local/bin/</Highlight>
-                            <LargeBreak/>
-                            Now you can access it without specifying the location of the file, like
-                            this: <Code>$ create-blender-project {"<Optional parameter: Project name>"}</Code>.
-                        </Tile>
-
-                    </HStack>
-                </Section>
-
-            </Article>
+                        <CreateBlenderProjectTerminal/>
+                    </div>
+                </div>
+            </ReadingLayout>
         </CodeProjectLayout>
     );
 }
 
-export const metadata = {
-    title: "bdav.dev – create-blender-project",
-    description: "A command line tool to create a new blender project with common directories.",
-    ...defaultMetadata(["create-blender-project", "create blender project", "createBlenderProject"])
+function CreateBlenderProjectTitle() {
+    return (
+        <>
+        <div className={'bg-teal-400'}>
+
+        </div>
+        <span
+            className={`
+                text-xl font-semibold
+                text-transparent bg-clip-text bg-gradient-to-br
+                from-green-600 via-emerald-600 to-teal-600
+                dark:from-green-400 dark:via-emerald-400 dark:to-teal-400
+            `}
+        >
+            create-blender-project
+        </span>
+
+        </>
+        );
+}
+
+function CreateBlenderProjectTerminal() {
+    return (
+        <Terminal
+            user={"you"}
+            hostname={"macbook-pro"}
+            currentDirectory={"~/Desktop"}
+            command={"create-blender-project earth-and-moon"}
+        >
+            Creating directories and Blender file.<br/>
+            Done. Project "earth-and-moon" successfully created:<br/>
+            <Path>./earth-and-moon</Path><br/>
+            ├── <Path>assets</Path><br/>
+            ├── <Path>blender-files</Path><br/>
+            │&nbsp;&nbsp;&nbsp;└── earth-and-moon.blend<br/>
+            ├── <Path>render-output</Path><br/>
+            └── <Path>results</Path><br/>
+            <br/>
+            Do you want to open the project in Blender? (y/N): y
+        </Terminal>
+    );
 }
