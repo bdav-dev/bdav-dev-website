@@ -1,6 +1,9 @@
+'use client';
+
 import { CSSProperties } from "react";
 import { codeProjectAppIcons } from "@/categories/code/content/codeProjectAppIcons";
 import { CodeProject } from "@/categories/code/content/codeProjects";
+import { useTheme } from "@/hooks/UseTheme";
 
 
 export type CodeProjectAppIconProps = {
@@ -10,6 +13,13 @@ export type CodeProjectAppIconProps = {
 }
 
 export default function CodeProjectAppIcon({ project, ...rest }: CodeProjectAppIconProps) {
-    const AppIcon = codeProjectAppIcons[project.id];
+    const { darkTheme } = useTheme();
+
+    const definition = codeProjectAppIcons[project.id];
+
+    const AppIcon = typeof definition === 'object'
+        ? darkTheme ? definition.dark : definition.light
+        : definition;
+
     return <AppIcon {...rest}/>;
 }
