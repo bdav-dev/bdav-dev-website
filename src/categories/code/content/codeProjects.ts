@@ -1,11 +1,9 @@
 import { CodeLanguage, CodeLanguages } from "@/categories/code/content/codeLanguages";
 import { CodeProjectType, CodeProjectTypes } from "@/categories/code/content/codeProjectType";
 import { CodeProjectStatus, CodeProjectStatuses } from "@/categories/code/content/codeProjectStatus";
-import CodeLanguageBadge from "@/categories/code/components/CodeLanguageBadge";
 
 
 export type CodeProjectAction = ({ type: 'Launch' } | { type: 'Download', fileName: string }) & { url: string };
-
 
 export type CodeProjectId = 'CreateBlenderProject' | 'TimeToWork' | 'KdmFinder' | 'Timecoder' | 'RecipeHaven';
 
@@ -46,11 +44,12 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         repositoryUrl: "https://github.com/bdav-dev/time-to-work-next",
         type: CodeProjectTypes.WebApplication,
         codeLanguages: [CodeLanguages.TypeScript],
+        status: CodeProjectStatuses.InDevelopment,
         action: {
             type: 'Launch',
             url: "https://ttw-preview.bdav.dev/",
         },
-        accentColor: 'light-dark(oklch(74.6% 0.16 232.661), oklch(70.7% 0.165 254.624))'
+        accentColor: 'light-dark(#3b82f6, #60a5fa)'
     },
     KdmFinder: {
         id: 'KdmFinder',
@@ -65,7 +64,7 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             url: 'https://github.com/bdav-dev/kdm-finder/archive/refs/heads/main.zip',
             fileName: 'kdm-finder-main.zip'
         },
-        accentColor: '#f86656'
+        accentColor: 'light-dark(#e65955, #f66864)'
     },
     Timecoder: {
         id: 'Timecoder',
@@ -90,6 +89,6 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         type: CodeProjectTypes.MobileApp,
         codeLanguages: [CodeLanguages.TypeScript],
         status: CodeProjectStatuses.Prototype,
-        accentColor: 'light-dark(oklch(76.8% 0.233 130.85), oklch(84.1% 0.238 128.85))'
+        accentColor: 'light-dark(#22c55e, #4ade80)'
     }
 };
