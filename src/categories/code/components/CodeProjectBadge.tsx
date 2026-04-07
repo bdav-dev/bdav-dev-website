@@ -16,7 +16,7 @@ export default function CodeProjectBadge({ codeProject }: CodeProjectBadgeProps)
             className={"bg-tile w-[23rem] h-[7rem] rounded-2xl group flex gap-3 items-center p-6"}
             style={createAccentColorStyle(codeProject.accentColor)}
         >
-            <CodeProjectAppIcon project={codeProject} className={'h-[4rem] w-[4rem]'}/>
+            <CodeProjectAppIcon project={codeProject} className={'h-[4rem] w-[4rem] drop-shadow'}/>
 
             <div className={"flex flex-col gap-1 flex-1"}>
                 <H4 className={'font-semibold group-hover:text-accent transition-colors ease-out leading-5'}>

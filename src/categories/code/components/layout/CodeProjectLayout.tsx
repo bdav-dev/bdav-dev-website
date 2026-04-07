@@ -58,7 +58,7 @@ export default function CodeProjectLayout(props: CodeProjectLayoutProps) {
 function CodeProjectPanel(props: { codeProject: CodeProject }) {
     return (
         <Tile className={'flex flex-col gap-2 items-center p-7 shadow-2xl shadow-zinc-600 dark:shadow-zinc-950 max-w-xl'}>
-            <CodeProjectAppIcon project={props.codeProject} className={'h-32 w-32 mx-auto select-none'}/>
+            <CodeProjectAppIcon project={props.codeProject} className={'h-32 w-32 mx-auto select-none drop-shadow-lg'}/>
 
             <H2 className={'font-semibold text-center'}>
                 {props.codeProject.title}
