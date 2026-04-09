@@ -16,15 +16,15 @@ export default function DarkAppIconSvgGroup() {
                 </clipPath>
 
                 <linearGradient id={`background-gradient-${id}`} gradientTransform="rotate(90)">
-                    <stop offset="0" style={{ stopColor: '#303030' }}/>
+                    <stop offset="0" style={{ stopColor: '#313131' }}/>
                     <stop offset="1" style={{ stopColor: '#141414' }}/>
                 </linearGradient>
 
                 <linearGradient id={`highlights-gradient-${id}`} gradientTransform="rotate(45 0.5 0.5)">
-                    <stop offset="0" style={{ stopColor: '#8c8c8c' }}/>
-                    <stop offset="0.4" style={{ stopColor: '#3b3b3b' }}/>
-                    <stop offset="0.6" style={{ stopColor: '#3b3b3b' }}/>
-                    <stop offset="1" style={{ stopColor: '#575757' }}/>
+                    <stop offset="0" style={{ stopColor: '#9e9e9e' }}/>
+                    <stop offset="0.4" style={{ stopColor: '#383838' }}/>
+                    <stop offset="0.6" style={{ stopColor: '#383838' }}/>
+                    <stop offset="1" style={{ stopColor: '#616161' }}/>
                 </linearGradient>
 
                 <filter
