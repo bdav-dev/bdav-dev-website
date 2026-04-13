@@ -34,7 +34,7 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             url: "https://raw.githubusercontent.com/bdav-dev/create-blender-project/refs/heads/main/create-blender-project",
             fileName: "create-blender-project"
         },
-        accentColor: 'light-dark(rgb(5 150 105), rgb(52 211 153))'
+        accentColor: 'light-dark(#525252, #a3a3a3)'
     },
     TimeToWork: {
         id: 'TimeToWork',
@@ -89,6 +89,6 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         type: CodeProjectTypes.MobileApp,
         codeLanguages: [CodeLanguages.TypeScript],
         status: CodeProjectStatuses.Prototype,
-        accentColor: 'light-dark(#22c55e, #4ade80)'
+        accentColor: 'light-dark(#20B858, #4ade80)'
     }
 };

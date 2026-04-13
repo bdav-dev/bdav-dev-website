@@ -59,23 +59,17 @@ export default function CreateBlenderProjectPage() {
 
 function CreateBlenderProjectTitle() {
     return (
-        <>
-        <div className={'bg-teal-400'}>
-
-        </div>
         <span
             className={`
                 text-xl font-semibold
                 text-transparent bg-clip-text bg-gradient-to-br
-                from-green-600 via-emerald-600 to-teal-600
-                dark:from-green-400 dark:via-emerald-400 dark:to-teal-400
+                from-gray-700 via-neutral-700 to-zinc-700
+                dark:from-gray-100 dark:via-neutral-100 dark:to-zinc-100
             `}
         >
             create-blender-project
         </span>
-
-        </>
-        );
+    );
 }
 
 function CreateBlenderProjectTerminal() {

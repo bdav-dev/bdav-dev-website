@@ -25,9 +25,8 @@ export default function CreateBlenderProjectDarkAppIcon(props: { className?: str
                     gradientUnits="userSpaceOnUse"
                     gradientTransform="matrix(0.08021184,0,0,0.08021184,21.545629,147.00775)"
                 >
-                    <stop offset="0" style={{ stopColor: '#4ade80' }}/>
-                    <stop offset="0.5" style={{ stopColor: '#34d393' }}/>
-                    <stop offset="1" style={{ stopColor: '#2dd4a3' }}/>
+                    <stop offset="0" style={{ stopColor: '#e6e6e6' }}/>
+                    <stop offset="1" style={{ stopColor: '#cccccc' }}/>
                 </linearGradient>
             </defs>
 
