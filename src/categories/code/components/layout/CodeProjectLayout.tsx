@@ -10,28 +10,34 @@ import { CloudinaryImage as CloudinaryImageType } from "@/cloudinary";
 import CloudinaryImage from "@/components/CloudinaryImage";
 import createAccentColorStyle from "@/styling/accentColorOverride";
 import CodeProjectAppIcon from "@/categories/code/components/icon/CodeProjectAppIcon";
+import { useTheme } from "@/hooks/UseTheme";
 
 
 type CodeProjectLayoutProps = {
     project: CodeProject,
     banner: {
-        image: CloudinaryImageType,
+        image: CloudinaryImageType | { light: CloudinaryImageType, dark: CloudinaryImageType },
         className?: string
     }
     children?: ReactNode
 }
 
 export default function CodeProjectLayout(props: CodeProjectLayoutProps) {
+    const { resolveThemeSwitch } = useTheme();
+
+    const image = resolveThemeSwitch(props.banner.image);
+
     return (
         <div style={createAccentColorStyle(props.project.accentColor)}>
             <div className={'relative mb-5 md:mb-20'}>
                 <SkeletonLoader
+                    key={image.src}
                     className={'h-[36rem] md:h-[30rem] w-full rounded-3xl'}
                     skeleton={({ className }) => <div className={`${className} skeleton`}/>}
                     component={
                         context =>
                             <CloudinaryImage
-                                image={props.banner.image}
+                                image={image}
                                 alt={props.project.title}
                                 className={`${context.className} object-cover ${props.banner.className}`}
                                 draggable={false}

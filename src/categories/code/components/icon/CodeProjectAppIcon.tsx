@@ -13,13 +13,9 @@ export type CodeProjectAppIconProps = {
 }
 
 export default function CodeProjectAppIcon({ project, ...rest }: CodeProjectAppIconProps) {
-    const { darkTheme } = useTheme();
+    const { resolveThemeSwitch } = useTheme();
 
-    const definition = codeProjectAppIcons[project.id];
-
-    const AppIcon = typeof definition === 'object'
-        ? darkTheme ? definition.dark : definition.light
-        : definition;
+    const AppIcon = resolveThemeSwitch(codeProjectAppIcons[project.id]);
 
     return <AppIcon {...rest}/>;
 }
