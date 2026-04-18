@@ -62,6 +62,7 @@ function Item(props: ItemProps) {
                 w-full
                 text-center rounded-md
                 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-600
+                break-keep
             `}
         >
             <Link
