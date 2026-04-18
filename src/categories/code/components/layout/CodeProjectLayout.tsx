@@ -1,51 +1,35 @@
-'use client';
-
 import { ReactNode } from "react";
 import { CodeProject } from "@/categories/code/content/codeProjects";
 import Tile from "@/components/library/Tile";
 import H2 from "@/components/library/headlines/H2";
 import CodeProjectRibbon from "@/categories/code/components/layout/CodeProjectRibbon";
-import SkeletonLoader from "@/components/SkeletonLoader";
 import { CloudinaryImage as CloudinaryImageType } from "@/cloudinary";
-import CloudinaryImage from "@/components/CloudinaryImage";
 import createAccentColorStyle from "@/styling/accentColorOverride";
 import CodeProjectAppIcon from "@/categories/code/components/icon/CodeProjectAppIcon";
-import { useTheme } from "@/hooks/UseTheme";
+import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import { ThemeSwitch } from "@/contexts/ThemeContext";
 
 
 type CodeProjectLayoutProps = {
     project: CodeProject,
     banner: {
-        image: CloudinaryImageType | { light: CloudinaryImageType, dark: CloudinaryImageType },
+        image: ThemeSwitch<CloudinaryImageType>,
         className?: string
     }
     children?: ReactNode
 }
 
 export default function CodeProjectLayout(props: CodeProjectLayoutProps) {
-    const { resolveThemeSwitch } = useTheme();
-
-    const image = resolveThemeSwitch(props.banner.image);
-
     return (
         <div style={createAccentColorStyle(props.project.accentColor)}>
             <div className={'relative mb-5 md:mb-20'}>
-                <SkeletonLoader
-                    key={image.src}
-                    className={'h-[36rem] md:h-[30rem] w-full rounded-3xl'}
-                    skeleton={({ className }) => <div className={`${className} skeleton`}/>}
-                    component={
-                        context =>
-                            <CloudinaryImage
-                                image={image}
-                                alt={props.project.title}
-                                className={`${context.className} object-cover ${props.banner.className}`}
-                                draggable={false}
-                                style={context.style}
-                                onLoad={context.setLoaded}
-                                quality={95}
-                            />
-                    }
+                <SkeletonLoadingCloudinaryImage
+                    alt={props.project.title}
+                    image={props.banner.image}
+                    sharedClassName={'h-[36rem] md:h-[30rem] w-full rounded-3xl'}
+                    imageClassName={`object-cover ${props.banner.className}`}
+                    quality={95}
+                    draggable={false}
                 />
 
                 <div className={'absolute flex flex-col gap-9 items-center justify-center p-8 inset-0'}>
