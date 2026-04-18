@@ -1,6 +1,6 @@
 'use client';
 
-import { CloudinaryImage, CloudinaryImage as CloudinaryImageType, createCloudinaryLoaderWithMaxWidth } from "@/cloudinary";
+import { CloudinaryImage as CloudinaryImageType, createCloudinaryLoaderWithMaxWidth } from "@/cloudinary";
 import Image, { ImageProps } from "next/image";
 
 
@@ -16,12 +16,12 @@ export default function CloudinaryImage({ image, width, ...rest }: CloudinaryIma
             src={image.src}
             width={width ?? image.width}
             height={width ? deriveHeight(image, width) : image.height}
-            {...rest}
             placeholder={'empty'}
+            {...rest}
         />
     );
 }
 
-function deriveHeight(image: CloudinaryImage, width: number) {
+function deriveHeight(image: CloudinaryImageType, width: number) {
     return (image.height / image.width) * width;
 }
