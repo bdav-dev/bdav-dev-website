@@ -7,7 +7,7 @@ import useLocalStorage from "../hooks/UseLocalStorage";
 type ThemeContextType = {
     darkTheme: boolean,
     setDarkTheme: Dispatch<SetStateAction<boolean>>,
-    resolveThemeSwitch: <T>(themeSwitch: T | { light: T, dark: T }) => T
+    resolveThemeSwitch: <T>(themeSwitch: ThemeSwitch<T>) => T
 }
 
 export const ThemeContext = React.createContext<ThemeContextType>({
@@ -30,7 +30,9 @@ export default function ThemeProvider(props: ThemeProviderProps) {
     );
 }
 
-export function resolveThemeSwitch<T>(darkTheme: boolean, themeSwitch: T | { light: T, dark: T }): T {
+export type ThemeSwitch<T> = T | { light: T, dark: T };
+
+export function resolveThemeSwitch<T>(darkTheme: boolean, themeSwitch: ThemeSwitch<T>): T {
     if (typeof themeSwitch === 'object' && themeSwitch != null && 'light' in themeSwitch && 'dark' in themeSwitch) {
         return darkTheme ? themeSwitch.dark : themeSwitch.light;
     }

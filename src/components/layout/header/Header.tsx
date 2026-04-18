@@ -5,7 +5,7 @@ import CategoryLink from "./CategoryLink";
 import CodeIcon from "@/icons/deprecated/CodeIcon";
 import DropdownMenu from "./DropdownMenu";
 import InstagramIcon from "@/icons/deprecated/InstagramIcon";
-import { CodeProject, CodeProjects } from "@/categories/code/content/codeProjects";
+import { CodeProjects } from "@/categories/code/content/codeProjects";
 import { recipes } from "@/categories/recipes/recipes";
 import GitHubIcon from "@/icons/logos/GitHubIcon";
 import VerticalRuler from "@/components/library/VerticalRuler";
@@ -51,7 +51,7 @@ export default function Header() {
                                                     text: 'GitHub'
                                                 }
                                             ],
-                                            (Object.values(CodeProjects) as CodeProject[]).map(
+                                            Object.values(CodeProjects).map(
                                                 codeProject => (
                                                     {
                                                         href: BdavDev.code.$project.getRoute({ project: codeProject }),
