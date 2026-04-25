@@ -1,0 +1,16 @@
+.germany-flag {
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.35rem;
+    background-size: 125% 125%;
+    background-position: 50% 50%;
+    background-image: linear-gradient(
+            180deg,
+            #141414 0%,
+            #141414 35%,
+            #ef4444 35%,
+            #ef4444 64%,
+            #ebbe38 64%,
+            #ebbe38 100%
+    );
+    background-repeat: no-repeat;
+}
