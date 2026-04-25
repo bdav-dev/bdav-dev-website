@@ -6,6 +6,7 @@ import Enumerate from "@/components/library/Enumerate";
 import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLayout";
 import ReadingLayout from "@/layout/ReadingLayout";
 import Terminal, { Path } from "@/components/library/Terminal";
+import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 
 
 export const metadata: Metadata = {
@@ -51,6 +52,11 @@ export default function CreateBlenderProjectPage() {
 
                         <CreateBlenderProjectTerminal/>
                     </div>
+
+                    <Tile className={'flex justify-center'}>
+                        <CodeProjectAction project={project}/>
+                    </Tile>
+
                 </div>
             </ReadingLayout>
         </CodeProjectLayout>

@@ -2,6 +2,7 @@
 
 import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol";
 import { useState } from "react";
+import { downloadFile } from "../../utils/DownloadUtilities";
 
 type DownloadButtonProps = {
     url: string,
@@ -9,7 +10,7 @@ type DownloadButtonProps = {
 }
 
 export default function DownloadButton(props: DownloadButtonProps) {
-    const [disabled, setDisabled] = useState(false);
+    const [isDownloading, setIsDownloading] = useState(false);
 
     return (
         <button
@@ -21,36 +22,16 @@ export default function DownloadButton(props: DownloadButtonProps) {
                 disabled:opacity-40 disabled:pointer-events-none
             `}
             onClick={() => {
-                setDisabled(true);
+                setIsDownloading(true);
                 downloadFile(props.url, props.fileName)
-                    .finally(() => setDisabled(false));
+                    .finally(() => setIsDownloading(false));
             }}
-            disabled={disabled}
+            disabled={isDownloading}
         >
-            <MaterialSymbol symbol={disabled ? MaterialSymbols.PROGRESS_ACTIVITY : MaterialSymbols.DOWNLOAD} weight={350} className={disabled ? 'animate-spin' : ''}/>
+            <MaterialSymbol symbol={isDownloading ? MaterialSymbols.PROGRESS_ACTIVITY : MaterialSymbols.DOWNLOAD} weight={350} className={isDownloading ? 'animate-spin' : ''}/>
             <span className={'self-baseline'}>
                 Download
             </span>
         </button>
     );
-}
-
-async function downloadFile(url: string, fileName: string) {
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`Failed to download file '${fileName}'.`);
-    }
-
-    const blob = await response.blob();
-    const blobUrl = URL.createObjectURL(blob);
-
-    const anchor = document.createElement("a");
-    anchor.href = blobUrl;
-    anchor.download = fileName;
-    document.body.appendChild(anchor);
-
-    anchor.click();
-    anchor.remove();
-
-    requestAnimationFrame(() => URL.revokeObjectURL(blobUrl));
 }

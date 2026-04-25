@@ -7,7 +7,7 @@ import Enumerate from "@/components/library/Enumerate";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
 import { CloudinaryImage } from "@/cloudinary";
-import CodeProjectLaunchLink from "@/categories/code/components/CodeProjectLaunchLink";
+import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import { ContentImageSplit } from "@/components/library/ContentImageSplit";
 
 
@@ -133,10 +133,8 @@ export default function TimeToWorkPage() {
                         }}
                     />
 
-                    <Tile customPadding className={'p-5'}>
-                        <div className={'flex justify-center'}>
-                            <CodeProjectLaunchLink project={project}/>
-                        </div>
+                    <Tile className={'flex justify-center'}>
+                        <CodeProjectAction project={project} message={'Try a preview!'}/>
                     </Tile>
                 </div>
             </ReadingLayout>
