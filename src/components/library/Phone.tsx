@@ -1,22 +1,19 @@
-import Image, { StaticImageData } from "next/image";
-import { toRemovedBlurDimensions } from "@/utils/ImageUtils";
-import { ComponentProps } from "react";
+import { ComponentProps, CSSProperties, ReactNode } from "react";
+
 
 type PhoneProps = {
-    image: StaticImageData,
+    screen: ReactNode,
     size?: string
+    style?: CSSProperties,
+    className?: string,
 }
 
 export default function Phone(props: PhoneProps) {
     return (
-        <div className={'relative'} style={{ width: props.size ?? '10rem' }}>
-            <Image
-                {...toRemovedBlurDimensions(props.image)}
-                alt={""}
-                className={"absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[91.5%] select-none"}
-                style={{ borderRadius: "14% / 6.4%" }}
-                draggable={false}
-            />
+        <div className={`relative h-fit ${props.className}`} style={{ width: props.size ?? '10rem', ...props.style }}>
+            <div className={'absolute object-cover w-[92%] h-[97%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none overflow-clip'} style={{ borderRadius: "14% / 6.4%" }}>
+                {props.screen}
+            </div>
             <PhoneFrame className={'relative text-[#999999] dark:text-[#B2B2B2]'}/>
         </div>
     );
