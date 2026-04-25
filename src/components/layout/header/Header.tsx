@@ -116,13 +116,6 @@ export default function Header() {
                             }
                         />
 
-                        <CategoryLink
-                            icon={<></>}
-                            text={"About"}
-                            href={BdavDev.about.getRoute()}
-                            selected={categoryRoute === BdavDev.about.getRoute()}
-                        />
-
                         <VerticalRuler className="mx-1 h-9"/>
 
                         <ThemeToggle/>

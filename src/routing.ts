@@ -36,9 +36,6 @@ export const BdavDev = {
             getRoute: (parameters: { recipe: Recipe }) => `/recipes/${parameters.recipe.routeSegment}`,
         }
     },
-    about: {
-        getRoute: () => '/about',
-    },
     privacyPolicy: {
         getRoute: () => '/privacy-policy',
     },

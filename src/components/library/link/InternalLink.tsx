@@ -7,7 +7,6 @@ import CodeIcon from "@/icons/deprecated/CodeIcon";
 import { BdavDev, getBaseOfRoute } from "@/routing";
 import CubeIcon from "@/icons/CubeIcon";
 import RecipesIcon from "@/icons/deprecated/RecipiesIcon";
-import AboutIcon from "@/icons/deprecated/AboutIcon";
 
 
 type InternalLinkProps = {
@@ -39,7 +38,5 @@ function getIconForRoute(href: string): ComponentType<IconProps> | undefined {
             return CubeIcon;
         case BdavDev.recipes.getRoute():
             return RecipesIcon;
-        case BdavDev.about.getRoute():
-            return AboutIcon;
     }
 }

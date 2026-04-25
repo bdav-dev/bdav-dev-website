@@ -15,7 +15,6 @@ import DEPRECATED_VStack from "@/components/library/stacks/DEPRECATED_VStack";
 import { Abstract3dImage, Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import { CodeProject, CodeProjects } from "@/categories/code/content/codeProjects";
 import { Recipe, recipes } from "@/categories/recipes/recipes";
-import AboutIcon from "@/icons/deprecated/AboutIcon";
 import CubeIcon from "@/icons/CubeIcon";
 import CodeIcon from "@/icons/deprecated/CodeIcon";
 import RecipesIcon from "@/icons/deprecated/RecipiesIcon";
@@ -87,12 +86,6 @@ export default function HomePage() {
                             href={BdavDev.recipes.getRoute()}
                             icon={RecipesIcon}
                             text="Recipes"
-                        />
-
-                        <LargeLink
-                            href={BdavDev.about.getRoute()}
-                            icon={AboutIcon}
-                            text="About"
                         />
 
                     </div>
