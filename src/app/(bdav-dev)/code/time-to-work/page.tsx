@@ -17,15 +17,7 @@ export default function TimeToWorkPage() {
     return (
         <CodeProjectLayout
             project={project}
-            banner={
-                {
-                    image: {
-                        light: { src: '/code/time-to-work/banner/banner-light.png', width: 2934, height: 1440 },
-                        dark: { src: '/code/time-to-work/banner/banner-dark.png', width: 2934, height: 1440 }
-                    },
-                    className: 'brightness-90 dark:brightness-[70%]'
-                }
-            }
+            banner={{ image: images.banner, className: 'brightness-90 dark:brightness-[70%]' }}
         >
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>
@@ -50,15 +42,7 @@ export default function TimeToWorkPage() {
                                 />
                             </Tile>
                         }
-                        image={
-                            <TimeToWorkImage
-                                alt={""}
-                                image={{
-                                    light: { src: '/code/time-to-work/table-light.png', width: 1920, height: 640 },
-                                    dark: { src: '/code/time-to-work/table-dark.png', width: 1920, height: 640 }
-                                }}
-                            />
-                        }
+                        image={<TimeToWorkImage alt={'Table'} image={images.table}/>}
                     />
 
                     <ContentImageSplit
@@ -68,15 +52,7 @@ export default function TimeToWorkPage() {
                                 Everything is neatly presented on a timeline, so you always have a clear overview of your day.
                             </Tile>
                         }
-                        image={
-                            <TimeToWorkImage
-                                alt={""}
-                                image={{
-                                    light: { src: '/code/time-to-work/timeline-light.png', width: 1920, height: 640 },
-                                    dark: { src: '/code/time-to-work/timeline-dark.png', width: 1920, height: 640 }
-                                }}
-                            />
-                        }
+                        image={<TimeToWorkImage alt={'Timeline'} image={images.timeline}/>}
                         reverse
                     />
 
@@ -89,15 +65,7 @@ export default function TimeToWorkPage() {
                                 No more guessing or rushing at the last minute!
                             </Tile>
                         }
-                        image={
-                            <TimeToWorkImage
-                                alt={""}
-                                image={{
-                                    light: { src: '/code/time-to-work/public-transport-light.png', width: 1920, height: 640 },
-                                    dark: { src: '/code/time-to-work/public-transport-dark.png', width: 1920, height: 640 }
-                                }}
-                            />
-                        }
+                        image={<TimeToWorkImage alt={'Public transport'} image={images.publicTransport}/>}
                     />
 
                     <ContentImageSplit
@@ -107,15 +75,7 @@ export default function TimeToWorkPage() {
                                 If you decide to leave earlier, it also shows how that would affect your overtime balance.
                             </Tile>
                         }
-                        image={
-                            <TimeToWorkImage
-                                alt={""}
-                                image={{
-                                    light: { src: '/code/time-to-work/overtime-light.png', width: 1920, height: 640 },
-                                    dark: { src: '/code/time-to-work/overtime-dark.png', width: 1920, height: 640 }
-                                }}
-                            />
-                        }
+                        image={<TimeToWorkImage alt={'Overtime'} image={images.overtime}/>}
                         reverse
                     />
 
@@ -125,13 +85,7 @@ export default function TimeToWorkPage() {
                         The app data is stored locally in your browser, so your progress is still there when you come back.
                     </Tile>
 
-                    <TimeToWorkImage
-                        alt={""}
-                        image={{
-                            light: { src: '/code/time-to-work/banner/banner-light.png', width: 2934, height: 1440 },
-                            dark: { src: '/code/time-to-work/banner/banner-dark.png', width: 2934, height: 1440 }
-                        }}
-                    />
+                    <TimeToWorkImage alt={'time-to-work'} image={images.banner}/>
 
                     <Tile className={'flex justify-center'}>
                         <CodeProjectAction project={project} message={'Try a preview!'}/>
@@ -146,9 +100,9 @@ function TimeToWorkImage(props: { image: ThemeSwitch<CloudinaryImage>, alt: stri
     return (
         <SkeletonLoadingCloudinaryImage
             {...props}
+            sharedClassName={'w-full h-full object-cover rounded-xl'}
             quality={95}
             draggable={false}
-            sharedClassName={'w-full h-full object-cover rounded-xl'}
         />
     );
 }
@@ -167,3 +121,26 @@ function TimeToWorkTitle() {
         </span>
     );
 }
+
+const images = {
+    banner: {
+        light: { src: '/code/time-to-work/banner/banner-light.png', width: 2934, height: 1440 },
+        dark: { src: '/code/time-to-work/banner/banner-dark.png', width: 2934, height: 1440 }
+    },
+    table: {
+        light: { src: '/code/time-to-work/table-light.png', width: 1920, height: 640 },
+        dark: { src: '/code/time-to-work/table-dark.png', width: 1920, height: 640 }
+    },
+    timeline: {
+        light: { src: '/code/time-to-work/timeline-light.png', width: 1920, height: 640 },
+        dark: { src: '/code/time-to-work/timeline-dark.png', width: 1920, height: 640 }
+    },
+    publicTransport: {
+        light: { src: '/code/time-to-work/public-transport-light.png', width: 1920, height: 640 },
+        dark: { src: '/code/time-to-work/public-transport-dark.png', width: 1920, height: 640 }
+    },
+    overtime: {
+        light: { src: '/code/time-to-work/overtime-light.png', width: 1920, height: 640 },
+        dark: { src: '/code/time-to-work/overtime-dark.png', width: 1920, height: 640 }
+    }
+} as const satisfies Record<string, ThemeSwitch<CloudinaryImage>>;
