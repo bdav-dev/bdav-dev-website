@@ -8,6 +8,7 @@ import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol
 import InlineIcon from "@/components/InlineIcon";
 import CodeProjectTypeIcon from "@/categories/code/components/icon/CodeProjectTypeIcon";
 import CodeProjectStatusIcon from "@/categories/code/components/icon/CodeProjectStatusIcon";
+import GermanyFlag from "../../../../components/misc/GermanyFlag";
 
 
 type CodeProjectRibbonProps = {
@@ -33,6 +34,13 @@ export default function CodeProjectRibbon({ codeProject }: CodeProjectRibbonProp
                     <InlineIcon icon={<CodeProjectStatusIcon status={codeProject.status} weight={300}/>}>
                         {codeProject.status.label}
                     </InlineIcon>
+                </div>
+            }
+
+            {
+                codeProject.isGerman &&
+                <div className={'flex gap-1 items-center'}>
+                    <GermanyFlag size={'1.25rem'}/> German
                 </div>
             }
 

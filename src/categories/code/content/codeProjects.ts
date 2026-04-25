@@ -17,7 +17,8 @@ export type CodeProject = {
     codeLanguages: CodeLanguage[],
     status?: CodeProjectStatus,
     action?: CodeProjectAction,
-    accentColor?: string
+    accentColor?: string,
+    isGerman: boolean
 };
 
 export const CodeProjects: Record<CodeProjectId, CodeProject> = {
@@ -34,7 +35,8 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             url: "https://raw.githubusercontent.com/bdav-dev/create-blender-project/refs/heads/main/create-blender-project",
             fileName: "create-blender-project"
         },
-        accentColor: 'light-dark(#525252, #a3a3a3)'
+        accentColor: 'light-dark(#525252, #a3a3a3)',
+        isGerman: false
     },
     TimeToWork: {
         id: 'TimeToWork',
@@ -49,7 +51,8 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             type: 'Launch',
             url: "https://ttw-preview.bdav.dev/",
         },
-        accentColor: 'light-dark(#3b82f6, #60a5fa)'
+        accentColor: 'light-dark(#3b82f6, #60a5fa)',
+        isGerman: true
     },
     KdmFinder: {
         id: 'KdmFinder',
@@ -64,7 +67,8 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             url: 'https://github.com/bdav-dev/kdm-finder/archive/refs/heads/main.zip',
             fileName: 'kdm-finder-main.zip'
         },
-        accentColor: 'light-dark(#e65955, #f66864)'
+        accentColor: 'light-dark(#e65955, #f66864)',
+        isGerman: false
     },
     Timecoder: {
         id: 'Timecoder',
@@ -78,7 +82,8 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             type: 'Launch',
             url: 'https://timecoder.bdav.dev/',
         },
-        accentColor: 'light-dark(oklch(55.4% 0.046 257.417), oklch(70.4% 0.04 256.788))'
+        accentColor: 'light-dark(oklch(55.4% 0.046 257.417), oklch(70.4% 0.04 256.788))',
+        isGerman: false
     },
     RecipeHaven: {
         id: 'RecipeHaven',
@@ -89,6 +94,7 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         type: CodeProjectTypes.MobileApp,
         codeLanguages: [CodeLanguages.TypeScript],
         status: CodeProjectStatuses.Prototype,
-        accentColor: 'light-dark(#20B858, #4ade80)'
+        accentColor: 'light-dark(#20B858, #4ade80)',
+        isGerman: true
     }
 };
