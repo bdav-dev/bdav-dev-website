@@ -17,7 +17,7 @@ export default function TimeToWorkPage() {
     return (
         <CodeProjectLayout
             project={project}
-            banner={{ image: images.banner, className: 'brightness-90 dark:brightness-[70%]' }}
+            banner={{ image: images.banner, className: 'brightness-[80%] dark:brightness-[70%]' }}
         >
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>

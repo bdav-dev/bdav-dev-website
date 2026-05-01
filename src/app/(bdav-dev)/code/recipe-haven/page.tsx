@@ -16,7 +16,7 @@ export default function RecipeHavenPage() {
     return (
         <CodeProjectLayout
             project={project}
-            banner={{ image: images.banner, className: 'dark:brightness-75' }}
+            banner={{ image: images.banner, className: 'dark:brightness-[65%]' }}
         >
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>

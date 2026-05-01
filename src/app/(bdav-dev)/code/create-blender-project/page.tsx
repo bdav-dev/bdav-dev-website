@@ -24,7 +24,7 @@ export default function CreateBlenderProjectPage() {
             banner={
                 {
                     image: { src: '/code/create-blender-project/banner.png', height: 3500, width: 1440 },
-                    className: 'brightness-90 dark:brightness-75 invert dark:invert-0 hue-rotate-180 dark:hue-rotate-0'
+                    className: 'brightness-[75%] dark:brightness-[65%] invert dark:invert-0 hue-rotate-180 dark:hue-rotate-0'
                 }
             }
         >
