@@ -53,7 +53,7 @@ export default function Abstract3dImageDownloadTable(props: Abstract3dImageDownl
                                 </td>
 
                                 <td className={"text-right"}>
-                                    <DownloadButton url={download.downloadUrl} fileName={`${download.fileName}.${download.fileFormat}`}/>
+                                    <DownloadButton download={{ url: download.downloadUrl, fetch: true, fileName: `${download.fileName}.${download.fileFormat}` }}/>
                                 </td>
                             </tr>
                         )

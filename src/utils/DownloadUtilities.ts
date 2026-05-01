@@ -1,4 +1,7 @@
-export async function downloadFile(url: string, fileName: string) {
+
+export type Download = { url: string } & ({ fetch: false } | { fetch: true, fileName: string });
+
+export async function fetchDownloadFile(url: string, fileName: string) {
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`Failed to download file '${fileName}'.`);

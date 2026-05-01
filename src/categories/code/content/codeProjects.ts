@@ -1,9 +1,10 @@
 import { CodeLanguage, CodeLanguages } from "@/categories/code/content/codeLanguages";
 import { CodeProjectType, CodeProjectTypes } from "@/categories/code/content/codeProjectType";
 import { CodeProjectStatus, CodeProjectStatuses } from "@/categories/code/content/codeProjectStatus";
+import { Download } from "@/utils/DownloadUtilities";
 
 
-export type CodeProjectAction = ({ type: 'Launch' } | { type: 'Download', fileName: string }) & { url: string };
+export type CodeProjectAction = { url: string } & ({ type: 'Launch' } | ({ type: 'Download' } & Download));
 
 export type CodeProjectId = 'CreateBlenderProject' | 'TimeToWork' | 'KdmFinder' | 'Timecoder' | 'RecipeHaven';
 
@@ -33,7 +34,8 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         action: {
             type: 'Download',
             url: "https://raw.githubusercontent.com/bdav-dev/create-blender-project/refs/heads/main/create-blender-project",
-            fileName: "create-blender-project"
+            fileName: "create-blender-project",
+            fetch: true
         },
         accentColor: 'light-dark(#525252, #a3a3a3)',
         isGerman: false
@@ -65,7 +67,7 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         action: {
             type: 'Download',
             url: 'https://github.com/bdav-dev/kdm-finder/archive/refs/heads/main.zip',
-            fileName: 'kdm-finder-main.zip'
+            fetch: false
         },
         accentColor: 'light-dark(#e65955, #f66864)',
         isGerman: false

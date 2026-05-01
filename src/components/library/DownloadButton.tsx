@@ -2,14 +2,30 @@
 
 import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol";
 import { useState } from "react";
-import { downloadFile } from "../../utils/DownloadUtilities";
+import { Download, fetchDownloadFile } from "@/utils/DownloadUtilities";
+import HyperLink from "@/components/library/link/HyperLink";
 
-type DownloadButtonProps = {
-    url: string,
-    fileName: string
+type DownloadButtonProps = { download: Download };
+
+export default function DownloadButton({ download }: DownloadButtonProps) {
+    return download.fetch
+        ? <FetchDownloadButton url={download.url} fileName={download.fileName}/>
+        : <DownloadLink url={download.url}/>;
 }
 
-export default function DownloadButton(props: DownloadButtonProps) {
+function DownloadLink(props: { url: string }) {
+    return (
+        <HyperLink
+            href={props.url}
+            icon={<MaterialSymbol symbol={MaterialSymbols.DOWNLOAD} weight={350}/>}
+            discreet
+        >
+            Download
+        </HyperLink>
+    )
+}
+
+function FetchDownloadButton(props: { url: string, fileName: string }) {
     const [isDownloading, setIsDownloading] = useState(false);
 
     return (
@@ -23,7 +39,7 @@ export default function DownloadButton(props: DownloadButtonProps) {
             `}
             onClick={() => {
                 setIsDownloading(true);
-                downloadFile(props.url, props.fileName)
+                fetchDownloadFile(props.url, props.fileName)
                     .finally(() => setIsDownloading(false));
             }}
             disabled={isDownloading}

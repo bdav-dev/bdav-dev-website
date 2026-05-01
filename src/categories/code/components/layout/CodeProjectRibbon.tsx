@@ -59,7 +59,7 @@ export default function CodeProjectRibbon({ codeProject }: CodeProjectRibbonProp
 function renderAction(action: CodeProjectAction) {
     switch (action.type) {
         case "Download":
-            return <DownloadButton url={action.url} fileName={action.fileName}/>;
+            return <DownloadButton download={action}/>;
         case "Launch":
             return <LaunchLink href={action.url}/>;
     }

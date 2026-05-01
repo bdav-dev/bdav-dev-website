@@ -4,7 +4,7 @@ import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol
 import CodeProjectAppIcon from "@/categories/code/components/icon/CodeProjectAppIcon";
 import { CodeProject } from "@/categories/code/content/codeProjects";
 import { ComponentType, CSSProperties, ReactNode, useId, useState } from "react";
-import { downloadFile } from "../../../utils/DownloadUtilities";
+import { fetchDownloadFile } from "@/utils/DownloadUtilities";
 import Link from "next/link";
 
 
@@ -22,7 +22,7 @@ export default function CodeProjectAction(props: CodeProjectActionProps) {
     const [isDownloading, setIsDownloading] = useState(false);
 
     let Container: ComponentType<{ className?: string, children?: ReactNode }> = () => <></>;
-    if (action.type === 'Launch') {
+    if (action.type === 'Launch' || (action.type === 'Download' && !action.fetch)) {
         Container = ({ className, children }) =>
             <Link
                 href={action.url}
@@ -30,14 +30,14 @@ export default function CodeProjectAction(props: CodeProjectActionProps) {
             >
                 {children}
             </Link>
-    } else if (action.type === 'Download') {
+    } else if (action.type === 'Download' && action.fetch) {
         Container = ({ className, children }) =>
             <button
                 className={`${isDownloading && 'opacity-50 pointer-events-none'} ${className}`}
                 onClick={
                     () => {
                         setIsDownloading(true);
-                        downloadFile(action.url, action.fileName)
+                        fetchDownloadFile(action.url, action.fileName)
                             .finally(() => setIsDownloading(false))
                     }
                 }
@@ -72,7 +72,7 @@ export default function CodeProjectAction(props: CodeProjectActionProps) {
 
 function Arrow(props: { direction: 'left' | 'right' }) {
     const symbol = {
-        left:  MaterialSymbols.KEYBOARD_DOUBLE_ARROW_LEFT,
+        left: MaterialSymbols.KEYBOARD_DOUBLE_ARROW_LEFT,
         right: MaterialSymbols.KEYBOARD_DOUBLE_ARROW_RIGHT
     }[props.direction];
 
