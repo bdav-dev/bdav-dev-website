@@ -2,6 +2,7 @@ import { CodeLanguage, CodeLanguages } from "@/categories/code/content/codeLangu
 import { CodeProjectType, CodeProjectTypes } from "@/categories/code/content/codeProjectType";
 import { CodeProjectStatus, CodeProjectStatuses } from "@/categories/code/content/codeProjectStatus";
 import { Download } from "@/utils/DownloadUtilities";
+import { ThemeSwitch } from "@/contexts/ThemeContext";
 
 
 export type CodeProjectAction = { url: string } & ({ type: 'Launch' } | ({ type: 'Download' } & Download));
@@ -18,8 +19,9 @@ export type CodeProject = {
     codeLanguages: CodeLanguage[],
     status?: CodeProjectStatus,
     action?: CodeProjectAction,
+    isGerman: boolean,
     accentColor?: string,
-    isGerman: boolean
+    gradient: ThemeSwitch<{ from: string, via?: string, to: string }>
 };
 
 export const CodeProjects: Record<CodeProjectId, CodeProject> = {
@@ -37,8 +39,12 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             fileName: "create-blender-project",
             fetch: true
         },
+        isGerman: false,
         accentColor: 'light-dark(#525252, #a3a3a3)',
-        isGerman: false
+        gradient: {
+            light: { from: '#374151', via: '#404040', to: '#3f3f46' },
+            dark: { from: '#f3f4f6', via: '#f5f5f5', to: '#f4f4f5' }
+        }
     },
     TimeToWork: {
         id: 'TimeToWork',
@@ -53,8 +59,12 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             type: 'Launch',
             url: "https://ttw-preview.bdav.dev/",
         },
+        isGerman: true,
         accentColor: 'light-dark(#3b82f6, #60a5fa)',
-        isGerman: true
+        gradient: {
+            light: { from: '#0284c7', via: '#2563eb', to: '#4f46e5' },
+            dark: { from: '#38bdf8', via: '#60a5fa', to: '#818cf8' }
+        }
     },
     KdmFinder: {
         id: 'KdmFinder',
@@ -69,8 +79,12 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             url: 'https://github.com/bdav-dev/kdm-finder/archive/refs/heads/main.zip',
             fetch: false
         },
+        isGerman: false,
         accentColor: 'light-dark(#e65955, #f66864)',
-        isGerman: false
+        gradient: {
+            light: { from: '#f77e4a', to: '#ed4278' },
+            dark: { from: '#fb8a58', to: '#f05082' }
+        }
     },
     Timecoder: {
         id: 'Timecoder',
@@ -84,8 +98,9 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
             type: 'Launch',
             url: 'https://timecoder.bdav.dev/',
         },
+        isGerman: false,
         accentColor: 'light-dark(oklch(55.4% 0.046 257.417), oklch(70.4% 0.04 256.788))',
-        isGerman: false
+        gradient: { from: 'black', to: 'black' }
     },
     RecipeHaven: {
         id: 'RecipeHaven',
@@ -96,7 +111,11 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         type: CodeProjectTypes.MobileApp,
         codeLanguages: [CodeLanguages.TypeScript],
         status: CodeProjectStatuses.Prototype,
+        isGerman: true,
         accentColor: 'light-dark(#20B858, #4ade80)',
-        isGerman: true
+        gradient: {
+            light: { from: '#20B858', to: '#20B858' },
+            dark: { from: '#4ade80', to: '#4ade80' }
+        }
     }
 };

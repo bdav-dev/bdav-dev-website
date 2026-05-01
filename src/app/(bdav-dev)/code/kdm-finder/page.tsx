@@ -5,6 +5,7 @@ import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudina
 import Tile from "@/components/library/Tile";
 import React from "react";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
+import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 
 
 export default function KdmFinderPage() {
@@ -23,7 +24,7 @@ export default function KdmFinderPage() {
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>
                     <Tile className={"flex-1 text-center"}>
-                        <KdmFinderTitle/> is an application designed to help cinemas quickly find KDM files in their email accounts.
+                        <CodeProjectTitle project={project}/> is an application designed to help cinemas quickly find KDM files in their email accounts.
                     </Tile>
 
                     <SkeletonLoadingCloudinaryImage
@@ -46,21 +47,6 @@ export default function KdmFinderPage() {
                 </div>
             </ReadingLayout>
         </CodeProjectLayout>
-    );
-}
-
-function KdmFinderTitle() {
-    return (
-        <span
-            className={`
-                text-xl font-semibold
-                text-transparent bg-clip-text bg-gradient-to-br
-                from-[#f77e4a] to-[#ed4278]
-                dark:from-[#fb8a58]  dark:to-[#f05082]
-            `}
-        >
-            KDM-Finder
-        </span>
     );
 }
 

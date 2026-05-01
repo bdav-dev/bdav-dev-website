@@ -7,6 +7,7 @@ import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLa
 import ReadingLayout from "@/layout/ReadingLayout";
 import Terminal, { Path } from "@/components/library/Terminal";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
+import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function CreateBlenderProjectPage() {
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>
                     <Tile className={"flex-1 text-center"}>
-                        <CreateBlenderProjectTitle/> is a command-line tool designed to make starting new Blender projects faster and more organized.
+                        <CodeProjectTitle project={project}/> is a command-line tool designed to make starting new Blender projects faster and more organized.
                     </Tile>
 
                     <div className={"flex flex-col lg:flex-row gap-5"}>
@@ -56,21 +57,6 @@ export default function CreateBlenderProjectPage() {
                 </div>
             </ReadingLayout>
         </CodeProjectLayout>
-    );
-}
-
-function CreateBlenderProjectTitle() {
-    return (
-        <span
-            className={`
-                text-xl font-semibold
-                text-transparent bg-clip-text bg-gradient-to-br
-                from-gray-700 via-neutral-700 to-zinc-700
-                dark:from-gray-100 dark:via-neutral-100 dark:to-zinc-100
-            `}
-        >
-            create-blender-project
-        </span>
     );
 }
 

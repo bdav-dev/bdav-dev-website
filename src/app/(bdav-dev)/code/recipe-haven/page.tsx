@@ -7,6 +7,7 @@ import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudina
 import Phone from "@/components/library/Phone";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
 import { CloudinaryImage } from "@/cloudinary";
+import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 
 
 export default function RecipeHavenPage() {
@@ -21,7 +22,7 @@ export default function RecipeHavenPage() {
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>
                     <Tile className={"text-center"}>
-                        <RecipeHavenTitle/> is a mobile app for collecting your recipes and organizing your shopping list.
+                        <CodeProjectTitle project={project}/> is a mobile app for collecting your recipes and organizing your shopping list.
                     </Tile>
 
                     <div className={'flex justify-center'}>
@@ -114,14 +115,6 @@ export default function RecipeHavenPage() {
                 </div>
             </ReadingLayout>
         </CodeProjectLayout>
-    );
-}
-
-function RecipeHavenTitle() {
-    return (
-        <span className={'text-xl font-semibold text-[#20B858] dark:text-[#4ade80]'}>
-            Recipe Haven
-        </span>
     );
 }
 

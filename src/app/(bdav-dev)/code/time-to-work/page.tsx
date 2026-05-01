@@ -9,6 +9,7 @@ import { ThemeSwitch } from "@/contexts/ThemeContext";
 import { CloudinaryImage } from "@/cloudinary";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import { ContentImageSplit } from "@/components/library/ContentImageSplit";
+import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 
 
 export default function TimeToWorkPage() {
@@ -22,7 +23,7 @@ export default function TimeToWorkPage() {
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>
                     <Tile className={'text-center'}>
-                        <TimeToWorkTitle/> is a simple, browser-based work time dashboard that helps you keep track of your working hours throughout the day.
+                        <CodeProjectTitle project={project}/> is a simple, browser-based work time dashboard that helps you keep track of your working hours throughout the day.
                     </Tile>
 
                     <ContentImageSplit
@@ -104,21 +105,6 @@ function TimeToWorkImage(props: { image: ThemeSwitch<CloudinaryImage>, alt: stri
             quality={95}
             draggable={false}
         />
-    );
-}
-
-function TimeToWorkTitle() {
-    return (
-        <span
-            className={`
-                text-xl font-semibold
-                text-transparent bg-clip-text bg-gradient-to-br
-                from-sky-600 via-blue-600 to-indigo-600
-                dark:from-sky-400 dark:via-blue-400 dark:to-indigo-400
-            `}
-        >
-            time-to-work
-        </span>
     );
 }
 
