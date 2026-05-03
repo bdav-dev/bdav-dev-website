@@ -100,7 +100,10 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         },
         isGerman: false,
         accentColor: 'light-dark(oklch(55.4% 0.046 257.417), oklch(70.4% 0.04 256.788))',
-        gradient: { from: 'black', to: 'black' }
+        gradient: {
+            light: { from: '#64748b', via: '#6b7280', to: '#71717a' },
+            dark: { from: '#94a3b8', via: '#9ca3af', to: '#a1a1aa' }
+        }
     },
     RecipeHaven: {
         id: 'RecipeHaven',
