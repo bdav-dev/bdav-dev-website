@@ -10,7 +10,13 @@ import { CloudinaryImage } from "@/cloudinary";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import { ContentImageSplit } from "@/components/library/ContentImageSplit";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+    title: `${CodeProjects.TimeToWork.title} – bdav.dev`,
+    description: CodeProjects.TimeToWork.tagline
+}
 
 export default function TimeToWorkPage() {
     const project = CodeProjects.TimeToWork;

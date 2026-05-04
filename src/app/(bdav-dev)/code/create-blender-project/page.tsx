@@ -12,8 +12,7 @@ import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 
 export const metadata: Metadata = {
     title: `${CodeProjects.CreateBlenderProject.title} – bdav.dev`,
-    description: "A command line tool to create a new blender project with common directories.",
-    keywords: ["create-blender-project", "create blender project", "createBlenderProject"]
+    description: CodeProjects.CreateBlenderProject.tagline
 }
 
 export default function CreateBlenderProjectPage() {
@@ -40,7 +39,17 @@ export default function CreateBlenderProjectPage() {
                         <div className={"flex flex-col gap-5 flex-1"}>
                             <Tile className={"flex-1"}>
                                 Instead of manually creating folders and setting things up every time, the tool automatically generates a clean project structure with commonly used directories:
-                                <Enumerate indent items={['assets', 'blender-files', 'render-output', 'results']}/>
+                                <Enumerate
+                                    indent
+                                    items={
+                                        [
+                                            'assets',
+                                            'blender-files',
+                                            'render-output',
+                                            'results'
+                                        ]
+                                    }
+                                />
                             </Tile>
                             <Tile className={"flex-1"}>
                                 It also creates a ready-to-use Blender file named after your project, so you can jump straight into creating.

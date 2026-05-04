@@ -8,7 +8,13 @@ import Phone from "@/components/library/Phone";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
 import { CloudinaryImage } from "@/cloudinary";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+    title: `${CodeProjects.RecipeHaven.title} – bdav.dev`,
+    description: CodeProjects.RecipeHaven.tagline
+}
 
 export default function RecipeHavenPage() {
     const project = CodeProjects.RecipeHaven;

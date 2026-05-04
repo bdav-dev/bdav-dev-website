@@ -7,7 +7,13 @@ import { ThemeSwitch } from "@/contexts/ThemeContext";
 import { CloudinaryImage } from "@/cloudinary";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+    title: `${CodeProjects.Timecoder.title} – bdav.dev`,
+    description: CodeProjects.Timecoder.tagline
+}
 
 export default function TimecoderPage() {
     const project = CodeProjects.Timecoder;

@@ -6,7 +6,13 @@ import Tile from "@/components/library/Tile";
 import React from "react";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+    title: `${CodeProjects.KdmFinder.title} – bdav.dev`,
+    description: CodeProjects.KdmFinder.tagline
+}
 
 export default function KdmFinderPage() {
     const project = CodeProjects.KdmFinder;
