@@ -39,6 +39,7 @@ export default function RecipeHavenPage() {
                                     alt={'Ingredients'}
                                     image={images.ingredients}
                                     sharedClassName={'w-full h-full object-cover'}
+                                    draggable={false}
                                 />
                             }
                         />
@@ -57,6 +58,7 @@ export default function RecipeHavenPage() {
                                     alt={'Recipes'}
                                     image={images.recipes}
                                     sharedClassName={'w-full h-full object-cover'}
+                                    draggable={false}
                                 />
                             }
                         />
@@ -67,6 +69,7 @@ export default function RecipeHavenPage() {
                                     alt={'Cheeseburger recipe'}
                                     image={images.cheeseburgerRecipe}
                                     sharedClassName={'w-full h-full object-cover'}
+                                    draggable={false}
                                 />
                             }
                         />
@@ -77,6 +80,7 @@ export default function RecipeHavenPage() {
                                     alt={'Edit recipe'}
                                     image={images.editRecipe}
                                     sharedClassName={'w-full h-full object-cover'}
+                                    draggable={false}
                                 />
                             }
                         />
@@ -99,6 +103,7 @@ export default function RecipeHavenPage() {
                                     alt={'Shopping list'}
                                     image={images.shoppingList}
                                     sharedClassName={'w-full h-full object-cover'}
+                                    draggable={false}
                                 />
                             }
                         />
@@ -109,6 +114,7 @@ export default function RecipeHavenPage() {
                                     alt={'Checked off shopping list'}
                                     image={images.checkedOffShoppingList}
                                     sharedClassName={'w-full h-full object-cover'}
+                                    draggable={false}
                                 />
                             }
                         />

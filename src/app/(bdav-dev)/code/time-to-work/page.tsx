@@ -86,13 +86,14 @@ export default function TimeToWorkPage() {
                         reverse
                     />
 
-                    <Tile>
-                        The clean, modern interface, which uses the neumorphic design language, keeps everything easy to read and comfortable to use throughout the day.
-                        With both light and dark mode support, it adapts to your preference.
-                        The app data is stored locally in your browser, so your progress is still there when you come back.
-                    </Tile>
-
-                    <TimeToWorkImage alt={'time-to-work'} image={images.banner}/>
+                    <div className={'flex flex-col-reverse lg:flex-col gap-5'}>
+                        <Tile>
+                            The clean, modern interface, which uses the neumorphic design language, keeps everything easy to read and comfortable to use throughout the day.
+                            With both light and dark mode support, it adapts to your preference.
+                            The app data is stored locally in your browser, so your progress is still there when you come back.
+                        </Tile>
+                        <TimeToWorkImage alt={'time-to-work'} image={images.banner}/>
+                    </div>
 
                     <Tile className={'flex justify-center'}>
                         <CodeProjectAction project={project} message={'Try a preview!'}/>

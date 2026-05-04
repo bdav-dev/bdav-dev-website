@@ -35,7 +35,6 @@ export default function CreateBlenderProjectPage() {
                     </Tile>
 
                     <div className={"flex flex-col lg:flex-row gap-5"}>
-
                         <div className={"flex flex-col gap-5 flex-1"}>
                             <Tile className={"flex-1"}>
                                 Instead of manually creating folders and setting things up every time, the tool automatically generates a clean project structure with commonly used directories:
@@ -62,7 +61,6 @@ export default function CreateBlenderProjectPage() {
                     <Tile className={'flex justify-center'}>
                         <CodeProjectAction project={project}/>
                     </Tile>
-
                 </div>
             </ReadingLayout>
         </CodeProjectLayout>
