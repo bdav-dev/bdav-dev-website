@@ -32,8 +32,8 @@ function CodeProjectTypeSection(props: { type: CodeProjectType }) {
     return (
         <Section
             headline={
-                <div className={'flex flex-row items-center gap-2'}>
-                    <CodeProjectTypeIcon className={'text-[0.85em]'} type={props.type} weight={400}/>
+                <div className={'flex flex-row items-center gap-1.5'}>
+                    <CodeProjectTypeIcon className={'text-[0.8em]'} type={props.type} weight={400}/>
                     {props.type.pluralLabel}
                 </div>
             }
