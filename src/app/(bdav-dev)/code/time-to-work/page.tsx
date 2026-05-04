@@ -8,7 +8,7 @@ import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudina
 import { ThemeSwitch } from "@/contexts/ThemeContext";
 import { CloudinaryImage } from "@/cloudinary";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
-import { ContentImageSplit } from "@/components/library/ContentImageSplit";
+import { SplitLayout } from "@/components/library/layout/SplitLayout";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 import { Metadata } from "next";
 
@@ -32,8 +32,8 @@ export default function TimeToWorkPage() {
                         <CodeProjectTitle project={project}/> is a simple, browser-based work time dashboard that helps you keep track of your working hours throughout the day.
                     </Tile>
 
-                    <ContentImageSplit
-                        content={
+                    <SplitLayout
+                        left={
                             <Tile>
                                 Instead of relying on mental math, you can track your work and break time and instantly see where you stand.
                                 time-to-work gives you clear answers to the questions that matter, such as:
@@ -49,22 +49,22 @@ export default function TimeToWorkPage() {
                                 />
                             </Tile>
                         }
-                        image={<TimeToWorkImage alt={'Table'} image={images.table}/>}
+                        right={<TimeToWorkImage alt={'Table'} image={images.table}/>}
                     />
 
-                    <ContentImageSplit
-                        content={
+                    <SplitLayout
+                        left={
                             <Tile>
                                 You can log your time the way that feels most natural to you, either by logging timestamps or entering a time range manually.<br/>
                                 Everything is neatly presented on a timeline, so you always have a clear overview of your day.
                             </Tile>
                         }
-                        image={<TimeToWorkImage alt={'Timeline'} image={images.timeline}/>}
+                        right={<TimeToWorkImage alt={'Timeline'} image={images.timeline}/>}
                         reverse
                     />
 
-                    <ContentImageSplit
-                        content={
+                    <SplitLayout
+                        left={
                             <Tile>
                                 For commuters, time-to-work goes one step further:<br/>
                                 It helps you plan exactly when to leave your workplace so you can catch your next train or other public transport on time, taking into account walking time and train
@@ -72,17 +72,17 @@ export default function TimeToWorkPage() {
                                 No more guessing or rushing at the last minute!
                             </Tile>
                         }
-                        image={<TimeToWorkImage alt={'Public transport'} image={images.publicTransport}/>}
+                        right={<TimeToWorkImage alt={'Public transport'} image={images.publicTransport}/>}
                     />
 
-                    <ContentImageSplit
-                        content={
+                    <SplitLayout
+                        left={
                             <Tile>
                                 Based on your working hours, breaks, and overtime balance, the app continuously tracks your progress and estimates when your workday will end.<br/>
                                 If you decide to leave earlier, it also shows how that would affect your overtime balance.
                             </Tile>
                         }
-                        image={<TimeToWorkImage alt={'Overtime'} image={images.overtime}/>}
+                        right={<TimeToWorkImage alt={'Overtime'} image={images.overtime}/>}
                         reverse
                     />
 
