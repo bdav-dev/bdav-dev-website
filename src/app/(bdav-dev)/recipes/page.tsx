@@ -1,8 +1,12 @@
 import RecipeLink from "@/components/link/content/RecipeLink";
-import { defaultMetadata } from "@/metadata";
 import Section from "@/components/layout/document/Section";
 import { recipes } from "@/categories/recipes/recipes";
 import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: `bdav.dev – Recipes`,
+    description: "Recipes from David Berezowski."
+}
 
 export default function RecipesPage() {
     return (
@@ -18,8 +22,3 @@ export default function RecipesPage() {
     );
 }
 
-export const metadata: Metadata = {
-    title: `bdav.dev – Recipes`,
-    description: "Recipes from David Berezowski.",
-    ...defaultMetadata(["Recipes", "Recipe"])
-}

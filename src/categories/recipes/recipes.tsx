@@ -1,86 +1,83 @@
-import { StaticImageData } from "next/image"
-import cheeseburgerImages from "./images/cheeseburgerImages";
-import React from "react";
+import { CloudinaryImage } from "@/cloudinary";
+
+
+export type RecipeId = 'Cheeseburger';
+
+type RecipeCategory = 'Mains';
 
 export type Recipe = {
+    id: RecipeId,
     routeSegment: string,
     title: string,
-
-    badgeHoverText?: string | React.ReactNode,
-    image: StaticImageData,
-
-    customDropdownText?: string | React.ReactNode,
-
+    tagline: string,
+    category: RecipeCategory,
+    image: CloudinaryImage,
+    servings: number,
     ingredients: Ingredient[]
 }
-
 
 export type Ingredient = {
     name: string,
     pluralName?: string,
-    unit: Unit,
-    productRecommendation?: React.ReactNode
-    image: StaticImageData,
-    customImagePadding?: string
-} & (
-    | { unit: "Gram" | "Piece"; amount: number }
-    | { unit: "None"; amount: string }
-    )
+    productRecommendation?: string
+    image: CloudinaryImage
+} & Quantity;
 
-type Unit = "Gram" | "None" | "Piece";
+type Quantity =
+    | { amount: number, unit: 'Gram' | 'Piece' }
+    | { amount: string, unit: 'None' };
 
+const placeholderImage: CloudinaryImage = { src: "", height: 0, width: 0 }
 
-type Recipes = {
-    [key: string]: Recipe
-}
-
-export const recipes: Recipes = {
-    cheeseburger: {
+export const Recipes: Record<RecipeId, Recipe> = {
+    Cheeseburger: {
+        id: 'Cheeseburger',
         routeSegment: 'cheeseburger',
-        title: "Cheeseburger",
-        badgeHoverText: <span className="text-white">Cheeseburger</span>,
-        image: cheeseburgerImages.cheeseburger,
+        title: 'Cheeseburger',
+        tagline: 'A true American classic.',
+        category: 'Mains',
+        image: placeholderImage,
+        servings: 1,
         ingredients: [
             {
-                name: "Brioche Burger Buns with Sesame Seeds",
+                name: "Brioche burger buns with sesame seeds",
                 unit: "Piece",
                 amount: 1,
-                image: cheeseburgerImages.buns
+                image: placeholderImage
             },
             {
-                name: "Burger Sauce",
+                name: "Burger sauce",
                 amount: "some",
                 unit: "None",
-                productRecommendation: <>Nawhal's Biggy Burger Sauce</>,
-                image: cheeseburgerImages.sauce,
-                customImagePadding: "p-4"
+                productRecommendation: "Nawhal's Biggy Burger Sauce",
+                image: placeholderImage
             },
             {
-                name: "Large Onion",
-                pluralName: "Large Onions",
+                name: "Large onion",
+                pluralName: "Large onions",
                 amount: 0.5,
                 unit: "Piece",
-                image: cheeseburgerImages.onion
+                image: placeholderImage
             },
             {
-                name: "Iceberg Lettuce Leaf",
-                pluralName: "Iceberg Lettuce Leaves",
+                name: "Iceberg lettuce leaf",
+                pluralName: "Iceberg lettuce leaves",
                 amount: 2,
                 unit: "Piece",
-                image: cheeseburgerImages.lettuce
+                image: placeholderImage
             },
             {
-                name: "Cheddar Cheese Slice",
-                pluralName: "Cheddar Cheese Slices",
+                name: "Cheddar cheese slice",
+                pluralName: "Cheddar cheese slices",
                 amount: 2,
                 unit: "Piece",
-                image: cheeseburgerImages.cheese
+                image: placeholderImage
             },
             {
-                name: "Minced Meat",
+                name: "Minced meat",
                 amount: 100,
                 unit: "Gram",
-                image: cheeseburgerImages.mincedMeat
+                image: placeholderImage
             }
         ]
     }
@@ -151,47 +148,3 @@ const ingredientAsStringFunctions: {
 }
 
 
-class Fraction {
-    whole: number;
-    numerator: number
-    denominator: number
-
-    constructor(number: number) {
-        this.numerator = number;
-        this.denominator = 1;
-        this.whole = 0;
-        this.shorten();
-    }
-
-    private gcd(a: number, b: number) {
-        while (b) {
-            [a, b] = [b, a % b];
-        }
-        return a;
-    }
-
-    private shorten() {
-        const commonDivisor = this.gcd(this.numerator, this.denominator);
-        this.numerator /= commonDivisor;
-        this.denominator /= commonDivisor;
-
-        // normalize
-        const sign = Math.sign(this.numerator);
-        const absNumerator = Math.abs(this.numerator);
-        const wholePart = Math.floor(absNumerator / this.denominator);
-
-        this.whole += sign * wholePart;
-        this.numerator = absNumerator % this.denominator;
-    }
-
-    toString() {
-        if (this.whole === 0)
-            return `${this.numerator}/${this.denominator}`
-
-        else if (this.numerator === 0)
-            return `${this.whole}`;
-
-        else
-            return `${this.whole} ${this.numerator}/${this.denominator}`
-    }
-}

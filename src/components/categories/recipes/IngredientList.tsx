@@ -13,7 +13,7 @@ type IngredientListProps = {
 export default function IngredientList(props: IngredientListProps) {
     let [numberOfPortions, setNumberOfPortions] = useState(1);
 
-    let ingredients = [...props.recipe.ingredients];
+    let ingredients = [...props.recipe.recipe];
 
     return (
         <Tile className="h-full mt-1">
