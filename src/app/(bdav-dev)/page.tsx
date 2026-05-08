@@ -3,7 +3,6 @@
 import LargeLink from "@/components/library/link/LargeLink";
 import Abstract3dImageLink, { Abstract3dImageLinkPlaceholder } from "@/categories/3d/a3ds/components/Abstract3dImageLink";
 import CodeProjectLink, { CodeProjectLinkPlaceholder } from "@/categories/code/components/CodeProjectLink";
-import RecipeLink, { RecipeLinkPlaceholder } from "@/components/link/content/RecipeLink";
 import GitHubLink from "@/components/link/social/GitHubLink";
 import InstagramLink from "@/components/link/social/InstagramLink";
 import LinkedInLink from "@/components/link/social/LinkedInLink";
@@ -14,7 +13,6 @@ import DEPRECATED_HStack from "@/components/library/stacks/DEPRECATED_HStack";
 import DEPRECATED_VStack from "@/components/library/stacks/DEPRECATED_VStack";
 import { Abstract3dImage, Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import { CodeProject, CodeProjects } from "@/categories/code/content/codeProjects";
-import { Recipe, recipes } from "@/categories/recipes/recipes";
 import CubeIcon from "@/icons/CubeIcon";
 import CodeIcon from "@/icons/deprecated/CodeIcon";
 import RecipesIcon from "@/icons/deprecated/RecipiesIcon";
@@ -27,7 +25,6 @@ import { BdavDev } from "@/routing";
 
 export default function HomePage() {
     let [featuredCodeProject, setFeaturedCodeProject] = useState<CodeProject>();
-    let [featuredRecipe, setFeaturedRecipe] = useState<Recipe>();
     let [featuredAbstract3D, setFeaturedAbstract3D] = useState<Abstract3dImage>();
     let [isNewAbstract3D, setIsNewAbstract3D] = useState(false);
 
@@ -45,7 +42,6 @@ export default function HomePage() {
 
     useEffect(() => {
         setFeaturedCodeProject(chooseRandom(Object.values(CodeProjects)));
-        setFeaturedRecipe(chooseRandom(Object.values(recipes)));
         setAbstract3D();
     }, []);
 
@@ -133,20 +129,6 @@ export default function HomePage() {
 
                     <div className="flex flex-col grow">
                         <span className="pl-0.5">Featured Recipe</span>
-
-                        <Tile
-                            className="p-5 grow"
-                            customPadding
-                        >
-                            <div
-                                className="flex justify-center items-center h-full">
-                                {
-                                    featuredRecipe
-                                        ? <RecipeLink recipe={featuredRecipe}/>
-                                        : <RecipeLinkPlaceholder/>
-                                }
-                            </div>
-                        </Tile>
                     </div>
                 </DEPRECATED_HStack>
 
