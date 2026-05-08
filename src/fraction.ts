@@ -1,12 +1,12 @@
 export default class Fraction {
-    #whole: number;
+    private whole: number;
     private numerator: number;
     private denominator: number;
 
     public constructor(numerator: number, denominator: number = 1) {
         this.numerator = numerator;
         this.denominator = denominator;
-        this.#whole = 0;
+        this.whole = 0;
         this.reduce();
     }
 
@@ -32,6 +32,14 @@ export default class Fraction {
 
     public getWhole(): number {
         return this.whole;
+    }
+
+    public getNumerator(): number {
+        return this.numerator;
+    }
+
+    public getDenominator(): number {
+        return this.denominator;
     }
 
     public toString() {
