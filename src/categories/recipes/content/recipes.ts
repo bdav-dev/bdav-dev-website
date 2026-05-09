@@ -1,8 +1,7 @@
 import { CloudinaryImage } from "@/cloudinary";
 import Fraction from "@/fraction";
+import { RecipeCategories, RecipeCategory } from "@/categories/recipes/content/recipeCategory";
 
-
-type RecipeCategory = 'Mains';
 
 export type RecipeId = 'Cheeseburger';
 
@@ -22,16 +21,14 @@ export type Ingredient = {
     pluralName?: string,
     productRecommendation?: string
     image: CloudinaryImage
-};
-
-export type MeasuredIngredient = Ingredient & Quantity;
-
-export type IngredientFromRecipe = { ingredient: MeasuredIngredient, forServings: number };
+}
+export type MeasuredIngredient = Ingredient & Quantity
+export type IngredientFromRecipe = { ingredient: MeasuredIngredient, forServings: number }
 
 type Quantity =
     | { amount: number, unit: 'Gram' }
     | { amount: number, unit: 'Piece' }
-    | { amount: string, unit: 'None' };
+    | { amount: string, unit: 'None' }
 
 const placeholderImage: CloudinaryImage = { src: "", height: 0, width: 0 };
 
@@ -41,7 +38,7 @@ export const Recipes: Record<RecipeId, Recipe> = {
         routeSegment: 'cheeseburger',
         title: 'Cheeseburger',
         tagline: 'A true American classic.',
-        category: 'Mains',
+        category: RecipeCategories.MainCourse,
         image: placeholderImage,
         servings: 1,
         ingredients: [
@@ -102,9 +99,8 @@ export function toAppliedServings(ingredientFromRecipe: IngredientFromRecipe, se
     return {
         ...ingredientFromRecipe.ingredient,
         amount: (ingredientFromRecipe.ingredient.amount / ingredientFromRecipe.forServings) * servings
-    }
+    };
 }
-
 
 export function getFormattedIngredientAmount(ingredient: MeasuredIngredient) {
     switch (ingredient.unit) {
@@ -140,5 +136,5 @@ function getFormattedIngredientAmountForNoneUnit(ingredient: MeasuredIngredient 
     return {
         name: ingredient.name,
         amount: ingredient.amount
-    }
+    };
 }
