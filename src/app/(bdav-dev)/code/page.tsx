@@ -21,7 +21,8 @@ export default function CodePage() {
             </Tile>
             <Article headline={'Projects'}>
                 {
-                    Object.values(CodeProjectTypes).map((type, index) => <CodeProjectTypeSection type={type} key={index}/>)
+                    Object.values(CodeProjectTypes)
+                        .map((type, index) => <CodeProjectTypeSection type={type} key={index}/>)
                 }
             </Article>
         </div>
