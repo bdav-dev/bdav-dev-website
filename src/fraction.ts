@@ -30,6 +30,10 @@ export default class Fraction {
         return a;
     }
 
+    public asDecimal() {
+        return this.whole + this.numerator / this.denominator;
+    }
+
     public getWhole(): number {
         return this.whole;
     }
