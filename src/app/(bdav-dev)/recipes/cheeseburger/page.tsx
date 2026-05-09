@@ -1,6 +1,6 @@
 import DEPRECATED_VStack from "@/components/library/stacks/DEPRECATED_VStack";
 import { Recipes } from "@/categories/recipes/content/recipes";
-import RecipeLayout from "@/layout/content/RecipeLayout";
+import RecipeLayout from "@/categories/recipes/components/layout/RecipeLayout";
 import Section from "@/components/layout/document/Section";
 import LargeBreak from "@/components/library/spacing/LargeBreak";
 import RecipeStep from "@/components/categories/recipes/RecipeStep";

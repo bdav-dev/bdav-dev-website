@@ -1,12 +1,13 @@
-import H1 from '@/components/library/headlines/H1';
-import { Recipe } from '@/categories/recipes/content/recipes';
-import IngredientList from '@/components/categories/recipes/IngredientList';
-import React from "react";
+import { Recipe } from "@/categories/recipes/content/recipes";
+import H1 from "@/components/library/headlines/H1";
+import IngredientList from "@/components/categories/recipes/IngredientList";
+import { ReactNode } from "react";
+import RecipeCategoryTag from "@/categories/recipes/components/RecipeCategoryTag";
 
 
 type RecipeLayoutProps = {
     recipe: Recipe
-    children?: React.ReactNode
+    children?: ReactNode
 }
 
 export default function RecipeLayout(props: RecipeLayoutProps) {
@@ -28,8 +29,12 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
                     `}
                 />
 
-                <div className="flex-grow">
+                <div className={"flex-grow flex flex-col gap-1.5"}>
                     <H1>{props.recipe.title}</H1>
+                    <div className={"flex flex-row gap-1.5"}>
+                        <RecipeCategoryTag category={props.recipe.category}/>
+                        <div>{props.recipe.tagline}</div>
+                    </div>
                     <IngredientList recipe={props.recipe}/>
                 </div>
             </div>
