@@ -1,12 +1,11 @@
 
-
 export type CodeProjectTypeId = 'WebApplication' | 'MobileApp' | 'DesktopApplication' | 'CLI_Tool';
 
 export type CodeProjectType = {
     id: CodeProjectTypeId,
     label: string,
     pluralLabel: string
-};
+}
 
 export const CodeProjectTypes = {
     WebApplication: {
