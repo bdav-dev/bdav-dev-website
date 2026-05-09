@@ -1,5 +1,5 @@
 import DEPRECATED_VStack from "@/components/library/stacks/DEPRECATED_VStack";
-import { recipes } from "@/categories/recipes/recipes";
+import { Recipes } from "@/categories/recipes/content/recipes";
 import RecipeLayout from "@/layout/content/RecipeLayout";
 import Section from "@/components/layout/document/Section";
 import LargeBreak from "@/components/library/spacing/LargeBreak";
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function CheeseburgerPage() {
     return (
-        <RecipeLayout recipe={recipes.cheeseburger}>
+        <RecipeLayout recipe={Recipes.Cheeseburger}>
             <ReadingLayout>
                 <Section headline="Cooking instructions">
                     

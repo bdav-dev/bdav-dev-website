@@ -1,7 +1,8 @@
 import { CodeProject } from "@/categories/code/content/codeProjects";
-import { Recipe } from "@/categories/recipes/recipes";
+import { Recipe } from "@/categories/recipes/content/recipes";
 import { Abstract3dCollection } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
+
 
 export const BdavDev = {
     getRoute: () => '/',
@@ -43,7 +44,6 @@ export const BdavDev = {
         getRoute: () => '/legal-notice',
     }
 } as const;
-
 
 export function getBaseOfRoute(route: string) {
     return route.split("/").slice(0, 2).join("/");

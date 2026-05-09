@@ -1,6 +1,6 @@
 import RecipeLink from "@/components/link/content/RecipeLink";
 import Section from "@/components/layout/document/Section";
-import { recipes } from "@/categories/recipes/recipes";
+import { Recipes } from "@/categories/recipes/content/recipes";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function RecipesPage() {
         <Section headline="Recipes">
             <div className="mt-2.5 flex flex-row flex-wrap gap-2.5 justify-center sm:justify-normal">
                 {
-                    Object.values(recipes).map(
+                    Object.values(Recipes).map(
                         (recipe, index) => <RecipeLink recipe={recipe} key={index}/>
                     )
                 }

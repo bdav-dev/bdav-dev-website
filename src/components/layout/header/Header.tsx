@@ -6,13 +6,13 @@ import CodeIcon from "@/icons/deprecated/CodeIcon";
 import DropdownMenu from "./DropdownMenu";
 import InstagramIcon from "@/icons/deprecated/InstagramIcon";
 import { CodeProjects } from "@/categories/code/content/codeProjects";
-import { recipes } from "@/categories/recipes/recipes";
 import GitHubIcon from "@/icons/logos/GitHubIcon";
 import VerticalRuler from "@/components/library/VerticalRuler";
 import ThemeToggle from "@/components/theme/ThemeToggle";
 import { usePathname } from "next/navigation";
 import BdavDevHomeLink from "@/components/layout/header/BdavDevHomeLink";
 import { BdavDev } from "@/routing";
+import { Recipes } from "@/categories/recipes/content/recipes";
 
 
 export default function Header() {
@@ -102,11 +102,11 @@ export default function Header() {
                                 <DropdownMenu
                                     groups={
                                         [
-                                            Object.values(recipes).map(
+                                            Object.values(Recipes).map(
                                                 recipe => (
                                                     {
                                                         href: BdavDev.recipes.$recipe.getRoute({ recipe }),
-                                                        text: recipe.customDropdownText ?? recipe.title
+                                                        text: recipe.title
                                                     }
                                                 )
                                             )

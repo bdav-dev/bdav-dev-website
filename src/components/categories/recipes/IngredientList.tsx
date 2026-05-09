@@ -1,7 +1,7 @@
 'use client';
 
 import Tile from "@/components/library/Tile";
-import { Recipe } from "@/categories/recipes/recipes";
+import { Recipe, toAppliedServings } from "@/categories/recipes/content/recipes";
 import { useState } from "react";
 import IngredientCard from "./IngredientCard";
 import NumberInput from "@/components/library/input/NumberInput";
@@ -13,7 +13,7 @@ type IngredientListProps = {
 export default function IngredientList(props: IngredientListProps) {
     let [numberOfPortions, setNumberOfPortions] = useState(1);
 
-    let ingredients = [...props.recipe.recipe];
+    let ingredients = [...props.recipe.ingredients];
 
     return (
         <Tile className="h-full mt-1">
@@ -33,8 +33,7 @@ export default function IngredientList(props: IngredientListProps) {
                         ingredients.map(
                             (ingredient, index) => (
                                 <IngredientCard
-                                    ingredient={ingredient}
-                                    numberOfPortions={numberOfPortions}
+                                    ingredient={toAppliedServings({ ingredient, forServings: props.recipe.servings }, numberOfPortions)}
                                     key={index}
                                 />
                             )

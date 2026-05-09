@@ -1,17 +1,17 @@
-import { Ingredient, ingredientAsString } from "@/categories/recipes/recipes";
-import Image from "next/image";
+import { getFormattedIngredientAmount, MeasuredIngredient } from "@/categories/recipes/content/recipes";
 import RecommendationStar from "./RecommendationStar";
 
+
 type IngredientCardProps = {
-    ingredient: Ingredient,
-    numberOfPortions: number
+    ingredient: MeasuredIngredient
 }
 
 export default function IngredientCard(props: IngredientCardProps) {
-    const ingredientString = ingredientAsString(props.ingredient, props.numberOfPortions);
+    const formattedIngredientAmount = getFormattedIngredientAmount(props.ingredient);
 
     return (
-        <div className={`
+        <div
+            className={`
                 w-56 h-52
                 bg-zinc-200 dark:bg-zinc-800
                 border
@@ -22,16 +22,8 @@ export default function IngredientCard(props: IngredientCardProps) {
                 >overflow-hidden
             `}
         >
-            <Image
-                src={props.ingredient.image}
-                alt={props.ingredient.name}
-                className={`
-                    ${props.ingredient.customImagePadding ?? "p-1.5"}
-                    h-2/3 object-contain select-none rounded-xl drop-shadow-md
-                `}
-                draggable="false"
-                placeholder="blur"
-            />
+            { /* Placeholder */ }
+            <div className={'skeleton p-1.5 h-2/3 object-contain select-none rounded-xl drop-shadow-md'}/>
 
             {
                 props.ingredient.productRecommendation &&
@@ -47,14 +39,13 @@ export default function IngredientCard(props: IngredientCardProps) {
                 `}
             >
                 <div className="h-full w-24 flex justify-center items-center bg-zinc-350 dark:bg-zinc-950">
-                    {ingredientString.amount}
+                    {formattedIngredientAmount.amount}
                 </div>
 
                 <div className="h-fit w-full text-center p-1 leading-tight">
-                    {ingredientString.name}
+                    {formattedIngredientAmount.name}
                 </div>
             </div>
-
         </div>
     );
 }
