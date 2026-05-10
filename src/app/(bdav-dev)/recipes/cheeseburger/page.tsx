@@ -10,7 +10,7 @@ import ReadingLayout from "@/layout/ReadingLayout";
 
 
 export const metadata: Metadata = {
-    title: `Cheeseburger - bdav.dev`,
+    title: `${Recipes.Cheeseburger.title} – bdav.dev`,
     description: "Cheeseburger recipe from David Berezowski."
 }
 
