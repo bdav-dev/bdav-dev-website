@@ -1,5 +1,5 @@
 import { getFormattedIngredientAmount, MeasuredIngredient } from "@/categories/recipes/content/recipes";
-import RecommendationStar from "./RecommendationStar";
+import RecommendationStar from "@/components/categories/recipes/RecommendationStar";
 
 
 type IngredientCardProps = {
@@ -19,7 +19,6 @@ export default function IngredientCard(props: IngredientCardProps) {
                 rounded-2xl
                 flex flex-col
                 relative
-                >overflow-hidden
             `}
         >
             { /* Placeholder */ }
