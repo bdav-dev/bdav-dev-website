@@ -10,31 +10,37 @@ type RecipeLinkProps = {
 
 export default function RecipeLink({ recipe }: RecipeLinkProps) {
     return (
-        <Link className="w-fit rounded-full" href={BdavDev.recipes.$recipe.getRoute({ recipe })} draggable={false}>
-
-            <div className={`
-                >border dark:border-zinc-800 border-zinc-400
-                w-56 h-56
-                overflow-hidden
-                flex items-center relative
-                rounded-full
+        <Link
+            href={BdavDev.recipes.$recipe.getRoute({ recipe })}
+            draggable={false}
+            className={`
+                flex items-center justify-center relative
+                w-56 h-56 rounded-full
+                bg-tile overflow-clip
                 group
-                bg-zinc-100 dark:bg-zinc-850
-            `}>
-                <div className={`
+            `}
+        >
+            <div
+                className={`
+                    absolute z-10
                     text-2xl text-center select-none
-                    absolute
-                    transition-all opacity-0 group-hover:opacity-100 -translate-y-32 ease-out duration-300 group-hover:translate-y-0
-                    z-10 left-0 right-0
-                    ml-auto mr-auto w-fit
-                `}>
-                    {recipe.title}
-                </div>
-
-                { /* Placeholder */ }
-                <div className={'w-full h-full skeleton transition-all duration-300 group-hover:blur-md p-3.5'}/>
+                    transition-all ease-out duration-300
+                    opacity-0 group-hover:opacity-100
+                    -translate-y-32  group-hover:translate-y-0
+                `}
+            >
+                {recipe.title}
             </div>
 
+            { /* Placeholder */ }
+            <div
+                className={`
+                    skeleton w-full h-full p-3.5
+                    transition-all duration-300
+                    group-hover:blur-md
+                    group-hover:brightness-75
+                `}
+            />
         </Link>
     );
 }
