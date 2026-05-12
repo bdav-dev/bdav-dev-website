@@ -43,7 +43,7 @@ export const Recipes: Record<RecipeId, Recipe> = {
         servings: 1,
         ingredients: [
             {
-                name: "Brioche burger buns",
+                name: "Brioche burger buns with sesame seeds",
                 amount: 1,
                 unit: "Piece",
                 image: placeholderImage
