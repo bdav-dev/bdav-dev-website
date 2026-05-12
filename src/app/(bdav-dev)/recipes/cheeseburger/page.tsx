@@ -1,12 +1,11 @@
-import DEPRECATED_VStack from "@/components/library/stacks/DEPRECATED_VStack";
 import { Recipes } from "@/categories/recipes/content/recipes";
 import RecipeLayout from "@/categories/recipes/components/layout/RecipeLayout";
 import Section from "@/components/layout/document/Section";
 import LargeBreak from "@/components/library/spacing/LargeBreak";
-import RecipeStep from "@/components/categories/recipes/RecipeStep";
-import BonAppetitMessage from "@/components/categories/recipes/BonAppetitMessage";
+import EnjoyYourMealMessage from "@/categories/recipes/components/EnjoyYourMealMessage";
 import { Metadata } from "next";
 import ReadingLayout from "@/layout/ReadingLayout";
+import Tile from "@/components/library/Tile";
 
 
 export const metadata: Metadata = {
@@ -19,43 +18,41 @@ export default function CheeseburgerPage() {
         <RecipeLayout recipe={Recipes.Cheeseburger}>
             <ReadingLayout>
                 <Section headline="Cooking instructions">
-                    
-                    <DEPRECATED_VStack className="gap-4 mt-3">
-
-                        <RecipeStep title="Slice onions" imageStart>
+                    <div className={'flex flex-col gap-5'}>
+                        <Tile title={'Slice onions'}>
                             Start by slicing the onion(s) into rings or half rings.
                             Do not slice them too thin. Use the image above as a reference.
-                        </RecipeStep>
+                        </Tile>
 
-                        <RecipeStep title="Cook onions">
+                        <Tile title={'Cook onions'}>
                             Add cooking oil to a pan and fry the onions until light brown spots appear.
                             Keep them juicy, so as not to overcook them.
                             Keep the prepared onions warm.
-                        </RecipeStep>
+                        </Tile>
 
-                        <RecipeStep title="Wash lettuce leaves">
+                        <Tile title={'Wash lettuce leaves'}>
                             Next, wash and portion the lettuce leaves,
                             ensuring they match the approximate diameter of the burger buns.
-                        </RecipeStep>
+                        </Tile>
 
-                        <RecipeStep title="Prepare cheese slices">
-                            Take the cheese slices out of the fridge and protion them.
-                        </RecipeStep>
+                        <Tile title={'Prepare cheese slices'}>
+                            Take the cheese slices out of the fridge and portion them.
+                        </Tile>
 
-                        <RecipeStep title="Form patties">
+                        <Tile title={'Form patties'}>
                             For the burger patties, take 100g of minced meat per patty,
                             mix it with salt and pepper evenly and shape it slightly larger than
                             the burger buns to account for shrinkage during cooking.<br/>
                             At the end, season both sides of the raw patty with salt and pepper.
-                        </RecipeStep>
+                        </Tile>
 
-                        <RecipeStep title="Prepare burger buns and preheat pan">
+                        <Tile title={'Prepare burger buns and preheat pan'}>
                             Have the burger buns and sauce ready.<br/>
                             Preheat a pan with cooking oil for the burger patties at high temperature.
                             Start toasting the burger buns in a toaster or another pan.
-                        </RecipeStep>
+                        </Tile>
 
-                        <RecipeStep title="Frying">
+                        <Tile title={'Frying'}>
                             Once the pan is hot, cook the patties, turning them regularly
                             (about one minute per side) until a good crust forms on both sides.
                             Lower the heat and cook to your preferred level, be it medium rare or well-done.
@@ -63,28 +60,25 @@ export default function CheeseburgerPage() {
                             <LargeBreak/>
                             As the patty nears completion, place 2 cheese slices on top of the patty to melt.
                             Feel free to turn the patty around to speed up the cheese melting process.
-                        </RecipeStep>
+                        </Tile>
 
-                        <RecipeStep title="Burger assembly">
+                        <Tile title={'Burger assembly'}>
                             Simultaneously, assemble the burger by taking out the toasted buns,
                             allowing them to cool slightly (about 30 seconds).
                             Apply the following ingredients on both buns in order: preferred amount of burger sauce,
                             some fried onions and 1 lettuce leaf per bun.
-                        </RecipeStep>
+                        </Tile>
 
-                        <RecipeStep title="Serve">
+                        <Tile title={'Serve'}>
                             When everything is ready, place the patty with the melted cheese onto the burger and serve.
-                        </RecipeStep>
+                        </Tile>
 
-                        <BonAppetitMessage>
+                        <EnjoyYourMealMessage>
                             Enjoy your delicious homemade burger!
-                        </BonAppetitMessage>
-
-                    </DEPRECATED_VStack>
-
+                        </EnjoyYourMealMessage>
+                    </div>
                 </Section>
             </ReadingLayout>
-
         </RecipeLayout>
     );
 }

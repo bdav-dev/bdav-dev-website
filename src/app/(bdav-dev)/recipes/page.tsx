@@ -1,4 +1,4 @@
-import RecipeLink from "@/components/link/content/RecipeLink";
+import RecipeLink from "@/categories/recipes/components/RecipeLink";
 import { Recipes } from "@/categories/recipes/content/recipes";
 import { Metadata } from "next";
 import Article from "@/components/layout/document/Article";
@@ -7,8 +7,8 @@ import { RecipeCategories, RecipeCategory } from "@/categories/recipes/content/r
 
 
 export const metadata: Metadata = {
-    title: `Recipes – bdav.dev`,
-    description: "Recipes from David Berezowski."
+    title: 'Recipes – bdav.dev',
+    description: 'Recipes from David Berezowski.'
 }
 
 export default function RecipesPage() {

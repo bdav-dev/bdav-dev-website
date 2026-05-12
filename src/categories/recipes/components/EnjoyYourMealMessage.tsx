@@ -1,12 +1,13 @@
 import Tile from "@/components/library/Tile";
 import CutleryIcon from "@/icons/deprecated/CutleryIcon";
-import React from "react";
+import { ReactNode } from "react";
 
-type BonAppetitMessageProps = {
-    children: React.ReactNode
+type EnjoyYourMealMessageProps = {
+    children?: ReactNode
 }
 
-export default function BonAppetitMessage(props: BonAppetitMessageProps) {
+export default function EnjoyYourMealMessage(props: EnjoyYourMealMessageProps) {
+    // TODO: Refactor; Add big image
     return (
         <Tile className="text-center font-semibold">
             {props.children}
