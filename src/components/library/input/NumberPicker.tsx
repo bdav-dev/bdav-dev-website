@@ -1,4 +1,5 @@
 import React, { Dispatch, MouseEventHandler, ReactNode, SetStateAction } from "react";
+import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol";
 
 
 type NumberPickerProps = {
@@ -39,11 +40,11 @@ export default function NumberPicker(props: NumberPickerProps) {
 
             <div className={"flex flex-col gap-1"}>
                 <NumberPickerButton onClick={increment}>
-                    <span className="font-bold text-sm">+</span>
+                    <MaterialSymbol symbol={MaterialSymbols.ADD} className={'text-[0.9em]'}/>
                 </NumberPickerButton>
 
                 <NumberPickerButton onClick={decrement}>
-                    <span className="font-bold text-sm">-</span>
+                    <MaterialSymbol symbol={MaterialSymbols.REMOVE} className={'text-[0.9em]'}/>
                 </NumberPickerButton>
             </div>
         </div>

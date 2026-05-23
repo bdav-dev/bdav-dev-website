@@ -14,7 +14,9 @@ export enum MaterialSymbols {
     PROGRESS_ACTIVITY = 'progress_activity',
     EMOJI_OBJECTS = 'emoji_objects',
     KEYBOARD_DOUBLE_ARROW_RIGHT = 'keyboard_double_arrow_right',
-    KEYBOARD_DOUBLE_ARROW_LEFT = 'keyboard_double_arrow_left'
+    KEYBOARD_DOUBLE_ARROW_LEFT = 'keyboard_double_arrow_left',
+    REMOVE = 'remove',
+    ADD = 'add'
 }
 
 export const MATERIAL_SYMBOLS_API_URL = `https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght@20..48,100..700&icon_names=${Object.values(MaterialSymbols).toSorted().join(',')}`;
