@@ -12,7 +12,6 @@ export default function RecipeLink({ recipe }: RecipeLinkProps) {
     return (
         <Link
             href={BdavDev.recipes.$recipe.getRoute({ recipe })}
-            draggable={false}
             className={`
                 flex items-center justify-center relative
                 w-56 h-56 rounded-full

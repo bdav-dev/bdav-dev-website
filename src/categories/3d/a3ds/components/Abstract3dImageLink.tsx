@@ -26,7 +26,6 @@ export default function Abstract3dImageLink(props: Abstract3dImageLinkProps) {
                     ? BdavDev.blender.abstract3dSeries.collections.$collection.$image.getRoute({ collection: props.inCollection, image: props.image })
                     : BdavDev.blender.abstract3dSeries.$image.getRoute({ image: props.image })
             }
-            draggable={false}
         >
             <div className={'relative transition-transform group-hover:scale-[1.02] ease-out duration-100'}>
                 <div className={'relative z-20'}>
