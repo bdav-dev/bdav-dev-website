@@ -4,6 +4,7 @@ import RecipeIngredients from "@/categories/recipes/components/RecipeIngredients
 import { ReactNode } from "react";
 import RecipeCategoryTag from "@/categories/recipes/components/RecipeCategoryTag";
 import Tile from "@/components/library/Tile";
+import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 
 
 type RecipeLayoutProps = {
@@ -15,19 +16,20 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
     return (
         <>
             <div className="flex flex-col lg:flex-row gap-4 mb-8">
-                { /* Placeholder */ }
-                <div
-                    className={`
-                        skeleton
-                        w-full self-center max-w-xl
-                        sm:w-2/3 sm:min-w-0
-                        md:w-[60%]
-                        lg:w-1/2 lg:self-auto lg:max-w-3xl 3xl:max-w-[55rem]
+                <SkeletonLoadingCloudinaryImage
+                    alt={props.recipe.title}
+                    image={props.recipe.image}
+                    draggable={false}
+                    sharedClassName={`
+                        w-full sm:w-2/3 md:w-[60%] lg:w-1/2
+                        max-w-xl lg:max-w-3xl 3xl:max-w-[57.5rem]
+                        sm:min-w-0
+                        self-center lg:self-auto 
                         flex-shrink-0
-                        object-contain
-                        drop-shadow-lg
                         select-none
                     `}
+                    imageClassName={'object-contain drop-shadow-lg'}
+                    skeletonClassName={'rounded-xl'}
                 />
 
                 <div className={"flex-grow flex flex-col gap-4"}>
@@ -38,7 +40,7 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
                             {props.recipe.tagline}
                         </div>
                     </div>
-                    <Tile customPadding className={'p-8'}>
+                    <Tile customPadding className={'p-8 flex-1 flex items-center justify-center'}>
                         <RecipeIngredients recipe={props.recipe}/>
                     </Tile>
                 </div>

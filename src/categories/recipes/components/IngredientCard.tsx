@@ -1,6 +1,7 @@
 import { getFormattedIngredientAmount, MeasuredIngredient } from "@/categories/recipes/content/recipes";
 import Popover from "@/components/Popover";
 import { ReactNode } from "react";
+import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 
 
 type IngredientCardProps = {
@@ -16,17 +17,18 @@ export default function IngredientCard(props: IngredientCardProps) {
                 flex flex-col relative
                 w-56 rounded-2xl
                 bg-tile
+                p-2
+                gap-2
             `}
         >
-            { /* Placeholder */ }
-            <div
-                className={`
-                    skeleton
-                    h-36 rounded-t-2xl
-                    p-1.5
-                    object-contain select-none
-                    drop-shadow-md
-                `}
+            <SkeletonLoadingCloudinaryImage
+                alt={props.ingredient.name}
+                image={props.ingredient.image}
+                sharedClassName={'h-[8.4rem] w-full select-none'}
+                imageClassName={'object-contain drop-shadow-md'}
+                skeletonClassName={'rounded-xl'}
+                imageStyle={{ transform: `scale(${props.ingredient.displayOptions?.size ?? 1})` }}
+                draggable={false}
             />
 
             {
@@ -40,7 +42,7 @@ export default function IngredientCard(props: IngredientCardProps) {
                 className={`
                     flex-1
                     flex flex-row items-center gap-1.5
-                    w-full px-1.5 py-2
+                    w-full
                     rounded-xl overflow-clip    
                     leading-tight
                 `}
@@ -68,7 +70,7 @@ function ProductRecommendation(props: { children?: ReactNode }) {
         <div
             className={`
                 w-8 h-8
-                absolute right-0
+                absolute top-0 right-0
                 flex items-center justify-center
                 dark:bg-yellow-700 dark:hover:bg-yellow-600
                 bg-yellow-600 hover:bg-yellow-700

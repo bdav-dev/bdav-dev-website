@@ -2,6 +2,7 @@ import { Recipe } from "@/categories/recipes/content/recipes";
 import Link from "next/link";
 import ContentLinkPlaceholder from "@/components/link/content/ContentLinkPlaceholder";
 import { BdavDev } from "@/routing";
+import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 
 
 type RecipeLinkProps = {
@@ -26,19 +27,17 @@ export default function RecipeLink({ recipe }: RecipeLinkProps) {
                     transition-all ease-out duration-300
                     opacity-0 group-hover:opacity-100
                     -translate-y-32  group-hover:translate-y-0
+                    text-white
                 `}
             >
                 {recipe.title}
             </div>
 
-            { /* Placeholder */ }
-            <div
-                className={`
-                    skeleton w-full h-full p-3.5
-                    transition-all duration-300
-                    group-hover:blur-md
-                    group-hover:brightness-75
-                `}
+            <SkeletonLoadingCloudinaryImage
+                alt={recipe.title}
+                image={recipe.image}
+                sharedClassName={"w-full h-full transition-all duration-300 group-hover:blur-md group-hover:brightness-90"}
+                imageClassName={'p-4 object-contain'}
             />
         </Link>
     );
