@@ -15,7 +15,7 @@ type RecipeLayoutProps = {
 export default function RecipeLayout(props: RecipeLayoutProps) {
     return (
         <>
-            <div className="flex flex-col lg:flex-row gap-4 mb-8">
+            <div className="flex flex-col xl:flex-row gap-4 mb-8">
                 <SkeletonLoadingCloudinaryImage
                     alt={props.recipe.title}
                     image={props.recipe.image}
@@ -24,7 +24,7 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
                         w-full sm:w-2/3 md:w-[60%] lg:w-1/2
                         max-w-xl lg:max-w-3xl 3xl:max-w-[57.5rem]
                         sm:min-w-0
-                        self-center lg:self-auto 
+                        self-center xl:self-auto 
                         flex-shrink-0
                         select-none
                     `}
