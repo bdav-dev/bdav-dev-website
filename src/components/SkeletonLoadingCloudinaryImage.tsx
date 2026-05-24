@@ -11,11 +11,12 @@ type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image' | 'cl
     image: ThemeSwitch<CloudinaryImageType>,
     sharedClassName?: string,
     imageClassName?: string,
-    skeletonClassName?: string
+    skeletonClassName?: string,
+    imageStyle?: CSSProperties
 } & ({ width?: undefined, propagateWidthToSkeleton?: never } | { width: number, propagateWidthToSkeleton?: boolean });
 
 export default function SkeletonLoadingCloudinaryImage(
-    { image: imageSwitch, propagateWidthToSkeleton, sharedClassName, imageClassName, skeletonClassName, ...imageProps }: CloudinaryImageWithSkeletonProps
+    { image: imageSwitch, propagateWidthToSkeleton, sharedClassName, imageClassName, skeletonClassName, imageStyle, ...imageProps }: CloudinaryImageWithSkeletonProps
 ) {
     const { resolveThemeSwitch } = useTheme();
 
@@ -33,7 +34,7 @@ export default function SkeletonLoadingCloudinaryImage(
                 context =>
                     <CloudinaryImage
                         image={image}
-                        style={context.style}
+                        style={context.isLoaded ? imageStyle : context.style}
                         className={`${sharedClassName} ${imageClassName}`}
                         onLoad={context.setLoaded}
                         {...imageProps}
