@@ -20,7 +20,10 @@ export type Ingredient = {
     name: string,
     pluralName?: string,
     productRecommendation?: string
-    image: CloudinaryImage
+    image: CloudinaryImage,
+    displayOptions?: {
+        size?: number
+    }
 }
 export type MeasuredIngredient = Ingredient & Quantity
 export type IngredientFromRecipe = { ingredient: MeasuredIngredient, forServings: number }
@@ -30,8 +33,6 @@ type Quantity =
     | { amount: number, unit: 'Piece' }
     | { amount: string, unit: 'None' }
 
-const placeholderImage: CloudinaryImage = { src: "", height: 0, width: 0 };
-
 export const Recipes: Record<RecipeId, Recipe> = {
     Cheeseburger: {
         id: 'Cheeseburger',
@@ -39,48 +40,50 @@ export const Recipes: Record<RecipeId, Recipe> = {
         title: 'Cheeseburger',
         tagline: 'A true American classic.',
         category: RecipeCategories.MainCourse,
-        image: placeholderImage,
+        image: { src: '/recipes/cheeseburger/cheeseburger.png', width: 2057, height: 1440 },
         servings: 1,
         ingredients: [
             {
-                name: "Brioche burger buns with sesame seeds",
+                name: "Brioche burger buns",
                 amount: 1,
                 unit: "Piece",
-                image: placeholderImage
+                image: { src: '/recipes/cheeseburger/ingredients/buns.png', width: 500, height: 500 },
+                displayOptions: { size: 1.075 }
             },
             {
                 name: "Burger sauce",
                 amount: "some",
                 unit: "None",
                 productRecommendation: "Nawhal's Biggy Burger Sauce",
-                image: placeholderImage
+                image: { src: '/recipes/cheeseburger/ingredients/burger-sauce.png', width: 500, height: 500 },
+                displayOptions: { size: 0.85 }
             },
             {
                 name: "Large onion",
                 pluralName: "Large onions",
                 amount: 0.5,
                 unit: "Piece",
-                image: placeholderImage
+                image: { src: '/recipes/cheeseburger/ingredients/onion.png', width: 500, height: 500 }
             },
             {
                 name: "Iceberg lettuce leaf",
                 pluralName: "Iceberg lettuce leaves",
                 amount: 2,
                 unit: "Piece",
-                image: placeholderImage
+                image: { src: '/recipes/cheeseburger/ingredients/lettuce.png', width: 500, height: 500 }
             },
             {
                 name: "Appenzeller cheese slice",
                 pluralName: "Appenzeller cheese slices",
                 amount: 2,
                 unit: "Piece",
-                image: placeholderImage
+                image: { src: '/recipes/cheeseburger/ingredients/cheese-appenzeller.png', width: 500, height: 500 }
             },
             {
                 name: "Minced meat",
                 amount: 100,
                 unit: "Gram",
-                image: placeholderImage
+                image: { src: '/recipes/cheeseburger/ingredients/minced-meat.png', width: 500, height: 500 }
             }
         ]
     }
