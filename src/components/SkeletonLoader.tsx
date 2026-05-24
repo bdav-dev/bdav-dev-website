@@ -7,13 +7,13 @@ type SkeletonLoaderProps =
     {
         className: string,
         skeleton: ComponentType<{ className: string }>,
-        component: ComponentType<{ setLoaded: () => void, style?: CSSProperties, isLoaded: boolean, className: string }>
+        component: (context: { setLoaded: () => void, style?: CSSProperties, isLoaded: boolean, className: string }) => ReactNode
     }
     |
     {
         className?: never,
         skeleton: ReactNode,
-        component: ComponentType<{ setLoaded: () => void, style?: CSSProperties, isLoaded: boolean }>
+        component: (context: { setLoaded: () => void, style?: CSSProperties, isLoaded: boolean }) => ReactNode
     };
 
 export default function SkeletonLoader(props: SkeletonLoaderProps) {
@@ -36,12 +36,14 @@ export default function SkeletonLoader(props: SkeletonLoaderProps) {
                 )
             }
             {
-                <props.component
-                    isLoaded={isLoaded}
-                    setLoaded={() => setIsLoaded(true)}
-                    style={isLoaded ? undefined : componentLoadingStyles}
-                    className={props.className!}
-                />
+                props.component(
+                    {
+                        isLoaded,
+                        setLoaded: () => setIsLoaded(true),
+                        style: isLoaded ? undefined : componentLoadingStyles,
+                        className: props.className!,
+                    }
+                )
             }
         </>
     );
