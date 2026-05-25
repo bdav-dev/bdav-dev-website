@@ -2,6 +2,7 @@ import { getFormattedIngredientAmount, MeasuredIngredient } from "@/categories/r
 import Popover from "@/components/Popover";
 import { ReactNode } from "react";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import StarIcon from "@/icons/StarIcon";
 
 
 type IngredientCardProps = {
@@ -79,8 +80,7 @@ function ProductRecommendation(props: { children?: ReactNode }) {
                 group
             `}
         >
-            { /* Placeholder */ }
-            <div>P</div>
+            <StarIcon className={'text-neutral-200'}/>
 
             <div
                 className={`
