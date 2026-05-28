@@ -1,7 +1,6 @@
 import WeightableIcon, { WeightableIconProps } from "@/icons/WeightableIcon";
 
 export default function StarIcon(props: WeightableIconProps) {
-
     return (
         <WeightableIcon weightRatio={{ strokeWidth: 72.5, atWeight: 400 }} {...props}>
             <svg

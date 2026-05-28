@@ -1,18 +1,19 @@
 'use client';
 
-import CubeIcon from "@/icons/CubeIcon";
+import CubeIcon from "@/icons/app/CubeIcon";
 import CategoryLink from "./CategoryLink";
-import CodeIcon from "@/icons/deprecated/CodeIcon";
+import CodeIcon from "@/icons/app/CodeIcon";
 import DropdownMenu from "./DropdownMenu";
 import InstagramIcon from "@/icons/deprecated/InstagramIcon";
 import { CodeProjects } from "@/categories/code/content/codeProjects";
-import GitHubIcon from "@/icons/logos/GitHubIcon";
+import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import VerticalRuler from "@/components/library/VerticalRuler";
 import ThemeToggle from "@/components/theme/ThemeToggle";
 import { usePathname } from "next/navigation";
 import BdavDevHomeLink from "@/components/layout/header/BdavDevHomeLink";
 import { BdavDev } from "@/routing";
 import { Recipes } from "@/categories/recipes/content/recipes";
+import ChefHatIcon from "@/icons/app/ChefHatIcon";
 
 
 export default function Header() {
@@ -47,7 +48,7 @@ export default function Header() {
                                             [
                                                 {
                                                     href: "https://github.com/bdav-dev",
-                                                    icon: <GitHubIcon/>,
+                                                    icon: <GitHubInvertocat className={'text-[0.8em]'}/>,
                                                     text: 'GitHub'
                                                 }
                                             ],
@@ -94,7 +95,7 @@ export default function Header() {
                         />
 
                         <CategoryLink
-                            icon={<></>}
+                            icon={<ChefHatIcon weight={300} className={'text-[1.05em]'}/>}
                             text={"Recipes"}
                             href={BdavDev.recipes.getRoute()}
                             selected={categoryRoute === BdavDev.recipes.getRoute()}
@@ -116,7 +117,7 @@ export default function Header() {
                             }
                         />
 
-                        <VerticalRuler className="mx-1 h-9"/>
+                        <VerticalRuler className="mx-0.5 h-9"/>
 
                         <ThemeToggle/>
                     </div>

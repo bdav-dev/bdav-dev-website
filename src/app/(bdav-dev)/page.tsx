@@ -13,9 +13,9 @@ import DEPRECATED_HStack from "@/components/library/stacks/DEPRECATED_HStack";
 import DEPRECATED_VStack from "@/components/library/stacks/DEPRECATED_VStack";
 import { Abstract3dImage, Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import { CodeProject, CodeProjects } from "@/categories/code/content/codeProjects";
-import CubeIcon from "@/icons/CubeIcon";
-import CodeIcon from "@/icons/deprecated/CodeIcon";
-import RecipesIcon from "@/icons/deprecated/RecipiesIcon";
+import CubeIcon from "@/icons/app/CubeIcon";
+import CodeIcon from "@/icons/app/CodeIcon";
+import ChefHatIcon from "@/icons/app/ChefHatIcon";
 import { useEffect, useState } from "react";
 import { chooseRandom } from "@/utils/RandomUtils";
 import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
@@ -80,7 +80,7 @@ export default function HomePage() {
 
                         <LargeLink
                             href={BdavDev.recipes.getRoute()}
-                            icon={RecipesIcon}
+                            icon={ChefHatIcon}
                             text="Recipes"
                         />
 

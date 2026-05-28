@@ -2,7 +2,7 @@ import { getFormattedIngredientAmount, MeasuredIngredient } from "@/categories/r
 import Popover from "@/components/Popover";
 import { ReactNode } from "react";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
-import StarIcon from "@/icons/StarIcon";
+import StarIcon from "@/icons/app/StarIcon";
 
 
 type IngredientCardProps = {

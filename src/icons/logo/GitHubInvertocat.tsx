@@ -1,9 +1,6 @@
-'use client';
-
-
 import Icon, { IconProps } from "@/icons/Icon";
 
-export default function GitHubIcon(props: IconProps) {
+export default function GitHubInvertocat(props: IconProps) {
     return (
         <Icon {...props}>
             <svg

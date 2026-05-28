@@ -3,10 +3,10 @@
 import React, { ComponentType, ReactNode } from "react";
 import HyperLink from "@/components/library/link/HyperLink";
 import { IconProps } from "@/icons/Icon";
-import CodeIcon from "@/icons/deprecated/CodeIcon";
+import CodeIcon from "@/icons/app/CodeIcon";
 import { BdavDev, getBaseOfRoute } from "@/routing";
-import CubeIcon from "@/icons/CubeIcon";
-import RecipesIcon from "@/icons/deprecated/RecipiesIcon";
+import CubeIcon from "@/icons/app/CubeIcon";
+import ChefHatIcon from "@/icons/app/ChefHatIcon";
 
 
 type InternalLinkProps = {
@@ -37,6 +37,6 @@ function getIconForRoute(href: string): ComponentType<IconProps> | undefined {
         case BdavDev.blender.getRoute():
             return CubeIcon;
         case BdavDev.recipes.getRoute():
-            return RecipesIcon;
+            return ChefHatIcon;
     }
 }

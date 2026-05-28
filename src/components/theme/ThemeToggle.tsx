@@ -1,7 +1,7 @@
 'use client';
 
-import LightModeIcon from "@/icons/deprecated/LightModeIcon";
-import DarkModeIcon from "@/icons/deprecated/DarkModeIcon";
+import SunIcon from "@/icons/app/SunIcon";
+import MoonIcon from "@/icons/app/MoonIcon";
 import { useTheme } from "@/hooks/UseTheme";
 
 
@@ -12,7 +12,7 @@ export default function ThemeToggle() {
         <button
             className={`
                 flex flex-row items-center
-                p-1.5 mx-0.5
+                p-1.5 mr-0.5
                 rounded-lg 
                 transition-colors duration-200
                 bg-opacity-80 dark:bg-opacity-80
@@ -22,8 +22,8 @@ export default function ThemeToggle() {
         >
             {
                 darkTheme
-                    ? <DarkModeIcon className="dark:stroke-white stroke-black stroke-[5] h-6 w-6"/>
-                    : <LightModeIcon className="dark:stroke-white stroke-black stroke-[5] h-6 w-6"/>
+                    ? <MoonIcon weight={300} className={'text-[1.05em]'}/>
+                    : <SunIcon weight={300} className={'text-[1.05em]'}/>
             }
         </button>
     );
