@@ -1,11 +1,11 @@
 import SocialLink from "./SocialLink";
-import InstagramIcon from "@/icons/deprecated/InstagramIcon";
+import InstagramGlyph from "@/icons/logo/InstagramGlyph";
 
 export default function InstagramLink() {
 
     return (
         <SocialLink href={"https://www.instagram.com/davidb.3d/"}>
-            <InstagramIcon className="fill-white ml-1.5 w-7 h-7"/>
+            <InstagramGlyph/>
         </SocialLink>
     );
 }

@@ -4,7 +4,6 @@ import CubeIcon from "@/icons/app/CubeIcon";
 import CategoryLink from "./CategoryLink";
 import CodeIcon from "@/icons/app/CodeIcon";
 import DropdownMenu from "./DropdownMenu";
-import InstagramIcon from "@/icons/deprecated/InstagramIcon";
 import { CodeProjects } from "@/categories/code/content/codeProjects";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import VerticalRuler from "@/components/library/VerticalRuler";
@@ -14,6 +13,7 @@ import BdavDevHomeLink from "@/components/layout/header/BdavDevHomeLink";
 import { BdavDev } from "@/routing";
 import { Recipes } from "@/categories/recipes/content/recipes";
 import ChefHatIcon from "@/icons/app/ChefHatIcon";
+import InstagramGlyph from "@/icons/logo/InstagramGlyph";
 
 
 export default function Header() {
@@ -78,7 +78,7 @@ export default function Header() {
                                             [
                                                 {
                                                     href: "https://www.instagram.com/davidb.3d/",
-                                                    icon: <InstagramIcon className={'w-5'}/>,
+                                                    icon: <InstagramGlyph className={'text-[0.8em]'}/>,
                                                     text: 'Instagram'
                                                 }
                                             ],
