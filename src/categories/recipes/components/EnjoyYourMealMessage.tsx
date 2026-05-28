@@ -1,5 +1,4 @@
 import Tile from "@/components/library/Tile";
-import CutleryIcon from "@/icons/deprecated/CutleryIcon";
 import { ReactNode } from "react";
 
 type EnjoyYourMealMessageProps = {
@@ -15,8 +14,6 @@ export default function EnjoyYourMealMessage(props: EnjoyYourMealMessageProps) {
             <span className="italic">
                 Guten&nbsp;Appetit!
             </span>
-            &nbsp;
-            <CutleryIcon className="fill-black dark:fill-white w-7 h-7 inline"/>
         </Tile>
     );
 }
