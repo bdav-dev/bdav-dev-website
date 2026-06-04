@@ -1,11 +1,12 @@
 import { Recipes } from "@/categories/recipes/content/recipes";
 import RecipeLayout from "@/categories/recipes/components/layout/RecipeLayout";
 import Section from "@/components/layout/document/Section";
-import LargeBreak from "@/components/library/spacing/LargeBreak";
-import EnjoyYourMealMessage from "@/categories/recipes/components/EnjoyYourMealMessage";
 import { Metadata } from "next";
 import ReadingLayout from "@/layout/ReadingLayout";
 import Tile from "@/components/library/Tile";
+import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import { ThemeSwitch } from "@/contexts/ThemeContext";
+import { CloudinaryImage } from "@/cloudinary";
 
 
 export const metadata: Metadata = {
@@ -19,66 +20,86 @@ export default function CheeseburgerPage() {
             <ReadingLayout>
                 <Section headline="Cooking instructions">
                     <div className={'flex flex-col gap-5'}>
-                        <Tile title={'Slice onions'}>
-                            Start by slicing the onion(s) into rings or half rings.
-                            Do not slice them too thin. Use the image above as a reference.
+                        <Tile title={'1.'}>
+                            <p>
+                                Start by peeling the onion(s) and slicing them into half-rings.
+                                Do not slice them too thinly. Use the recipe image as a reference.
+                            </p>
+                            <p>
+                                Add cooking oil to a pan and fry the onions until light brown spots appear.
+                                Keep them juicy and avoid overcooking them.
+                            </p>
+                            <p>
+                                Keep the prepared onions warm.
+                            </p>
                         </Tile>
 
-                        <Tile title={'Cook onions'}>
-                            Add cooking oil to a pan and fry the onions until light brown spots appear.
-                            Keep them juicy, so as not to overcook them.
-                            Keep the prepared onions warm.
+                        <Tile title={'2.'}>
+                            Next, wash and portion the lettuce leaves, ensuring they are approximately the same size as the burger buns.
                         </Tile>
 
-                        <Tile title={'Wash lettuce leaves'}>
-                            Next, wash and portion the lettuce leaves,
-                            ensuring they match the approximate diameter of the burger buns.
-                        </Tile>
-
-                        <Tile title={'Prepare cheese slices'}>
+                        <Tile title={'3.'}>
                             Take the cheese slices out of the fridge and portion them.
                         </Tile>
 
-                        <Tile title={'Form patties'}>
-                            For the burger patties, take 100g of minced meat per patty,
-                            mix it with salt and pepper evenly and shape it slightly larger than
-                            the burger buns to account for shrinkage during cooking.<br/>
-                            At the end, season both sides of the raw patty with salt and pepper.
+                        <Tile title={'4.'}>
+                            <p>
+                                For the burger patties, use 100 grams of minced meat per patty.
+                                Mix the meat evenly with salt and pepper, then shape the patties slightly larger than the burger buns to account for shrinkage during cooking.
+                            </p>
+                            <p>
+                                Finally, season both sides of each raw patty with salt and pepper.
+                            </p>
                         </Tile>
 
-                        <Tile title={'Prepare burger buns and preheat pan'}>
-                            Have the burger buns and sauce ready.<br/>
-                            Preheat a pan with cooking oil for the burger patties at high temperature.
-                            Start toasting the burger buns in a toaster or another pan.
+                        <Tile title={'5.'}>
+                            <p>
+                                Have the burger buns and sauce ready.
+                            </p>
+                            <p>
+                                Preheat a pan with cooking oil over high heat for the burger patties.
+                                Start toasting the burger buns in a grill pan or toaster.
+                            </p>
                         </Tile>
 
-                        <Tile title={'Frying'}>
-                            Once the pan is hot, cook the patties, turning them regularly
-                            (about one minute per side) until a good crust forms on both sides.
-                            Lower the heat and cook to your preferred level, be it medium rare or well-done.
-                            Add a bit of butter to both sides of the patty and let it melt thoroughly.
-                            <LargeBreak/>
-                            As the patty nears completion, place 2 cheese slices on top of the patty to melt.
-                            Feel free to turn the patty around to speed up the cheese melting process.
+                        <Tile title={'6.'}>
+                            <p>
+                                Once the pan is hot, cook the patties, turning them regularly (about one minute per side) until a good crust forms on both sides.
+                                Lower the heat and continue cooking to your preferred level of doneness, whether medium-rare or well-done.
+                                Add a small amount of butter to both sides of the patty and allow it to melt completely.
+                            </p>
+                            <p>
+                                As the patty nears completion, place two cheese slices on top and allow them to melt.
+                            </p>
                         </Tile>
 
-                        <Tile title={'Burger assembly'}>
-                            Simultaneously, assemble the burger by taking out the toasted buns,
-                            allowing them to cool slightly (about 30 seconds).
-                            Apply the following ingredients on both buns in order: preferred amount of burger sauce,
-                            some fried onions and 1 lettuce leaf per bun.
+                        <Tile title={'7.'}>
+                            At the same time, assemble the burger by removing the toasted buns and allowing them to cool slightly (about 30 seconds).
+                            Apply the following ingredients on both buns in this order: your preferred amount of burger sauce, some fried onions and one lettuce leaf.
                         </Tile>
 
-                        <Tile title={'Serve'}>
-                            When everything is ready, place the patty with the melted cheese onto the burger and serve.
+                        <Tile title={'8.'}>
+                            When everything is ready, assemble the burger by placing the patty with the melted cheese between the prepared buns, then serve immediately.
                         </Tile>
 
-                        <EnjoyYourMealMessage>
+                        <Tile className={'text-center font-semibold'}>
                             Enjoy your delicious homemade burger!
-                        </EnjoyYourMealMessage>
+                        </Tile>
+
+                        <SkeletonLoadingCloudinaryImage
+                            alt={'Cheeseburger exploded view'}
+                            image={images.cheeseburgerExplodedView}
+                            sharedClassName={'w-full select-none'}
+                            skeletonClassName={'rounded-xl'}
+                            draggable={false}
+                        />
                     </div>
                 </Section>
             </ReadingLayout>
         </RecipeLayout>
     );
 }
+
+const images = {
+    cheeseburgerExplodedView: { src: '/recipes/cheeseburger/cheeseburger-exploded-view.png', width: 2560, height: 1087 },
+} as const satisfies Record<string, ThemeSwitch<CloudinaryImage>>;

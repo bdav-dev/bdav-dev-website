@@ -27,3 +27,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+:is(article, section) p:not(:last-child) {
+    margin-bottom: 0.3rem;
+}
