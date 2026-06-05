@@ -6,6 +6,7 @@ import Article from "@/components/layout/document/Article";
 import { CodeProjectType, CodeProjectTypes } from "@/categories/code/content/codeProjectType";
 import Section from "@/components/layout/document/Section";
 import CodeProjectTypeIcon from "@/categories/code/components/icon/CodeProjectTypeIcon";
+import FollowMeOnGitHubLink from "@/categories/code/components/link/FollowMeOnGitHubLink";
 
 
 export const metadata: Metadata = {
@@ -16,8 +17,8 @@ export const metadata: Metadata = {
 export default function CodePage() {
     return (
         <div className={'flex flex-col gap-5'}>
-            <Tile>
-                Laptop with GitHub
+            <Tile className={'p-7 flex justify-center'} customPadding>
+                <FollowMeOnGitHubLink/>
             </Tile>
             <Article headline={'Projects'}>
                 {
