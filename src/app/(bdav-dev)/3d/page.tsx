@@ -6,16 +6,12 @@ import InternalLink from "@/components/library/link/InternalLink";
 import { StaticAbstract3dCollections } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 import Abstract3dImageLinks from "@/categories/3d/a3ds/components/Abstract3dImageLinks";
 import { Metadata } from "next";
-import Phone from "@/components/library/Phone";
 import ExternalLink from "@/components/library/link/ExternalLink";
 import { BdavDev } from "@/routing";
 import Article from "@/components/layout/document/Article";
 import { Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 import React from "react";
-import { CloudinaryImage } from "@/cloudinary";
-import { ThemeSwitch } from "@/contexts/ThemeContext";
-import InstagramGlyph from "@/icons/logo/InstagramGlyph";
+import FollowMeOnInstagramLink from "@/categories/3d/components/FollowMeOnInstagramLink";
 
 
 export const metadata: Metadata = {
@@ -30,31 +26,8 @@ export default function BlenderPage() {
 
     return (
         <>
-            <Tile className={'flex justify-center p-5'} customPadding>
-                <Link href={'https://www.instagram.com/davidb.3d/'} className={'group w-fit flex flex-row gap-10 items-center'}>
-                    <Phone
-                        size={'13.5rem'}
-                        className={'rotate-3 group-hover:rotate-0 transition-transform'}
-                        screen={
-                            <SkeletonLoadingCloudinaryImage
-                                alt={'Ingredients'}
-                                image={images.davidb3dInstagram}
-                                sharedClassName={'w-full h-full object-cover'}
-                                draggable={false}
-                            />
-                        }
-                    />
-                    <div className={'text-2xl leading-9'}>
-                        <span>
-                            Follow me on
-                        </span>
-                        <br/>
-                        <span className={'inline-flex items-center gap-1.5'}>
-                            <InstagramGlyph className={'text-[0.8em]'}/>
-                            Instagram
-                        </span>
-                    </div>
-                </Link>
+            <Tile className={'p-7 flex justify-center'} customPadding>
+                <FollowMeOnInstagramLink/>
             </Tile>
 
             <Article headline={'Projects'} className={'mt-8'}>
@@ -87,10 +60,3 @@ export default function BlenderPage() {
         </>
     );
 }
-
-const images = {
-    davidb3dInstagram: {
-        light: { src: '/3d/davidb.3d-instagram-light.png', width: 1206, height: 2622 },
-        dark: { src: '/3d/davidb.3d-instagram-dark.png', width: 1206, height: 2622 }
-    }
-} as const satisfies Record<string, ThemeSwitch<CloudinaryImage>>;
