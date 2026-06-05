@@ -1,7 +1,7 @@
 import { CodeProject, CodeProjectAction } from "@/categories/code/content/codeProjects";
 import CodeLanguageBadge from "@/categories/code/components/CodeLanguageBadge";
 import VerticalRuler from "@/components/library/VerticalRuler";
-import GitHubRepositoryLink from "@/categories/code/components/GitHubRepositoryLink";
+import GitHubRepositoryLink from "@/categories/code/components/link/GitHubRepositoryLink";
 import DownloadButton from "@/components/library/DownloadButton";
 import HyperLink from "@/components/library/link/HyperLink";
 import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol";
