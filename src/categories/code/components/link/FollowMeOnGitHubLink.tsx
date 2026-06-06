@@ -1,9 +1,8 @@
-'use client';
-
 import React from "react";
 import Link from "next/link";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import Notebook from "@/components/library/Notebook";
+import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 
 
 export default function FollowMeOnGitHubLink() {
@@ -16,7 +15,19 @@ export default function FollowMeOnGitHubLink() {
                 className={'block w-fit max-w-full'}
             >
                 <Notebook
-                    screen={<div className={'w-full h-full bg-red-500'}></div>}
+                    screen={
+                        <SkeletonLoadingCloudinaryImage
+                            alt={'GitHub page of bdav-dev'}
+                            image={
+                                {
+                                    light: { src: '/code/bdav-dev-github-light.png', width: 2228, height: 1440 },
+                                    dark: { src: '/code/bdav-dev-github-dark.png', width: 2228, height: 1440 }
+                                }
+                            }
+                            sharedClassName={'w-full h-full object-cover'}
+                            draggable={false}
+                        />
+                    }
                     size={'32rem'}
                     className={'max-w-full'}
                 />
