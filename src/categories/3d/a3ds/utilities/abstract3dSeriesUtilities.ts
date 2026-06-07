@@ -2,15 +2,22 @@ import { parseDmy } from "@/utils/DateUtils";
 import { Abstract3dImage, Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
 
 
-export function isNew(abstract3D: Abstract3dImage) {
+export function isNew(abstract3dImage: Abstract3dImage) {
     const NEW_THRESHOLD_IN_DAYS = 7;
 
-    const date = parseDmy(abstract3D.releaseDate);
+    const date = parseDmy(abstract3dImage.releaseDate);
     const currentDate = Date.now();
 
     const differenceInMilliseconds = Math.abs(currentDate.valueOf() - date.valueOf());
     const differenceInDays = differenceInMilliseconds / (1000 * 60 * 60 * 24);
     return differenceInDays <= NEW_THRESHOLD_IN_DAYS;
+}
+
+export function getLatestNewAbstract3dImage(): Abstract3dImage | undefined {
+    return Object.values(Abstract3dSeries)
+        .filter(isNew)
+        .sort(compareAbstract3dImages)
+        [0];
 }
 
 export const compareAbstract3dImages = (a: Abstract3dImage, b: Abstract3dImage) => b.nr - a.nr;
