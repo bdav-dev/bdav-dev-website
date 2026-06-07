@@ -21,7 +21,8 @@ const config: Config = {
         accent: 'var(--accent-color)',
         danger: 'var(--danger-color)',
         warning: 'var(--warning-color)',
-        success: 'var(--success-color)'
+        success: 'var(--success-color)',
+        secondary: 'var(--secondary-color)'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

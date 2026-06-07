@@ -33,7 +33,7 @@ export default function FollowMeOnInstagramLink() {
             </Link>
 
             <div className={'flex flex-col gap-1'}>
-                <div className={'text-sm text-center md:text-left text-neutral-700 dark:text-neutral-200'}>
+                <div className={'text-sm text-center md:text-left text-secondary'}>
                     follow me on
                 </div>
                 <Link

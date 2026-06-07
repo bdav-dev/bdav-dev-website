@@ -15,6 +15,8 @@
     --danger-color: light-dark(rgb(185 28 28), rgb(248 113 113));
     --warning-color: light-dark(rgb(161 98 7), rgb(254 240 138));
     --success-color: light-dark(rgb(22 163 74), rgb(74 222 128));
+
+    --secondary-color: light-dark(rgb(64 64 64), rgb(229 229 229));
 }
 
 :root.dark {
