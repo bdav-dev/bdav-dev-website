@@ -2,7 +2,6 @@ import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLa
 import { CodeProjects } from "@/categories/code/content/codeProjects";
 import ReadingLayout from "@/layout/ReadingLayout";
 import Tile from "@/components/library/Tile";
-import React from "react";
 import Enumerate from "@/components/library/Enumerate";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 import { ThemeSwitch } from "@/contexts/ThemeContext";

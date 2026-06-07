@@ -1,8 +1,9 @@
-import React from "react";
+import { ReactNode } from "react";
+
 
 export type HeadlineProps = {
     className?: string,
-    children?: React.ReactNode
+    children?: ReactNode
 }
 
 export default function H2(props: HeadlineProps) {

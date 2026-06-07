@@ -1,8 +1,8 @@
-import React from "react";
+import { ReactNode } from "react";
 
 type HStackProps = {
     className?: string,
-    children?: React.ReactNode
+    children?: ReactNode
 };
 
 

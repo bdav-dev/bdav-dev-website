@@ -1,5 +1,5 @@
 import H1 from "@/components/library/headlines/H1";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 type ArticleProps = {
     headline: ReactNode,

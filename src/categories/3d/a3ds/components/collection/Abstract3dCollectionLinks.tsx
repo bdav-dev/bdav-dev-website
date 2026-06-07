@@ -1,7 +1,7 @@
 'use client';
 
 import { Abstract3dCollectionLink } from "@/categories/3d/a3ds/components/collection/Abstract3dCollectionLink";
-import React, { ReactNode, useContext } from "react";
+import { ReactNode, useContext } from "react";
 import { Abstract3dCollection } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 import { Abstract3dCollectionsContext } from "@/categories/3d/a3ds/contexts/Abstract3dCollectionsContext";
 

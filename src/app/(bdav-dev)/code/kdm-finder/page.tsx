@@ -3,7 +3,6 @@ import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLa
 import ReadingLayout from "@/layout/ReadingLayout";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 import Tile from "@/components/library/Tile";
-import React from "react";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 import { Metadata } from "next";

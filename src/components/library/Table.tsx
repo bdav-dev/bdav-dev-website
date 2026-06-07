@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { isFirst } from "@/utils/ArrayUtils";
 
 type TableProps = {

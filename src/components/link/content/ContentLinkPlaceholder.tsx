@@ -1,8 +1,8 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 export type ContentLinkPlaceholderProps = {
     className?: string,
-    children?: React.ReactNode,
+    children?: ReactNode,
     style?: CSSProperties,
     fill?: boolean
 }

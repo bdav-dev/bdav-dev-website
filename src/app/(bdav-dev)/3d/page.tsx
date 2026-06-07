@@ -10,7 +10,6 @@ import ExternalLink from "@/components/library/link/ExternalLink";
 import { BdavDev } from "@/routing";
 import Article from "@/components/layout/document/Article";
 import { Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
-import React from "react";
 import FollowMeOnInstagramLink from "@/categories/3d/components/FollowMeOnInstagramLink";
 
 

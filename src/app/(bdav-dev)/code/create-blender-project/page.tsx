@@ -1,6 +1,5 @@
 import Tile from "@/components/library/Tile";
 import { CodeProjects } from "@/categories/code/content/codeProjects";
-import React from "react";
 import { Metadata } from "next";
 import Enumerate from "@/components/library/Enumerate";
 import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLayout";

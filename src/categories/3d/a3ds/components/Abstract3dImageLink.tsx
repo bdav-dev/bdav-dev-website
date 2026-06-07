@@ -3,7 +3,7 @@
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import ContentLinkPlaceholder from "@/components/link/content/ContentLinkPlaceholder";
 import { Abstract3dCollection } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import NewBadge from "@/categories/3d/a3ds/components/NewBadge";
 import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
 import { BdavDev } from "@/routing";

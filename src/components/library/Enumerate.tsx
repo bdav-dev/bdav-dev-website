@@ -1,15 +1,15 @@
-import React from "react";
 import { createIsLast } from "@/utils/ArrayUtils";
+import { ReactNode } from "react";
 
 type TitledItem = {
-    title: string | React.ReactNode,
-    text: string | React.ReactNode
+    title: string | ReactNode,
+    text: string | ReactNode
 }
 
 type EnumerateProps = {
-    items: (string | React.ReactNode | TitledItem)[],
+    items: (string | ReactNode | TitledItem)[],
     numbered?: boolean
-    bulletSymbol?: string | React.ReactNode,
+    bulletSymbol?: string | ReactNode,
     bulletWidth?: string,
     className?: string,
     spaceBetween?: boolean | string,
@@ -63,7 +63,7 @@ export default function Enumerate(props: EnumerateProps) {
     );
 }
 
-function Item({ content }: { content: (TitledItem | string | React.ReactNode) }) {
+function Item({ content }: { content: (TitledItem | string | ReactNode) }) {
     const contentAsTitledItem = content as TitledItem;
 
     return contentAsTitledItem.title != undefined

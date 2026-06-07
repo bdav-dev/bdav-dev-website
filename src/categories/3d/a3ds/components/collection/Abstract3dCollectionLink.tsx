@@ -1,7 +1,6 @@
 import { Abstract3dCollection } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 import Link from "next/link";
 import { isEven } from "@/utils/MathUtils";
-import React from "react";
 import { Abstract3dImageLinkPlaceholder, Abstract3dImageLinkPlaceholderProps } from "@/categories/3d/a3ds/components/Abstract3dImageLink";
 import { BdavDev } from "@/routing";
 import Abstract3dImageThumbnail from "@/categories/3d/a3ds/components/Abstract3dImageThumbnail";

@@ -1,7 +1,7 @@
-import React from "react";
+import { ReactNode } from "react";
 
 
-export default function Bold({ children }: { children?: React.ReactNode }) {
+export default function Bold({ children }: { children?: ReactNode }) {
     return (
         <span className={'font-bold'}>{children}</span>
     );

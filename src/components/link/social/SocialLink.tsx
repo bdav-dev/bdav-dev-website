@@ -1,12 +1,9 @@
 import Link from "next/link";
-import React from "react";
+import { ReactNode } from "react";
 
 type SocialLinkProps = {
-    children?: React.ReactNode,
-    href: string,
-    className?: string,
-    useCustomColor?: boolean,
-    useCustomPadding?: boolean
+    href: string
+    children?: ReactNode,
 }
 
 export default function SocialLink(props: SocialLinkProps) {
@@ -20,16 +17,15 @@ export default function SocialLink(props: SocialLinkProps) {
         >
             <div
                 className={`
-                    w-28 h-12
+                    w-12 h-12
                     m-1
-                    rounded-xl
+                    rounded-xl hover:rounded-3xl
                     flex flex-row items-center justify-center
-                    border border-zinc-600 dark:border-zinc-800
-                    transition-all ease-linear hover:rounded-3xl
+                    transition-all ease-linear 
                     drop-shadow-sm
-                    ${!props.useCustomPadding ? "p-2" : ""}
-                    ${!props.useCustomColor ? "bg-zinc-800 hover:bg-zinc-700 dark:bg-black  dark:hover:bg-zinc-900" : ""}
-                    ${props.className}
+                    p-2
+                    bg-zinc-800 hover:bg-zinc-700 
+                    dark:bg-zinc-950 dark:hover:bg-transparent
                 `}
             >
                 {props.children}

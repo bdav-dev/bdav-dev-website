@@ -1,9 +1,9 @@
 import H4 from "@/components/library/headlines/H4";
-import React from "react";
+import { ReactNode } from "react";
 
 type SubSubSectionProps = {
-    headline: string | React.ReactNode,
-    children?: React.ReactNode,
+    headline: string | ReactNode,
+    children?: ReactNode,
     className?: string
 }
 

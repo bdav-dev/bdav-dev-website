@@ -1,9 +1,9 @@
 import ThemeProvider from "@/contexts/ThemeContext";
 import { cascadiaCode, inter } from "@/fonts";
 import ThemeApplier from "@/components/theme/ThemeApplier";
-import React from "react";
 import type { Metadata } from "next";
 import { MATERIAL_SYMBOLS_API_URL } from "@/icons/material/MaterialSymbol";
+import { ReactNode } from "react";
 
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     }
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en" className={cascadiaCode.variable}>
         <head>

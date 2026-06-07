@@ -1,9 +1,10 @@
 import H3 from "@/components/library/headlines/H3";
-import React from "react";
+import { ReactNode } from "react";
+
 
 type SectionProps = {
-    headline: string | React.ReactNode,
-    children?: React.ReactNode,
+    headline: string | ReactNode,
+    children?: ReactNode,
     className?: string
 };
 

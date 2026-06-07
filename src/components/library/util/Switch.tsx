@@ -1,9 +1,9 @@
-import React from "react";
+import { ReactNode } from "react";
 
 type FlipProps = {
     switch?: boolean
-    first: React.ReactNode,
-    second: React.ReactNode,
+    first: ReactNode,
+    second: ReactNode,
 }
 
 export default function Switch(props: FlipProps) {

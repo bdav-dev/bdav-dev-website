@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Code from "../text/Code";
 import Tile from "../Tile";
-import React from "react";
 import { IconProps } from "@/icons/IconProps";
+import { ReactNode } from "react";
 
 
 type LargeLinkProps = {
     href: string,
-    icon: (props: IconProps) => React.ReactNode,
-    text: string | React.ReactNode,
+    icon: (props: IconProps) => ReactNode,
+    text: string | ReactNode,
     inNewTab?: boolean
 }
 

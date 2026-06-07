@@ -1,11 +1,12 @@
 import '../globals.css'
-import React from "react";
 import Header from "@/components/layout/header/Header";
 import BreadcrumbNavigation from "@/components/layout/BreadcrumbNavigation";
 import Footer from "@/components/layout/Footer";
+import { ReactNode } from "react";
+
 
 export default function BdavDevLayout(
-    { children }: { children: React.ReactNode }
+    { children }: { children: ReactNode }
 ) {
     return (
         <>

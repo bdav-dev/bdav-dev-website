@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ComponentType, ReactNode } from "react";
+import { ComponentType, ReactNode } from "react";
 import HyperLink from "@/components/library/link/HyperLink";
 import { IconProps } from "@/icons/Icon";
 import CodeIcon from "@/icons/app/CodeIcon";

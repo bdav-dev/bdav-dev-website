@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Dispatch, SetStateAction } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction } from "react";
 import useLocalStorage from "../hooks/UseLocalStorage";
 
 
@@ -10,14 +10,14 @@ type ThemeContextType = {
     resolveThemeSwitch: <T>(themeSwitch: ThemeSwitch<T>) => T
 }
 
-export const ThemeContext = React.createContext<ThemeContextType>({
+export const ThemeContext = createContext<ThemeContextType>({
     darkTheme: true,
     setDarkTheme: () => { },
     resolveThemeSwitch: themeSwitch => resolveThemeSwitch(true, themeSwitch)
 });
 
 type ThemeProviderProps = {
-    children?: React.ReactNode
+    children?: ReactNode
 }
 
 export default function ThemeProvider(props: ThemeProviderProps) {

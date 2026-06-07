@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 export default function Highlight(props: { children?: ReactNode, className?: string }) {
     return (

@@ -1,10 +1,10 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 
 type TileProps = {
-    title?: string | React.ReactNode,
+    title?: string | ReactNode,
     className?: string,
-    children?: React.ReactNode,
+    children?: ReactNode,
     customPadding?: boolean,
     style?: CSSProperties
 }

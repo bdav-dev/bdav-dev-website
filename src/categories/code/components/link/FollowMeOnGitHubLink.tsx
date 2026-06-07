@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import Notebook from "@/components/library/Notebook";

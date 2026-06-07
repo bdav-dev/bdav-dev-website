@@ -1,9 +1,10 @@
 import H2 from "@/components/library/headlines/H2";
-import React from "react";
+import { ReactNode } from "react";
+
 
 type SectionProps = {
-    headline: string | React.ReactNode,
-    children?: React.ReactNode,
+    headline: string | ReactNode,
+    children?: ReactNode,
     className?: string
 };
 

@@ -1,8 +1,8 @@
-import React from "react";
+import { ReactNode } from "react";
 
 type VStackProps = {
     className?: string,
-    children: React.ReactNode
+    children: ReactNode
 };
 
 

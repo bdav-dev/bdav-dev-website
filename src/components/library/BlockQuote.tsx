@@ -1,7 +1,7 @@
-import React from "react";
+import { ReactNode } from "react";
 
 type BlockQuoteProps = {
-    children?: React.ReactNode
+    children?: ReactNode
 }
 
 export default function BlockQuote(props: BlockQuoteProps) {

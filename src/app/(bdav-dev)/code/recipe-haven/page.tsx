@@ -2,7 +2,6 @@ import { CodeProjects } from "@/categories/code/content/codeProjects";
 import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLayout";
 import ReadingLayout from "@/layout/ReadingLayout";
 import Tile from "@/components/library/Tile";
-import React from "react";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 import Phone from "@/components/library/Phone";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
