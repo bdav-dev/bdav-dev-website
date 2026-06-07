@@ -5,9 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { ReactNode } from "react";
 
 
-export default function BdavDevLayout(
-    { children }: { children: ReactNode }
-) {
+export default function BdavDevLayout({ children }: { children: ReactNode }) {
     return (
         <>
             <div className={"flex-1 flex flex-col"}>
