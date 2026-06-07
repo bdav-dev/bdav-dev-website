@@ -22,7 +22,7 @@ export default function RecipeHavenPage() {
     return (
         <CodeProjectLayout
             project={project}
-            banner={{ image: images.banner, className: 'dark:brightness-[65%]' }}
+            banner={{ className: 'dark:brightness-[65%]' }}
         >
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>
@@ -130,10 +130,6 @@ export default function RecipeHavenPage() {
 }
 
 const images = {
-    banner: {
-        light: { src: `/code/recipe-haven/banner/banner-light.png`, width: 3500, height: 1440 },
-        dark: { src: `/code/recipe-haven/banner/banner-dark.png`, width: 3500, height: 1440 }
-    },
     shoppingList: {
         light: { src: `/code/recipe-haven/shopping-list-light.png`, width: 828, height: 1792 },
         dark: { src: `/code/recipe-haven/shopping-list-dark.png`, width: 828, height: 1792 }

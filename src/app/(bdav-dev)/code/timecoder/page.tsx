@@ -21,12 +21,7 @@ export default function TimecoderPage() {
     return (
         <CodeProjectLayout
             project={project}
-            banner={
-                {
-                    image: { src: '/code/timecoder/banner.png', height: 3500, width: 1440 },
-                    className: 'brightness-[90%] dark:brightness-[40%]'
-                }
-            }
+            banner={{ className: 'brightness-[90%] dark:brightness-[40%]' }}
         >
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>

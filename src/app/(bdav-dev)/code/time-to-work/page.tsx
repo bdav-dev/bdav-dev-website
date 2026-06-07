@@ -23,7 +23,7 @@ export default function TimeToWorkPage() {
     return (
         <CodeProjectLayout
             project={project}
-            banner={{ image: images.banner, className: 'brightness-[80%] dark:brightness-[70%]' }}
+            banner={{ className: 'brightness-[80%] dark:brightness-[70%]' }}
         >
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>
@@ -91,7 +91,7 @@ export default function TimeToWorkPage() {
                             With both light and dark mode support, it adapts to your preference.
                             The app data is stored locally in your browser, so your progress is still there when you come back.
                         </Tile>
-                        <TimeToWorkImage alt={'time-to-work'} image={images.banner}/>
+                        <TimeToWorkImage alt={'time-to-work'} image={project.banner}/>
                     </div>
 
                     <Tile className={'flex justify-center'}>
@@ -115,10 +115,6 @@ function TimeToWorkImage(props: { image: ThemeSwitch<CloudinaryImage>, alt: stri
 }
 
 const images = {
-    banner: {
-        light: { src: '/code/time-to-work/banner/banner-light.png', width: 2934, height: 1440 },
-        dark: { src: '/code/time-to-work/banner/banner-dark.png', width: 2934, height: 1440 }
-    },
     table: {
         light: { src: '/code/time-to-work/table-light.png', width: 1920, height: 640 },
         dark: { src: '/code/time-to-work/table-dark.png', width: 1920, height: 640 }

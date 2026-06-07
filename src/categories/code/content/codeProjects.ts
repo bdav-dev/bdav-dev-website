@@ -3,6 +3,7 @@ import { CodeProjectType, CodeProjectTypes } from "@/categories/code/content/cod
 import { CodeProjectStatus, CodeProjectStatuses } from "@/categories/code/content/codeProjectStatus";
 import { Download } from "@/utils/DownloadUtilities";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
+import { CloudinaryImage } from "@/cloudinary";
 
 
 export type CodeProjectAction = { url: string } & ({ type: 'Launch' } | ({ type: 'Download' } & Download));
@@ -21,7 +22,8 @@ export type CodeProject = {
     action?: CodeProjectAction,
     isGerman: boolean,
     accentColor?: string,
-    gradient: ThemeSwitch<{ from: string, via?: string, to: string }>
+    gradient: ThemeSwitch<{ from: string, via?: string, to: string }>,
+    banner: ThemeSwitch<CloudinaryImage>
 };
 
 export const CodeProjects: Record<CodeProjectId, CodeProject> = {
@@ -44,7 +46,8 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         gradient: {
             light: { from: '#374151', via: '#404040', to: '#3f3f46' },
             dark: { from: '#f3f4f6', via: '#f5f5f5', to: '#f4f4f5' }
-        }
+        },
+        banner: { src: '/code/create-blender-project/banner.png', height: 3500, width: 1440 }
     },
     TimeToWork: {
         id: 'TimeToWork',
@@ -64,6 +67,10 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         gradient: {
             light: { from: '#0284c7', via: '#2563eb', to: '#4f46e5' },
             dark: { from: '#38bdf8', via: '#60a5fa', to: '#818cf8' }
+        },
+        banner: {
+            light: { src: '/code/time-to-work/banner/banner-light.png', width: 2934, height: 1440 },
+            dark: { src: '/code/time-to-work/banner/banner-dark.png', width: 2934, height: 1440 }
         }
     },
     KdmFinder: {
@@ -84,6 +91,10 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         gradient: {
             light: { from: '#f77e4a', to: '#ed4278' },
             dark: { from: '#fb8a58', to: '#f05082' }
+        },
+        banner: {
+            light: { src: '/code/kdm-finder/banner/banner-light.png', width: 3500, height: 1440 },
+            dark: { src: '/code/kdm-finder/banner/banner-dark.png', width: 3500, height: 1440 }
         }
     },
     Timecoder: {
@@ -103,7 +114,8 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         gradient: {
             light: { from: '#64748b', via: '#6b7280', to: '#71717a' },
             dark: { from: '#94a3b8', via: '#9ca3af', to: '#a1a1aa' }
-        }
+        },
+        banner: { src: '/code/timecoder/banner.png', height: 3500, width: 1440 }
     },
     RecipeHaven: {
         id: 'RecipeHaven',
@@ -119,6 +131,10 @@ export const CodeProjects: Record<CodeProjectId, CodeProject> = {
         gradient: {
             light: { from: '#20B858', to: '#20B858' },
             dark: { from: '#4ade80', to: '#4ade80' }
+        },
+        banner: {
+            light: { src: `/code/recipe-haven/banner/banner-light.png`, width: 3500, height: 1440 },
+            dark: { src: `/code/recipe-haven/banner/banner-dark.png`, width: 3500, height: 1440 }
         }
     }
 };

@@ -20,12 +20,7 @@ export default function CreateBlenderProjectPage() {
     return (
         <CodeProjectLayout
             project={project}
-            banner={
-                {
-                    image: { src: '/code/create-blender-project/banner.png', height: 3500, width: 1440 },
-                    className: 'brightness-[75%] dark:brightness-[65%] invert dark:invert-0 hue-rotate-180 dark:hue-rotate-0'
-                }
-            }
+            banner={{ className: 'brightness-[75%] dark:brightness-[65%] invert dark:invert-0 hue-rotate-180 dark:hue-rotate-0' }}
         >
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>

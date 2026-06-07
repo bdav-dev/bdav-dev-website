@@ -19,12 +19,7 @@ export default function KdmFinderPage() {
     return (
         <CodeProjectLayout
             project={project}
-            banner={
-                {
-                    image: images.banner,
-                    className: 'brightness-[80%] dark:brightness-[60%]'
-                }
-            }
+            banner={{ className: 'brightness-[80%] dark:brightness-[60%]' }}
         >
             <ReadingLayout>
                 <div className={'flex flex-col gap-5'}>
@@ -56,10 +51,6 @@ export default function KdmFinderPage() {
 }
 
 const images = {
-    banner: {
-        light: { src: '/code/kdm-finder/banner/banner-light.png', width: 3500, height: 1440 },
-        dark: { src: '/code/kdm-finder/banner/banner-dark.png', width: 3500, height: 1440 }
-    },
     kdmFinder: {
         light: { src: '/code/kdm-finder/kdm-finder-windows-light.png', width: 2222, height: 1440 },
         dark: { src: '/code/kdm-finder/kdm-finder-windows-dark.png', width: 2222, height: 1440 }
