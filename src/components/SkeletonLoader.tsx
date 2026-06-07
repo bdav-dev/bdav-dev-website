@@ -7,13 +7,13 @@ type SkeletonLoaderProps =
     {
         className: string,
         skeleton: ComponentType<{ className: string }>,
-        component: (context: { setLoaded: () => void, style?: CSSProperties, isLoaded: boolean, className: string }) => ReactNode
+        component: undefined | ((context: { setLoaded: () => void, style?: CSSProperties, isLoaded: boolean, className: string }) => ReactNode)
     }
     |
     {
         className?: never,
         skeleton: ReactNode,
-        component: (context: { setLoaded: () => void, style?: CSSProperties, isLoaded: boolean }) => ReactNode
+        component: undefined | ((context: { setLoaded: () => void, style?: CSSProperties, isLoaded: boolean }) => ReactNode)
     };
 
 export default function SkeletonLoader(props: SkeletonLoaderProps) {
@@ -29,13 +29,14 @@ export default function SkeletonLoader(props: SkeletonLoaderProps) {
     return (
         <>
             {
-                !isLoaded && (
+                (!isLoaded || !props.component) && (
                     typeof props.skeleton === 'function'
                         ? <props.skeleton className={props.className!}/>
                         : props.skeleton
                 )
             }
             {
+                props.component &&
                 props.component(
                     {
                         isLoaded,

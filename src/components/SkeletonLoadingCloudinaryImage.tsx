@@ -8,7 +8,7 @@ import { useTheme } from "@/hooks/UseTheme";
 import { CSSProperties } from "react";
 
 type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image' | 'className' | 'style' | 'onLoad' | 'width'> & {
-    image: ThemeSwitch<CloudinaryImageType>,
+    image: undefined | ThemeSwitch<CloudinaryImageType>,
     sharedClassName?: string,
     imageClassName?: string,
     skeletonClassName?: string,
@@ -22,23 +22,25 @@ export default function SkeletonLoadingCloudinaryImage(
 
     const image = resolveThemeSwitch(imageSwitch);
     const skeletonStyle: CSSProperties = {
-        aspectRatio: `${image.width} / ${image.height}`,
+        aspectRatio: image && `${image.width} / ${image.height}`,
         width: imageProps.width && propagateWidthToSkeleton ? `${imageProps.width}px` : undefined
     };
 
     return (
         <SkeletonLoader
-            key={image.src}
+            key={image && image.src}
             skeleton={<div className={`skeleton ${sharedClassName} ${skeletonClassName}`} style={skeletonStyle}/>}
             component={
-                context =>
-                    <CloudinaryImage
-                        image={image}
-                        style={context.isLoaded ? imageStyle : context.style}
-                        className={`${sharedClassName} ${imageClassName}`}
-                        onLoad={context.setLoaded}
-                        {...imageProps}
-                    />
+                image && (
+                    context =>
+                        <CloudinaryImage
+                            image={image}
+                            style={context.isLoaded ? imageStyle : context.style}
+                            className={`${sharedClassName} ${imageClassName}`}
+                            onLoad={context.setLoaded}
+                            {...imageProps}
+                        />
+                )
             }
         />
     );
