@@ -12,7 +12,7 @@ import VerticalRuler from "@/components/library/VerticalRuler";
 
 export default function Footer() {
     return (
-        <footer className="flex flex-row items-center gap-1.5 px-1.5 pt-2 pb-1 text-zinc-500 dark:text-zinc-700 text-sm">
+        <footer className="flex flex-row items-center gap-2 px-1.5 pt-2 pb-1 text-zinc-500 dark:text-zinc-700 text-sm">
             <Image
                 alt={'bdav.dev icon'}
                 src={bdavDevIcon}
@@ -36,7 +36,7 @@ export default function Footer() {
                 <LinkedInGlyph className={'text-[0.95em]'}/>
             </SocialLink>
 
-            <div className={'flex flex-row gap-1.5 ml-auto'}>
+            <div className={'flex flex-row gap-2 ml-auto'}>
                 <HyperLink href={BdavDev.privacyPolicy.getRoute()} discreet>
                     Datenschutzerklärung
                 </HyperLink>
