@@ -1,0 +1,9 @@
+.popover {
+    @apply
+    p-1.5 rounded-xl
+    bg-zinc-100 dark:bg-zinc-900
+    bg-opacity-90 dark:bg-opacity-90
+    border dark:border-zinc-800 border-zinc-200
+    backdrop-blur-md
+    shadow-sm dark:shadow-md
+}

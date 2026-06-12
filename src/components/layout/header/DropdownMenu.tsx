@@ -20,13 +20,7 @@ export default function DropdownMenu(props: DropdownMenuProps) {
         <ul
             className={`
                 flex flex-col items-center
-                p-1.5
-                rounded-xl
-                bg-opacity-90 dark:bg-opacity-90
-                backdrop-blur-sm
-                drop-shadow-sm
-                bg-zinc-100 dark:bg-zinc-900
-                border dark:border-zinc-800 border-zinc-200
+                popover
                 transition-all
                 opacity-0 group-hover:opacity-100
                 scale-90 group-hover:scale-100
@@ -62,7 +56,7 @@ function Item(props: ItemProps) {
                 w-full
                 text-center rounded-md
                 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-600
-                break-keep
+                whitespace-nowrap
             `}
         >
             <Link

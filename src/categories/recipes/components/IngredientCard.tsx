@@ -1,5 +1,4 @@
 import { getFormattedIngredientAmount, MeasuredIngredient } from "@/categories/recipes/content/recipes";
-import Popover from "@/components/Popover";
 import { ReactNode } from "react";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 import StarIcon from "@/icons/app/StarIcon";
@@ -102,13 +101,13 @@ function ProductRecommendation(props: { children?: ReactNode }) {
 
 function ProductRecommendationPopover(props: { children?: ReactNode }) {
     return (
-        <Popover className={'flex flex-col gap-0.5 text-center'}>
+        <div className={'popover flex flex-col gap-0.5 text-center'}>
             <div className={'flex-1 px-0.5 rounded-full bg-zinc-300 dark:bg-zinc-950 text-s font-semibold'}>
                 Product recommendation
             </div>
             <div>
                 {props.children}
             </div>
-        </Popover>
+        </div>
     );
 }

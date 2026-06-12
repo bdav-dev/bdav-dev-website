@@ -1,5 +1,6 @@
 @import '@/styling/tile.css';
 @import '@/styling/skeleton.css';
+@import '@/styling/popover.css';
 
 @tailwind base;
 @tailwind components;
