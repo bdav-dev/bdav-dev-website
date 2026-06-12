@@ -15,6 +15,8 @@ import { Recipes } from "@/categories/recipes/content/recipes";
 import ChefHatIcon from "@/icons/app/ChefHatIcon";
 import InstagramGlyph from "@/icons/logo/InstagramGlyph";
 
+import '@/styling/components/header.css';
+
 
 export default function Header() {
     const categoryRoute = getCategoryRoute(usePathname());
@@ -22,17 +24,7 @@ export default function Header() {
     return (
         <>
             <div className="fixed top-0 w-full z-50">
-                <nav className={`
-                    flex flex-col xs:flex-row
-                    items-center justify-center gap-0.5
-                    h-[5.75rem] xs:h-[3.75rem]
-                    p-2.5 pl-3.5 m-4 mb-0
-                    rounded-[1.25rem]
-                    bg-zinc-300 dark:bg-zinc-700
-                    bg-opacity-60 dark:bg-opacity-50
-                    backdrop-blur-md
-                    select-none
-                `}>
+                <nav className={'header'}>
                     <BdavDevHomeLink/>
 
                     <div className="flex flex-row xs:ml-auto justify-center items-center gap-1">

@@ -1,0 +1,26 @@
+.header {
+    --header-border-radius: 1.25rem;
+    border-radius: var(--header-border-radius);
+
+    @apply
+    flex flex-col xs:flex-row
+    items-center justify-center gap-0.5
+    h-[5.75rem] xs:h-[3.75rem]
+    p-2.5 pl-3.5 m-4 mb-0
+    bg-zinc-300 dark:bg-zinc-700
+    bg-opacity-60 dark:bg-opacity-50
+    select-none
+    relative
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(18px);
+    z-index: -1;
+    border-radius: var(--header-border-radius);
+}
