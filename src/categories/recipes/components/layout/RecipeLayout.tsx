@@ -32,14 +32,16 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
                     skeletonClassName={'rounded-xl'}
                 />
 
-                <div className={"flex-grow flex flex-col gap-4"}>
+                <div className={"flex-grow flex flex-col gap-2.5"}>
                     <div className={'flex flex-col gap-0.5'}>
                         <H1>{props.recipe.title}</H1>
+
                         <div className={"flex flex-row gap-1.5"}>
                             <RecipeCategoryTag category={props.recipe.category}/>
                             {props.recipe.tagline}
                         </div>
                     </div>
+
                     <Tile customPadding className={'p-8 flex-1 flex items-center justify-center'}>
                         <RecipeIngredients recipe={props.recipe}/>
                     </Tile>
