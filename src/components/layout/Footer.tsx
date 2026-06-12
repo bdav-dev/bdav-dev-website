@@ -12,7 +12,7 @@ import VerticalRuler from "@/components/library/VerticalRuler";
 
 export default function Footer() {
     return (
-        <footer className="flex flex-row items-center gap-2 px-1.5 pt-2 pb-1 text-zinc-500 dark:text-zinc-700 text-sm">
+        <footer className="flex flex-row items-center gap-1.5 sm:gap-2 px-1.5 pt-2 pb-1 text-zinc-500 dark:text-zinc-700 text-xs sm:text-sm">
             <Image
                 alt={'bdav.dev icon'}
                 src={bdavDevIcon}
