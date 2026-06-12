@@ -90,9 +90,9 @@ export function Abstract3dImageLinkPlaceholder(props: Abstract3dImageLinkPlaceho
 
     return (
         <ContentLinkPlaceholder
-            className={'rounded-2xl'}
+            className={'rounded-2xl max-w-full aspect-square'}
             fill={props.fill}
-            style={{ width: size, height: size }}
+            style={{ width: `${getThumbnailSizeInPixels(props.small ?? false)}px` }}
         >
             {props.children}
         </ContentLinkPlaceholder>

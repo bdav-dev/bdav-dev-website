@@ -43,7 +43,7 @@ export default function BlenderPage() {
                             <Abstract3dImageLinks
                                 images={abstract3dPreviewImages}
                                 trailingComponent={
-                                    <Link className={'group rounded-2xl'} href={BdavDev.blender.abstract3dSeries.getRoute()} draggable={false}>
+                                    <Link className={'group rounded-2xl max-w-full'} href={BdavDev.blender.abstract3dSeries.getRoute()} draggable={false}>
                                         <Abstract3dImageLinkPlaceholder fill>
                                             <div className={'text-xl text-accent group-hover:underline'}>
                                                 View all

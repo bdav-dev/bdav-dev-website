@@ -28,7 +28,7 @@ export default function FeaturedAbstract3dCollections() {
             collections={featuredCollections}
             small
             trailingComponent={
-                <Link className={'group m-3 rounded-2xl'} href={BdavDev.blender.abstract3dSeries.collections.getRoute()}>
+                <Link className={'group m-3 rounded-2xl max-w-full'} href={BdavDev.blender.abstract3dSeries.collections.getRoute()}>
                     <Abstract3dImageLinkPlaceholder small fill>
                         <div className={'text-xl text-accent group-hover:underline'}>
                             View all
