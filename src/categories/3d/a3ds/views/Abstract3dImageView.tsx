@@ -73,7 +73,7 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
                         }
                     </div>
                 }
-                className={'flex-grow'}
+                className={'flex-grow min-w-0'}
             >
                 <div className={'flex flex-col items-start gap-4'}>
                     <Table

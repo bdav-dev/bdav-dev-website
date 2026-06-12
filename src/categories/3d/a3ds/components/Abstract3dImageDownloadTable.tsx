@@ -14,7 +14,7 @@ export default function Abstract3dImageDownloadTable(props: Abstract3dImageDownl
     const isAnyDescriptionPresent = props.downloads.some(download => download.description);
 
     return (
-        <Tile>
+        <Tile className={'overflow-x-scroll'}>
             <table className="abstract-3d-image-download-table">
                 <thead>
                 <tr>
@@ -52,8 +52,10 @@ export default function Abstract3dImageDownloadTable(props: Abstract3dImageDownl
                                     {download.width}x{download.height}
                                 </td>
 
-                                <td className={"text-right"}>
-                                    <DownloadButton download={{ url: download.downloadUrl, fetch: true, fileName: `${download.fileName}.${download.fileFormat}` }}/>
+                                <td>
+                                    <div className={'ml-auto w-fit'}>
+                                        <DownloadButton download={{ url: download.downloadUrl, fetch: true, fileName: `${download.fileName}.${download.fileFormat}` }}/>
+                                    </div>
                                 </td>
                             </tr>
                         )

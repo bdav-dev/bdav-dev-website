@@ -31,7 +31,7 @@ function FetchDownloadButton(props: { url: string, fileName: string }) {
     return (
         <button
             className={`
-                inline-flex items-center gap-[0.075rem]
+                flex items-center gap-[0.075rem]
                 hover:text-accent
                 transition-transform ease-out duration-[50ms]
                 active:translate-y-[0.075rem]
@@ -45,7 +45,7 @@ function FetchDownloadButton(props: { url: string, fileName: string }) {
             disabled={isDownloading}
         >
             <MaterialSymbol symbol={isDownloading ? MaterialSymbols.PROGRESS_ACTIVITY : MaterialSymbols.DOWNLOAD} weight={350} className={isDownloading ? 'animate-spin' : ''}/>
-            <span className={'self-baseline'}>
+            <span className={'hidden xs:inline'}>
                 Download
             </span>
         </button>
