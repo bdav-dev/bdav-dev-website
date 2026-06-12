@@ -12,7 +12,7 @@ export default function CodeProjectLink({ codeProject }: CodeProjectProps) {
     return (
         <Link
             href={BdavDev.code.$project.getRoute({ project: codeProject })}
-            className={'rounded-2xl w-fit'}
+            className={'block rounded-2xl max-w-full'}
         >
             <CodeProjectBadge codeProject={codeProject}/>
         </Link>
