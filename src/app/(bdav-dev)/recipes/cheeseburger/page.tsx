@@ -19,7 +19,7 @@ export default function CheeseburgerPage() {
         <RecipeLayout recipe={Recipes.Cheeseburger}>
             <ReadingLayout>
                 <Section headline="Cooking instructions">
-                    <div className={'flex flex-col gap-5'}>
+                    <div className={'flex flex-col gap-5 mt-1.5'}>
                         <Tile title={'1.'}>
                             <p>
                                 Start by peeling the onion(s) and slicing them into half-rings.
