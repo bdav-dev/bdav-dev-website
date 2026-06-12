@@ -13,7 +13,7 @@ export default function CodeProjectBadge({ codeProject }: CodeProjectBadgeProps)
 
     return (
         <div
-            className={"bg-tile w-[23rem] h-[7rem] rounded-2xl group flex gap-3 items-center p-6"}
+            className={"group flex items-center gap-3 p-6 w-[23rem] h-[7rem] max-w-full rounded-2xl bg-tile"}
             style={createAccentColorStyle(codeProject.accentColor)}
         >
             <CodeProjectAppIcon project={codeProject} className={'h-[4rem] w-[4rem] drop-shadow'}/>
