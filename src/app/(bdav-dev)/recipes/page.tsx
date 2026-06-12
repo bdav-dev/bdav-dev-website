@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RecipesPage() {
     return (
         <Article headline={'Recipes'}>
-            <div className={'flex flex-row flex-wrap justify-center sm:justify-normal gap-2.5 mt-2.5'}>
+            <div className={'flex flex-row flex-wrap gap-2.5 mt-2.5'}>
                 {
                     Object.values(RecipeCategories)
                         .map((category, index) => <RecipeCategorySection category={category} key={index}/>)
