@@ -9,7 +9,6 @@ import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities"
 import { BdavDev } from "@/routing";
 import Link from "next/link";
 import Abstract3dImageThumbnail, { getThumbnailSizeInPixels } from "@/categories/3d/a3ds/components/Abstract3dImageThumbnail";
-import SkeletonLoader from "@/components/SkeletonLoader";
 
 
 type Abstract3dImageLinkProps = {
@@ -29,30 +28,10 @@ export default function Abstract3dImageLink(props: Abstract3dImageLinkProps) {
         >
             <div className={'relative transition-transform group-hover:scale-[1.02] ease-out duration-100'}>
                 <div className={'relative z-20'}>
-                    <SkeletonLoader
-                        className={'rounded-2xl'}
-                        skeleton={
-                            ({ className }) =>
-                                <div
-                                    className={`skeleton ${className}`}
-                                    style={
-                                        {
-                                            width: `${getThumbnailSizeInPixels(false)}px`,
-                                            height: `${getThumbnailSizeInPixels(false)}px`
-                                        }
-                                    }
-                                />
-                        }
-                        component={
-                            context =>
-                                <Abstract3dImageThumbnail
-                                    image={props.image}
-                                    alt={`Abstract3DSeries #${props.image.nr}`}
-                                    className={`${context.className} select-none`}
-                                    style={context.style}
-                                    onLoad={context.setLoaded}
-                                />
-                        }
+                    <Abstract3dImageThumbnail
+                        image={props.image}
+                        alt={`Abstract3DSeries #${props.image.nr}`}
+                        sharedClassName={`rounded-2xl select-none`}
                     />
                 </div>
 
@@ -60,7 +39,7 @@ export default function Abstract3dImageLink(props: Abstract3dImageLinkProps) {
                     <Abstract3dImageThumbnail
                         image={props.image}
                         alt={`Abstract3DSeries #${props.image.nr}`}
-                        className={'rounded-2xl select-none'}
+                        sharedClassName={'rounded-2xl select-none'}
                     />
                 </div>
 
@@ -86,8 +65,6 @@ export type Abstract3dImageLinkPlaceholderProps = {
 }
 
 export function Abstract3dImageLinkPlaceholder(props: Abstract3dImageLinkPlaceholderProps) {
-    const size = `${getThumbnailSizeInPixels(props.small ?? false)}px`;
-
     return (
         <ContentLinkPlaceholder
             className={'rounded-2xl max-w-full aspect-square'}

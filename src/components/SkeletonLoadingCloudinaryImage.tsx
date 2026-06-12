@@ -7,7 +7,7 @@ import CloudinaryImage, { CloudinaryImageProps } from "@/components/CloudinaryIm
 import { useTheme } from "@/hooks/UseTheme";
 import { CSSProperties } from "react";
 
-type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image' | 'className' | 'style' | 'onLoad' | 'width'> & {
+export type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image' | 'className' | 'style' | 'onLoad' | 'width'> & {
     image: undefined | ThemeSwitch<CloudinaryImageType>,
     sharedClassName?: string,
     imageClassName?: string,

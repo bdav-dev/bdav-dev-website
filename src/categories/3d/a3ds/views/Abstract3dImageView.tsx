@@ -11,9 +11,8 @@ import Abstract3dImageDialog from "@/categories/3d/a3ds/components/Abstract3dIma
 import { formatDmyString } from "@/utils/DateUtils";
 import NewBadge from "@/categories/3d/a3ds/components/NewBadge";
 import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
-import CloudinaryImage from "@/components/CloudinaryImage";
 import Abstract3dImageFavoriteButton from "@/categories/3d/a3ds/components/Abstract3dImageFavoriteButton";
-import SkeletonLoader from "@/components/SkeletonLoader";
+import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
 
 
 type Abstract3dImageViewProps = {
@@ -28,35 +27,21 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
 
     return (
         <div className="flex flex-col lg:flex-row gap-5">
-            <SkeletonLoader
-                className={`
+            <SkeletonLoadingCloudinaryImage
+                alt={`Abstract3DSeries #${image.nr}`}
+                image={image.image}
+                sharedClassName={`
                     w-full sm:w-2/3 md:w-[67%] lg:w-1/2
                     max-w-xl lg:max-w-[50rem] 3xl:max-w-[77rem]
                     self-center lg:self-start
                     flex-shrink-0
                     rounded-2xl
                 `}
-                skeleton={
-                    ({ className }) =>
-                        <div
-                            className={`${className} skeleton`}
-                            style={{ aspectRatio: `${image.image.width} / ${image.image.height}` }}
-                        />
-                }
-                component={
-                    context =>
-                        <CloudinaryImage
-                            alt={`Abstract3DSeries #${image.nr}`}
-                            image={image.image}
-                            className={`${context.className} select-none cursor-pointer`}
-                            quality={95}
-                            loading={'eager'}
-                            draggable={false}
-                            onClick={() => setIsDialogVisible(true)}
-                            style={context.style}
-                            onLoad={context.setLoaded}
-                        />
-                }
+                imageClassName={'select-none cursor-pointer'}
+                quality={95}
+                loading={'eager'}
+                draggable={false}
+                onClick={() => setIsDialogVisible(true)}
             />
 
             <Article

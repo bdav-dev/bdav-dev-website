@@ -17,8 +17,9 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
     const collectionSize = collection.images.length;
     const [first, second, third] = collection.images.toSorted(compareAbstract3dImages);
 
-    const imageClassNames = 'rounded-xl select-none transition-all ease-out';
-    const obstructedClassNames = 'absolute top-0 z-10 duration-100';
+    const classNames = 'rounded-xl select-none transition-all ease-out';
+    const classNamesForObstructedImages = 'absolute top-0 z-10 duration-100';
+    const skeletonClassNames = 'border border-zinc-300 dark:border-zinc-600';
 
     return (
         <div className={`w-fit flex flex-col items-center ${props.small ? 'my-2 mx-4' : 'my-4 mx-6'}`}>
@@ -35,9 +36,10 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                         image={first}
                         alt={collection.name}
                         small={props.small}
-                        className={
+                        skeletonClassName={skeletonClassNames}
+                        sharedClassName={
                             `
-                            ${imageClassNames}
+                            ${classNames}
                             ${
                                 isEven(first.nr)
                                     ? collectionSize == 1 ? 'group-hover:-rotate-2' : 'group-hover:-rotate-1'
@@ -54,9 +56,10 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                         image={second}
                         alt={collection.name}
                         small={props.small}
-                        className={`
-                            ${imageClassNames}
-                            ${obstructedClassNames}
+                        skeletonClassName={skeletonClassNames}
+                        sharedClassName={`
+                            ${classNames}
+                            ${classNamesForObstructedImages}
                             ${collectionSize == 2 ? 'rotate-6 group-hover:rotate-12' : '-translate-x-3 -rotate-3 group-hover:-translate-x-6 group-hover:-rotate-6'}
                         `}
                     />
@@ -67,9 +70,10 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                         image={third}
                         alt={collection.name}
                         small={props.small}
-                        className={`
-                            ${imageClassNames}
-                            ${obstructedClassNames}
+                        skeletonClassName={skeletonClassNames}
+                        sharedClassName={`
+                            ${classNames}
+                            ${classNamesForObstructedImages}
                             translate-x-3 rotate-3 group-hover:translate-x-6 group-hover:rotate-6
                         `}
                     />

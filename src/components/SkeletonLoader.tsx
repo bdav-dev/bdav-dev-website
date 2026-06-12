@@ -21,9 +21,12 @@ export default function SkeletonLoader(props: SkeletonLoaderProps) {
 
     const componentLoadingStyles: CSSProperties = {
         opacity: 0,
+        position: 'fixed',
+        bottom: 0,
+        right: 0,
         visibility: 'hidden',
         pointerEvents: 'none',
-        position: 'absolute'
+        zIndex: '-1'
     };
 
     return (

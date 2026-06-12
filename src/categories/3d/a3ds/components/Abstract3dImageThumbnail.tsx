@@ -1,19 +1,20 @@
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
-import CloudinaryImage, { CloudinaryImageProps } from "@/components/CloudinaryImage";
+import SkeletonLoadingCloudinaryImage, { CloudinaryImageWithSkeletonProps } from "@/components/SkeletonLoadingCloudinaryImage";
 
 
 type Abstract3dImageThumbnailProps = {
     image: Abstract3dImage,
     small?: boolean
-} & Omit<CloudinaryImageProps, 'image' | 'width' | 'quality' | 'draggable'>
+} & Omit<CloudinaryImageWithSkeletonProps, 'image' | 'width' | 'propagateWidthToSkeleton' | 'quality' | 'draggable'>
 
 export const getThumbnailSizeInPixels = (small: boolean) => small ? 136 : 225;
 
 export default function Abstract3dImageThumbnail({ image, small, ...rest }: Abstract3dImageThumbnailProps) {
     return (
-        <CloudinaryImage
+        <SkeletonLoadingCloudinaryImage
             image={image.image}
             width={getThumbnailSizeInPixels(small ?? false)}
+            propagateWidthToSkeleton
             quality={20}
             draggable={false}
             {...rest}
