@@ -16,7 +16,7 @@ export default function Footer() {
             <Image
                 alt={'bdav.dev icon'}
                 src={bdavDevIcon}
-                className={'opacity-80 w-5 h-5 select-none'}
+                className={'opacity-80 select-none w-[1.4em] h-[1.4em]'}
                 draggable={false}
                 loading={'lazy'}
                 placeholder={'blur'}
