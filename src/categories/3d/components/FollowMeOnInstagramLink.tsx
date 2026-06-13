@@ -1,16 +1,15 @@
 import Link from "next/link";
-import Phone from "@/components/library/Phone";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import Phone from "@/components/library/device/Phone";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 import InstagramGlyph from "@/icons/logo/InstagramGlyph";
+import { SocialMedia } from "@/utilities/routing";
 
 
 export default function FollowMeOnInstagramLink() {
-    const instagramHref = 'https://www.instagram.com/davidb.3d/';
-
     return (
         <div className={'flex flex-col md:flex-row items-center w-fit max-w-full gap-4 md:gap-6'}>
             <Link
-                href={instagramHref}
+                href={SocialMedia.instagram.davidb3d.href}
                 className={'block w-fit max-w-full'}
             >
                 <Phone
@@ -37,7 +36,7 @@ export default function FollowMeOnInstagramLink() {
                     follow me on
                 </div>
                 <Link
-                    href={instagramHref}
+                    href={SocialMedia.instagram.davidb3d.href}
                     className={'w-fit text-3xl font-semibold flex flex-row gap-1.5'}
                 >
                     <InstagramGlyph className={'text-[0.85em]'}/>

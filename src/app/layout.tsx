@@ -1,5 +1,5 @@
 import ThemeProvider from "@/contexts/ThemeContext";
-import { cascadiaCode, inter } from "@/fonts";
+import { cascadiaCode, inter } from "@/styles/fonts";
 import ThemeApplier from "@/components/theme/ThemeApplier";
 import type { Metadata } from "next";
 import { MATERIAL_SYMBOLS_API_URL } from "@/icons/material/MaterialSymbol";

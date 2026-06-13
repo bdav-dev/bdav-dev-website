@@ -1,11 +1,11 @@
 import { ThemeSwitch } from "@/contexts/ThemeContext";
-import { CloudinaryImage } from "@/cloudinary";
+import { CloudinaryImage } from "@/utilities/cloudinary";
 import { ComponentType, ReactNode } from "react";
 import { WeightableIconProps } from "@/icons/WeightableIcon";
 import Link from "next/link";
 import Tile from "@/components/library/Tile";
-import NewBadge from "@/categories/3d/a3ds/components/NewBadge";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import NewBadge from "@/components/library/NewBadge";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 
 
 type CategorySliceProps = CategoryLinkProps & {

@@ -1,16 +1,15 @@
 import Link from "next/link";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
-import Notebook from "@/components/library/Notebook";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import Notebook from "@/components/library/device/Notebook";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
+import { SocialMedia } from "@/utilities/routing";
 
 
 export default function FollowMeOnGitHubLink() {
-    const githubHref = 'https://github.com/bdav-dev/';
-
     return (
         <div className={'flex flex-col md:flex-row items-center w-fit max-w-full gap-3 md:gap-2'}>
             <Link
-                href={githubHref}
+                href={SocialMedia.gitHub.bdavDev.href}
                 className={'block w-fit max-w-full'}
             >
                 <Notebook
@@ -37,7 +36,7 @@ export default function FollowMeOnGitHubLink() {
                     follow me on
                 </div>
                 <Link
-                    href={githubHref}
+                    href={SocialMedia.gitHub.bdavDev.href}
                     className={'w-fit text-3xl font-semibold flex flex-row gap-1.5'}
                 >
                     <GitHubInvertocat className={'text-[0.85em]'}/>

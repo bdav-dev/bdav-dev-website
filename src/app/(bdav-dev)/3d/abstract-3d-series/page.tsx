@@ -1,6 +1,6 @@
 import Abstract3dImageLinks from "@/categories/3d/a3ds/components/Abstract3dImageLinks";
-import Article from "@/components/layout/document/Article";
-import Section from "@/components/layout/document/Section";
+import Article from "@/components/library/document/Article";
+import Section from "@/components/library/document/Section";
 import { Metadata } from "next";
 import FeaturedAbstract3dCollections from "@/categories/3d/a3ds/components/collection/FeaturedAbstract3dCollections";
 import Tile from "@/components/library/Tile";

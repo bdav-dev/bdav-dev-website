@@ -1,4 +1,4 @@
-import { SemanticColor } from "@/styling/semanticColor";
+import { SemanticColor } from "@/styles/semanticColor";
 
 
 export type CodeProjectStatusId = 'InDevelopment' | 'Archived' | 'Prototype';

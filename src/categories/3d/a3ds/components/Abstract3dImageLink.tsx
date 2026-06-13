@@ -1,12 +1,11 @@
 'use client';
 
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
-import ContentLinkPlaceholder from "@/components/link/content/ContentLinkPlaceholder";
 import { Abstract3dCollection } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 import { ReactNode } from "react";
-import NewBadge from "@/categories/3d/a3ds/components/NewBadge";
+import NewBadge from "@/components/library/NewBadge";
 import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
-import { BdavDev } from "@/routing";
+import { BdavDev } from "@/utilities/routing";
 import Link from "next/link";
 import Abstract3dImageThumbnail, { getThumbnailSizeInPixels } from "@/categories/3d/a3ds/components/Abstract3dImageThumbnail";
 
@@ -66,12 +65,16 @@ export type Abstract3dImageLinkPlaceholderProps = {
 
 export function Abstract3dImageLinkPlaceholder(props: Abstract3dImageLinkPlaceholderProps) {
     return (
-        <ContentLinkPlaceholder
-            className={'rounded-2xl max-w-full aspect-square'}
-            fill={props.fill}
+        <div
             style={{ width: `${getThumbnailSizeInPixels(props.small ?? false)}px` }}
+            className={`
+                flex justify-center items-center
+                p-1.5 max-w-full rounded-2xl aspect-square
+                text-center text-zinc-600 dark:text-zinc-400
+                ${props.fill ? 'bg-tile' : 'border border-zinc-500 border-dashed'}
+            `}
         >
             {props.children}
-        </ContentLinkPlaceholder>
+        </div>
     );
 }

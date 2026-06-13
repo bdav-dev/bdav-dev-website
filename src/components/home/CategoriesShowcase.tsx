@@ -3,11 +3,11 @@
 import { Abstract3dImage, Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import { CodeProject, CodeProjects } from "@/categories/code/content/codeProjects";
 import { useEffect, useState } from "react";
-import { chooseRandom } from "@/utils/RandomUtils";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import { chooseRandom } from "@/utilities/random";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 import { Recipe, Recipes } from "@/categories/recipes/content/recipes";
 import CodeIcon from "@/icons/app/CodeIcon";
-import { BdavDev } from "@/routing";
+import { BdavDev } from "@/utilities/routing";
 import CubeIcon from "@/icons/app/CubeIcon";
 import ChefHatIcon from "@/icons/app/ChefHatIcon";
 import { getLatestNewAbstract3dImage, isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";

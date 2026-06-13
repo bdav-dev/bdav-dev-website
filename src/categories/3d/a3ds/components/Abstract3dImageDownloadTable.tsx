@@ -1,10 +1,9 @@
 import { Abstract3dImageDownload } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import DownloadButton from "@/components/library/DownloadButton";
-
-import '@/categories/3d/a3ds/components/styles/abstract3d-image-download-table.css';
 import Tile from "@/components/library/Tile";
 import { calculateAspectRatio } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
 
+import '@/styles/css/components/3d/a3ds/abstract3d-image-download-table.css';
 
 type Abstract3dImageDownloadTableProps = {
     downloads: readonly Abstract3dImageDownload[]

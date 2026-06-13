@@ -2,31 +2,31 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { isEmpty } from "@/utils/ArrayUtils";
-import { BdavDev } from "@/routing";
+import { isEmpty } from "@/utilities/array";
+import { BdavDev } from "@/utilities/routing";
 import { ReactNode } from "react";
 
 
 export default function BreadcrumbNavigation() {
     const route = usePathname()
-        .split("/")
-        .filter(segment => segment != "");
+        .split('/')
+        .filter(segment => segment != '');
 
     if (isEmpty(route)) {
-        return <></>;
+        return null;
     }
 
     return (
-        <div className="flex flex-row flex-wrap items-center">
+        <div className={'flex flex-row flex-wrap items-center'}>
             <Segment href={BdavDev.getRoute()}>
                 bdav.dev
             </Segment>
             {
                 route.map(
                     (segment, index) => (
-                        <div key={segment} className={"flex flex-row flex-nowrap items-center"}>
+                        <div key={index} className={'flex flex-row flex-nowrap items-center'}>
                             <SegmentDivider/>
-                            <Segment href={"/" + route.slice(0, index + 1).join("/")}>
+                            <Segment href={'/' + route.slice(0, index + 1).join('/')}>
                                 {segment}
                             </Segment>
                         </div>
@@ -57,5 +57,5 @@ function Segment(props: { href: string, children?: ReactNode }) {
 }
 
 function SegmentDivider() {
-    return <div className="px-1.5 select-none dark:text-zinc-500 text-zinc-400">/</div>;
+    return <div className={'px-1.5 select-none dark:text-zinc-500 text-zinc-400'}>/</div>;
 }

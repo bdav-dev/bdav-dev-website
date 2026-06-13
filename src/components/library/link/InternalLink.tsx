@@ -4,7 +4,7 @@ import { ComponentType, ReactNode } from "react";
 import HyperLink from "@/components/library/link/HyperLink";
 import { IconProps } from "@/icons/Icon";
 import CodeIcon from "@/icons/app/CodeIcon";
-import { BdavDev, getBaseOfRoute } from "@/routing";
+import { BdavDev, getBaseOfRoute } from "@/utilities/routing";
 import CubeIcon from "@/icons/app/CubeIcon";
 import ChefHatIcon from "@/icons/app/ChefHatIcon";
 

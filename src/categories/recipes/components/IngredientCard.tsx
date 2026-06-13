@@ -1,6 +1,6 @@
 import { getFormattedIngredientAmount, MeasuredIngredient } from "@/categories/recipes/content/recipes";
 import { ReactNode } from "react";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 import StarIcon from "@/icons/app/StarIcon";
 
 

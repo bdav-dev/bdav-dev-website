@@ -1,8 +1,8 @@
 import RecipeLink from "@/categories/recipes/components/RecipeLink";
 import { Recipes } from "@/categories/recipes/content/recipes";
 import { Metadata } from "next";
-import Article from "@/components/layout/document/Article";
-import Section from "@/components/layout/document/Section";
+import Article from "@/components/library/document/Article";
+import Section from "@/components/library/document/Section";
 import { RecipeCategories, RecipeCategory } from "@/categories/recipes/content/recipeCategory";
 
 

@@ -1,4 +1,4 @@
-import { createIsLast } from "@/utils/ArrayUtils";
+import { createIsLast } from "@/utilities/array";
 import { ReactNode } from "react";
 
 type TitledItem = {
@@ -22,11 +22,11 @@ export default function Enumerate(props: EnumerateProps) {
     const digits = props.items.length.toString().length;
     const bulletWidth = props.bulletWidth ?? (props.numbered ? `${digits * 0.5 + 0.6}rem` : '0.75rem');
 
-    const separate = typeof (props.spaceBetween) === "boolean"
+    const separate = typeof (props.spaceBetween) === 'boolean'
         ? '0.25rem'
         : props.spaceBetween;
 
-    const marginLeft = typeof (props.indent) === "boolean"
+    const marginLeft = typeof (props.indent) === 'boolean'
         ? '0.5rem'
         : props.indent;
 

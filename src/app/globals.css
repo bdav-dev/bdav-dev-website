@@ -1,6 +1,7 @@
-@import '@/styling/tile.css';
-@import '@/styling/skeleton.css';
-@import '@/styling/popover.css';
+@import '@/styles/css/document.css';
+@import '@/styles/css/popover.css';
+@import '@/styles/css/skeleton.css';
+@import '@/styles/css/tile.css';
 
 @tailwind base;
 @tailwind components;
@@ -29,8 +30,4 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-:is(article, section) p:not(:last-child) {
-    margin-bottom: 0.3rem;
 }

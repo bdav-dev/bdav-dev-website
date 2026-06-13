@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { capitalizeFirstLetter } from "@/utils/StringUtils";
+import { capitalizeFirstLetter } from "@/utilities/string";
 import Abstract3dImageOfCollectionViewResolver from "@/categories/3d/a3ds/views/resolver/Abstract3dImageOfCollectionViewResolver";
 
 

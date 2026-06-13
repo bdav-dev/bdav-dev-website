@@ -8,6 +8,8 @@ import { useTheme } from "@/hooks/UseTheme";
 export default function ThemeToggle() {
     const { darkTheme, setDarkTheme } = useTheme();
 
+    const Icon = darkTheme ? MoonIcon : SunIcon;
+
     return (
         <button
             className={`
@@ -20,11 +22,7 @@ export default function ThemeToggle() {
             `}
             onClick={() => setDarkTheme(current => !current)}
         >
-            {
-                darkTheme
-                    ? <MoonIcon weight={300} className={'text-[1.05em]'}/>
-                    : <SunIcon weight={300} className={'text-[1.05em]'}/>
-            }
+            <Icon weight={300} className={'text-[1.05em]'}/>
         </button>
     );
 }

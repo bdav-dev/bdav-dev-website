@@ -2,9 +2,9 @@ import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLa
 import { CodeProjects } from "@/categories/code/content/codeProjects";
 import Tile from "@/components/library/Tile";
 import Enumerate from "@/components/library/Enumerate";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
-import { CloudinaryImage } from "@/cloudinary";
+import { CloudinaryImage } from "@/utilities/cloudinary";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import { SplitLayout } from "@/components/library/layout/SplitLayout";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";

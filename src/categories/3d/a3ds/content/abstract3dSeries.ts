@@ -1,4 +1,4 @@
-import { CloudinaryImage } from "@/cloudinary";
+import { CloudinaryImage } from "@/utilities/cloudinary";
 
 
 export type Abstract3dImage = {

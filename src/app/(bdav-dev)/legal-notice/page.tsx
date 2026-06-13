@@ -1,6 +1,6 @@
 import HyperLink from "@/components/library/link/HyperLink";
-import Article from "@/components/layout/document/Article";
-import Section from "@/components/layout/document/Section";
+import Article from "@/components/library/document/Article";
+import Section from "@/components/library/document/Section";
 import { Metadata } from "next";
 
 export default function ImpressumPage() {

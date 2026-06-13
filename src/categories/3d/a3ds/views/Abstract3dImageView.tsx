@@ -1,18 +1,18 @@
 'use client';
 
-import Article from "@/components/layout/document/Article";
-import Section from "@/components/layout/document/Section";
-import SubSection from "@/components/layout/document/SubSection";
+import Article from "@/components/library/document/Article";
+import Section from "@/components/library/document/Section";
+import SubSection from "@/components/library/document/SubSection";
 import Abstract3dImageDownloadTable from "@/categories/3d/a3ds/components/Abstract3dImageDownloadTable";
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import { useState } from "react";
 import Table from "@/components/library/Table";
 import Abstract3dImageDialog from "@/categories/3d/a3ds/components/Abstract3dImageDialog";
-import { formatDmyString } from "@/utils/DateUtils";
-import NewBadge from "@/categories/3d/a3ds/components/NewBadge";
+import { formatDmyString } from "@/utilities/date";
+import NewBadge from "@/components/library/NewBadge";
 import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
 import Abstract3dImageFavoriteButton from "@/categories/3d/a3ds/components/Abstract3dImageFavoriteButton";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 
 
 type Abstract3dImageViewProps = {

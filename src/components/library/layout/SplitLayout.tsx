@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
+
 type SplitLayoutProps = {
     left: ReactNode,
     right: ReactNode,

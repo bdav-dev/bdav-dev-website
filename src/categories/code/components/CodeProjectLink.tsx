@@ -1,8 +1,8 @@
 import { CodeProject } from "@/categories/code/content/codeProjects";
 import Link from "next/link";
 import CodeProjectBadge from "@/categories/code/components/CodeProjectBadge";
-import ContentLinkPlaceholder from "@/components/link/content/ContentLinkPlaceholder";
-import { BdavDev } from "@/routing";
+import { BdavDev } from "@/utilities/routing";
+
 
 type CodeProjectProps = {
     codeProject: CodeProject
@@ -17,8 +17,4 @@ export default function CodeProjectLink({ codeProject }: CodeProjectProps) {
             <CodeProjectBadge codeProject={codeProject}/>
         </Link>
     );
-}
-
-export function CodeProjectLinkPlaceholder() {
-    return <ContentLinkPlaceholder className={'w-[23rem] h-[7.5rem] rounded-2xl'}/>;
 }

@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from "react";
 
-import "@/styling/components/icon.css";
+import "@/styles/css/components/icon.css";
 
 
 export type IconProps = {

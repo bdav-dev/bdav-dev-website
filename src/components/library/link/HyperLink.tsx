@@ -1,8 +1,6 @@
-'use client';
-
 import Link from "next/link";
 import { ReactNode } from "react";
-import InjectWordBreaks from "@/components/library/util/InjectWordBreaks";
+import InjectWordBreaks from "@/components/library/utility/InjectWordBreaks";
 
 
 export type HyperLinkProps = {

@@ -16,11 +16,7 @@ export const ThemeContext = createContext<ThemeContextType>({
     resolveThemeSwitch: themeSwitch => resolveThemeSwitch(true, themeSwitch)
 });
 
-type ThemeProviderProps = {
-    children?: ReactNode
-}
-
-export default function ThemeProvider(props: ThemeProviderProps) {
+export default function ThemeProvider(props: { children?: ReactNode }) {
     const [darkTheme, setDarkTheme] = useLocalStorage("useDarkTheme", true);
 
     return (

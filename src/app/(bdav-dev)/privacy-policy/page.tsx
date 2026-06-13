@@ -1,12 +1,11 @@
 import Enumerate from "@/components/library/Enumerate";
 import HyperLink from "@/components/library/link/HyperLink";
-import VerticalSpace from "@/components/library/spacing/VerticalSpace";
-import Article from "@/components/layout/document/Article";
-import Section from "@/components/layout/document/Section";
-import SubSection from "@/components/layout/document/SubSection";
-import SubSubSection from "@/components/layout/document/SubSubSection";
+import Article from "@/components/library/document/Article";
+import Section from "@/components/library/document/Section";
+import SubSection from "@/components/library/document/SubSection";
+import SubSubSection from "@/components/library/document/SubSubSection";
 import { Metadata } from "next";
-import ReadingLayout from "@/layout/ReadingLayout";
+import ReadingLayout from "@/components/library/layout/ReadingLayout";
 
 
 export const metadata: Metadata = {
@@ -84,72 +83,86 @@ export default function PrivacyPolicyPage() {
                     Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
 
                     <SubSection headline="Externes Hosting">
-                        Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst
-                        werden,
-                        werden auf den Servern des Hosters / der Hoster gespeichert.
-                        Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten,
-                        Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website
-                        generiert werden, handeln.
-                        <VerticalSpace/>
-                        Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und
-                        bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und
-                        effizienten
-                        Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit.
-                        f DSGVO).
-                        Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich
-                        auf Grundlage von Art.
-                        6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies
-                        oder den
-                        Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des
-                        TTDSG umfasst.
-                        Die Einwilligung ist jederzeit widerrufbar.
-                        <VerticalSpace/>
-                        Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten,
-                        wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug
-                        auf diese Daten befolgen.
-                        <VerticalSpace/>
-                        Wir setzen folgende(n) Hoster ein:
-                        <VerticalSpace/>
-                        Vercel Inc.<br/>
-                        440 N Barranca Ave #4133<br/>
-                        Covina, CA 91723<br/>
-                        privacy@vercel.com
+                        <p>
+                            Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst
+                            werden,
+                            werden auf den Servern des Hosters / der Hoster gespeichert.
+                            Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten,
+                            Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website
+                            generiert werden, handeln.
+                        </p>
+                        <p>
+                            Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und
+                            bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und
+                            effizienten
+                            Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit.
+                            f DSGVO).
+                            Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich
+                            auf Grundlage von Art.
+                            6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies
+                            oder den
+                            Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des
+                            TTDSG umfasst.
+                            Die Einwilligung ist jederzeit widerrufbar.
+                        </p>
+                        <p>
+                            Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten,
+                            wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug
+                            auf diese Daten befolgen.
+                        </p>
+                        <p>
+                            Wir setzen folgende(n) Hoster ein:
+                        </p>
+                        <p>
+                            Vercel Inc.<br/>
+                            440 N Barranca Ave #4133<br/>
+                            Covina, CA 91723<br/>
+                            privacy@vercel.com
+                        </p>
                     </SubSection>
-
                 </Section>
 
                 <Section headline="3. Allgemeine Hinweise und Pflichtinformationen">
                     <SubSection headline={"Datenschutz"}>
-                        Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst.
-                        Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen
-                        Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-                        <VerticalSpace/>
-                        Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben.
-                        Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können.
-                        Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie
-                        nutzen.
-                        Sie erläutert auch, wie und zu welchem Zweck das geschieht.
-                        <VerticalSpace/>
-                        Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per
-                        E-Mail)
-                        Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte
-                        ist nicht möglich.
+                        <p>
+                            Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst.
+                            Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen
+                            Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+                        </p>
+                        <p>
+                            Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben.
+                            Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können.
+                            Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie
+                            nutzen.
+                            Sie erläutert auch, wie und zu welchem Zweck das geschieht.
+                        </p>
+                        <p>
+                            Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per
+                            E-Mail)
+                            Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte
+                            ist nicht möglich.
+                        </p>
                     </SubSection>
 
                     <SubSection headline="Hinweis zur verantwortlichen Stelle">
-                        Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
-                        <VerticalSpace/>
-                        David Berezowski<br/>
-                        Taubenacker 28<br/>
-                        79541 Lörrach
-                        <VerticalSpace/>
-                        Telefon: 07621 1628160<br/>
-                        E-Mail: david.berezowski@outlook.com
-                        <VerticalSpace/>
-                        Verantwortliche Stelle ist die natürliche oder juristische Person,
-                        die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von
-                        personenbezogenen Daten
-                        (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
+                        <p>
+                            Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+                        </p>
+                        <p>
+                            David Berezowski<br/>
+                            Taubenacker 28<br/>
+                            79541 Lörrach
+                        </p>
+                        <p>
+                            Telefon: 07621 1628160<br/>
+                            E-Mail: david.berezowski@outlook.com
+                        </p>
+                        <p>
+                            Verantwortliche Stelle ist die natürliche oder juristische Person,
+                            die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von
+                            personenbezogenen Daten
+                            (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
+                        </p>
                     </SubSection>
 
                     <SubSection headline="Speicherdauer">
@@ -215,28 +228,32 @@ export default function PrivacyPolicyPage() {
                     </SubSection>
 
                     <SubSection
-                        headline="Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)">
-                        WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT,
-                        HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN,
-                        GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN;
-                        DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING.
-                        DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER
-                        DATENSCHUTZERKLÄRUNG.
-                        WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR
-                        VERARBEITEN, ES SEI DENN,
-                        WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN,
-                        RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG,
-                        AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
-                        <VerticalSpace/>
-                        WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS
-                        RECHT,
-                        JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE
-                        DERARTIGER
-                        WERBUNG EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN
-                        VERBINDUNG STEHT.
-                        WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE
-                        DER DIREKTWERBUNG
-                        VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
+                        headline="Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)"
+                    >
+                        <p>
+                            WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT,
+                            HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN,
+                            GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN;
+                            DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING.
+                            DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER
+                            DATENSCHUTZERKLÄRUNG.
+                            WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR
+                            VERARBEITEN, ES SEI DENN,
+                            WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN,
+                            RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG,
+                            AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
+                        </p>
+                        <p>
+                            WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS
+                            RECHT,
+                            JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE
+                            DERARTIGER
+                            WERBUNG EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN
+                            VERBINDUNG STEHT.
+                            WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE
+                            DER DIREKTWERBUNG
+                            VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
+                        </p>
                     </SubSection>
 
                     <SubSection headline="Beschwerderecht bei der zuständigen Aufsichtsbehörde">
@@ -308,110 +325,118 @@ export default function PrivacyPolicyPage() {
                     </SubSection>
 
                     <SubSection headline="SSL- bzw. TLS-Verschlüsselung">
-                        Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte,
-                        wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden,
-                        eine SSL- bzw. TLS- Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran,
-                        dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem
-                        Schloss-Symbol in Ihrer Browserzeile.
-                        <VerticalSpace/>
-                        Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns
-                        übermitteln,
-                        nicht von Dritten mitgelesen werden.
+                        <p>
+                            Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte,
+                            wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden,
+                            eine SSL- bzw. TLS- Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran,
+                            dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem
+                            Schloss-Symbol in Ihrer Browserzeile.
+                        </p>
+                        <p>
+                            Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns
+                            übermitteln,
+                            nicht von Dritten mitgelesen werden.
+                        </p>
                     </SubSection>
 
                 </Section>
 
                 <Section headline="4. Datenerfassung auf dieser Website">
-
                     <SubSection headline="Cookies">
-                        Unsere Internetseiten verwenden so genannte „Cookies“.
-                        Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an.
-                        Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft
-                        (permanente Cookies)
-                        auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch
-                        gelöscht.
-                        Permanente Cookies bleiben auf Ihrem Endgerät gespeichert,
-                        bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.
-                        <VerticalSpace/>
-                        Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog.
-                        Third-Party-Cookies).
-                        Third-Party-Cookies ermöglichen die Einbindung bestimmter Dienstleistungen von Drittunternehmen
-                        innerhalb von Webseiten (z. B. Cookies zur Abwicklung von Zahlungsdienstleistungen).
-                        <VerticalSpace/>
-                        Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig,
-                        da bestimmte Webseitenfunktionen ohne diese nicht funktionieren würden
-                        (z. B. die Warenkorbfunktion oder die Anzeige von Videos).
-                        Andere Cookies können zur Auswertung des Nutzerverhaltens oder zu Werbezwecken verwendet werden.
-                        <VerticalSpace/>
-                        Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs, zur Bereitstellung
-                        bestimmter,
-                        von Ihnen erwünschter Funktionen (z. B. für die Warenkorbfunktion) oder zur Optimierung der
-                        Website
-                        (z. B. Cookies zur Messung des Webpublikums) erforderlich sind (notwendige Cookies), werden auf
-                        Grundlage
-                        von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage angegeben wird.
-                        Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von notwendigen Cookies
-                        zur
-                        technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Sofern eine Einwilligung
-                        zur Speicherung
-                        von Cookies und vergleichbaren Wiedererkennungstechnologien abgefragt wurde,
-                        erfolgt die Verarbeitung ausschließlich auf Grundlage dieser
-                        Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG);
-                        die Einwilligung ist jederzeit widerrufbar.
-                        <VerticalSpace/>
-                        Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden
-                        und
-                        Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell
-                        ausschließen
-                        sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren.
-                        Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
-                        <VerticalSpace/>
-                        Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser
-                        Datenschutzerklärung entnehmen.
+                        <p>
+                            Unsere Internetseiten verwenden so genannte „Cookies“.
+                            Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an.
+                            Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft
+                            (permanente Cookies)
+                            auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch
+                            gelöscht.
+                            Permanente Cookies bleiben auf Ihrem Endgerät gespeichert,
+                            bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.
+                        </p>
+                        <p>
+                            Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog.
+                            Third-Party-Cookies).
+                            Third-Party-Cookies ermöglichen die Einbindung bestimmter Dienstleistungen von Drittunternehmen
+                            innerhalb von Webseiten (z. B. Cookies zur Abwicklung von Zahlungsdienstleistungen).
+                        </p>
+                        <p>
+                            Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig,
+                            da bestimmte Webseitenfunktionen ohne diese nicht funktionieren würden
+                            (z. B. die Warenkorbfunktion oder die Anzeige von Videos).
+                            Andere Cookies können zur Auswertung des Nutzerverhaltens oder zu Werbezwecken verwendet werden.
+                        </p>
+                        <p>
+                            Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs, zur Bereitstellung
+                            bestimmter,
+                            von Ihnen erwünschter Funktionen (z. B. für die Warenkorbfunktion) oder zur Optimierung der
+                            Website
+                            (z. B. Cookies zur Messung des Webpublikums) erforderlich sind (notwendige Cookies), werden auf
+                            Grundlage
+                            von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage angegeben wird.
+                            Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von notwendigen Cookies
+                            zur
+                            technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Sofern eine Einwilligung
+                            zur Speicherung
+                            von Cookies und vergleichbaren Wiedererkennungstechnologien abgefragt wurde,
+                            erfolgt die Verarbeitung ausschließlich auf Grundlage dieser
+                            Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG);
+                            die Einwilligung ist jederzeit widerrufbar.
+                        </p>
+                        <p>
+                            Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden
+                            und
+                            Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell
+                            ausschließen
+                            sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren.
+                            Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
+                        </p>
+                        <p>
+                            Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser
+                            Datenschutzerklärung entnehmen.
+                        </p>
                     </SubSection>
 
                 </Section>
 
                 <Section headline="5. Plugins und Tools">
-
                     <SubSection headline="Google Fonts">
-                        Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts,
-                        die von Google bereitgestellt werden. Beim Aufruf einer Seite lädt Ihr Browser
-                        die benötigten Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.
-                        <VerticalSpace/>
-                        Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von Google
-                        aufnehmen.
-                        Hierdurch erlangt Google Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen
-                        wurde.
-                        Die Nutzung von Google Fonts erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
-                        Der Websitebetreiber hat ein berechtigtes Interesse an der einheitlichen Darstellung des
-                        Schriftbildes auf seiner Website. Sofern eine entsprechende Einwilligung abgefragt wurde,
-                        erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25
-                        Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf
-                        Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst.
-                        Die Einwilligung ist jederzeit widerrufbar.
-                        <VerticalSpace/>
-                        Wenn Ihr Browser Google Fonts nicht unterstützt, wird eine Standardschrift von Ihrem Computer
-                        genutzt.
-                        <VerticalSpace/>
-                        Weitere Informationen zu Google Fonts finden Sie unter <HyperLink
-                        href="https://developers.google.com/fonts/faq"/> und
-                        in der Datenschutzerklärung von Google: <HyperLink
-                        href="https://policies.google.com/privacy?hl=de"/>.
-                        <VerticalSpace/>
-                        Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework“ (DPF).
-                        Der DPF ist ein Übereinkommen zwischen der Europäischen Union und den USA,
-                        der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA
-                        gewährleisten soll.
-                        Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards
-                        einzuhalten.
-                        Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem
-                        Link:<span> </span>
-                        <HyperLink
-                            href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
-                        />
+                        <p>
+                            Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts,
+                            die von Google bereitgestellt werden. Beim Aufruf einer Seite lädt Ihr Browser
+                            die benötigten Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.
+                        </p>
+                        <p>
+                            Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von Google
+                            aufnehmen.
+                            Hierdurch erlangt Google Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen
+                            wurde.
+                            Die Nutzung von Google Fonts erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+                            Der Websitebetreiber hat ein berechtigtes Interesse an der einheitlichen Darstellung des
+                            Schriftbildes auf seiner Website. Sofern eine entsprechende Einwilligung abgefragt wurde,
+                            erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25
+                            Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf
+                            Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst.
+                            Die Einwilligung ist jederzeit widerrufbar.
+                        </p>
+                        <p>
+                            Wenn Ihr Browser Google Fonts nicht unterstützt, wird eine Standardschrift von Ihrem Computer
+                            genutzt.
+                        </p>
+                        <p>
+                            Weitere Informationen zu Google Fonts finden Sie unter <HyperLink href="https://developers.google.com/fonts/faq"/> und
+                            in der Datenschutzerklärung von Google: <HyperLink href="https://policies.google.com/privacy?hl=de"/>.
+                        </p>
+                        <p>
+                            Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework“ (DPF).
+                            Der DPF ist ein Übereinkommen zwischen der Europäischen Union und den USA,
+                            der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA
+                            gewährleisten soll.
+                            Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards
+                            einzuhalten.
+                            Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem
+                            Link: <HyperLink href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"/>
+                        </p>
                     </SubSection>
-
                 </Section>
 
                 Quelle: <HyperLink href="https://www.e-recht24.de"/>

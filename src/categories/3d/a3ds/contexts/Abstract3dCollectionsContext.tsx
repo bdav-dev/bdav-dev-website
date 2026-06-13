@@ -4,7 +4,7 @@ import { createContext, ReactNode, useMemo } from "react";
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import { Abstract3dCollection, StaticAbstract3dCollections } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 import useLocalStorage from "@/hooks/UseLocalStorage";
-import { createFavoritesCollection } from "@/categories/3d/a3ds/utilities/abstract3dSeriesCollectionsUtilities";
+import { createFavoritesCollection } from "@/categories/3d/a3ds/utilities/abstract3dSeriesCollectionUtilities";
 
 
 type Abstract3dCollectionsContextType = {

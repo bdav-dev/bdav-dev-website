@@ -1,0 +1,60 @@
+.header {
+    --header-border-radius: 1.25rem;
+    border-radius: var(--header-border-radius);
+
+    @apply
+    flex flex-col xs:flex-row
+    items-center justify-center gap-0.5
+    h-[5.75rem] xs:h-[3.75rem]
+    p-2.5 pl-3.5 m-4 mb-0
+    bg-zinc-300 dark:bg-zinc-700
+    bg-opacity-60 dark:bg-opacity-50
+    select-none
+    relative
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(18px);
+    z-index: -1;
+    border-radius: var(--header-border-radius);
+}
+
+.bdav-dev-home-link {
+    --text-color: #000000;
+    --from-color: hsl(200, 100%, 42.5%);
+    --via-color: hsl(180, 100%, 42.5%);
+    --to-color: hsl(158.5, 100%, 42.5%);
+
+    color: transparent;
+    font-size: 1.275rem;
+
+    background-clip: text;
+    background-image: linear-gradient(
+            to right,
+            var(--from-color) 0%,
+            var(--via-color) 25%,
+            var(--to-color) 50%,
+            var(--text-color) 50%,
+            var(--text-color) 100%
+    );
+    background-size: 200%;
+    background-position-x: 100%;
+    transition: background-position .15s ease-out;
+}
+
+.dark .bdav-dev-home-link {
+    --text-color: #FFFFFF;
+    --from-color: hsl(200, 100%, 50%);
+    --via-color: hsl(180, 100%, 50%);
+    --to-color: hsl(158.5, 100%, 50%);
+}
+
+.bdav-dev-home-link:hover {
+    background-position-x: 0;
+}

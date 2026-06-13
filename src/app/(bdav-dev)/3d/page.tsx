@@ -1,5 +1,5 @@
 import Tile from "@/components/library/Tile";
-import Section from "@/components/layout/document/Section";
+import Section from "@/components/library/document/Section";
 import { Abstract3dImageLinkPlaceholder } from "@/categories/3d/a3ds/components/Abstract3dImageLink";
 import Link from "next/link";
 import InternalLink from "@/components/library/link/InternalLink";
@@ -7,8 +7,8 @@ import { StaticAbstract3dCollections } from "@/categories/3d/a3ds/content/static
 import Abstract3dImageLinks from "@/categories/3d/a3ds/components/Abstract3dImageLinks";
 import { Metadata } from "next";
 import ExternalLink from "@/components/library/link/ExternalLink";
-import { BdavDev } from "@/routing";
-import Article from "@/components/layout/document/Article";
+import { BdavDev } from "@/utilities/routing";
+import Article from "@/components/library/document/Article";
 import { Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import FollowMeOnInstagramLink from "@/categories/3d/components/FollowMeOnInstagramLink";
 

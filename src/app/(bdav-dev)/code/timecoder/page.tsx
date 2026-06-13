@@ -3,8 +3,8 @@ import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLa
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 import Tile from "@/components/library/Tile";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
-import { CloudinaryImage } from "@/cloudinary";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import { CloudinaryImage } from "@/utilities/cloudinary";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import { Metadata } from "next";
 

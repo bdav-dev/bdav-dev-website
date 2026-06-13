@@ -1,5 +1,5 @@
-import { CloudinaryImage } from "@/cloudinary";
-import Fraction from "@/fraction";
+import { CloudinaryImage } from "@/utilities/cloudinary";
+import Fraction from "@/utilities/fraction";
 import { RecipeCategories, RecipeCategory } from "@/categories/recipes/content/recipeCategory";
 
 

@@ -3,11 +3,11 @@
 import Abstract3dCollectionLinks from "@/categories/3d/a3ds/components/collection/Abstract3dCollectionLinks";
 import Link from "next/link";
 import { Abstract3dImageLinkPlaceholder } from "@/categories/3d/a3ds/components/Abstract3dImageLink";
-import { BdavDev } from "@/routing";
+import { BdavDev } from "@/utilities/routing";
 import { useContext } from "react";
 import { Abstract3dCollectionsContext } from "@/categories/3d/a3ds/contexts/Abstract3dCollectionsContext";
 import { Abstract3dCollection, StaticAbstract3dCollections } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
-import { getLatestAdventCalendarCollection, getLatestYearCollection } from "@/categories/3d/a3ds/utilities/abstract3dSeriesCollectionsUtilities";
+import { getLatestAdventCalendarCollection, getLatestYearCollection } from "@/categories/3d/a3ds/utilities/abstract3dSeriesCollectionUtilities";
 
 
 export default function FeaturedAbstract3dCollections() {

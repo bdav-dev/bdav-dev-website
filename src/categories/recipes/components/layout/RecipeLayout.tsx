@@ -4,8 +4,8 @@ import RecipeIngredients from "@/categories/recipes/components/RecipeIngredients
 import { ReactNode } from "react";
 import RecipeCategoryTag from "@/categories/recipes/components/RecipeCategoryTag";
 import Tile from "@/components/library/Tile";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
-import ReadingLayout from "@/layout/ReadingLayout";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
+import ReadingLayout from "@/components/library/layout/ReadingLayout";
 
 
 type RecipeLayoutProps = {

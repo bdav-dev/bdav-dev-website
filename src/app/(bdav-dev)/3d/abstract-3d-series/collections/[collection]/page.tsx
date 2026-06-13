@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Abstract3dCollectionViewResolver from "@/categories/3d/a3ds/views/resolver/Abstract3dCollectionViewResolver";
-import { capitalizeFirstLetter } from "@/utils/StringUtils";
+import { capitalizeFirstLetter } from "@/utilities/string";
 
 
 export async function generateMetadata(props: { params: Promise<{ collection: string }> }): Promise<Metadata> {

@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
-import CloudinaryImage from "@/components/CloudinaryImage";
+import CloudinaryImage from "@/components/image/CloudinaryImage";
 
-import '@/categories/3d/a3ds/components/styles/abstract3d-image-dialog.css'
+import '@/styles/css/components/3d/a3ds/abstract3d-image-dialog.css';
 
 
 type Abstract3dImageDialogProps = {

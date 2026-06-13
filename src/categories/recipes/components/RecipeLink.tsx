@@ -1,8 +1,7 @@
 import { Recipe } from "@/categories/recipes/content/recipes";
 import Link from "next/link";
-import ContentLinkPlaceholder from "@/components/link/content/ContentLinkPlaceholder";
-import { BdavDev } from "@/routing";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import { BdavDev } from "@/utilities/routing";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 
 
 type RecipeLinkProps = {
@@ -41,8 +40,4 @@ export default function RecipeLink({ recipe }: RecipeLinkProps) {
             />
         </Link>
     );
-}
-
-export function RecipeLinkPlaceholder() {
-    return <ContentLinkPlaceholder className={'rounded-full w-56 h-56'}/>;
 }

@@ -3,10 +3,10 @@ import { CodeProject } from "@/categories/code/content/codeProjects";
 import Tile from "@/components/library/Tile";
 import H2 from "@/components/library/headlines/H2";
 import CodeProjectRibbon from "@/categories/code/components/layout/CodeProjectRibbon";
-import createAccentColorStyle from "@/styling/accentColorOverride";
+import createAccentColorStyle from "@/styles/accentColorOverride";
 import CodeProjectAppIcon from "@/categories/code/components/icon/CodeProjectAppIcon";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
-import ReadingLayout from "@/layout/ReadingLayout";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
+import ReadingLayout from "@/components/library/layout/ReadingLayout";
 
 
 type CodeProjectLayoutProps = {

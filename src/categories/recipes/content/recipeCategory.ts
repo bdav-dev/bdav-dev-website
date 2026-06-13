@@ -16,4 +16,3 @@ export const RecipeCategories: Record<RecipeCategoryId, RecipeCategory> = {
         color: 'light-dark(#c084fc, #3b0764)'
     }
 }
-

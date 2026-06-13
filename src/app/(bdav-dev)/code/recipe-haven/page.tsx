@@ -1,10 +1,10 @@
 import { CodeProjects } from "@/categories/code/content/codeProjects";
 import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLayout";
 import Tile from "@/components/library/Tile";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
-import Phone from "@/components/library/Phone";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
+import Phone from "@/components/library/device/Phone";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
-import { CloudinaryImage } from "@/cloudinary";
+import { CloudinaryImage } from "@/utilities/cloudinary";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 import { Metadata } from "next";
 

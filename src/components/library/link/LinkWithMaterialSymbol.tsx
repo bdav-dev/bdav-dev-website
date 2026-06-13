@@ -1,6 +1,7 @@
 import HyperLink, { HyperLinkProps } from "@/components/library/link/HyperLink";
 import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol";
 
+
 export default function LinkWithMaterialSymbol(props: { symbol: MaterialSymbols } & Omit<HyperLinkProps, 'icon'>) {
     return (
         <HyperLink

@@ -1,11 +1,11 @@
 import { Recipes } from "@/categories/recipes/content/recipes";
 import RecipeLayout from "@/categories/recipes/components/layout/RecipeLayout";
-import Section from "@/components/layout/document/Section";
+import Section from "@/components/library/document/Section";
 import { Metadata } from "next";
 import Tile from "@/components/library/Tile";
-import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
-import { CloudinaryImage } from "@/cloudinary";
+import { CloudinaryImage } from "@/utilities/cloudinary";
 
 
 export const metadata: Metadata = {

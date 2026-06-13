@@ -1,13 +1,14 @@
 import HyperLink from "@/components/library/link/HyperLink";
-import { BdavDev } from "@/routing";
+import { BdavDev, SocialMedia } from "@/utilities/routing";
 import Link from "next/link";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import InstagramGlyph from "@/icons/logo/InstagramGlyph";
 import { ReactNode } from "react";
 import LinkedInGlyph from "@/icons/logo/LinkedInGlyph";
-import bdavDevIcon from '@/app/icon.png';
 import Image from "next/image";
 import VerticalRuler from "@/components/library/VerticalRuler";
+
+import bdavDevIcon from '@/app/favicon.png';
 
 
 export default function Footer() {
@@ -24,15 +25,15 @@ export default function Footer() {
 
             <VerticalRuler className={'h-4'}/>
 
-            <SocialLink href={'https://github.com/bdav-dev/'}>
+            <SocialLink href={SocialMedia.gitHub.bdavDev.href}>
                 <GitHubInvertocat className={'text-[0.95em]'}/>
             </SocialLink>
 
-            <SocialLink href={'https://www.instagram.com/davidb.3d/'}>
+            <SocialLink href={SocialMedia.instagram.davidb3d.href}>
                 <InstagramGlyph className={'text-[0.95em]'}/>
             </SocialLink>
 
-            <SocialLink href={'https://linkedin.com/in/david-berezowski-ab5639273/'}>
+            <SocialLink href={SocialMedia.linkedIn.davidBerezowski.href}>
                 <LinkedInGlyph className={'text-[0.95em]'}/>
             </SocialLink>
 

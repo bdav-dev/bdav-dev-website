@@ -1,7 +1,7 @@
-import Article from "@/components/layout/document/Article";
+import Article from "@/components/library/document/Article";
 import Abstract3dCollectionLinks from "@/categories/3d/a3ds/components/collection/Abstract3dCollectionLinks";
 import { Metadata } from "next";
-import Section from "@/components/layout/document/Section";
+import Section from "@/components/library/document/Section";
 
 export const metadata: Metadata = {
     title: "bdav.dev – Abstract3D Collections",

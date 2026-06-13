@@ -1,9 +1,9 @@
 'use client';
 
-import Article from "@/components/layout/document/Article";
+import Article from "@/components/library/document/Article";
 import Abstract3dImageLinks from "@/categories/3d/a3ds/components/Abstract3dImageLinks";
 import { Abstract3dImageLinkPlaceholder } from "@/categories/3d/a3ds/components/Abstract3dImageLink";
-import Section from "@/components/layout/document/Section";
+import Section from "@/components/library/document/Section";
 import { Abstract3dCollection } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 
 

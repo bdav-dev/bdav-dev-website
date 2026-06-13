@@ -2,6 +2,7 @@
 
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
+
 export default function useLocalStorage<T>(key: string, fallback: T): [T, Dispatch<SetStateAction<T>>] {
     const [firstLoadDone, setFirstLoadDone] = useState(false);
     const [storedValue, setStoredValue] = useState(fallback);

@@ -2,7 +2,7 @@
 
 import H4 from "@/components/library/headlines/H4";
 import { CodeProject } from "@/categories/code/content/codeProjects";
-import createAccentColorStyle from "@/styling/accentColorOverride";
+import createAccentColorStyle from "@/styles/accentColorOverride";
 import CodeProjectAppIcon from "@/categories/code/components/icon/CodeProjectAppIcon";
 
 type CodeProjectBadgeProps = {

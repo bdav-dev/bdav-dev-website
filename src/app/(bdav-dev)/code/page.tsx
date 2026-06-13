@@ -2,9 +2,9 @@ import CodeProjectLink from "@/categories/code/components/CodeProjectLink";
 import { CodeProjects } from "@/categories/code/content/codeProjects";
 import { Metadata } from "next";
 import Tile from "@/components/library/Tile";
-import Article from "@/components/layout/document/Article";
+import Article from "@/components/library/document/Article";
 import { CodeProjectType, CodeProjectTypes } from "@/categories/code/content/codeProjectType";
-import Section from "@/components/layout/document/Section";
+import Section from "@/components/library/document/Section";
 import CodeProjectTypeIcon from "@/categories/code/components/icon/CodeProjectTypeIcon";
 import FollowMeOnGitHubLink from "@/categories/code/components/link/FollowMeOnGitHubLink";
 

@@ -1,5 +1,5 @@
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
-import SkeletonLoadingCloudinaryImage, { CloudinaryImageWithSkeletonProps } from "@/components/SkeletonLoadingCloudinaryImage";
+import SkeletonLoadingCloudinaryImage, { CloudinaryImageWithSkeletonProps } from "@/components/image/SkeletonLoadingCloudinaryImage";
 
 
 type Abstract3dImageThumbnailProps = {

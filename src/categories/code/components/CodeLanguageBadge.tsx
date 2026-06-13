@@ -1,5 +1,6 @@
 import { CodeLanguage } from "@/categories/code/content/codeLanguages";
 
+
 type CodeLanguageBadgeProps = {
     language: CodeLanguage
 }

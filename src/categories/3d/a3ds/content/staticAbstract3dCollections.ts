@@ -1,5 +1,5 @@
 import { Abstract3dImage, Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
-import { createAdventCalendarCollections, createYearCollections } from "@/categories/3d/a3ds/utilities/abstract3dSeriesCollectionsUtilities";
+import { createAdventCalendarCollections, createYearCollections } from "@/categories/3d/a3ds/utilities/abstract3dSeriesCollectionUtilities";
 import { compareAbstract3dImages } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
 
 

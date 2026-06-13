@@ -5,10 +5,10 @@ import GitHubRepositoryLink from "@/categories/code/components/link/GitHubReposi
 import DownloadButton from "@/components/library/DownloadButton";
 import HyperLink from "@/components/library/link/HyperLink";
 import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol";
-import InlineIcon from "@/components/InlineIcon";
+import InlineIcon from "@/components/library/icon/InlineIcon";
 import CodeProjectTypeIcon from "@/categories/code/components/icon/CodeProjectTypeIcon";
 import CodeProjectStatusIcon from "@/categories/code/components/icon/CodeProjectStatusIcon";
-import GermanyFlag from "../../../../components/misc/GermanyFlag";
+import GermanyFlag from "../../../../components/library/GermanyFlag";
 
 
 type CodeProjectRibbonProps = {
