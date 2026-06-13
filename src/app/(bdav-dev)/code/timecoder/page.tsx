@@ -1,6 +1,5 @@
 import { CodeProjects } from "@/categories/code/content/codeProjects";
 import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLayout";
-import ReadingLayout from "@/layout/ReadingLayout";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 import Tile from "@/components/library/Tile";
 import { ThemeSwitch } from "@/contexts/ThemeContext";
@@ -23,24 +22,22 @@ export default function TimecoderPage() {
             project={project}
             banner={{ className: 'brightness-[90%] dark:brightness-[40%]' }}
         >
-            <ReadingLayout>
-                <div className={'flex flex-col gap-5'}>
-                    <Tile className={'text-center'}>
-                        <CodeProjectTitle project={project}/> is a tool that lets video producers and clients document and comment in/out timecodes.
-                    </Tile>
+            <div className={'flex flex-col gap-gutter'}>
+                <Tile className={'text-center'}>
+                    <CodeProjectTitle project={project}/> is a tool that lets video producers and clients document and comment in/out timecodes.
+                </Tile>
 
-                    <SkeletonLoadingCloudinaryImage
-                        alt={'Timecoder'}
-                        image={images.timecoder}
-                        sharedClassName={"rounded-2xl"}
-                        draggable={false}
-                    />
+                <SkeletonLoadingCloudinaryImage
+                    alt={'Timecoder'}
+                    image={images.timecoder}
+                    sharedClassName={'rounded-tile'}
+                    draggable={false}
+                />
 
-                    <Tile className={'flex justify-center'}>
-                        <CodeProjectAction project={project}/>
-                    </Tile>
-                </div>
-            </ReadingLayout>
+                <Tile className={'flex justify-center'}>
+                    <CodeProjectAction project={project}/>
+                </Tile>
+            </div>
         </CodeProjectLayout>
     );
 }

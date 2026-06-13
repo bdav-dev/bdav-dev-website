@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gap: {
+        'gutter': '1rem'
+      },
+      borderRadius: {
+        'tile': '0.75rem'
+      },
       colors: {
         zinc: {
           150: 'color-mix(in oklch, oklch(96.7% 0.001 286.375), oklch(92% 0.004 286.32))',

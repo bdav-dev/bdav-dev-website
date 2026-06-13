@@ -3,7 +3,6 @@ import { CodeProjects } from "@/categories/code/content/codeProjects";
 import { Metadata } from "next";
 import Enumerate from "@/components/library/Enumerate";
 import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLayout";
-import ReadingLayout from "@/layout/ReadingLayout";
 import Terminal, { Path } from "@/components/library/Terminal";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
@@ -22,41 +21,39 @@ export default function CreateBlenderProjectPage() {
             project={project}
             banner={{ className: 'brightness-[75%] dark:brightness-[65%] invert dark:invert-0 hue-rotate-180 dark:hue-rotate-0' }}
         >
-            <ReadingLayout>
-                <div className={'flex flex-col gap-5'}>
-                    <Tile className={"flex-1 text-center"}>
-                        <CodeProjectTitle project={project}/> is a command-line tool designed to make starting new Blender projects faster and more organized.
-                    </Tile>
+            <div className={'flex flex-col gap-gutter'}>
+                <Tile className={"flex-1 text-center"}>
+                    <CodeProjectTitle project={project}/> is a command-line tool designed to make starting new Blender projects faster and more organized.
+                </Tile>
 
-                    <div className={"flex flex-col lg:flex-row gap-5"}>
-                        <div className={"flex flex-col gap-5 flex-1"}>
-                            <Tile className={"flex-1"}>
-                                Instead of manually creating folders and setting things up every time, the tool automatically generates a clean project structure with commonly used directories:
-                                <Enumerate
-                                    indent
-                                    items={
-                                        [
-                                            'assets',
-                                            'blender-files',
-                                            'render-output',
-                                            'results'
-                                        ]
-                                    }
-                                />
-                            </Tile>
-                            <Tile className={"flex-1"}>
-                                It also creates a ready-to-use Blender file named after your project, so you can jump straight into creating.
-                            </Tile>
-                        </div>
-
-                        <CreateBlenderProjectTerminal/>
+                <div className={"flex flex-col lg:flex-row gap-gutter"}>
+                    <div className={"flex flex-col gap-gutter flex-1"}>
+                        <Tile className={"flex-1"}>
+                            Instead of manually creating folders and setting things up every time, the tool automatically generates a clean project structure with commonly used directories:
+                            <Enumerate
+                                indent
+                                items={
+                                    [
+                                        'assets',
+                                        'blender-files',
+                                        'render-output',
+                                        'results'
+                                    ]
+                                }
+                            />
+                        </Tile>
+                        <Tile className={"flex-1"}>
+                            It also creates a ready-to-use Blender file named after your project, so you can jump straight into creating.
+                        </Tile>
                     </div>
 
-                    <Tile className={'flex justify-center'}>
-                        <CodeProjectAction project={project}/>
-                    </Tile>
+                    <CreateBlenderProjectTerminal/>
                 </div>
-            </ReadingLayout>
+
+                <Tile className={'flex justify-center'}>
+                    <CodeProjectAction project={project}/>
+                </Tile>
+            </div>
         </CodeProjectLayout>
     );
 }

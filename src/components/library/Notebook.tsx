@@ -11,7 +11,7 @@ type NotebookProps = {
 export default function Notebook(props: NotebookProps) {
     return (
         <div className={`relative h-fit ${props.className}`} style={{ width: props.size ?? '30rem', ...props.style }}>
-            <div className={'absolute object-cover w-[82.1%] h-[87%] top-[1.8%] left-1/2 -translate-x-1/2 select-none overflow-clip'}>
+            <div className={'absolute object-cover w-[82.1%] h-[87%] top-[1.8%] left-1/2 -translate-x-1/2 overflow-clip'}>
                 {props.screen}
             </div>
             <NotebookFrame className={'relative text-[#999999] dark:text-[#B2B2B2]'}/>

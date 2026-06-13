@@ -23,7 +23,7 @@ export default function RecipeLink({ recipe }: RecipeLinkProps) {
             <div
                 className={`
                     absolute z-10
-                    text-2xl text-center select-none
+                    text-2xl text-center
                     transition-all ease-out duration-300
                     opacity-0 group-hover:opacity-100
                     -translate-y-32  group-hover:translate-y-0

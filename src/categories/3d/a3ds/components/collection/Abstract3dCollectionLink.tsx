@@ -17,7 +17,7 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
     const collectionSize = collection.images.length;
     const [first, second, third] = collection.images.toSorted(compareAbstract3dImages);
 
-    const classNames = 'rounded-xl select-none transition-all ease-out';
+    const classNames = 'rounded-xl transition-all ease-out';
     const classNamesForObstructedImages = 'absolute top-0 z-10 duration-100';
     const skeletonClassNames = 'border border-zinc-300 dark:border-zinc-600';
 

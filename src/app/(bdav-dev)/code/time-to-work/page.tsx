@@ -1,6 +1,5 @@
 import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLayout";
 import { CodeProjects } from "@/categories/code/content/codeProjects";
-import ReadingLayout from "@/layout/ReadingLayout";
 import Tile from "@/components/library/Tile";
 import Enumerate from "@/components/library/Enumerate";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
@@ -25,80 +24,78 @@ export default function TimeToWorkPage() {
             project={project}
             banner={{ className: 'brightness-[80%] dark:brightness-[70%]' }}
         >
-            <ReadingLayout>
-                <div className={'flex flex-col gap-5'}>
-                    <Tile className={'text-center'}>
-                        <CodeProjectTitle project={project}/> is a simple, browser-based work time dashboard that helps you keep track of your working hours throughout the day.
-                    </Tile>
+            <div className={'flex flex-col gap-gutter'}>
+                <Tile className={'text-center'}>
+                    <CodeProjectTitle project={project}/> is a simple, browser-based work time dashboard that helps you keep track of your working hours throughout the day.
+                </Tile>
 
-                    <SplitLayout
-                        left={
-                            <Tile>
-                                Instead of relying on mental math, you can track your work and break time and instantly see where you stand.
-                                time-to-work gives you clear answers to the questions that matter, such as:
-                                <Enumerate
-                                    items={
-                                        [
-                                            "How long have I worked today?",
-                                            "How much time is left?",
-                                            "When can I go home?",
-                                            "What's my current overtime balance?"
-                                        ]
-                                    }
-                                />
-                            </Tile>
-                        }
-                        right={<TimeToWorkImage alt={'Table'} image={images.table}/>}
-                    />
-
-                    <SplitLayout
-                        left={
-                            <Tile>
-                                You can log your time the way that feels most natural to you, either by logging timestamps or entering a time range manually.<br/>
-                                Everything is neatly presented on a timeline, so you always have a clear overview of your day.
-                            </Tile>
-                        }
-                        right={<TimeToWorkImage alt={'Timeline'} image={images.timeline}/>}
-                        reverse
-                    />
-
-                    <SplitLayout
-                        left={
-                            <Tile>
-                                For commuters, time-to-work goes one step further:<br/>
-                                It helps you plan exactly when to leave your workplace so you can catch your next train or other public transport on time, taking into account walking time and train
-                                intervals.<br/>
-                                No more guessing or rushing at the last minute!
-                            </Tile>
-                        }
-                        right={<TimeToWorkImage alt={'Public transport'} image={images.publicTransport}/>}
-                    />
-
-                    <SplitLayout
-                        left={
-                            <Tile>
-                                Based on your working hours, breaks, and overtime balance, the app continuously tracks your progress and estimates when your workday will end.<br/>
-                                If you decide to leave earlier, it also shows how that would affect your overtime balance.
-                            </Tile>
-                        }
-                        right={<TimeToWorkImage alt={'Overtime'} image={images.overtime}/>}
-                        reverse
-                    />
-
-                    <div className={'flex flex-col-reverse lg:flex-col gap-5'}>
+                <SplitLayout
+                    left={
                         <Tile>
-                            The clean, modern interface, which uses the neumorphic design language, keeps everything easy to read and comfortable to use throughout the day.
-                            With both light and dark mode support, it adapts to your preference.
-                            The app data is stored locally in your browser, so your progress is still there when you come back.
+                            Instead of relying on mental math, you can track your work and break time and instantly see where you stand.
+                            time-to-work gives you clear answers to the questions that matter, such as:
+                            <Enumerate
+                                items={
+                                    [
+                                        "How long have I worked today?",
+                                        "How much time is left?",
+                                        "When can I go home?",
+                                        "What's my current overtime balance?"
+                                    ]
+                                }
+                            />
                         </Tile>
-                        <TimeToWorkImage alt={'time-to-work'} image={project.banner}/>
-                    </div>
+                    }
+                    right={<TimeToWorkImage alt={'Table'} image={images.table}/>}
+                />
 
-                    <Tile className={'flex justify-center'}>
-                        <CodeProjectAction project={project} message={'Try a preview!'}/>
+                <SplitLayout
+                    left={
+                        <Tile>
+                            You can log your time the way that feels most natural to you, either by logging timestamps or entering a time range manually.<br/>
+                            Everything is neatly presented on a timeline, so you always have a clear overview of your day.
+                        </Tile>
+                    }
+                    right={<TimeToWorkImage alt={'Timeline'} image={images.timeline}/>}
+                    reverse
+                />
+
+                <SplitLayout
+                    left={
+                        <Tile>
+                            For commuters, time-to-work goes one step further:<br/>
+                            It helps you plan exactly when to leave your workplace so you can catch your next train or other public transport on time, taking into account walking time and train
+                            intervals.<br/>
+                            No more guessing or rushing at the last minute!
+                        </Tile>
+                    }
+                    right={<TimeToWorkImage alt={'Public transport'} image={images.publicTransport}/>}
+                />
+
+                <SplitLayout
+                    left={
+                        <Tile>
+                            Based on your working hours, breaks, and overtime balance, the app continuously tracks your progress and estimates when your workday will end.<br/>
+                            If you decide to leave earlier, it also shows how that would affect your overtime balance.
+                        </Tile>
+                    }
+                    right={<TimeToWorkImage alt={'Overtime'} image={images.overtime}/>}
+                    reverse
+                />
+
+                <div className={'flex flex-col-reverse lg:flex-col gap-gutter'}>
+                    <Tile>
+                        The clean, modern interface, which uses the neumorphic design language, keeps everything easy to read and comfortable to use throughout the day.
+                        With both light and dark mode support, it adapts to your preference.
+                        The app data is stored locally in your browser, so your progress is still there when you come back.
                     </Tile>
+                    <TimeToWorkImage alt={'time-to-work'} image={project.banner}/>
                 </div>
-            </ReadingLayout>
+
+                <Tile className={'flex justify-center'}>
+                    <CodeProjectAction project={project} message={'Try a preview!'}/>
+                </Tile>
+            </div>
         </CodeProjectLayout>
     );
 }
@@ -107,7 +104,7 @@ function TimeToWorkImage(props: { image: ThemeSwitch<CloudinaryImage>, alt: stri
     return (
         <SkeletonLoadingCloudinaryImage
             {...props}
-            sharedClassName={'w-full h-full object-cover rounded-xl'}
+            sharedClassName={'w-full h-full object-cover rounded-tile'}
             quality={95}
             draggable={false}
         />

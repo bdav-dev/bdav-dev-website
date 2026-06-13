@@ -11,7 +11,7 @@ type PhoneProps = {
 export default function Phone(props: PhoneProps) {
     return (
         <div className={`relative h-fit ${props.className}`} style={{ width: props.size ?? '10rem', ...props.style }}>
-            <div className={'absolute object-cover w-[92%] h-[97%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none overflow-clip'} style={{ borderRadius: "14% / 6.4%" }}>
+            <div className={'absolute object-cover w-[92%] h-[97%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-clip'} style={{ borderRadius: "14% / 6.4%" }}>
                 {props.screen}
             </div>
             <PhoneFrame className={'relative text-[#999999] dark:text-[#B2B2B2]'}/>

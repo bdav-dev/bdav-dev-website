@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import RecipeCategoryTag from "@/categories/recipes/components/RecipeCategoryTag";
 import Tile from "@/components/library/Tile";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import ReadingLayout from "@/layout/ReadingLayout";
 
 
 type RecipeLayoutProps = {
@@ -26,10 +27,9 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
                         sm:min-w-0
                         self-center xl:self-auto 
                         flex-shrink-0
-                        select-none
+                        rounded-tile
                     `}
                     imageClassName={'object-contain drop-shadow-lg'}
-                    skeletonClassName={'rounded-xl'}
                 />
 
                 <div className={"flex-grow flex flex-col gap-2.5"}>
@@ -47,7 +47,9 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
                     </Tile>
                 </div>
             </div>
-            {props.children}
+            <ReadingLayout>
+                {props.children}
+            </ReadingLayout>
         </>
     );
 }

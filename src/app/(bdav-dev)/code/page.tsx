@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function CodePage() {
     return (
-        <div className={'flex flex-col gap-5'}>
+        <div className={'flex flex-col gap-6'}>
             <Tile className={'p-7 flex justify-center'} customPadding>
                 <FollowMeOnGitHubLink/>
             </Tile>

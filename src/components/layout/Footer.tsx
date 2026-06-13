@@ -12,11 +12,11 @@ import VerticalRuler from "@/components/library/VerticalRuler";
 
 export default function Footer() {
     return (
-        <footer className="flex flex-row items-center gap-1.5 sm:gap-2 px-1.5 pt-2 pb-1 text-zinc-500 dark:text-zinc-700 text-xs sm:text-sm">
+        <footer className={'flex flex-row items-center gap-1.5 sm:gap-2 px-1.5 pt-2 pb-1 text-zinc-500 dark:text-zinc-700 text-xs sm:text-sm select-none'}>
             <Image
                 alt={'bdav.dev icon'}
                 src={bdavDevIcon}
-                className={'opacity-80 select-none w-[1.4em] h-[1.4em]'}
+                className={'opacity-80 w-[1.4em] h-[1.4em]'}
                 draggable={false}
                 loading={'lazy'}
                 placeholder={'blur'}

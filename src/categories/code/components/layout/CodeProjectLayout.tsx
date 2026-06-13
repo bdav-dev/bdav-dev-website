@@ -6,6 +6,7 @@ import CodeProjectRibbon from "@/categories/code/components/layout/CodeProjectRi
 import createAccentColorStyle from "@/styling/accentColorOverride";
 import CodeProjectAppIcon from "@/categories/code/components/icon/CodeProjectAppIcon";
 import SkeletonLoadingCloudinaryImage from "@/components/SkeletonLoadingCloudinaryImage";
+import ReadingLayout from "@/layout/ReadingLayout";
 
 
 type CodeProjectLayoutProps = {
@@ -37,7 +38,9 @@ export default function CodeProjectLayout(props: CodeProjectLayoutProps) {
                 </div>
             </div>
 
-            {props.children}
+            <ReadingLayout>
+                {props.children}
+            </ReadingLayout>
         </div>
     );
 }
@@ -45,7 +48,7 @@ export default function CodeProjectLayout(props: CodeProjectLayoutProps) {
 function CodeProjectPanel(props: { codeProject: CodeProject }) {
     return (
         <Tile className={'flex flex-col gap-2 items-center p-7 shadow-2xl shadow-zinc-600 dark:shadow-zinc-950 max-w-xl'}>
-            <CodeProjectAppIcon project={props.codeProject} className={'h-32 w-32 mx-auto select-none drop-shadow-lg'}/>
+            <CodeProjectAppIcon project={props.codeProject} className={'h-32 w-32 mx-auto drop-shadow-lg'}/>
 
             <H2 className={'font-semibold text-center'}>
                 {props.codeProject.title}

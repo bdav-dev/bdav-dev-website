@@ -26,7 +26,7 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
     const hasMultipleWallpaperDownloads = (image.downloads?.wallpaper?.length ?? 0) > 1;
 
     return (
-        <div className="flex flex-col lg:flex-row gap-5">
+        <div className={'flex flex-col lg:flex-row gap-5'}>
             <SkeletonLoadingCloudinaryImage
                 alt={`Abstract3DSeries #${image.nr}`}
                 image={image.image}
@@ -37,7 +37,7 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
                     flex-shrink-0
                     rounded-2xl
                 `}
-                imageClassName={'select-none cursor-pointer'}
+                imageClassName={'cursor-pointer'}
                 quality={95}
                 loading={'eager'}
                 draggable={false}

@@ -8,7 +8,7 @@ type SplitLayoutProps = {
 
 export function SplitLayout(props: SplitLayoutProps) {
     return (
-        <div className={'grid grid-cols-1 lg:grid-cols-2 gap-5'}>
+        <div className={'grid grid-cols-1 lg:grid-cols-2 gap-gutter'}>
             {
                 props.reverse
                     ? props.right
