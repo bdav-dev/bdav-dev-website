@@ -26,7 +26,7 @@ export default function SkeletonLoader(props: SkeletonLoaderProps) {
         right: 0,
         visibility: 'hidden',
         pointerEvents: 'none',
-        zIndex: '-1'
+        zIndex: '-100'
     };
 
     return (
