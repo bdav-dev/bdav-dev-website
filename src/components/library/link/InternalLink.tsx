@@ -1,5 +1,3 @@
-'use client';
-
 import { ComponentType, ReactNode } from "react";
 import HyperLink from "@/components/library/link/HyperLink";
 import { IconProps } from "@/icons/Icon";

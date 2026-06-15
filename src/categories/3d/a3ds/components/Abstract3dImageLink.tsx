@@ -1,5 +1,3 @@
-'use client';
-
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import { Abstract3dCollection } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 import { ReactNode } from "react";

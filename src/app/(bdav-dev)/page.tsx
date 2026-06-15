@@ -1,5 +1,3 @@
-'use client';
-
 import WelcomeToBdavDevHeadline from "@/components/home/WelcomeToBdavDevHeadline";
 import CategoriesShowcase from "@/components/home/CategoriesShowcase";
 

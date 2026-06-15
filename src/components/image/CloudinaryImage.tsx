@@ -1,5 +1,3 @@
-'use client';
-
 import { CloudinaryImage as CloudinaryImageType, createCloudinaryLoaderWithMaxWidth } from "@/utilities/cloudinary";
 import Image, { ImageProps } from "next/image";
 

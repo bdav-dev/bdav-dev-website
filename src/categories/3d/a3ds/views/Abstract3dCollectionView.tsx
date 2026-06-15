@@ -1,5 +1,3 @@
-'use client';
-
 import Article from "@/components/library/document/Article";
 import Abstract3dImageLinks from "@/categories/3d/a3ds/components/Abstract3dImageLinks";
 import { Abstract3dImageLinkPlaceholder } from "@/categories/3d/a3ds/components/Abstract3dImageLink";
