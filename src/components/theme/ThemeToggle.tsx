@@ -2,27 +2,34 @@
 
 import SunIcon from "@/icons/app/SunIcon";
 import MoonIcon from "@/icons/app/MoonIcon";
-import { useTheme } from "@/hooks/UseTheme";
+import useTheme from "@/hooks/UseTheme";
 
 
 export default function ThemeToggle() {
-    const { darkTheme, setDarkTheme } = useTheme();
+    const { theme, toggleTheme } = useTheme();
 
-    const Icon = darkTheme ? MoonIcon : SunIcon;
+    const Icon = theme && {
+        light: SunIcon,
+        dark: MoonIcon,
+    }[theme];
 
     return (
         <button
             className={`
-                flex flex-row items-center
-                p-1.5 mr-0.5
-                rounded-lg 
+                flex flex-row items-center justify-center
+                p-1.5 mr-0.5 rounded-lg
+                hover:bg-zinc-300/95 dark:hover:bg-zinc-700/90
                 transition-colors duration-200
-                bg-opacity-80 dark:bg-opacity-80
-                hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90
+                size-9
+                ${!Icon && 'text-center border border-dashed text-zinc-400 dark:text-zinc-500'}
             `}
-            onClick={() => setDarkTheme(current => !current)}
+            onClick={toggleTheme}
         >
-            <Icon weight={300} className={'text-[1.05em]'}/>
+            {
+                Icon
+                    ? <Icon weight={300} className={'text-[1.05em]'}/>
+                    : '?'
+            }
         </button>
     );
 }

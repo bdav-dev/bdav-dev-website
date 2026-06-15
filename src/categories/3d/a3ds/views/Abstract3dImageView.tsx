@@ -34,7 +34,7 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
                     w-full sm:w-2/3 md:w-[67%] lg:w-1/2
                     max-w-xl lg:max-w-[50rem] 3xl:max-w-[77rem]
                     self-center lg:self-start
-                    flex-shrink-0
+                    shrink-0
                     rounded-2xl
                 `}
                 imageClassName={'cursor-pointer'}
@@ -58,7 +58,7 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
                         }
                     </div>
                 }
-                className={'flex-grow min-w-0'}
+                className={'grow min-w-0'}
             >
                 <div className={'flex flex-col items-start gap-4'}>
                     <Table

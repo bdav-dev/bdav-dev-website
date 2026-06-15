@@ -1,9 +1,10 @@
-import ThemeProvider from "@/contexts/ThemeContext";
 import { cascadiaCode, inter } from "@/styles/fonts";
-import ThemeApplier from "@/components/theme/ThemeApplier";
 import type { Metadata } from "next";
 import { MATERIAL_SYMBOLS_API_URL } from "@/icons/material/MaterialSymbol";
 import { ReactNode } from "react";
+import ThemeContextProvider from "@/contexts/ThemeContext";
+
+import './globals.css';
 
 
 export const metadata: Metadata = {
@@ -19,17 +20,32 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
     return (
-        <html lang="en" className={cascadiaCode.variable}>
+        <html lang="en" className={`${cascadiaCode.variable} ${inter.className}`} suppressHydrationWarning>
         <head>
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        (function() {
+                            try {
+                                const storedTheme = localStorage.getItem("theme");
+                                const doesUserPreferDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+                                const theme = storedTheme || (doesUserPreferDarkTheme ? 'dark' : 'light');
+                                document.documentElement.classList.toggle("dark", theme === "dark");
+
+                            } catch (e) {
+                            }
+                        })();
+                    `
+                }}
+            />
             <link rel="stylesheet" href={MATERIAL_SYMBOLS_API_URL}/>
         </head>
-        <body className={inter.className}>
-        <ThemeProvider>
-            <ThemeApplier>
-                {children}
-            </ThemeApplier>
-        </ThemeProvider>
+        <body className={'text-zinc-850 dark:text-zinc-100 flex flex-col min-h-screen'}>
+        <ThemeContextProvider>
+            {children}
+        </ThemeContextProvider>
         </body>
         </html>
-    )
+    );
 }

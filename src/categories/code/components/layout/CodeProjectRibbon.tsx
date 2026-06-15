@@ -8,7 +8,7 @@ import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol
 import InlineIcon from "@/components/library/icon/InlineIcon";
 import CodeProjectTypeIcon from "@/categories/code/components/icon/CodeProjectTypeIcon";
 import CodeProjectStatusIcon from "@/categories/code/components/icon/CodeProjectStatusIcon";
-import GermanyFlag from "../../../../components/library/GermanyFlag";
+import GermanyFlag from "@/components/library/GermanyFlag";
 
 
 type CodeProjectRibbonProps = {

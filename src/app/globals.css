@@ -1,33 +1,58 @@
-@import '@/styles/css/document.css';
-@import '@/styles/css/popover.css';
-@import '@/styles/css/skeleton.css';
-@import '@/styles/css/tile.css';
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "../styles/css/document.css" layer(components);
+@import "../styles/css/popover.css" layer(components);
+@import "../styles/css/skeleton.css" layer(components);
+@import "../styles/css/tile.css" layer(components);
+
+@import "../styles/css/components/header.css" layer(components);
+@import "../styles/css/components/germany-flag.css" layer(components);
+@import "../styles/css/components/icon.css" layer(components);
+@import "../styles/css/components/3d/a3ds/abstract3d-image-dialog.css" layer(components);
+@import "../styles/css/components/3d/a3ds/abstract3d-image-download-table.css" layer(components);
 
 
-:root {
-    color-scheme: light;
-
-    background-color: light-dark(#ffffff, color-mix(in oklch, oklch(21% 0.006 285.885) 80%, oklch(14.1% 0.005 285.823) 20%));
-
-    --accent-color: light-dark(rgb(0, 115, 186), rgb(56 189 248));
-    --danger-color: light-dark(rgb(185 28 28), rgb(248 113 113));
-    --warning-color: light-dark(rgb(161 98 7), rgb(254 240 138));
-    --success-color: light-dark(rgb(22 163 74), rgb(74 222 128));
-
-    --secondary-color: light-dark(rgb(64 64 64), rgb(229 229 229));
+html {
+    --cascadia-code-font: monospace; /* Fallback */
 }
 
-:root.dark {
-    color-scheme: dark;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-zinc-150: color-mix(in oklch, oklch(96.7% 0.001 286.375), oklch(92% 0.004 286.32));
+    --color-zinc-250: color-mix(in oklch, oklch(92% 0.004 286.32), oklch(87.1% 0.006 286.286));
+    --color-zinc-350: color-mix(in oklch, oklch(87.1% 0.006 286.286), oklch(70.5% 0.015 286.067));
+    --color-zinc-750: color-mix(in oklch, oklch(37% 0.013 285.805), oklch(27.4% 0.006 286.033));
+    --color-zinc-850: color-mix(in oklch, oklch(27.4% 0.006 286.033), oklch(21% 0.006 285.885));
+    --color-zinc-910: color-mix(in oklch, oklch(21% 0.006 285.885) 80%, oklch(14.1% 0.005 285.823) 20%);
+    --color-zinc-925: color-mix(in oklch, oklch(21% 0.006 285.885), oklch(14.1% 0.005 285.823));
+
+    --color-accent: light-dark(rgb(0, 115, 186), rgb(56 189 248));
+
+    --color-danger: light-dark(rgb(185 28 28), rgb(248 113 113));
+    --color-warning: light-dark(rgb(161 98 7), rgb(254 240 138));
+    --color-success: light-dark(rgb(22 163 74), rgb(74 222 128));
+
+    --color-secondary: light-dark(rgb(64 64 64), rgb(229 229 229));
+
+    --spacing-gutter: 1rem;
+
+    --radius-tile: 0.75rem;
+
+    --font-mono: var(--cascadia-code-font);
+
+    --breakpoint-xs: 23.75rem;
+    --breakpoint-3xl: 125rem;
 }
 
-body {
-    @apply text-zinc-850 dark:text-zinc-100;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+@layer base {
+    :root {
+        color-scheme: light;
+        background-color: #ffffff;
+    }
+
+    :root.dark {
+        color-scheme: dark;
+        background-color: color-mix(in oklch, oklch(21% 0.006 285.885) 80%, oklch(14.1% 0.005 285.823) 20%);
+    }
 }

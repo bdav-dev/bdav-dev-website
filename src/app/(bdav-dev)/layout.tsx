@@ -1,4 +1,3 @@
-import '../globals.css'
 import Header from "@/components/layout/Header";
 import BreadcrumbNavigation from "@/components/layout/BreadcrumbNavigation";
 import Footer from "@/components/layout/Footer";
@@ -12,7 +11,7 @@ export default function BdavDevLayout({ children }: { children: ReactNode }) {
                 <div className={'fixed top-0 w-full z-50'}>
                     <Header/>
                 </div>
-                <div className="h-[7.25rem] xs:h-[5.25rem]"/>
+                <div className="h-29 xs:h-21"/>
 
                 <div className={'px-5'}>
                     <BreadcrumbNavigation/>

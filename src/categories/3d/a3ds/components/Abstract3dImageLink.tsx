@@ -34,7 +34,7 @@ export default function Abstract3dImageLink(props: Abstract3dImageLinkProps) {
                     />
                 </div>
 
-                <div className={'absolute top-0 z-10 transition-all group-hover:saturate-200 group-hover:blur-[20px] ease-out duration-[250ms]'}>
+                <div className={'absolute top-0 z-10 transition-all group-hover:saturate-200 group-hover:blur-[20px] ease-out duration-250'}>
                     <Abstract3dImageThumbnail
                         image={props.image}
                         alt={`Abstract3DSeries #${props.image.nr}`}

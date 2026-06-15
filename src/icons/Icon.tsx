@@ -1,7 +1,5 @@
 import { CSSProperties, ReactNode } from "react";
 
-import "@/styles/css/components/icon.css";
-
 
 export type IconProps = {
     className?: string,

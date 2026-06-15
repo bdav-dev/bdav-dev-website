@@ -11,6 +11,6 @@ export const inter = Inter(
 export const cascadiaCode = localFont(
     {
         src: '../../public/fonts/CascadiaCode.woff2',
-        variable: "--mono-font"
+        variable: "--cascadia-code-font"
     }
 );

@@ -15,8 +15,6 @@ import { Fragment, ReactNode } from "react";
 import Link from "next/link";
 import { createIsLast } from "@/utilities/array";
 
-import '@/styles/css/components/header.css';
-
 
 export default function Header() {
     const categoryRoute = getBaseOfRoute(usePathname());
@@ -136,8 +134,7 @@ function CategoryLink(props: CategoryLinkProps) {
                     select-none
                     rounded-lg
                     transition-colors duration-200
-                    bg-opacity-80 dark:bg-opacity-80
-                    ${props.selected ? "bg-zinc-350 dark:bg-zinc-925" : "hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:bg-opacity-95 hover:dark:bg-opacity-90"}
+                    ${props.selected ? "bg-zinc-350/80 dark:bg-zinc-925/80" : "hover:bg-zinc-300/95 dark:hover:bg-zinc-700/90"}
                 `}
                 draggable={false}
             >

@@ -3,7 +3,7 @@
 import { CSSProperties } from "react";
 import { codeProjectAppIcons } from "@/categories/code/content/codeProjectAppIcons";
 import { CodeProject } from "@/categories/code/content/codeProjects";
-import { useTheme } from "@/hooks/UseTheme";
+import useTheme from "@/hooks/UseTheme";
 
 
 export type CodeProjectAppIconProps = {
@@ -17,5 +17,5 @@ export default function CodeProjectAppIcon({ project, ...rest }: CodeProjectAppI
 
     const AppIcon = resolveThemeSwitch(codeProjectAppIcons[project.id]);
 
-    return <AppIcon {...rest}/>;
+    return AppIcon && <AppIcon {...rest}/>;
 }

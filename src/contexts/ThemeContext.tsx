@@ -1,36 +1,48 @@
 'use client';
 
-import { createContext, Dispatch, ReactNode, SetStateAction } from "react";
-import useLocalStorage from "../hooks/UseLocalStorage";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
+
+export type Theme = 'light' | 'dark';
+export type ThemeSwitch<T> = T | Record<Theme, T>;
 
 type ThemeContextType = {
-    darkTheme: boolean,
-    setDarkTheme: Dispatch<SetStateAction<boolean>>,
-    resolveThemeSwitch: <T>(themeSwitch: ThemeSwitch<T>) => T
+    theme: Theme | undefined,
+    toggleTheme: () => void,
+    resolveThemeSwitch: <T>(themeSwitch: ThemeSwitch<T>) => T | undefined
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
-    darkTheme: true,
-    setDarkTheme: () => { },
-    resolveThemeSwitch: themeSwitch => resolveThemeSwitch(true, themeSwitch)
+    theme: undefined,
+    toggleTheme: () => {},
+    resolveThemeSwitch: () => undefined
 });
 
-export default function ThemeProvider(props: { children?: ReactNode }) {
-    const [darkTheme, setDarkTheme] = useLocalStorage("useDarkTheme", true);
+export default function ThemeContextProvider(props: { children?: ReactNode }) {
+    const [theme, setTheme] = useState<Theme>();
+
+    useEffect(
+        () => setTheme(document.documentElement.classList.contains('dark') ? 'dark' : 'light'),
+        []
+    );
+
+    function toggleTheme() {
+        const invertedTheme = theme === 'light' ? 'dark' : 'light';
+        document.documentElement.classList.toggle('dark', invertedTheme === 'dark');
+        localStorage.setItem('theme', invertedTheme);
+        setTheme(invertedTheme);
+    }
 
     return (
-        <ThemeContext.Provider value={{ darkTheme, setDarkTheme, resolveThemeSwitch: themeSwitch => resolveThemeSwitch(darkTheme, themeSwitch) }}>
+        <ThemeContext value={{ theme, toggleTheme, resolveThemeSwitch: themeSwitch => theme ? resolveThemeSwitch(theme, themeSwitch) : undefined }}>
             {props.children}
-        </ThemeContext.Provider>
+        </ThemeContext>
     );
 }
 
-export type ThemeSwitch<T> = T | { light: T, dark: T };
-
-export function resolveThemeSwitch<T>(darkTheme: boolean, themeSwitch: ThemeSwitch<T>): T {
+function resolveThemeSwitch<T>(theme: Theme, themeSwitch: ThemeSwitch<T>): T {
     if (typeof themeSwitch === 'object' && themeSwitch != null && 'light' in themeSwitch && 'dark' in themeSwitch) {
-        return darkTheme ? themeSwitch.dark : themeSwitch.light;
+        return themeSwitch[theme];
     }
     return themeSwitch;
 }

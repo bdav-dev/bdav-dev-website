@@ -37,7 +37,14 @@ export default function CategorySlice(props: CategorySliceProps) {
                 <SkeletonLoadingCloudinaryImage
                     alt={''}
                     sharedClassName={'absolute inset-0 h-full w-full'}
-                    imageClassName={'scale-110 object-cover blur-md group-hover:blur-none brightness-75 peer-hover:brightness-90 transition-all ease-out duration-[250ms]'}
+                    imageClassName={`
+                        [--blur:var(--blur-md)]
+                        [--brightness:75%]
+                        filter-[blur(var(--blur))_brightness(var(--brightness))]
+                        group-hover:[--blur:0px]
+                        peer-hover:[--brightness:90%]
+                        scale-110 object-cover transition-[filter] ease-out duration-250
+                    `}
                     image={props.backgroundImage}
                     draggable={false}
                 />
@@ -57,7 +64,7 @@ function CategoryLink(props: CategoryLinkProps) {
     return (
         <Link
             href={props.href}
-            className={'block relative z-10 peer hover:-translate-y-2 transition-transform ease-out duration-[250ms]'}
+            className={'block relative z-10 peer hover:-translate-y-2 transition-transform ease-out duration-250'}
         >
             <Tile
                 customPadding

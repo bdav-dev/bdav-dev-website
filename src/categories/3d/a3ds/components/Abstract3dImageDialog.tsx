@@ -2,8 +2,6 @@ import { useEffect, useRef } from "react";
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import CloudinaryImage from "@/components/image/CloudinaryImage";
 
-import '@/styles/css/components/3d/a3ds/abstract3d-image-dialog.css';
-
 
 type Abstract3dImageDialogProps = {
     image: Abstract3dImage,
@@ -33,6 +31,7 @@ export default function Abstract3dImageDialog(props: Abstract3dImageDialogProps)
                 quality={95}
                 loading={'eager'}
                 className={`
+                    mx-auto
                     w-[95vw] h-[95vh]
                     object-contain
                     select-none

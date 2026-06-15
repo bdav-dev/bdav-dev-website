@@ -74,7 +74,7 @@ function ProductRecommendation(props: { children?: ReactNode }) {
                 dark:bg-yellow-700 dark:hover:bg-yellow-600
                 bg-yellow-600 hover:bg-yellow-700
                 transition-color
-                rounded-sm rounded-bl-md rounded-tr-2xl
+                rounded-xs rounded-bl-md rounded-tr-2xl
                 group
             `}
         >

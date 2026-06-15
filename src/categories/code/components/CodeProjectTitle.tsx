@@ -1,7 +1,8 @@
 'use client';
 
 import { CodeProject } from "@/categories/code/content/codeProjects";
-import { useTheme } from "@/hooks/UseTheme";
+import useTheme from "@/hooks/UseTheme";
+
 
 type CodeProjectTitleProps = {
     project: CodeProject
@@ -14,10 +15,10 @@ export default function CodeProjectTitle({ project }: CodeProjectTitleProps) {
 
     return (
         <span
-            className={'text-xl font-semibold text-transparent bg-clip-text'}
+            className={`text-xl font-semibold bg-clip-text ${gradient && 'text-transparent'}`}
             style={
                 {
-                    backgroundImage: `linear-gradient(to bottom right, ${Object.values(gradient).filter(Boolean).join(', ')})`
+                    backgroundImage: gradient && `linear-gradient(to bottom right, ${Object.values(gradient).filter(Boolean).join(', ')})`
                 }
             }
         >

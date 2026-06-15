@@ -1,56 +1,56 @@
 .bg-tile {
-    @apply dark:bg-zinc-800 bg-zinc-150
+    @apply dark:bg-zinc-800 bg-zinc-150;
 }
 
 .bg-tile .bg-tile {
-    @apply dark:bg-zinc-900 bg-zinc-300
+    @apply dark:bg-zinc-900 bg-zinc-300;
 }
 
 .bg-tile .bg-tile .bg-tile {
-    @apply dark:bg-zinc-800 bg-zinc-150
+    @apply dark:bg-zinc-800 bg-zinc-150;
 }
 
 .bg-tile .bg-tile .bg-tile .bg-tile {
-    @apply dark:bg-zinc-900 bg-zinc-300
+    @apply dark:bg-zinc-900 bg-zinc-300;
 }
 
 .bg-tile .bg-tile .bg-tile .bg-tile .bg-tile {
-    @apply dark:bg-zinc-800 bg-zinc-100
+    @apply dark:bg-zinc-800 bg-zinc-100;
 }
 
 .bg-tile .bg-tile .bg-tile .bg-tile .bg-tile .bg-tile {
-    @apply dark:bg-zinc-900 bg-zinc-300
+    @apply dark:bg-zinc-900 bg-zinc-300;
 }
 
 .bg-tile .bg-tile .bg-tile .bg-tile .bg-tile .bg-tile .bg-tile {
-    @apply dark:bg-zinc-800 bg-zinc-100
+    @apply dark:bg-zinc-800 bg-zinc-100;
 }
 
 
 .border-tile {
-    @apply dark:border-zinc-700 border-zinc-300
+    @apply dark:border-zinc-700 border-zinc-300;
 }
 
 .bg-tile .border-tile {
-    @apply dark:border-zinc-600 border-zinc-350
+    @apply dark:border-zinc-600 border-zinc-350;
 }
 
 .bg-tile .bg-tile .border-tile {
-    @apply dark:border-zinc-700 border-zinc-300
+    @apply dark:border-zinc-700 border-zinc-300;
 }
 
 .bg-tile .bg-tile .bg-tile .border-tile {
-    @apply dark:border-zinc-600 border-zinc-350
+    @apply dark:border-zinc-600 border-zinc-350;
 }
 
 .bg-tile .bg-tile .bg-tile .bg-tile .border-tile {
-    @apply dark:border-zinc-700 border-zinc-300
+    @apply dark:border-zinc-700 border-zinc-300;
 }
 
 .bg-tile .bg-tile .bg-tile .bg-tile .bg-tile .border-tile {
-    @apply dark:border-zinc-600 border-zinc-350
+    @apply dark:border-zinc-600 border-zinc-350;
 }
 
 .bg-tile .bg-tile .bg-tile .bg-tile .bg-tile .bg-tile .border-tile {
-    @apply dark:border-zinc-800 border-zinc-100
+    @apply dark:border-zinc-800 border-zinc-100;
 }
