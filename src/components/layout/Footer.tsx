@@ -8,7 +8,7 @@ import LinkedInGlyph from "@/icons/logo/LinkedInGlyph";
 import Image from "next/image";
 import VerticalRuler from "@/components/library/VerticalRuler";
 
-import bdavDevIcon from '@/app/favicon.png';
+import bdavDevIcon from '@/app/icon.png';
 
 
 export default function Footer() {
