@@ -8,7 +8,7 @@ export async function generateMetadata(props: { params: Promise<{ nr: string }> 
     const parameters = await props.params;
 
     return {
-        title: "bdav.dev – Abstract3D Series #" + parameters.nr,
+        title: `Abstract3D Series #${parameters.nr} – bdav.dev`,
         description: "Abstract3D Series #" + parameters.nr + " Image from David Berezowski.",
         keywords: ["Abstract 3D Series " + parameters.nr, "Abstract 3D Series #" + parameters.nr, "a3ds-" + parameters.nr, "a3ds " + parameters.nr, parameters.nr]
     }

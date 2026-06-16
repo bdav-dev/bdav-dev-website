@@ -11,7 +11,7 @@ export async function generateMetadata(props: { params: Promise<{ collection: st
         .join(' ');
 
     return {
-        title: `bdav.dev – Abstract3D #${parameters.nr} in ${collection}`,
+        title: `Abstract3D #${parameters.nr} in ${collection} – bdav.dev`,
         description: `Abstract3D Series #${parameters.nr} Collection „${collection}“.`
     }
 }

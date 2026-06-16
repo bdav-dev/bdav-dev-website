@@ -7,7 +7,7 @@ import Tile from "@/components/library/Tile";
 
 
 export const metadata: Metadata = {
-    title: "bdav.dev – Abstract3D Series",
+    title: "Abstract3D Series – bdav.dev",
     description: "Abstract3D Series from David Berezowski.",
     keywords: ["Abstract3D Series", "Abstract3DSeries", "a3ds", "Blender", "3D", "abstract"]
 }

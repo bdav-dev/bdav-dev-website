@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Section from "@/components/library/document/Section";
 
 export const metadata: Metadata = {
-    title: "bdav.dev – Abstract3D Collections",
+    title: "Abstract3D Collections – bdav.dev",
     description: "Abstract3D Series Collections from David Berezowski.",
     keywords: ["Blender projects", "3D projects", "Project", "Blender", "3D"]
 }

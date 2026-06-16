@@ -9,7 +9,7 @@ import ReadingLayout from "@/components/library/layout/ReadingLayout";
 
 
 export const metadata: Metadata = {
-    title: "bdav.dev – Datenschutzerklärung"
+    title: "Datenschutzerklärung – bdav.dev"
 }
 
 export default function PrivacyPolicyPage() {

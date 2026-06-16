@@ -10,7 +10,7 @@ export async function generateMetadata(props: { params: Promise<{ collection: st
         .join(' ');
 
     return {
-        title: "bdav.dev – " + collection,
+        title: collection + " – bdav.dev",
         description: `Abstract3D Series Collection „${collection}“.`,
         keywords: [`Abstract 3D Series Collection „${collection}“`, collection]
     }
