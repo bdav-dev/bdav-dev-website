@@ -18,7 +18,7 @@ export function SplitLayout(props: SplitLayoutProps) {
             {
                 props.reverse
                     ? props.left
-                    : <div className={'order-first lg:order-none flex'}>{props.right}</div>
+                    : <div className={'order-first lg:order-0 flex'}>{props.right}</div>
             }
         </div>
     );

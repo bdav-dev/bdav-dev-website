@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                         (function() {
                             try {
                                 const storedTheme = localStorage.getItem("theme");
-                                const doesUserPreferDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+                                const doesUserPreferDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
                                 const theme = storedTheme || (doesUserPreferDarkTheme ? 'dark' : 'light');
                                 document.documentElement.classList.toggle("dark", theme === "dark");
