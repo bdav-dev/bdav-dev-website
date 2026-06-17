@@ -16,15 +16,14 @@ type RecipeLayoutProps = {
 export default function RecipeLayout(props: RecipeLayoutProps) {
     return (
         <>
-            <div className={'flex flex-col xl:flex-row gap-4 mb-8'}>
+            <div className={'flex flex-col xl:flex-row gap-gutter mb-8'}>
                 <SkeletonLoadingCloudinaryImage
                     alt={props.recipe.title}
                     image={props.recipe.image}
                     draggable={false}
                     sharedClassName={`
-                        w-full sm:w-2/3 md:w-[60%] lg:w-1/2
-                        max-w-xl lg:max-w-3xl 3xl:max-w-[57.5rem]
-                        sm:min-w-0
+                        w-full    xl:w-1/2
+                        max-w-160 xl:max-w-175 3xl:max-w-240
                         self-center xl:self-auto 
                         shrink-0
                         rounded-tile
