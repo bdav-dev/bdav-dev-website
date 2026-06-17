@@ -15,7 +15,7 @@ export default function Abstract3dImageThumbnail({ image, small, ...rest }: Abst
             image={image.image}
             width={getThumbnailSizeInPixels(small ?? false)}
             propagateWidthToSkeleton
-            quality={20}
+            quality={50}
             draggable={false}
             {...rest}
         />
