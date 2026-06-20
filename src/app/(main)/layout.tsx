@@ -1,4 +1,4 @@
-import Header from "@/components/layout/Header";
+import Header from "@/components/layout/header/Header";
 import BreadcrumbNavigation from "@/components/layout/BreadcrumbNavigation";
 import Footer from "@/components/layout/Footer";
 import { ReactNode } from "react";

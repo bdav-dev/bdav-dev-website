@@ -8,9 +8,9 @@ import useTheme from "@/hooks/UseTheme";
 export default function ThemeToggle() {
     const { theme, toggleTheme } = useTheme();
 
-    const Icon = theme && {
+    const Icon = {
         light: SunIcon,
-        dark: MoonIcon,
+        dark: MoonIcon
     }[theme];
 
     return (
@@ -21,15 +21,10 @@ export default function ThemeToggle() {
                 hover:bg-zinc-300/95 dark:hover:bg-zinc-700/90
                 transition-colors duration-200
                 size-9
-                ${!Icon && 'text-center border border-dashed text-zinc-400 dark:text-zinc-500'}
             `}
             onClick={toggleTheme}
         >
-            {
-                Icon
-                    ? <Icon weight={300} className={'text-[1.05em]'}/>
-                    : '?'
-            }
+            <Icon weight={300} className={'text-[1.05em]'}/>
         </button>
     );
 }

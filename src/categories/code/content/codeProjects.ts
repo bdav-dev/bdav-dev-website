@@ -2,8 +2,8 @@ import { CodeLanguage, CodeLanguages } from "@/categories/code/content/codeLangu
 import { CodeProjectType, CodeProjectTypes } from "@/categories/code/content/codeProjectType";
 import { CodeProjectStatus, CodeProjectStatuses } from "@/categories/code/content/codeProjectStatus";
 import { Download } from "@/utilities/download";
-import { ThemeSwitch } from "@/contexts/ThemeContext";
 import { CloudinaryImage } from "@/utilities/cloudinary";
+import { ThemeSwitch } from "@/lib/theme";
 
 
 export type CodeProjectAction = { url: string } & ({ type: 'Launch' } | ({ type: 'Download' } & Download));

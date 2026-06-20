@@ -10,7 +10,7 @@ import CreateBlenderProjectLightAppIcon from "@/categories/code/appIcons/createB
 import KdmFinderLightAppIcon from "@/categories/code/appIcons/kdmFinder/KdmFinderLightAppIcon";
 import RecipeHavenLightAppIcon from "@/categories/code/appIcons/recipeHaven/RecipeHavenLightAppIcon";
 import RecipeHavenDarkAppIcon from "@/categories/code/appIcons/recipeHaven/RecipeHavenDarkAppIcon";
-import { ThemeSwitch } from "@/contexts/ThemeContext";
+import { ThemeSwitch } from "@/lib/theme";
 
 
 type AppIconComponent = ComponentType<{ className?: string, style?: CSSProperties }>;

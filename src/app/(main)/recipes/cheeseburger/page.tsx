@@ -4,8 +4,8 @@ import Section from "@/components/library/document/Section";
 import { Metadata } from "next";
 import Tile from "@/components/library/Tile";
 import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
-import { ThemeSwitch } from "@/contexts/ThemeContext";
 import { CloudinaryImage } from "@/utilities/cloudinary";
+import { ThemeSwitch } from "@/lib/theme";
 
 
 export const metadata: Metadata = {

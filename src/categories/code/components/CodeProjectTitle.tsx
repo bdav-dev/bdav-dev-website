@@ -15,10 +15,10 @@ export default function CodeProjectTitle({ project }: CodeProjectTitleProps) {
 
     return (
         <span
-            className={`text-xl font-semibold bg-clip-text ${gradient && 'text-transparent'}`}
+            className={`text-xl font-semibold bg-clip-text`}
             style={
                 {
-                    backgroundImage: gradient && `linear-gradient(to bottom right, ${Object.values(gradient).filter(Boolean).join(', ')})`
+                    backgroundImage: `linear-gradient(to bottom right, ${Object.values(gradient).filter(Boolean).join(', ')})`
                 }
             }
         >

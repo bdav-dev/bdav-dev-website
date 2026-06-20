@@ -1,0 +1,33 @@
+.bdav-dev-home-link {
+    --text-color: #000000;
+    --from-color: hsl(200, 100%, 42.5%);
+    --via-color: hsl(180, 100%, 42.5%);
+    --to-color: hsl(158.5, 100%, 42.5%);
+
+    color: transparent;
+    font-size: 1.275rem;
+
+    background-clip: text;
+    background-image: linear-gradient(
+            to right,
+            var(--from-color) 0%,
+            var(--via-color) 25%,
+            var(--to-color) 50%,
+            var(--text-color) 50%,
+            var(--text-color) 100%
+    );
+    background-size: 200%;
+    background-position-x: 100%;
+    transition: background-position .15s ease-out;
+}
+
+.dark .bdav-dev-home-link {
+    --text-color: #FFFFFF;
+    --from-color: hsl(200, 100%, 50%);
+    --via-color: hsl(180, 100%, 50%);
+    --to-color: hsl(158.5, 100%, 50%);
+}
+
+.bdav-dev-home-link:hover {
+    background-position-x: 0;
+}

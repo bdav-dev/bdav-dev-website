@@ -17,5 +17,5 @@ export default function CodeProjectAppIcon({ project, ...rest }: CodeProjectAppI
 
     const AppIcon = resolveThemeSwitch(codeProjectAppIcons[project.id]);
 
-    return AppIcon && <AppIcon {...rest}/>;
+    return <AppIcon {...rest}/>;
 }

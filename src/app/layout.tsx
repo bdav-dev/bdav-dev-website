@@ -5,6 +5,8 @@ import { ReactNode } from "react";
 import ThemeContextProvider from "@/contexts/ThemeContext";
 
 import './globals.css';
+import { cookies } from "next/headers";
+import { parseTheme, THEME_COOKIE } from "@/lib/theme";
 
 
 export const metadata: Metadata = {
@@ -18,31 +20,20 @@ export const metadata: Metadata = {
     }
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
+    const initialTheme = parseTheme((await cookies()).get(THEME_COOKIE)?.value);
+
     return (
-        <html lang="en" className={`${cascadiaCode.variable} ${inter.className}`} suppressHydrationWarning>
+        <html
+            lang={"en"}
+            className={`${cascadiaCode.variable} ${inter.className} ${initialTheme === 'dark' ? 'dark' : ''}`}
+            suppressHydrationWarning
+        >
         <head>
-            <script
-                dangerouslySetInnerHTML={{
-                    __html: `
-                        (function() {
-                            try {
-                                const storedTheme = localStorage.getItem("theme");
-                                const doesUserPreferDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-                                const theme = storedTheme || (doesUserPreferDarkTheme ? 'dark' : 'light');
-                                document.documentElement.classList.toggle("dark", theme === "dark");
-
-                            } catch (e) {
-                            }
-                        })();
-                    `
-                }}
-            />
             <link rel="stylesheet" href={MATERIAL_SYMBOLS_API_URL}/>
         </head>
         <body className={'text-zinc-850 dark:text-zinc-100 flex flex-col min-h-screen'}>
-        <ThemeContextProvider>
+        <ThemeContextProvider initialTheme={initialTheme}>
             {children}
         </ThemeContextProvider>
         </body>

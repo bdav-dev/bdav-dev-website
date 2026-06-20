@@ -1,48 +1,42 @@
 'use client';
 
-import { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode, useEffect, useLayoutEffect, useState, useTransition } from "react";
+import { resolveThemeSwitch as resolveTheme, Theme, ThemeSwitch } from "@/lib/theme";
+import { persistTheme } from "@/app/actions/theme";
 
-
-export type Theme = 'light' | 'dark';
-export type ThemeSwitch<T> = T | Record<Theme, T>;
 
 type ThemeContextType = {
-    theme: Theme | undefined,
+    theme: Theme,
     toggleTheme: () => void,
-    resolveThemeSwitch: <T>(themeSwitch: ThemeSwitch<T>) => T | undefined
+    resolveThemeSwitch: <T>(themeSwitch: ThemeSwitch<T>) => T
 }
 
-export const ThemeContext = createContext<ThemeContextType>({
-    theme: undefined,
-    toggleTheme: () => {},
-    resolveThemeSwitch: () => undefined
-});
+export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export default function ThemeContextProvider(props: { children?: ReactNode }) {
-    const [theme, setTheme] = useState<Theme>();
+export default function ThemeContextProvider(props: { initialTheme: Theme, children?: ReactNode }) {
+    const [theme, setTheme] = useState<Theme>(props.initialTheme);
+    const [, startTransition] = useTransition();
 
-    useEffect(
-        () => setTheme(document.documentElement.classList.contains('dark') ? 'dark' : 'light'),
-        []
+    useIsomorphicLayoutEffect(
+        () => { document.documentElement.classList.toggle("dark", theme === 'dark') },
+        [theme]
     );
 
     function toggleTheme() {
-        const invertedTheme = theme === 'light' ? 'dark' : 'light';
-        document.documentElement.classList.toggle('dark', invertedTheme === 'dark');
-        localStorage.setItem('theme', invertedTheme);
-        setTheme(invertedTheme);
+        const nextTheme: Theme = theme === 'dark' ? 'light' : 'dark';
+        setTheme(nextTheme);
+        startTransition(() => { persistTheme(nextTheme) });
+    }
+
+    function resolveThemeSwitch<T>(themeSwitch: ThemeSwitch<T>) {
+        return resolveTheme(theme, themeSwitch);
     }
 
     return (
-        <ThemeContext value={{ theme, toggleTheme, resolveThemeSwitch: themeSwitch => theme ? resolveThemeSwitch(theme, themeSwitch) : undefined }}>
+        <ThemeContext value={{ theme, toggleTheme, resolveThemeSwitch }}>
             {props.children}
         </ThemeContext>
     );
 }
 
-function resolveThemeSwitch<T>(theme: Theme, themeSwitch: ThemeSwitch<T>): T {
-    if (typeof themeSwitch === 'object' && themeSwitch != null && 'light' in themeSwitch && 'dark' in themeSwitch) {
-        return themeSwitch[theme];
-    }
-    return themeSwitch;
-}
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;

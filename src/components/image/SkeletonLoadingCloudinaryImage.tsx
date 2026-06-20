@@ -2,10 +2,10 @@
 
 import SkeletonLoader from "@/components/library/utility/SkeletonLoader";
 import { CloudinaryImage as CloudinaryImageType } from "@/utilities/cloudinary";
-import { ThemeSwitch } from "@/contexts/ThemeContext";
 import CloudinaryImage, { CloudinaryImageProps } from "@/components/image/CloudinaryImage";
 import useTheme from "@/hooks/UseTheme";
 import { CSSProperties } from "react";
+import { ThemeSwitch } from "@/lib/theme";
 
 export type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image' | 'className' | 'style' | 'onLoad' | 'width'> & {
     image: undefined | ThemeSwitch<CloudinaryImageType>,
