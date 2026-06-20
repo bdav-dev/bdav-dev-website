@@ -1,11 +1,11 @@
 'use client';
 
 import SkeletonLoader from "@/components/library/utility/SkeletonLoader";
-import { CloudinaryImage as CloudinaryImageType } from "@/utilities/cloudinary";
+import { CloudinaryImage as CloudinaryImageType } from "@/library/cloudinary";
 import CloudinaryImage, { CloudinaryImageProps } from "@/components/image/CloudinaryImage";
 import useTheme from "@/hooks/UseTheme";
 import { CSSProperties } from "react";
-import { ThemeSwitch } from "@/lib/theme";
+import { ThemeSwitch } from "@/library/theme";
 
 export type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image' | 'className' | 'style' | 'onLoad' | 'width'> & {
     image: undefined | ThemeSwitch<CloudinaryImageType>,

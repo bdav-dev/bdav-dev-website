@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, ReactNode, useEffect, useLayoutEffect, useState, useTransition } from "react";
-import { resolveThemeSwitch as resolveTheme, Theme, ThemeSwitch } from "@/lib/theme";
+import { resolveThemeSwitch as resolveTheme, Theme, ThemeSwitch } from "@/library/theme";
 import { persistTheme } from "@/app/actions/theme";
 
 

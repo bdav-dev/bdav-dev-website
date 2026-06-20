@@ -1,5 +1,5 @@
-import { splitWithoutRemoving } from "@/utilities/string";
-import { createIsLast } from "@/utilities/array";
+import { splitWithoutRemoving } from "@/library/string";
+import { createIsLast } from "@/library/array";
 import { Fragment } from "react";
 
 

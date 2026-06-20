@@ -7,7 +7,7 @@ import { StaticAbstract3dCollections } from "@/categories/3d/a3ds/content/static
 import Abstract3dImageLinks from "@/categories/3d/a3ds/components/Abstract3dImageLinks";
 import { Metadata } from "next";
 import ExternalLink from "@/components/library/link/ExternalLink";
-import { BdavDev } from "@/utilities/routing";
+import { BdavDev } from "@/library/routing";
 import Article from "@/components/library/document/Article";
 import { Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import FollowMeOnInstagramLink from "@/categories/3d/components/FollowMeOnInstagramLink";

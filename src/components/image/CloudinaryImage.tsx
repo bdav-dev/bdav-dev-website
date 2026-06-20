@@ -1,4 +1,4 @@
-import { CloudinaryImage as CloudinaryImageType, createCloudinaryLoaderWithMaxWidth } from "@/utilities/cloudinary";
+import { CloudinaryImage as CloudinaryImageType, createCloudinaryLoaderWithMaxWidth } from "@/library/cloudinary";
 import Image, { ImageProps } from "next/image";
 
 

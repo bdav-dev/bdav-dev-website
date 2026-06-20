@@ -1,11 +1,11 @@
-import { CloudinaryImage } from "@/utilities/cloudinary";
+import { CloudinaryImage } from "@/library/cloudinary";
 import { ComponentType, ReactNode } from "react";
 import { WeightableIconProps } from "@/icons/WeightableIcon";
 import Link from "next/link";
 import Tile from "@/components/library/Tile";
 import NewBadge from "@/components/library/NewBadge";
 import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
-import { ThemeSwitch } from "@/lib/theme";
+import { ThemeSwitch } from "@/library/theme";
 
 
 type CategorySliceProps = CategoryLinkProps & {

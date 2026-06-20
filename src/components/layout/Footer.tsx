@@ -1,5 +1,5 @@
 import HyperLink from "@/components/library/link/HyperLink";
-import { BdavDev, SocialMedia } from "@/utilities/routing";
+import { BdavDev, SocialMedia } from "@/library/routing";
 import Link from "next/link";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import InstagramGlyph from "@/icons/logo/InstagramGlyph";

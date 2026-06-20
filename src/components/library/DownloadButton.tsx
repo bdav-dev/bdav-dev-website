@@ -2,7 +2,7 @@
 
 import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol";
 import { useState } from "react";
-import { Download, fetchDownloadFile } from "@/utilities/download";
+import { Download, fetchDownloadFile } from "@/library/client/download";
 import HyperLink from "@/components/library/link/HyperLink";
 
 type DownloadButtonProps = { download: Download };

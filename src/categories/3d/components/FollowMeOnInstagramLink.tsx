@@ -2,7 +2,7 @@ import Link from "next/link";
 import Phone from "@/components/library/device/Phone";
 import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 import InstagramGlyph from "@/icons/logo/InstagramGlyph";
-import { SocialMedia } from "@/utilities/routing";
+import { SocialMedia } from "@/library/routing";
 
 
 export default function FollowMeOnInstagramLink() {

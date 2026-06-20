@@ -1,6 +1,6 @@
 import { Recipe } from "@/categories/recipes/content/recipes";
 import Link from "next/link";
-import { BdavDev } from "@/utilities/routing";
+import { BdavDev } from "@/library/routing";
 import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 
 

@@ -5,8 +5,8 @@ import Tile from "@/components/library/Tile";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 import { Metadata } from "next";
-import { CloudinaryImage } from "@/utilities/cloudinary";
-import { ThemeSwitch } from "@/lib/theme";
+import { CloudinaryImage } from "@/library/cloudinary";
+import { ThemeSwitch } from "@/library/theme";
 
 
 export const metadata: Metadata = {

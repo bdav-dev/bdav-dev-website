@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { CodeProjects } from "@/categories/code/content/codeProjects";
 import { Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
-import { BdavDev } from "@/utilities/routing";
+import { BdavDev } from "@/library/routing";
 import { StaticAbstract3dCollections } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 import { Recipes } from "@/categories/recipes/content/recipes";
 

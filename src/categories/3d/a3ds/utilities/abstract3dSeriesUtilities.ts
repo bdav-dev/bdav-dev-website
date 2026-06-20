@@ -1,4 +1,4 @@
-import { parseDmy } from "@/utilities/date";
+import { parseDmy } from "@/library/date";
 import { Abstract3dImage, Abstract3dSeries } from "@/categories/3d/a3ds/content/abstract3dSeries";
 
 

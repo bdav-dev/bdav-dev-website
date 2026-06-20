@@ -1,7 +1,7 @@
 'use server';
 
 
-import { Theme, THEME_COOKIE } from "@/lib/theme";
+import { Theme, THEME_COOKIE } from "@/library/theme";
 import { cookies } from "next/headers";
 
 export async function persistTheme(theme: Theme) {

@@ -2,11 +2,11 @@ import { CodeProjects } from "@/categories/code/content/codeProjects";
 import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLayout";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 import Tile from "@/components/library/Tile";
-import { CloudinaryImage } from "@/utilities/cloudinary";
+import { CloudinaryImage } from "@/library/cloudinary";
 import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 import CodeProjectAction from "@/categories/code/components/CodeProjectAction";
 import { Metadata } from "next";
-import { ThemeSwitch } from "@/lib/theme";
+import { ThemeSwitch } from "@/library/theme";
 
 
 export const metadata: Metadata = {

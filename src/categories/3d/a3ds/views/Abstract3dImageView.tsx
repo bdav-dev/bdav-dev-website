@@ -8,7 +8,7 @@ import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import { useState } from "react";
 import Table from "@/components/library/Table";
 import Abstract3dImageDialog from "@/categories/3d/a3ds/components/Abstract3dImageDialog";
-import { formatDmyString } from "@/utilities/date";
+import { formatDmyString } from "@/library/date";
 import NewBadge from "@/components/library/NewBadge";
 import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
 import Abstract3dImageFavoriteButton from "@/categories/3d/a3ds/components/Abstract3dImageFavoriteButton";

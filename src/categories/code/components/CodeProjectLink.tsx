@@ -1,7 +1,7 @@
 import { CodeProject } from "@/categories/code/content/codeProjects";
 import Link from "next/link";
 import CodeProjectBadge from "@/categories/code/components/CodeProjectBadge";
-import { BdavDev } from "@/utilities/routing";
+import { BdavDev } from "@/library/routing";
 
 
 type CodeProjectProps = {

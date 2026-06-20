@@ -1,9 +1,9 @@
 import { CodeLanguage, CodeLanguages } from "@/categories/code/content/codeLanguages";
 import { CodeProjectType, CodeProjectTypes } from "@/categories/code/content/codeProjectType";
 import { CodeProjectStatus, CodeProjectStatuses } from "@/categories/code/content/codeProjectStatus";
-import { Download } from "@/utilities/download";
-import { CloudinaryImage } from "@/utilities/cloudinary";
-import { ThemeSwitch } from "@/lib/theme";
+import { Download } from "@/library/client/download";
+import { CloudinaryImage } from "@/library/cloudinary";
+import { ThemeSwitch } from "@/library/theme";
 
 
 export type CodeProjectAction = { url: string } & ({ type: 'Launch' } | ({ type: 'Download' } & Download));

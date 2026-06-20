@@ -4,7 +4,7 @@ import { CodeProjects } from "@/categories/code/content/codeProjects";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import VerticalRuler from "@/components/library/VerticalRuler";
 import ThemeToggle from "@/components/theme/ThemeToggle";
-import { BdavDev, SocialMedia } from "@/utilities/routing";
+import { BdavDev, SocialMedia } from "@/library/routing";
 import { Recipes } from "@/categories/recipes/content/recipes";
 import ChefHatIcon from "@/icons/app/ChefHatIcon";
 import InstagramGlyph from "@/icons/logo/InstagramGlyph";

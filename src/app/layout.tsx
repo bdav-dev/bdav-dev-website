@@ -6,7 +6,7 @@ import ThemeContextProvider from "@/contexts/ThemeContext";
 
 import './globals.css';
 import { cookies } from "next/headers";
-import { parseTheme, THEME_COOKIE } from "@/lib/theme";
+import { parseTheme, THEME_COOKIE } from "@/library/theme";
 
 
 export const metadata: Metadata = {

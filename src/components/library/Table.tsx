@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { isFirst } from "@/utilities/array";
+import { isFirst } from "@/library/array";
 
 type TableProps = {
     header?: (ReactNode)[] | (ReactNode),

@@ -1,8 +1,8 @@
 import { Abstract3dCollection } from "@/categories/3d/a3ds/content/staticAbstract3dCollections";
 import Link from "next/link";
-import { isEven } from "@/utilities/math";
+import { isEven } from "@/library/math";
 import { Abstract3dImageLinkPlaceholder, Abstract3dImageLinkPlaceholderProps } from "@/categories/3d/a3ds/components/Abstract3dImageLink";
-import { BdavDev } from "@/utilities/routing";
+import { BdavDev } from "@/library/routing";
 import Abstract3dImageThumbnail from "@/categories/3d/a3ds/components/Abstract3dImageThumbnail";
 import { compareAbstract3dImages } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
 

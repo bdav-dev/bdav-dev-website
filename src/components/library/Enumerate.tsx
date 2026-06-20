@@ -1,4 +1,4 @@
-import { createIsLast } from "@/utilities/array";
+import { createIsLast } from "@/library/array";
 import { ReactNode } from "react";
 
 type TitledItem = {

@@ -3,10 +3,10 @@ import CodeProjectLayout from "@/categories/code/components/layout/CodeProjectLa
 import Tile from "@/components/library/Tile";
 import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
 import Phone from "@/components/library/device/Phone";
-import { CloudinaryImage } from "@/utilities/cloudinary";
+import { CloudinaryImage } from "@/library/cloudinary";
 import CodeProjectTitle from "@/categories/code/components/CodeProjectTitle";
 import { Metadata } from "next";
-import { ThemeSwitch } from "@/lib/theme";
+import { ThemeSwitch } from "@/library/theme";
 
 
 export const metadata: Metadata = {

@@ -3,7 +3,7 @@
 import { useContext, useEffect } from "react";
 import { Abstract3dCollectionsContext } from "@/categories/3d/a3ds/contexts/Abstract3dCollectionsContext";
 import { notFound, useRouter } from "next/navigation";
-import { BdavDev } from "@/utilities/routing";
+import { BdavDev } from "@/library/routing";
 import Abstract3dImageView from "@/categories/3d/a3ds/views/Abstract3dImageView";
 
 

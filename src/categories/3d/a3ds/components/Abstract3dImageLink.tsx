@@ -3,7 +3,7 @@ import { Abstract3dCollection } from "@/categories/3d/a3ds/content/staticAbstrac
 import { ReactNode } from "react";
 import NewBadge from "@/components/library/NewBadge";
 import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
-import { BdavDev } from "@/utilities/routing";
+import { BdavDev } from "@/library/routing";
 import Link from "next/link";
 import Abstract3dImageThumbnail, { getThumbnailSizeInPixels } from "@/categories/3d/a3ds/components/Abstract3dImageThumbnail";
 

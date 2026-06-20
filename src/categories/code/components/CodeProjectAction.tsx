@@ -4,7 +4,7 @@ import MaterialSymbol, { MaterialSymbols } from "@/icons/material/MaterialSymbol
 import CodeProjectAppIcon from "@/categories/code/components/icon/CodeProjectAppIcon";
 import { CodeProject } from "@/categories/code/content/codeProjects";
 import { ComponentType, CSSProperties, ReactNode, useId, useState } from "react";
-import { fetchDownloadFile } from "@/utilities/download";
+import { fetchDownloadFile } from "@/library/client/download";
 import Link from "next/link";
 
 
