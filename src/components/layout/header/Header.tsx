@@ -4,12 +4,13 @@ import { CodeProjects } from "@/categories/code/content/codeProjects";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import VerticalRuler from "@/components/library/VerticalRuler";
 import ThemeToggle from "@/components/theme/ThemeToggle";
-import { BdavDev, SocialMedia } from "@/library/routing";
+import { BdavDev } from "@/library/routing";
 import { Recipes } from "@/categories/recipes/content/recipes";
 import ChefHatIcon from "@/icons/app/ChefHatIcon";
 import InstagramGlyph from "@/icons/logo/InstagramGlyph";
 import { SiteCategory } from "@/components/layout/header/SiteCategory";
 import { BdavDevHomeLink } from "@/components/layout/header/BdavDevHomeLink";
+import { SocialMedia } from "@/library/socialMedia";
 
 
 export default function Header() {

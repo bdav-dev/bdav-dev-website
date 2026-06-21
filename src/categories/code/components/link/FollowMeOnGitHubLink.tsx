@@ -2,7 +2,7 @@ import Link from "next/link";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import Notebook from "@/components/library/device/Notebook";
 import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
-import { SocialMedia } from "@/library/routing";
+import { SocialMedia } from "@/library/socialMedia";
 
 
 export default function FollowMeOnGitHubLink() {

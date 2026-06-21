@@ -1,11 +1,12 @@
 import HyperLink from "@/components/library/link/HyperLink";
-import { BdavDev, SocialMedia } from "@/library/routing";
+import { BdavDev } from "@/library/routing";
 import Link from "next/link";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import InstagramGlyph from "@/icons/logo/InstagramGlyph";
 import { ReactNode } from "react";
 import LinkedInGlyph from "@/icons/logo/LinkedInGlyph";
 import Image from "next/image";
+import { SocialMedia } from "@/library/socialMedia";
 import VerticalRuler from "@/components/library/VerticalRuler";
 
 import bdavDevIcon from '@/app/icon.png';
