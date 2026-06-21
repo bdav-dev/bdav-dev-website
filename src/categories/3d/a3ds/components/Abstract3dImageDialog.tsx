@@ -29,7 +29,6 @@ export default function Abstract3dImageDialog(props: Abstract3dImageDialogProps)
                 image={props.image.image}
                 alt={`Abstract3DSeries #${props.image.nr}`}
                 quality={95}
-                loading={'eager'}
                 className={`
                     mx-auto
                     w-[95vw] h-[95vh]

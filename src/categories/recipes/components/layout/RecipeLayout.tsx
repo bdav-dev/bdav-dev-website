@@ -18,8 +18,9 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
         <>
             <div className={'flex flex-col xl:flex-row gap-gutter mb-8'}>
                 <SkeletonLoadingCloudinaryImage
-                    alt={props.recipe.title}
+                    preload
                     image={props.recipe.image}
+                    alt={props.recipe.title}
                     draggable={false}
                     className={`
                         w-full    xl:w-1/2

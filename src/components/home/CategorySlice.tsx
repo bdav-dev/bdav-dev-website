@@ -36,6 +36,8 @@ export default function CategorySlice(props: CategorySliceProps) {
             {
                 props.backgroundImage &&
                 <SkeletonLoadingCloudinaryImage
+                    preload
+                    image={props.backgroundImage}
                     alt={''}
                     className={`
                         absolute inset-0 h-full w-full
@@ -46,7 +48,6 @@ export default function CategorySlice(props: CategorySliceProps) {
                         peer-hover:[--brightness:90%]
                         scale-110 object-cover transition-[filter] ease-out duration-250
                     `}
-                    image={props.backgroundImage}
                     draggable={false}
                 />
             }

@@ -28,8 +28,9 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
     return (
         <div className={'flex flex-col xl:flex-row gap-5'}>
             <SkeletonLoadingCloudinaryImage
-                alt={`Abstract3DSeries #${image.nr}`}
+                preload
                 image={image.image}
+                alt={`Abstract3DSeries #${image.nr}`}
                 className={`
                     w-full      xl:w-1/2
                     max-w-xl    xl:max-w-300 3xl:max-w-330
@@ -38,7 +39,6 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
                 `}
                 loadedClassName={'cursor-pointer'}
                 quality={95}
-                preload
                 draggable={false}
                 onClick={() => setIsDialogVisible(true)}
             />

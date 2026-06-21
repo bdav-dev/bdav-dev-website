@@ -22,8 +22,9 @@ export default function CodeProjectLayout(props: CodeProjectLayoutProps) {
         <div style={createAccentColorStyle(props.project.accentColor)}>
             <div className={'relative mb-5 md:mb-20'}>
                 <SkeletonLoadingCloudinaryImage
-                    alt={'Banner'}
+                    preload
                     image={props.project.banner}
+                    alt={'Banner'}
                     className={'h-144 md:h-120 w-full rounded-3xl object-cover'}
                     loadedClassName={props.banner.className}
                     quality={95}
