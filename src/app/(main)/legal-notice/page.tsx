@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 export default function LegalNoticePage() {
     return (
         <Article headline="Impressum">
-
             <Section headline="Angaben gemäß § 5 TMG">
                 David Berezowski<br/>
                 Taubenacker 28<br/>

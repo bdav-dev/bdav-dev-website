@@ -14,7 +14,7 @@ function BdavDev() {
                 text-5xl xs:text-7xl md:text-8xl
                 text-transparent
                 bg-clip-text
-                bg-gradient-to-r
+                bg-linear-to-r
                 from-[#00AAFF]
                 via-[#00ffff]
                 to-[#01FFA4]

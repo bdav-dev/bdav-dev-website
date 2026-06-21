@@ -39,5 +39,3 @@ export default function FeaturedAbstract3dCollections() {
         />
     );
 }
-
-

@@ -1,10 +1,10 @@
 'use client';
 
-
 import { useContext } from "react";
 import { Abstract3dCollectionsContext } from "@/categories/3d/a3ds/contexts/Abstract3dCollectionsContext";
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
 import StarIcon from "@/icons/app/StarIcon";
+
 
 type Abstract3dImageFavoriteButtonProps = {
     image: Abstract3dImage

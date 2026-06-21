@@ -1,18 +1,14 @@
-'use client';
-
 import Article from "@/components/library/document/Article";
 import Section from "@/components/library/document/Section";
 import SubSection from "@/components/library/document/SubSection";
 import Abstract3dImageDownloadTable from "@/categories/3d/a3ds/components/Abstract3dImageDownloadTable";
 import { Abstract3dImage } from "@/categories/3d/a3ds/content/abstract3dSeries";
-import { useState } from "react";
 import Table from "@/components/library/Table";
-import Abstract3dImageDialog from "@/categories/3d/a3ds/components/Abstract3dImageDialog";
 import { formatDmyString } from "@/library/date";
 import NewBadge from "@/components/library/NewBadge";
 import { isNew } from "@/categories/3d/a3ds/utilities/abstract3dSeriesUtilities";
 import Abstract3dImageFavoriteButton from "@/categories/3d/a3ds/components/Abstract3dImageFavoriteButton";
-import SkeletonLoadingCloudinaryImage from "@/components/image/SkeletonLoadingCloudinaryImage";
+import Abstract3dImageHeroWithDialog from "@/categories/3d/a3ds/components/Abstract3dImageHeroWithDialog";
 
 
 type Abstract3dImageViewProps = {
@@ -20,28 +16,12 @@ type Abstract3dImageViewProps = {
 }
 
 export default function Abstract3dImageView({ image }: Abstract3dImageViewProps) {
-    const [isDialogVisible, setIsDialogVisible] = useState(false);
-
     const hasMultipleImageDownloads = (image.downloads?.image?.length ?? 0) > 1;
     const hasMultipleWallpaperDownloads = (image.downloads?.wallpaper?.length ?? 0) > 1;
 
     return (
         <div className={'flex flex-col xl:flex-row gap-5'}>
-            <SkeletonLoadingCloudinaryImage
-                preload
-                image={image.image}
-                alt={`Abstract3DSeries #${image.nr}`}
-                className={`
-                    w-full      xl:w-1/2
-                    max-w-xl    xl:max-w-300 3xl:max-w-330
-                    self-center xl:self-start
-                    rounded-2xl
-                `}
-                loadedClassName={'cursor-pointer'}
-                quality={95}
-                draggable={false}
-                onClick={() => setIsDialogVisible(true)}
-            />
+            <Abstract3dImageHeroWithDialog image={image}/>
 
             <Article
                 headline={
@@ -92,12 +72,6 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
                     }
                 </div>
             </Article>
-
-            <Abstract3dImageDialog
-                image={image}
-                isOpen={isDialogVisible}
-                onCloseRequest={() => setIsDialogVisible(false)}
-            />
         </div>
     );
 }

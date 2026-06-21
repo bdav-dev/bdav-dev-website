@@ -33,7 +33,7 @@ function FetchDownloadButton(props: { url: string, fileName: string }) {
             className={`
                 flex items-center gap-[0.075rem]
                 hover:text-accent
-                transition-transform ease-out duration-[50ms]
+                transition-transform ease-out duration-50
                 active:translate-y-[0.075rem]
                 disabled:opacity-40 disabled:pointer-events-none
             `}

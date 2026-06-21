@@ -12,7 +12,7 @@ export async function generateMetadata(props: { params: Promise<{ collection: st
     return {
         title: collection + " – bdav.dev",
         description: `Abstract3D Series Collection „${collection}“.`,
-        keywords: [`Abstract 3D Series Collection „${collection}“`, collection]
+        keywords: [`Abstract3D Series Collection „${collection}“`, collection]
     }
 }
 

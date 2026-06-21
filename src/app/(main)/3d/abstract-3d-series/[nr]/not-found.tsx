@@ -4,6 +4,7 @@ import HyperLink from "@/components/library/link/HyperLink";
 import { BdavDev } from "@/library/routing";
 import { usePathname } from "next/navigation";
 
+
 export default function Abstract3dImageNotFound() {
     const pathname = usePathname();
 

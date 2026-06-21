@@ -16,9 +16,7 @@ export default function PrivacyPolicyPage() {
     return (
         <ReadingLayout>
             <Article headline="Datenschutzerklärung">
-
                 <Section headline="1. Datenschutz auf einen Blick">
-
                     <SubSection headline="Allgemeine Hinweise">
                         Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen
                         Daten passiert,
@@ -29,9 +27,7 @@ export default function PrivacyPolicyPage() {
                         Datenschutzerklärung.
                     </SubSection>
 
-
                     <SubSection headline="Datenerfassung auf dieser Website">
-
                         <SubSubSection headline="Wer ist verantwortlich für die Datenerfassung auf dieser Website?">
                             Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.
                             Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser
@@ -67,7 +63,6 @@ export default function PrivacyPolicyPage() {
                             Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns
                             wenden.
                         </SubSubSection>
-
                     </SubSection>
 
                     <SubSection headline={"Analyse-Tools und Tools von Drittanbietern"}>
@@ -76,7 +71,6 @@ export default function PrivacyPolicyPage() {
                         Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden
                         Datenschutzerklärung.
                     </SubSection>
-
                 </Section>
 
                 <Section headline="2. Hosting">
@@ -227,9 +221,7 @@ export default function PrivacyPolicyPage() {
                         unberührt.
                     </SubSection>
 
-                    <SubSection
-                        headline="Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)"
-                    >
+                    <SubSection headline="Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)">
                         <p>
                             WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT,
                             HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN,
@@ -338,7 +330,6 @@ export default function PrivacyPolicyPage() {
                             nicht von Dritten mitgelesen werden.
                         </p>
                     </SubSection>
-
                 </Section>
 
                 <Section headline="4. Datenerfassung auf dieser Website">
@@ -395,7 +386,6 @@ export default function PrivacyPolicyPage() {
                             Datenschutzerklärung entnehmen.
                         </p>
                     </SubSection>
-
                 </Section>
 
                 <Section headline="5. Plugins und Tools">
