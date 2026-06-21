@@ -19,7 +19,6 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
 
     const classNames = 'rounded-xl transition-all ease-out';
     const classNamesForObstructedImages = 'absolute top-0 z-10 duration-100';
-    const skeletonClassNames = 'border border-zinc-300 dark:border-zinc-600';
 
     return (
         <div className={`w-fit flex flex-col items-center ${props.small ? 'my-2 mx-4' : 'my-4 mx-6'}`}>
@@ -36,7 +35,6 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                         image={first}
                         alt={collection.name}
                         small={props.small}
-                        skeletonClassName={skeletonClassNames}
                         className={
                             `
                             ${classNames}
@@ -56,7 +54,6 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                         image={second}
                         alt={collection.name}
                         small={props.small}
-                        skeletonClassName={skeletonClassNames}
                         className={`
                             ${classNames}
                             ${classNamesForObstructedImages}
@@ -70,7 +67,6 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                         image={third}
                         alt={collection.name}
                         small={props.small}
-                        skeletonClassName={skeletonClassNames}
                         className={`
                             ${classNames}
                             ${classNamesForObstructedImages}
