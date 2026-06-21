@@ -52,8 +52,8 @@ export function Abstract3dCollectionsProvider({ children }: { children?: ReactNo
     }
 
     return (
-        <Abstract3dCollectionsContext.Provider value={{ collections, favorites: { collection: favoritesCollection, setFavorite, isFavorite, toggleFavorite } }}>
+        <Abstract3dCollectionsContext value={{ collections, favorites: { collection: favoritesCollection, setFavorite, isFavorite, toggleFavorite } }}>
             {children}
-        </Abstract3dCollectionsContext.Provider>
+        </Abstract3dCollectionsContext>
     );
 }
