@@ -15,7 +15,7 @@ export default function CodeProjectTitle({ project }: CodeProjectTitleProps) {
 
     return (
         <span
-            className={`text-xl font-semibold bg-clip-text`}
+            className={`text-xl font-semibold bg-clip-text text-transparent`}
             style={
                 {
                     backgroundImage: `linear-gradient(to bottom right, ${Object.values(gradient).filter(Boolean).join(', ')})`
