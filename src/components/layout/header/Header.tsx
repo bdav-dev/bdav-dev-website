@@ -3,7 +3,7 @@ import CodeIcon from "@/icons/app/CodeIcon";
 import { CodeProjects } from "@/categories/code/content/codeProjects";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
 import VerticalRuler from "@/components/library/VerticalRuler";
-import ThemeToggle from "@/components/theme/ThemeToggle";
+import ThemeToggle from "@/components/layout/header/ThemeToggle";
 import { BdavDev } from "@/library/routing";
 import { Recipes } from "@/categories/recipes/content/recipes";
 import ChefHatIcon from "@/icons/app/ChefHatIcon";
@@ -18,9 +18,9 @@ export default function Header() {
         <nav className={'header'}>
             <BdavDevHomeLink/>
 
-            <div className="flex flex-row xs:ml-auto justify-center items-center gap-1">
+            <div className={"flex flex-row xs:ml-auto justify-center items-center gap-1"}>
                 <SiteCategory
-                    icon={<CodeIcon weight={300} className={'text-[1.05em]'}/>}
+                    icon={<CodeIcon weight={300} className={'text-[1.2em]'}/>}
                     label={'Code'}
                     href={BdavDev.code.getRoute()}
                     menu={
@@ -45,7 +45,7 @@ export default function Header() {
                 />
 
                 <SiteCategory
-                    icon={<CubeIcon weight={300} className={'text-[1.05em]'}/>}
+                    icon={<CubeIcon weight={300} className={'text-[1.2em]'}/>}
                     label={'3D'}
                     href={BdavDev.blender.getRoute()}
                     menu={
@@ -68,7 +68,7 @@ export default function Header() {
                 />
 
                 <SiteCategory
-                    icon={<ChefHatIcon weight={300} className={'text-[1.05em]'}/>}
+                    icon={<ChefHatIcon weight={300} className={'text-[1.2em]'}/>}
                     label={'Recipes'}
                     href={BdavDev.recipes.getRoute()}
                     menu={

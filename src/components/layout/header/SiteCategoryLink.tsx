@@ -19,8 +19,8 @@ export default function SiteCategoryLink(props: SiteCategoryLinkProps) {
         <Link
             href={props.href}
             className={`
-                flex flex-row items-center gap-0.5
-                h-10 p-1.5
+                flex flex-row items-center justify-center gap-0.5
+                p-1.5 h-10 w-10 sm:w-auto
                 select-none
                 rounded-lg
                 transition-colors duration-200
