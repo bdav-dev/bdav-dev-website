@@ -14,7 +14,7 @@ export async function generateMetadata(props: { params: Promise<{ nr: string }> 
     }
 }
 
-export default async function Abstract3dPage(props: { params: Promise<{ nr: string }> }) {
+export default async function Abstract3dImagePage(props: { params: Promise<{ nr: string }> }) {
     const parameters = await props.params;
 
     const abstract3dSeriesImage: Abstract3dImage | undefined = Abstract3dSeries[+parameters.nr];
