@@ -2,7 +2,6 @@
 
 @import "../styles/css/document.css" layer(components);
 @import "../styles/css/popover.css" layer(components);
-@import "../styles/css/skeleton.css" layer(components);
 @import "../styles/css/tile.css" layer(components);
 
 @import "../styles/css/components/bdavDevHomeLink.css" layer(components);

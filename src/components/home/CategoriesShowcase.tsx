@@ -61,8 +61,7 @@ export default function CategoriesShowcase({ className }: { className?: string }
                         thumbnail: <SkeletonLoadingCloudinaryImage
                             alt={''}
                             image={featuredAbstract3dImage.image}
-                            sharedClassName={'w-6 h-6 lg:w-8 lg:h-8 rounded-md'}
-                            imageClassName={'object-contain'}
+                            sharedClassName={'w-6 h-6 lg:w-8 lg:h-8 rounded-md object-contain'}
                             draggable={false}
                         />,
                         href: BdavDev.blender.abstract3dSeries.$image.getRoute({ image: featuredAbstract3dImage }),
@@ -83,8 +82,7 @@ export default function CategoriesShowcase({ className }: { className?: string }
                         name: featuredRecipe.title,
                         thumbnail: <SkeletonLoadingCloudinaryImage
                             alt={''}
-                            sharedClassName={'h-6 lg:h-8 w-fit rounded-md'}
-                            imageClassName={'object-contain'}
+                            sharedClassName={'h-6 lg:h-8 w-fit rounded-md object-contain'}
                             image={featuredRecipe.image}
                             draggable={false}
                         />,

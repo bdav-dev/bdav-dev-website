@@ -45,7 +45,7 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                                     ? collectionSize == 1 ? 'group-hover:-rotate-2' : 'group-hover:-rotate-1'
                                     : collectionSize == 1 ? 'group-hover:rotate-2' : 'group-hover:rotate-1'
                             }
-                            relative z-20 group-hover:scale-[1.035] duration-[125ms]
+                            relative z-20 group-hover:scale-[1.035] duration-125
                             `
                         }
                     />

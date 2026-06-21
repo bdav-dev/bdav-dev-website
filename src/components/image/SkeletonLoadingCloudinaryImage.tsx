@@ -1,47 +1,45 @@
 'use client';
 
-import SkeletonLoader from "@/components/library/utility/SkeletonLoader";
 import { CloudinaryImage as CloudinaryImageType } from "@/library/cloudinary";
 import CloudinaryImage, { CloudinaryImageProps } from "@/components/image/CloudinaryImage";
 import useTheme from "@/hooks/UseTheme";
-import { CSSProperties } from "react";
 import { ThemeSwitch } from "@/library/theme";
+import { CSSProperties, useState } from "react";
 
-export type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image' | 'className' | 'style' | 'onLoad' | 'width'> & {
-    image: undefined | ThemeSwitch<CloudinaryImageType>,
+
+export type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image' | 'className' | 'style'> & {
+    image: ThemeSwitch<CloudinaryImageType>,
     sharedClassName?: string,
-    imageClassName?: string,
     skeletonClassName?: string,
+    imageClassName?: string,
+    sharedStyle?: CSSProperties,
+    skeletonStyle?: CSSProperties,
     imageStyle?: CSSProperties
-} & ({ width?: undefined, propagateWidthToSkeleton?: never } | { width: number, propagateWidthToSkeleton?: boolean });
+};
 
 export default function SkeletonLoadingCloudinaryImage(
-    { image: imageSwitch, propagateWidthToSkeleton, sharedClassName, imageClassName, skeletonClassName, imageStyle, ...imageProps }: CloudinaryImageWithSkeletonProps
+    { image, onLoad, sharedClassName, skeletonClassName, imageClassName, sharedStyle, skeletonStyle, imageStyle, ...rest }: CloudinaryImageWithSkeletonProps
 ) {
+    const [isLoaded, setIsLoaded] = useState(false);
     const { resolveThemeSwitch } = useTheme();
 
-    const image = resolveThemeSwitch(imageSwitch);
-    const skeletonStyle: CSSProperties = {
-        aspectRatio: image && `${image.width} / ${image.height}`,
-        width: imageProps.width && propagateWidthToSkeleton ? `${imageProps.width}px` : undefined
-    };
-
     return (
-        <SkeletonLoader
-            key={image && image.src}
-            skeleton={<div className={`skeleton ${sharedClassName} ${skeletonClassName}`} style={skeletonStyle}/>}
-            component={
-                image && (
-                    context =>
-                        <CloudinaryImage
-                            image={image}
-                            style={context.isLoaded ? imageStyle : context.style}
-                            className={`${sharedClassName} ${imageClassName}`}
-                            onLoad={context.setLoaded}
-                            {...imageProps}
-                        />
-                )
+        <CloudinaryImage
+            image={resolveThemeSwitch(image)}
+            className={`
+                ${sharedClassName}
+                ${isLoaded ? imageClassName : `animate-pulse bg-zinc-300 dark:bg-zinc-700 text-transparent ${skeletonClassName}`}
+            `}
+            onLoad={
+                event => {
+                    setIsLoaded(true);
+                    if (onLoad) {
+                        onLoad(event);
+                    }
+                }
             }
+            style={isLoaded ? { ...sharedStyle, ...imageStyle } : { ...sharedStyle, ...skeletonStyle }}
+            {...rest}
         />
     );
 }

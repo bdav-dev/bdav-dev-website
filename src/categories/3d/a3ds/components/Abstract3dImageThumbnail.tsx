@@ -14,7 +14,6 @@ export default function Abstract3dImageThumbnail({ image, small, ...rest }: Abst
         <SkeletonLoadingCloudinaryImage
             image={image.image}
             width={getThumbnailSizeInPixels(small ?? false)}
-            propagateWidthToSkeleton
             quality={50}
             draggable={false}
             {...rest}

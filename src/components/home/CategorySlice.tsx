@@ -34,10 +34,11 @@ export default function CategorySlice(props: CategorySliceProps) {
                 <FeaturedContentLink {...props.featuredContent}/>
             }
             {
+                props.backgroundImage &&
                 <SkeletonLoadingCloudinaryImage
                     alt={''}
-                    sharedClassName={'absolute inset-0 h-full w-full'}
-                    imageClassName={`
+                    sharedClassName={`
+                        absolute inset-0 h-full w-full
                         [--blur:var(--blur-md)]
                         [--brightness:75%]
                         filter-[blur(var(--blur))_brightness(var(--brightness))]

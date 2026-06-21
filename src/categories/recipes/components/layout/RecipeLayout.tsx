@@ -27,8 +27,9 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
                         self-center xl:self-auto 
                         shrink-0
                         rounded-tile
+                        object-contain
                     `}
-                    imageClassName={'object-contain drop-shadow-lg'}
+                    imageClassName={'drop-shadow-lg'}
                 />
 
                 <div className={"grow flex flex-col gap-2.5"}>

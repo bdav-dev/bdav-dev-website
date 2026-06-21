@@ -24,8 +24,8 @@ export default function CodeProjectLayout(props: CodeProjectLayoutProps) {
                 <SkeletonLoadingCloudinaryImage
                     alt={'Banner'}
                     image={props.project.banner}
-                    sharedClassName={'h-[36rem] md:h-[30rem] w-full rounded-3xl'}
-                    imageClassName={`object-cover ${props.banner.className}`}
+                    sharedClassName={'h-144 md:h-120 w-full rounded-3xl object-cover'}
+                    imageClassName={props.banner.className}
                     quality={95}
                     draggable={false}
                 />
