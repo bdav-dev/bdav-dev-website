@@ -21,7 +21,7 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
                     alt={props.recipe.title}
                     image={props.recipe.image}
                     draggable={false}
-                    sharedClassName={`
+                    className={`
                         w-full    xl:w-1/2
                         max-w-160 xl:max-w-175 3xl:max-w-240
                         self-center xl:self-auto 
@@ -29,7 +29,7 @@ export default function RecipeLayout(props: RecipeLayoutProps) {
                         rounded-tile
                         object-contain
                     `}
-                    imageClassName={'drop-shadow-lg'}
+                    loadedClassName={'drop-shadow-lg'}
                 />
 
                 <div className={"grow flex flex-col gap-2.5"}>

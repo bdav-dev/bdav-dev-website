@@ -35,7 +35,7 @@ export default function RecipeHavenPage() {
                             <SkeletonLoadingCloudinaryImage
                                 alt={'Ingredients'}
                                 image={images.ingredients}
-                                sharedClassName={'w-full h-full object-cover'}
+                                className={'w-full h-full object-cover'}
                                 draggable={false}
                             />
                         }
@@ -54,7 +54,7 @@ export default function RecipeHavenPage() {
                             <SkeletonLoadingCloudinaryImage
                                 alt={'Recipes'}
                                 image={images.recipes}
-                                sharedClassName={'w-full h-full object-cover'}
+                                className={'w-full h-full object-cover'}
                                 draggable={false}
                             />
                         }
@@ -65,7 +65,7 @@ export default function RecipeHavenPage() {
                             <SkeletonLoadingCloudinaryImage
                                 alt={'Cheeseburger recipe'}
                                 image={images.cheeseburgerRecipe}
-                                sharedClassName={'w-full h-full object-cover'}
+                                className={'w-full h-full object-cover'}
                                 draggable={false}
                             />
                         }
@@ -76,7 +76,7 @@ export default function RecipeHavenPage() {
                             <SkeletonLoadingCloudinaryImage
                                 alt={'Edit recipe'}
                                 image={images.editRecipe}
-                                sharedClassName={'w-full h-full object-cover'}
+                                className={'w-full h-full object-cover'}
                                 draggable={false}
                             />
                         }
@@ -99,7 +99,7 @@ export default function RecipeHavenPage() {
                             <SkeletonLoadingCloudinaryImage
                                 alt={'Shopping list'}
                                 image={images.shoppingList}
-                                sharedClassName={'w-full h-full object-cover'}
+                                className={'w-full h-full object-cover'}
                                 draggable={false}
                             />
                         }
@@ -110,7 +110,7 @@ export default function RecipeHavenPage() {
                             <SkeletonLoadingCloudinaryImage
                                 alt={'Checked off shopping list'}
                                 image={images.checkedOffShoppingList}
-                                sharedClassName={'w-full h-full object-cover'}
+                                className={'w-full h-full object-cover'}
                                 draggable={false}
                             />
                         }

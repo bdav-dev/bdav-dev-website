@@ -37,7 +37,7 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                         alt={collection.name}
                         small={props.small}
                         skeletonClassName={skeletonClassNames}
-                        sharedClassName={
+                        className={
                             `
                             ${classNames}
                             ${
@@ -57,7 +57,7 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                         alt={collection.name}
                         small={props.small}
                         skeletonClassName={skeletonClassNames}
-                        sharedClassName={`
+                        className={`
                             ${classNames}
                             ${classNamesForObstructedImages}
                             ${collectionSize == 2 ? 'rotate-6 group-hover:rotate-12' : '-translate-x-3 -rotate-3 group-hover:-translate-x-6 group-hover:-rotate-6'}
@@ -71,7 +71,7 @@ export function Abstract3dCollectionLink(props: Abstract3DCollectionLinkProps) {
                         alt={collection.name}
                         small={props.small}
                         skeletonClassName={skeletonClassNames}
-                        sharedClassName={`
+                        className={`
                             ${classNames}
                             ${classNamesForObstructedImages}
                             translate-x-3 rotate-3 group-hover:translate-x-6 group-hover:rotate-6

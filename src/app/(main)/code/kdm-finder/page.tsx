@@ -30,7 +30,7 @@ export default function KdmFinderPage() {
                 <SkeletonLoadingCloudinaryImage
                     alt={'KDM-Finder'}
                     image={images.kdmFinder}
-                    sharedClassName={'w-full rounded-tile'}
+                    className={'w-full rounded-tile'}
                     draggable={false}
                 />
 

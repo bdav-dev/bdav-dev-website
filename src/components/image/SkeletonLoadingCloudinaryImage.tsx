@@ -7,18 +7,16 @@ import { ThemeSwitch } from "@/library/theme";
 import { CSSProperties, useState } from "react";
 
 
-export type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image' | 'className' | 'style'> & {
+export type CloudinaryImageWithSkeletonProps = Omit<CloudinaryImageProps, 'image'> & {
     image: ThemeSwitch<CloudinaryImageType>,
-    sharedClassName?: string,
     skeletonClassName?: string,
-    imageClassName?: string,
-    sharedStyle?: CSSProperties,
+    loadedClassName?: string,
     skeletonStyle?: CSSProperties,
-    imageStyle?: CSSProperties
+    loadedStyle?: CSSProperties
 };
 
 export default function SkeletonLoadingCloudinaryImage(
-    { image, onLoad, sharedClassName, skeletonClassName, imageClassName, sharedStyle, skeletonStyle, imageStyle, ...rest }: CloudinaryImageWithSkeletonProps
+    { image, onLoad, className, skeletonClassName, loadedClassName, style, skeletonStyle, loadedStyle, ...rest }: CloudinaryImageWithSkeletonProps
 ) {
     const [isLoaded, setIsLoaded] = useState(false);
     const { resolveThemeSwitch } = useTheme();
@@ -27,8 +25,8 @@ export default function SkeletonLoadingCloudinaryImage(
         <CloudinaryImage
             image={resolveThemeSwitch(image)}
             className={`
-                ${sharedClassName}
-                ${isLoaded ? imageClassName : `animate-pulse bg-zinc-300 dark:bg-zinc-700 text-transparent ${skeletonClassName}`}
+                ${className}
+                ${isLoaded ? loadedClassName : `animate-pulse bg-zinc-300 dark:bg-zinc-700 text-transparent ${skeletonClassName}`}
             `}
             onLoad={
                 event => {
@@ -38,7 +36,7 @@ export default function SkeletonLoadingCloudinaryImage(
                     }
                 }
             }
-            style={isLoaded ? { ...sharedStyle, ...imageStyle } : { ...sharedStyle, ...skeletonStyle }}
+            style={isLoaded ? { ...style, ...loadedStyle } : { ...style, ...skeletonStyle }}
             {...rest}
         />
     );

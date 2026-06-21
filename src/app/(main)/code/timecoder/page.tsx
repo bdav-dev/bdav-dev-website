@@ -30,7 +30,7 @@ export default function TimecoderPage() {
                 <SkeletonLoadingCloudinaryImage
                     alt={'Timecoder'}
                     image={images.timecoder}
-                    sharedClassName={'rounded-tile'}
+                    className={'rounded-tile'}
                     draggable={false}
                 />
 

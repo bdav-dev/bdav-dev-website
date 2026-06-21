@@ -28,7 +28,7 @@ export default function Abstract3dImageLink(props: Abstract3dImageLinkProps) {
                     <Abstract3dImageThumbnail
                         image={props.image}
                         alt={`Abstract3DSeries #${props.image.nr}`}
-                        sharedClassName={`rounded-2xl`}
+                        className={'rounded-2xl'}
                     />
                 </div>
 
@@ -36,7 +36,7 @@ export default function Abstract3dImageLink(props: Abstract3dImageLinkProps) {
                     <Abstract3dImageThumbnail
                         image={props.image}
                         alt={`Abstract3DSeries #${props.image.nr}`}
-                        sharedClassName={'rounded-2xl select-none'}
+                        className={'rounded-2xl select-none'}
                     />
                 </div>
 

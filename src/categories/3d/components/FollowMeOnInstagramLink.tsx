@@ -24,7 +24,7 @@ export default function FollowMeOnInstagramLink() {
                                     dark: { src: '/3d/davidb.3d-instagram-dark.png', width: 1206, height: 2622 }
                                 }
                             }
-                            sharedClassName={'w-full h-full object-cover'}
+                            className={'w-full h-full object-cover'}
                             draggable={false}
                         />
                     }

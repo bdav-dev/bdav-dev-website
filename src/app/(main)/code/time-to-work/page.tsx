@@ -104,7 +104,7 @@ function TimeToWorkImage(props: { image: ThemeSwitch<CloudinaryImage>, alt: stri
     return (
         <SkeletonLoadingCloudinaryImage
             {...props}
-            sharedClassName={'w-full h-full object-cover rounded-tile'}
+            className={'w-full h-full object-cover rounded-tile'}
             quality={95}
             draggable={false}
         />

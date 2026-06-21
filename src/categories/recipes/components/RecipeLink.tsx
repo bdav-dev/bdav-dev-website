@@ -35,7 +35,7 @@ export default function RecipeLink({ recipe }: RecipeLinkProps) {
             <SkeletonLoadingCloudinaryImage
                 alt={recipe.title}
                 image={recipe.image}
-                sharedClassName={`
+                className={`
                     w-full h-full
                     p-4
                     select-none object-contain

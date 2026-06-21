@@ -87,7 +87,7 @@ export default function CheeseburgerPage() {
                     <SkeletonLoadingCloudinaryImage
                         alt={'Cheeseburger exploded view'}
                         image={images.cheeseburgerExplodedView}
-                        sharedClassName={'w-full rounded-tile'}
+                        className={'w-full rounded-tile'}
                         draggable={false}
                     />
                 </div>

@@ -37,7 +37,7 @@ export default function CategorySlice(props: CategorySliceProps) {
                 props.backgroundImage &&
                 <SkeletonLoadingCloudinaryImage
                     alt={''}
-                    sharedClassName={`
+                    className={`
                         absolute inset-0 h-full w-full
                         [--blur:var(--blur-md)]
                         [--brightness:75%]

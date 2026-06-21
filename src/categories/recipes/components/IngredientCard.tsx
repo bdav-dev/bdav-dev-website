@@ -24,9 +24,9 @@ export default function IngredientCard(props: IngredientCardProps) {
             <SkeletonLoadingCloudinaryImage
                 alt={props.ingredient.name}
                 image={props.ingredient.image}
-                sharedClassName={'h-[8.4rem] w-full rounded-xl object-contain select-none'}
-                imageClassName={'drop-shadow-md'}
-                imageStyle={{ transform: `scale(${props.ingredient.displayOptions?.size ?? 1})` }}
+                className={'h-[8.4rem] w-full rounded-xl object-contain select-none'}
+                loadedClassName={'drop-shadow-md'}
+                loadedStyle={{ transform: `scale(${props.ingredient.displayOptions?.size ?? 1})` }}
                 draggable={false}
             />
 

@@ -22,7 +22,7 @@ export default function FollowMeOnGitHubLink() {
                                     dark: { src: '/code/bdav-dev-github-dark.png', width: 2228, height: 1440 }
                                 }
                             }
-                            sharedClassName={'w-full h-full object-cover'}
+                            className={'w-full h-full object-cover'}
                             draggable={false}
                         />
                     }

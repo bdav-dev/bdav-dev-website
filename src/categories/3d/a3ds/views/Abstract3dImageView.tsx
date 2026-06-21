@@ -30,13 +30,13 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
             <SkeletonLoadingCloudinaryImage
                 alt={`Abstract3DSeries #${image.nr}`}
                 image={image.image}
-                sharedClassName={`
+                className={`
                     w-full      xl:w-1/2
                     max-w-xl    xl:max-w-300 3xl:max-w-330
                     self-center xl:self-start
                     rounded-2xl
                 `}
-                imageClassName={'cursor-pointer'}
+                loadedClassName={'cursor-pointer'}
                 quality={95}
                 preload
                 draggable={false}
