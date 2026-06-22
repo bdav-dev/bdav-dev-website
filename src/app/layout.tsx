@@ -32,7 +32,7 @@ export default async function RootLayout({ children }: { children?: ReactNode })
         <head>
             <link rel="stylesheet" href={MATERIAL_SYMBOLS_API_URL}/>
         </head>
-        <body className={'text-zinc-850 dark:text-zinc-100 flex flex-col min-h-screen'}>
+        <body className={'text-zinc-850 dark:text-zinc-100 flex flex-col min-h-dvh'}>
         <ThemeContextProvider initialTheme={initialTheme}>
             {children}
         </ThemeContextProvider>
