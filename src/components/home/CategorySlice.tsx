@@ -71,17 +71,18 @@ function CategoryLink(props: CategoryLinkProps) {
             <Tile
                 customPadding
                 className={`
+                    m-1.5
                     flex items-center justify-center
-                    flex-row                   lg:flex-col
-                    gap-0.5                    lg:gap-0
-                    p-1      xs:p-1.5 sm:p-2.5
+                    flex-row lg:flex-col
+                    gap-0.5  lg:gap-0
+                    p-1      lg:p-2.5
                     shadow-2xl shadow-zinc-600 dark:shadow-zinc-950
                 `}
             >
                 <props.icon
                     className={`
-                        text-[1.5em] xs:text-[2.75em] lg:text-[4.5em] 2xl:text-[6em] 3xl:text-[8em]
-                        mx-0                          lg:mx-3.5       2xl:mx-4       3xl:mx-5
+                        text-[1.5em] xs:text-[2.75em] md:text-[3em] lg:text-[4.5em] 2xl:text-[6em] 3xl:text-[7.5em]
+                        mx-0                                        lg:mx-3         2xl:mx-3       3xl:mx-3.5
                     `}
                     weight={200}
                 />
@@ -110,7 +111,7 @@ function FeaturedContentLink(props: FeaturedContentLinkProps) {
     return (
         <Link
             href={props.href}
-            className={'peer absolute z-10 bottom-0 mx-2 mb-1 lg:mb-5'}
+            className={'peer absolute z-10 bottom-0 left-0 lg:left-auto mx-1.5 mb-1.5 lg:mb-4'}
         >
             <Tile customPadding className={'drop-shadow-md flex flex-col p-1.5 lg:p-2'}>
                 <div className={'flex flex-row items-center gap-1.5 text-sm lg:text-base'}>

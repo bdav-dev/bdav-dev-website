@@ -29,7 +29,7 @@ export default function CategoriesShowcase({ className }: { className?: string }
     const isFeaturedAbstract3dImageNew = !!featuredAbstract3dImage && isNew(featuredAbstract3dImage);
 
     return (
-        <div className={`flex flex-col lg:flex-row gap-2 xs:gap-3 ${className}`}>
+        <div className={`flex flex-col lg:flex-row gap-2 sm:gap-3 ${className}`}>
             <CategorySlice
                 name={'Code'}
                 icon={CodeIcon}
