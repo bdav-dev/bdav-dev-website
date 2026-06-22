@@ -2,7 +2,6 @@ import CubeIcon from "@/icons/app/CubeIcon";
 import CodeIcon from "@/icons/app/CodeIcon";
 import { CodeProjects } from "@/categories/code/content/codeProjects";
 import GitHubInvertocat from "@/icons/logo/GitHubInvertocat";
-import VerticalRuler from "@/components/library/VerticalRuler";
 import ThemeToggle from "@/components/layout/header/ThemeToggle";
 import { BdavDev } from "@/library/routing";
 import { Recipes } from "@/categories/recipes/content/recipes";
@@ -85,10 +84,16 @@ export default function Header() {
                     }
                 />
 
-                <VerticalRuler className="mx-0.5 h-9"/>
+                <Divider/>
 
                 <ThemeToggle/>
             </div>
         </nav>
+    );
+}
+
+function Divider() {
+    return (
+        <div className={"h-8.5 mx-0.5 border-l border-zinc-600/40 dark:border-zinc-400/40"}/>
     );
 }
