@@ -17,10 +17,9 @@ export default function ThemeToggle() {
         <button
             className={`
                 flex flex-row items-center justify-center
-                p-1.5 mr-0.5 rounded-l-lg rounded-r-xl
-                hover:bg-zinc-300/95 dark:hover:bg-zinc-700/90
+                p-1.5 mr-0.5 rounded-l-lg rounded-r-lg xs:rounded-r-xl
+                hover:bg-zinc-950/10 dark:hover:bg-zinc-950/35
                 transition-colors duration-200
-                size-10
             `}
             onClick={toggleTheme}
         >

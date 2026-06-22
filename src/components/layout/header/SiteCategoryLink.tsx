@@ -35,6 +35,6 @@ export default function SiteCategoryLink(props: SiteCategoryLinkProps) {
 }
 
 const variants = {
-    default: 'hover:bg-zinc-300/95 dark:hover:bg-zinc-700/90',
-    selected: 'bg-zinc-350/80 dark:bg-zinc-925/80'
+    default: 'group-hover:bg-zinc-950/10 dark:group-hover:bg-zinc-950/35',
+    selected: 'bg-zinc-950/15 dark:bg-zinc-950/60'
 };

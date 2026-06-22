@@ -1,16 +1,19 @@
 .header {
     --header-border-radius: 1.25rem;
     border-radius: var(--header-border-radius);
+    padding-right: 0.5rem;
 
     height: 5.75rem;
     flex-direction: column;
+    padding-left: 0.5rem;
 
     @variant xs {
         height: 3.75rem;
         flex-direction: row;
+        padding-left: 0.875rem;
     }
 
-    @apply flex items-center justify-center gap-0.5 p-2.5 pl-3.5 m-4 mb-0 select-none relative bg-zinc-300/60 dark:bg-zinc-700/50;
+    @apply flex items-center justify-center gap-0.5 m-4 mb-0 select-none relative bg-zinc-300/60 dark:bg-zinc-700/50;
 }
 
 .header::before {
