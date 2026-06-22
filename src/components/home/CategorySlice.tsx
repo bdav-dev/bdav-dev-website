@@ -101,7 +101,7 @@ function CategoryLink(props: CategoryLinkProps) {
 
 
 type FeaturedContentLinkProps = {
-    name: string,
+    label: string,
     thumbnail: ReactNode,
     href: string,
     new?: boolean
@@ -118,8 +118,8 @@ function FeaturedContentLink(props: FeaturedContentLinkProps) {
                     <div>
                         {props.thumbnail}
                     </div>
-                    <div>
-                        {props.name}
+                    <div className={'hidden sm:block'}>
+                        {props.label}
                     </div>
                     {
                         props.new &&

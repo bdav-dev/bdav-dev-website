@@ -38,8 +38,8 @@ export default function CategoriesShowcase({ className }: { className?: string }
                 featuredContent={
                     featuredCodeProject &&
                     {
-                        name: featuredCodeProject.title,
                         thumbnail: <CodeProjectAppIcon project={featuredCodeProject} className={'w-6 h-6 lg:w-8 lg:h-8'}/>,
+                        label: featuredCodeProject.title,
                         href: BdavDev.code.$project.getRoute({ project: featuredCodeProject })
                     }
                 }
@@ -57,13 +57,13 @@ export default function CategoriesShowcase({ className }: { className?: string }
                 featuredContent={
                     featuredAbstract3dImage &&
                     {
-                        name: `Abstract3D Series #${featuredAbstract3dImage.nr}`,
                         thumbnail: <SkeletonLoadingCloudinaryImage
                             alt={''}
                             image={featuredAbstract3dImage.image}
                             className={'w-6 h-6 lg:w-8 lg:h-8 rounded-md object-contain'}
                             draggable={false}
                         />,
+                        label: `Abstract3D Series #${featuredAbstract3dImage.nr}`,
                         href: BdavDev.blender.abstract3dSeries.$image.getRoute({ image: featuredAbstract3dImage }),
                         new: isFeaturedAbstract3dImageNew
                     }
@@ -79,13 +79,13 @@ export default function CategoriesShowcase({ className }: { className?: string }
                 featuredContent={
                     featuredRecipe &&
                     {
-                        name: featuredRecipe.title,
                         thumbnail: <SkeletonLoadingCloudinaryImage
                             alt={''}
                             className={'h-6 lg:h-8 w-fit rounded-md object-contain'}
                             image={featuredRecipe.image}
                             draggable={false}
                         />,
+                        label: featuredRecipe.title,
                         href: BdavDev.recipes.$recipe.getRoute({ recipe: featuredRecipe })
                     }
                 }
