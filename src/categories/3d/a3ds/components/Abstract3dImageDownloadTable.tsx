@@ -12,7 +12,7 @@ export default function Abstract3dImageDownloadTable(props: Abstract3dImageDownl
     const isAnyDescriptionPresent = props.downloads.some(download => download.description);
 
     return (
-        <Tile className={'overflow-x-scroll'}>
+        <Tile className={'overflow-x-auto'}>
             <table className="abstract-3d-image-download-table">
                 <thead>
                 <tr>
