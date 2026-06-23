@@ -40,7 +40,19 @@ export default function Abstract3dImageLink(props: Abstract3dImageLinkProps) {
                     />
                 </div>
 
-                <div className={'absolute bottom-0 right-0 z-30 m-1.5 px-1.5 py-0.5 rounded-full backdrop-blur-lg text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity'}>
+                <div
+                    className={`
+                        absolute
+                        bottom-0 right-0 z-30
+                        m-1.5 px-1.5 py-0.5
+                        rounded-full
+                        text-xs text-white
+                        backdrop-blur-lg
+                        opacity-100
+                        sm:opacity-0 sm:group-hover:opacity-100
+                        transition-opacity
+                    `}
+                >
                     #{props.image.nr}
                 </div>
 
