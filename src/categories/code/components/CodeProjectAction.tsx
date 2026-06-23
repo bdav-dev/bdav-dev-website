@@ -87,6 +87,13 @@ function Arrow(props: { direction: 'left' | 'right' }) {
 function CurvedText(props: { children?: ReactNode, style?: CSSProperties, className?: string }) {
     const id = useId();
 
+    const ellipse = {
+        cx: 87.5,
+        cy: 49.982883,
+        rx: 55,
+        ry: 29.232883
+    };
+
     return (
         <svg
             width="175"
@@ -97,13 +104,10 @@ function CurvedText(props: { children?: ReactNode, style?: CSSProperties, classN
             style={props.style}
             className={props.className}
         >
-            <ellipse
+            <path
                 id={id}
                 style={{ fill: 'none', stroke: 'none' }}
-                cx="87.5"
-                cy="49.982883"
-                rx="55"
-                ry="29.232883"
+                d={ellipseToPathD(ellipse)}
             />
             <text style={{ fill: "currentcolor", letterSpacing: '-0.3px' }}>
                 <textPath href={`#${id}`} startOffset={"75%"} textAnchor={"middle"}>
@@ -112,4 +116,15 @@ function CurvedText(props: { children?: ReactNode, style?: CSSProperties, classN
             </text>
         </svg>
     );
+}
+
+type Ellipse = {
+    cx: number,
+    cy: number,
+    rx: number,
+    ry: number,
+}
+
+function ellipseToPathD({ cx, cy, rx, ry }: Ellipse): string {
+    return `M${cx + rx},${cy} A${rx},${ry} 0 0 1 ${cx},${cy + ry} A${rx},${ry} 0 0 1 ${cx - rx},${cy} A${rx},${ry} 0 0 1 ${cx},${cy - ry} A${rx},${ry} 0 0 1 ${cx + rx},${cy} Z`;
 }
