@@ -2135,4 +2135,24 @@ export const Abstract3dSeries: Record<number, Abstract3dImage> = {
             ]
         }
     },
+    83: {
+        nr: 83,
+        image: {
+            src: '/abstract-3d-series/083/a3ds-083.png',
+            width: 1080,
+            height: 1080
+        },
+        releaseDate: '27.06.2026',
+        downloads: {
+            image: [
+                {
+                    fileName: 'a3ds-083',
+                    fileFormat: 'png',
+                    width: 1080,
+                    height: 1080,
+                    downloadUrl: 'https://res.cloudinary.com/bdav-dev/image/upload/abstract-3d-series/083/a3ds-083.png'
+                }
+            ]
+        }
+    }
 };
