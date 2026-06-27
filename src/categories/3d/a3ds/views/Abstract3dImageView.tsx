@@ -32,7 +32,7 @@ export default function Abstract3dImageView({ image }: Abstract3dImageViewProps)
                         {
                             isNew(image) &&
                             <span className={'inline-block align-middle ml-3 text-xl'}>
-                                <NewBadge/>
+                                <NewBadge className={'font-semibold'}/>
                             </span>
                         }
                     </div>
